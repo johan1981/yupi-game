@@ -1,0 +1,11 @@
+{
+  "name": "Yupi: Nexus Breuk",
+  "short_name": "Yupi",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#07111d",
+  "theme_color": "#07111d",
+  "description": "Speelbare webgame van Yupi: Nexus Breuk"
+}
