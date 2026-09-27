@@ -79,8 +79,11 @@ const platforms=[
 const hazards=[{x:1530,y:675,w:45,h:25},{x:2370,y:690,w:60,h:25},{x:3910,y:680,w:55,h:25}];
 const purpleSpots=[{x:900,y:590},{x:3450,y:470},{x:4160,y:560},{x:5050,y:620}];
 function resize(){const d=Math.min(devicePixelRatio||1,2);cv.width=Math.max(700,innerWidth*d);cv.height=Math.max(400,innerHeight*d);ctx.setTransform(d,0,0,d,0,0)}addEventListener("resize",resize);resize();
-function W(){return cv.width/Math.min(devicePixelRatio||1,2)}
-function H(){return cv.height/Math.min(devicePixelRatio||1,2)}
+function CW(){return cv.width/Math.min(devicePixelRatio||1,2)}
+function CH(){return cv.height/Math.min(devicePixelRatio||1,2)}
+function SCALE(){return CH()/900}
+function W(){return CW()/SCALE()}
+function H(){return 900}
 function say(t,ms=1500){msg.textContent=t;msg.classList.add("show");clearTimeout(say.t);say.t=setTimeout(()=>msg.classList.remove("show"),ms)}
 function setScene(n,goal,text){if(n<=scene)return;scene=n;sceneEl.textContent="SCÈNE "+scene+" / 6";goalEl.textContent=goal;say(text,1800)}
 function reset(){
@@ -177,7 +180,10 @@ function drawTrail(){
  ctx.save();for(let i=0;i<18;i++){let x=p.x+120+i*70,y=600-Math.sin((performance.now()/300)+i)*28;ctx.globalAlpha=.18+(i%4)*.1;ctx.fillStyle="#a86cff";ctx.shadowBlur=18;ctx.shadowColor="#a86cff";ctx.beginPath();ctx.arc(x,y,5+(i%3),0,7);ctx.fill()}ctx.restore()
 }
 function draw(){
- const w=W(),h=H();ctx.save();if(shake>0){ctx.translate((Math.random()-.5)*12,(Math.random()-.5)*8)}sky();ctx.save();ctx.translate(-camX,0);
+ const w=W(),h=H(),sc=SCALE();
+ ctx.save();ctx.scale(sc,sc);
+ if(shake>0){ctx.translate((Math.random()-.5)*12,(Math.random()-.5)*8)}
+ sky();ctx.save();ctx.translate(-camX,0);
  if(scene<=3){ctx.fillStyle="#4c5b61";ctx.fillRect(0,260,2550,460);ctx.fillStyle="#22323a";for(let x=60;x<2450;x+=220){ctx.fillRect(x,330,130,180);ctx.fillStyle="#8fc9d8";ctx.globalAlpha=.35;ctx.fillRect(x+12,350,106,145);ctx.globalAlpha=1;ctx.fillStyle="#22323a"}}
  platforms.forEach(platformDraw);
  if(scene<=3)family.forEach((f,i)=>dogShape(f.x,f.y,1,i===1?.62:.78,1));
