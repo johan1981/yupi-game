@@ -7,199 +7,124 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#07111d">
 <link rel="manifest" href="./manifest.webmanifest">
-<title>Yupi — Level 1: De Laatste Rit</title>
+<title>Yupi — Looptest</title>
 <style>
-:root{--cyan:#6ee7ff;--vio:#a86cff;--panel:#07131fe8}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#030912;color:#eef8ff;font-family:system-ui,-apple-system,Segoe UI,sans-serif;touch-action:none}
-.screen{position:fixed;inset:0;display:none}.screen.active{display:flex}
-#start,#win{align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:24px;background:radial-gradient(circle at 50% 35%,#173450,#06101a 70%)}
-.logo{font-size:clamp(48px,14vw,120px);font-weight:1000;letter-spacing:.08em;line-height:.9;text-shadow:0 0 28px #4de8ff77}
-.sub{margin-top:14px;letter-spacing:.28em;color:var(--cyan);font-weight:900}
-p{max-width:700px;color:#bdd0dd}
-.primary{margin-top:18px;padding:16px 24px;border-radius:16px;border:1px solid #79eaff;color:#fff;background:linear-gradient(135deg,#0f8cae,#7d42bd);font:inherit;font-size:18px;font-weight:900}
-.hint{margin-top:18px;color:#89a7bb;font-size:13px}
-#gameScreen{background:#06101a}canvas{width:100%;height:100%;display:block}
-#hud{position:absolute;z-index:5;top:max(10px,env(safe-area-inset-top));left:max(10px,env(safe-area-inset-left));right:max(10px,env(safe-area-inset-right));display:flex;justify-content:space-between;pointer-events:none}
-.hudcol{display:flex;gap:8px}.badge{background:#07131fe8;border:1px solid #29465d;border-radius:12px;padding:8px 11px;font-weight:900;font-size:13px;box-shadow:0 4px 18px #0008}
-#msg{position:absolute;z-index:6;top:14%;left:50%;transform:translateX(-50%);padding:10px 14px;border-radius:12px;background:#07131fee;border:1px solid #41647a;font-weight:850;opacity:0;transition:.2s;white-space:nowrap;max-width:90vw;overflow:hidden;text-overflow:ellipsis}
-#msg.show{opacity:1}
-#touch{position:absolute;z-index:10;left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));bottom:max(12px,env(safe-area-inset-bottom));display:flex;justify-content:space-between;align-items:end}
-.moveBtns,.actions{display:flex;gap:10px;align-items:end}
-.tbtn{border:1px solid #65dff677;background:#0b2031cc;color:white;font-weight:1000;touch-action:none}
-.dir{width:68px;height:68px;border-radius:20px;font-size:28px}.action{width:78px;height:78px;border-radius:50%;font-size:12px}.small{width:64px;height:64px;border-radius:18px}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#06101a;color:#fff;font-family:system-ui,-apple-system,Segoe UI,sans-serif;touch-action:none}
+.screen{position:fixed;inset:0}
+#start{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;background:radial-gradient(circle at 50% 35%,#173450,#06101a 70%);z-index:20}
+#start.hide{display:none}
+.logo{font-size:clamp(48px,13vw,112px);font-weight:1000;letter-spacing:.08em;line-height:.9;text-shadow:0 0 28px #4de8ff77}
+.sub{margin-top:14px;color:#6ee7ff;font-weight:900;letter-spacing:.22em}
+p{max-width:650px;color:#bdd0dd}
+button{font:inherit}
+.primary{margin-top:18px;padding:16px 24px;border-radius:16px;border:1px solid #79eaff;color:#fff;background:linear-gradient(135deg,#0f8cae,#7d42bd);font-size:18px;font-weight:900}
+#game{background:#0b1721}
+#viewport{position:absolute;inset:0;overflow:hidden}
+#world{position:absolute;left:0;top:0;width:2200px;height:100%;will-change:transform}
+.sky{position:absolute;inset:0;background:linear-gradient(#8fd4ec 0%,#cbeff4 48%,#8aa8ad 100%)}
+.cityFar,.cityNear{position:absolute;left:0;right:0;bottom:34%;height:50%;opacity:.35;pointer-events:none}
+.cityFar{background:
+linear-gradient(90deg,transparent 0 4%,#507587 4% 9%,transparent 9% 13%,#456879 13% 20%,transparent 20% 25%,#618798 25% 31%,transparent 31% 38%,#456879 38% 45%,transparent 45% 52%,#507587 52% 59%,transparent 59% 65%,#618798 65% 72%,transparent 72% 78%,#456879 78% 84%,transparent 84% 100%);filter:blur(3px)}
+.cityNear{bottom:27%;height:36%;opacity:.22;background:
+repeating-linear-gradient(90deg,#274451 0 80px,transparent 80px 155px);filter:blur(1px)}
+.floor{position:absolute;left:0;right:0;bottom:0;height:31%;background:linear-gradient(#526066,#2b363b 18%,#1c272c 100%);border-top:8px solid #7d9198}
+.floor:after{content:"";position:absolute;left:0;right:0;top:34%;height:5px;background:repeating-linear-gradient(90deg,#8ec7d4 0 80px,transparent 80px 150px);opacity:.35}
+.crate{position:absolute;bottom:31%;width:120px;height:100px;border:5px solid #24343a;background:linear-gradient(135deg,#7b6044,#4f3d2e);box-shadow:inset 0 0 0 6px #907457,0 12px 22px #0006}
+.crate:before,.crate:after{content:"";position:absolute;background:#283a3f}
+.crate:before{left:10%;right:10%;top:45%;height:7px}.crate:after{top:10%;bottom:10%;left:47%;width:7px}
+#yupi{position:absolute;left:180px;bottom:27%;width:220px;height:220px;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 12px 10px #0005);transform-origin:50% 100%;will-change:left,transform}
+#hud{position:absolute;z-index:8;top:max(10px,env(safe-area-inset-top));left:max(10px,env(safe-area-inset-left));right:max(10px,env(safe-area-inset-right));display:flex;justify-content:space-between;pointer-events:none}
+.badge{padding:8px 12px;border-radius:12px;background:#07131fe8;border:1px solid #345369;font-weight:900;font-size:13px}
+#touch{position:absolute;z-index:9;left:max(14px,env(safe-area-inset-left));right:max(14px,env(safe-area-inset-right));bottom:max(14px,env(safe-area-inset-bottom));display:flex;justify-content:space-between}
+.move{display:flex;gap:12px}
+.tbtn{width:76px;height:76px;border-radius:22px;border:1px solid #6ee7ff88;background:#0a2032cc;color:#fff;font-size:30px;font-weight:1000;touch-action:none}
+#finish{position:absolute;right:120px;bottom:31%;width:5px;height:190px;background:#70e8ff;box-shadow:0 0 24px #70e8ff}
+#finishLabel{position:absolute;right:48px;bottom:calc(31% + 200px);padding:7px 10px;border-radius:10px;background:#07131fd9;color:#bfefff;font-weight:900;font-size:12px;letter-spacing:.08em}
+#message{position:absolute;z-index:10;left:50%;top:18%;transform:translateX(-50%);background:#07131fe8;border:1px solid #50728a;border-radius:14px;padding:10px 16px;font-weight:850;opacity:0;transition:.2s;pointer-events:none}
+#message.show{opacity:1}
 .rotate{display:none;position:absolute;inset:0;z-index:30;background:#050b12;align-items:center;justify-content:center;text-align:center;padding:30px;font-size:20px;font-weight:800}
 @media (orientation:portrait) and (max-width:900px){.rotate{display:flex}}
 @media (pointer:fine){#touch{display:none}}
 </style>
 </head>
 <body>
-<section id="start" class="screen active">
+<section id="start" class="screen">
   <div class="logo">YUPI</div>
-  <div class="sub">LEVEL 1 — DE LAATSTE RIT</div>
-  <p>Yupi is nog een pup. Tijdens een futuristische verhuizing begint iets vreemds hem te roepen. Leer lopen, springen, snuffelen en blaffen — en ontdek waarom deze rit alles verandert.</p>
-  <button id="startBtn" class="primary" type="button">START LEVEL 1</button>
-  <div class="hint">iPhone: horizontaal • Computer: ← → / A D, spatie springen, S snuffelen, B blaffen</div>
+  <div class="sub">PUP YUPI — LOOPTEST</div>
+  <p>Een eerste klein stukje van Level 1. Alleen lopen, zodat we eerst beweging, schaal en cameragedrag goed krijgen.</p>
+  <button id="startBtn" class="primary">START LOOPTEST</button>
 </section>
-<section id="gameScreen" class="screen">
-  <div id="hud">
-    <div class="hudcol"><div class="badge" id="hp">♥ ♥ ♥</div><div class="badge" id="scene">SCÈNE 1 / 6</div></div>
-    <div class="badge" id="goal">KIJK ROND IN DE WAGEN</div>
-  </div>
-  <canvas id="game"></canvas><div id="msg"></div>
-  <div id="touch">
-    <div class="moveBtns"><button class="tbtn dir" id="left">◀</button><button class="tbtn dir" id="right">▶</button></div>
-    <div class="actions">
-      <button class="tbtn action small" id="bark">BLAF</button>
-      <button class="tbtn action small" id="sniff">SNUIF</button>
-      <button class="tbtn action" id="jump">SPRING</button>
+
+<section id="game" class="screen">
+  <div id="viewport">
+    <div id="world">
+      <div class="sky"></div>
+      <div class="cityFar"></div>
+      <div class="cityNear"></div>
+      <div class="floor"></div>
+      <div class="crate" style="left:720px"></div>
+      <div class="crate" style="left:1180px;width:150px;height:75px"></div>
+      <div class="crate" style="left:1580px;width:100px;height:130px"></div>
+      <div id="finish"></div>
+      <div id="finishLabel">EINDE LOOPTEST</div>
+      <img id="yupi" src="./assets/yupi/pup/idle.png" alt="Pup Yupi">
     </div>
   </div>
+  <div id="hud"><div class="badge">LEVEL 1 — DE LAATSTE RIT</div><div class="badge">LOOPTEST</div></div>
+  <div id="message"></div>
+  <div id="touch"><div class="move"><button id="left" class="tbtn">◀</button><button id="right" class="tbtn">▶</button></div></div>
   <div class="rotate">↻<br><br>Draai je iPhone horizontaal om Yupi te spelen.</div>
 </section>
-<section id="win" class="screen">
-  <div class="logo" style="font-size:clamp(36px,9vw,82px)">DE LAATSTE RIT</div>
-  <h1>Level voltooid</h1>
-  <p>Vanuit de donkere tunnel klinkt één vervormde stem: “...Yupi...” Het paarse symbool pulseert nog één keer.</p>
-  <div class="sub">VOLGEND LEVEL: HET SPOOR</div>
-  <button id="again" class="primary">OPNIEUW</button>
-</section>
+
 <script>
 (()=>{
-const $=s=>document.querySelector(s),cv=$("#game"),ctx=cv.getContext("2d"),start=$("#start"),gs=$("#gameScreen"),win=$("#win"),msg=$("#msg"),hpEl=$("#hp"),sceneEl=$("#scene"),goalEl=$("#goal");
-let running=false,last=0,keys={},touch={l:0,r:0,j:0,sn:0,b:0},camX=0,scene=1,shake=0,flash=0,trail=0,barked=false;
-const world={w:5600,h:900,ground:720};
-const p={x:150,y:620,w:58,h:62,vx:0,vy:0,on:false,hp:3,inv:0,face:1,land:0};
-const family=[{x:350,y:635,kind:"ouder"},{x:460,y:642,kind:"broertje"},{x:560,y:635,kind:"ouder"}];
-const platforms=[
-{x:0,y:720,w:1250,h:180},{x:1320,y:700,w:430,h:200},{x:1810,y:660,w:320,h:240},{x:2200,y:715,w:500,h:185},
-{x:2790,y:660,w:420,h:240},{x:3290,y:600,w:350,h:300},{x:3730,y:705,w:520,h:195},{x:4330,y:650,w:390,h:250},{x:4800,y:700,w:800,h:200},
-{x:1490,y:540,w:170,h:24},{x:1960,y:500,w:150,h:24},{x:3000,y:500,w:150,h:24},{x:3440,y:430,w:160,h:24},{x:4490,y:500,w:160,h:24}
-];
-const hazards=[{x:1530,y:675,w:45,h:25},{x:2370,y:690,w:60,h:25},{x:3910,y:680,w:55,h:25}];
-const purpleSpots=[{x:900,y:590},{x:3450,y:470},{x:4160,y:560},{x:5050,y:620}];
-function resize(){const d=Math.min(devicePixelRatio||1,2);cv.width=Math.max(700,innerWidth*d);cv.height=Math.max(400,innerHeight*d);ctx.setTransform(d,0,0,d,0,0)}addEventListener("resize",resize);resize();
-function CW(){return cv.width/Math.min(devicePixelRatio||1,2)}
-function CH(){return cv.height/Math.min(devicePixelRatio||1,2)}
-function SCALE(){return CH()/900}
-function W(){return CW()/SCALE()}
-function H(){return 900}
-function say(t,ms=1500){msg.textContent=t;msg.classList.add("show");clearTimeout(say.t);say.t=setTimeout(()=>msg.classList.remove("show"),ms)}
-function setScene(n,goal,text){if(n<=scene)return;scene=n;sceneEl.textContent="SCÈNE "+scene+" / 6";goalEl.textContent=goal;say(text,1800)}
-function reset(){
- Object.assign(p,{x:150,y:620,vx:0,vy:0,on:false,hp:3,inv:0,face:1,land:0});
- camX=0;scene=1;shake=0;flash=0;trail=0;barked=false;hpEl.textContent="♥ ♥ ♥";sceneEl.textContent="SCÈNE 1 / 6";goalEl.textContent="KIJK ROND IN DE WAGEN"
+const yupi=document.querySelector("#yupi"),world=document.querySelector("#world"),start=document.querySelector("#start"),msg=document.querySelector("#message");
+const idle="./assets/yupi/pup/idle.png";
+const walk=["./assets/yupi/pup/walk-01.png","./assets/yupi/pup/walk-02.png"];
+walk.concat(idle).forEach(src=>{const i=new Image();i.src=src});
+let x=180,dir=1,walking=false,last=0,frameTime=0,frame=0,cam=0,keys={},touch={l:0,r:0},started=false,done=false;
+const WORLD_W=2200,YUPI_W=220,SPEED=245;
+
+function show(t){msg.textContent=t;msg.classList.add("show");clearTimeout(show.t);show.t=setTimeout(()=>msg.classList.remove("show"),1400)}
+function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
+function bind(id,k){
+ const b=document.querySelector(id);
+ b.addEventListener("pointerdown",e=>{e.preventDefault();touch[k]=1;b.setPointerCapture?.(e.pointerId)});
+ ["pointerup","pointercancel","pointerleave"].forEach(ev=>b.addEventListener(ev,()=>touch[k]=0));
 }
-function begin(){reset();start.classList.remove("active");win.classList.remove("active");gs.classList.add("active");running=true;say("Yupi is nog een pup — kijk rond in de verhuiswagen")}
-$("#startBtn").onclick=begin;$("#again").onclick=begin;
-addEventListener("keydown",e=>{keys[e.key.toLowerCase()]=1;if([" ","arrowleft","arrowright","arrowup"].includes(e.key.toLowerCase()))e.preventDefault()});
+bind("#left","l");bind("#right","r");
+addEventListener("keydown",e=>{const k=e.key.toLowerCase();keys[k]=1;if(k==="arrowleft"||k==="arrowright")e.preventDefault()});
 addEventListener("keyup",e=>keys[e.key.toLowerCase()]=0);
-function bind(id,k){const el=$(id);el.addEventListener("pointerdown",e=>{e.preventDefault();touch[k]=1;el.setPointerCapture?.(e.pointerId)});["pointerup","pointercancel","pointerleave"].forEach(ev=>el.addEventListener(ev,()=>touch[k]=0))}
-bind("#left","l");bind("#right","r");bind("#jump","j");bind("#sniff","sn");bind("#bark","b");
-function land(oldY){
- const wasOn=p.on;p.on=false;
- for(const q of platforms){
-   if(p.x+p.w>q.x&&p.x<q.x+q.w&&oldY+p.h<=q.y+8&&p.y+p.h>=q.y&&p.vy>=0){
-     if(!wasOn&&p.vy>260)p.land=.18;p.y=q.y-p.h;p.vy=0;p.on=true
-   }
- }
-}
-function damage(){if(p.inv>0)return;p.hp--;p.inv=1.25;shake=.3;hpEl.textContent="♥ ".repeat(p.hp)+"♡ ".repeat(3-p.hp);say("Voorzichtig, Yupi!");if(p.hp<=0)setTimeout(reset,450)}
-function doSniff(){
- trail=1.2;
- if(scene===1&&p.x>650){setScene(2,"VOLG HET PAARSE LICHT","Yupi ruikt iets vreemds achter het paneel...")}
- if(scene>=5)say("Het paarse spoor wordt sterker")
-}
-function doBark(){barked=true;say(scene<4?"Waf!":"...geen antwoord...")}
+document.querySelector("#startBtn").onclick=()=>{start.classList.add("hide");started=true;show("Loop naar rechts →")};
+
 function update(dt){
- if(!running)return;
- p.inv=Math.max(0,p.inv-dt);p.land=Math.max(0,p.land-dt);trail=Math.max(0,trail-dt);shake=Math.max(0,shake-dt);flash=Math.max(0,flash-dt);
- const left=keys["arrowleft"]||keys["a"]||touch.l,right=keys["arrowright"]||keys["d"]||touch.r;
- let dir=(right?1:0)-(left?1:0),target=dir*300;
- p.vx+=(target-p.vx)*Math.min(1,dt*10);if(!dir)p.vx*=Math.pow(.0007,dt);if(dir)p.face=dir;
- const jump=keys[" "]||keys["w"]||keys["arrowup"]||touch.j;if(jump&&p.on){p.vy=-610;p.on=false;keys[" "]=keys["w"]=keys["arrowup"]=0;touch.j=0}
- if((keys["s"]||touch.sn)){doSniff();keys["s"]=0;touch.sn=0}
- if((keys["b"]||touch.b)){doBark();keys["b"]=0;touch.b=0}
- p.vy+=1500*dt;const oldY=p.y;p.x+=p.vx*dt;p.y+=p.vy*dt;p.x=Math.max(0,Math.min(world.w-p.w,p.x));land(oldY);
- if(p.y>980){damage();Object.assign(p,{x:Math.max(80,p.x-220),y:450,vx:0,vy:0})}
- hazards.forEach(h=>{if(p.x+p.w>h.x&&p.x<h.x+h.w&&p.y+p.h>h.y&&p.y<h.y+h.h)damage()});
- if(scene===2&&p.x>1050){scene=3;sceneEl.textContent="SCÈNE 3 / 6";goalEl.textContent="REN NAAR JE FAMILIE";shake=.8;flash=.5;say("SIGNAL UNKNOWN — de wagen begint te schokken!",1800)}
- if(scene===3&&p.x>1700){scene=4;sceneEl.textContent="SCÈNE 4 / 6";goalEl.textContent="OVERLEEF DE CRASH";shake=1.3;flash=.9;say("De besturing valt uit!",1200)}
- if(scene===4&&p.x>2500){setScene(5,"ZOEK JE FAMILIE","Yupi wordt wakker tussen de brokstukken...");p.x=2860;p.y=500;p.vx=0;camX=2600}
- if(scene===5&&p.x>3650){setScene(6,"VOLG HET SPOOR NAAR DE TUNNEL","Een paarse gloed verschijnt tussen de ruïnes");trail=2}
- if(scene===6&&p.x>5250){running=false;gs.classList.remove("active");win.classList.add("active")}
- const desired=p.x-W()*.36;camX+=((Math.max(0,Math.min(world.w-W(),desired)))-camX)*Math.min(1,dt*5);
+ if(!started)return;
+ const left=keys["arrowleft"]||keys["a"]||touch.l;
+ const right=keys["arrowright"]||keys["d"]||touch.r;
+ const move=(right?1:0)-(left?1:0);
+ walking=move!==0;
+ if(move){
+   dir=move;
+   x+=move*SPEED*dt;
+   x=clamp(x,50,WORLD_W-YUPI_W-40);
+   frameTime+=dt;
+   if(frameTime>.16){frameTime=0;frame=(frame+1)%walk.length}
+ } else {frame=0;frameTime=0}
+ yupi.src=walking?walk[frame]:idle;
+ yupi.style.left=x+"px";
+ yupi.style.transform=dir<0?"scaleX(-1)":"scaleX(1)";
+ const vw=innerWidth;
+ const desired=x-vw*.38;
+ cam=clamp(desired,0,Math.max(0,WORLD_W-vw));
+ world.style.transform="translate3d("+(-cam)+"px,0,0)";
+ if(!done&&x>1880){done=true;show("Mooi — einde van de looptest")}
 }
-function sky(){
- const w=W(),h=H();let g=ctx.createLinearGradient(0,0,0,h);
- if(scene<4){g.addColorStop(0,"#7cc7e7");g.addColorStop(.5,"#b8e8ef");g.addColorStop(1,"#263f50")}
- else{g.addColorStop(0,"#182431");g.addColorStop(.5,"#35414c");g.addColorStop(1,"#101820")}
- ctx.fillStyle=g;ctx.fillRect(0,0,w,h);
- ctx.save();ctx.globalAlpha=scene<4?.28:.16;ctx.fillStyle="#315b72";
- for(let i=0;i<18;i++){let x=(i*340-(camX*.18)%340)-150;let bh=140+(i%5)*35;ctx.fillRect(x,h-390-bh,90,bh);ctx.beginPath();ctx.arc(x+45,h-390-bh,45,Math.PI,0);ctx.fill()}
- ctx.restore();
+
+function loop(t){
+ const dt=Math.min(.033,(t-last)/1000||0);last=t;update(dt);requestAnimationFrame(loop)
 }
-function platformDraw(q){
- ctx.fillStyle=scene<4?"#38484f":"#263136";ctx.fillRect(q.x,q.y,q.w,q.h);
- ctx.fillStyle=scene<4?"#6a7c80":"#48575c";ctx.fillRect(q.x,q.y,q.w,13);
- ctx.strokeStyle="#15272c";ctx.lineWidth=5;for(let x=q.x+30;x<q.x+q.w;x+=80){ctx.beginPath();ctx.moveTo(x,q.y+15);ctx.lineTo(x+28,q.y+55);ctx.stroke()}
-}
-function dogShape(x,y,face,scale=.72,alpha=1){
- ctx.save();ctx.globalAlpha=alpha;ctx.translate(x,y);ctx.scale(face*scale,scale);
- ctx.shadowBlur=16;ctx.shadowColor="#0007";
- ctx.strokeStyle="#8e4c28";ctx.lineWidth=9;ctx.lineCap="round";ctx.beginPath();ctx.moveTo(-28,-2);ctx.quadraticCurveTo(-48,-20,-54,-8);ctx.stroke();
- let bg=ctx.createLinearGradient(-30,-18,30,20);bg.addColorStop(0,"#6f351d");bg.addColorStop(.45,"#a95f32");bg.addColorStop(1,"#c77a43");
- ctx.fillStyle=bg;ctx.beginPath();ctx.ellipse(-1,2,33,21,0,0,Math.PI*2);ctx.fill();
- ctx.fillStyle="#b96b3b";ctx.beginPath();ctx.arc(28,-12,18,0,Math.PI*2);ctx.fill();
- ctx.fillStyle="#542d20";ctx.beginPath();ctx.moveTo(26,-28);ctx.lineTo(34,-49);ctx.lineTo(39,-24);ctx.closePath();ctx.fill();
- ctx.beginPath();ctx.moveTo(13,-27);ctx.quadraticCurveTo(1,-37,5,-18);ctx.quadraticCurveTo(12,-14,17,-21);ctx.closePath();ctx.fill();
- ctx.fillStyle="#e4b089";ctx.beginPath();ctx.ellipse(42,-8,12,8,.05,0,Math.PI*2);ctx.fill();ctx.fillStyle="#111";ctx.beginPath();ctx.arc(51,-9,3.3,0,Math.PI*2);ctx.fill();
- ctx.fillStyle="#f5f1dd";ctx.beginPath();ctx.arc(33,-15,4.8,0,Math.PI*2);ctx.fill();ctx.fillStyle="#17232a";ctx.beginPath();ctx.arc(34,-15,2.5,0,Math.PI*2);ctx.fill();
- ctx.strokeStyle="#9f582f";ctx.lineWidth=10;ctx.lineCap="round";
- [[8,17,10,32],[-15,16,-20,32],[-28,9,-35,28]].forEach(a=>{ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(a[2],a[3]);ctx.stroke()});
- ctx.restore()
-}
-function dog(x,y,face){
- const speed=Math.abs(p.vx),run=speed>35&&p.on,air=!p.on,phase=performance.now()/90,step=run?Math.sin(phase):0,bob=run?Math.abs(Math.sin(phase))*2.4:0;
- ctx.save();ctx.translate(x+30,y+31+bob);ctx.scale(face,1);if(p.inv&&Math.floor(p.inv*12)%2)ctx.globalAlpha=.35;
- ctx.shadowBlur=18;ctx.shadowColor="#0009";
- ctx.strokeStyle="#8e4c28";ctx.lineWidth=9;ctx.lineCap="round";ctx.beginPath();ctx.moveTo(-28,-2);ctx.quadraticCurveTo(-48,-20-step*4,-54,-8);ctx.stroke();
- let bg=ctx.createLinearGradient(-30,-18,30,20);bg.addColorStop(0,"#6f351d");bg.addColorStop(.45,"#a95f32");bg.addColorStop(1,"#c77a43");ctx.fillStyle=bg;ctx.beginPath();ctx.ellipse(-1,2,33,21,0,0,Math.PI*2);ctx.fill();
- ctx.fillStyle="#b96b3b";ctx.beginPath();ctx.arc(28,-12,18,0,Math.PI*2);ctx.fill();
- ctx.fillStyle="#542d20";ctx.beginPath();ctx.moveTo(26,-28);ctx.lineTo(34,-49);ctx.lineTo(39,-24);ctx.closePath();ctx.fill();
- ctx.beginPath();ctx.moveTo(13,-27);ctx.quadraticCurveTo(1,-37,5,-18);ctx.quadraticCurveTo(12,-14,17,-21);ctx.closePath();ctx.fill();
- ctx.fillStyle="#e4b089";ctx.beginPath();ctx.ellipse(42,-8,12,8,.05,0,Math.PI*2);ctx.fill();ctx.fillStyle="#111";ctx.beginPath();ctx.arc(51,-9,3.3,0,Math.PI*2);ctx.fill();
- ctx.fillStyle="#f5f1dd";ctx.beginPath();ctx.arc(33,-15,4.8,0,Math.PI*2);ctx.fill();ctx.fillStyle="#17232a";ctx.beginPath();ctx.arc(34,-15,2.5,0,Math.PI*2);ctx.fill();
- ctx.strokeStyle="#9f582f";ctx.lineWidth=10;ctx.lineCap="round";
- let legs=air?[[11,15,25,18],[-13,15,-29,17],[-27,8,-39,3]]:run?[[9,16,14+step*11,32],[-13,16,-20-step*12,32],[-27,9,-35+step*9,28]]:[[8,17,10,32],[-15,16,-20,32],[-28,9,-35,28]];
- legs.forEach(a=>{ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(a[2],a[3]);ctx.stroke()});
- ctx.restore()
-}
-function drawTrail(){
- if(!trail&&scene<6)return;
- ctx.save();for(let i=0;i<18;i++){let x=p.x+120+i*70,y=600-Math.sin((performance.now()/300)+i)*28;ctx.globalAlpha=.18+(i%4)*.1;ctx.fillStyle="#a86cff";ctx.shadowBlur=18;ctx.shadowColor="#a86cff";ctx.beginPath();ctx.arc(x,y,5+(i%3),0,7);ctx.fill()}ctx.restore()
-}
-function draw(){
- const w=W(),h=H(),sc=SCALE();
- ctx.save();ctx.scale(sc,sc);
- if(shake>0){ctx.translate((Math.random()-.5)*12,(Math.random()-.5)*8)}
- sky();ctx.save();ctx.translate(-camX,0);
- if(scene<=3){ctx.fillStyle="#4c5b61";ctx.fillRect(0,260,2550,460);ctx.fillStyle="#22323a";for(let x=60;x<2450;x+=220){ctx.fillRect(x,330,130,180);ctx.fillStyle="#8fc9d8";ctx.globalAlpha=.35;ctx.fillRect(x+12,350,106,145);ctx.globalAlpha=1;ctx.fillStyle="#22323a"}}
- platforms.forEach(platformDraw);
- if(scene<=3)family.forEach((f,i)=>dogShape(f.x,f.y,1,i===1?.62:.78,1));
- if(scene>=5){ctx.fillStyle="#1a2328";for(let i=0;i<12;i++){let x=2780+i*220;ctx.save();ctx.translate(x,0);ctx.rotate((i%2?1:-1)*.08);ctx.fillRect(0,420,150,240);ctx.restore()}}
- if(scene===2||scene===3){ctx.shadowBlur=30;ctx.shadowColor="#a86cff";ctx.fillStyle="#a86cff";ctx.beginPath();ctx.arc(930,560,14,0,7);ctx.fill();ctx.shadowBlur=0}
- drawTrail();
- hazards.forEach(h=>{ctx.fillStyle="#5a4242";ctx.fillRect(h.x,h.y,h.w,h.h)});
- if(scene===6){ctx.fillStyle="#090d12";ctx.fillRect(5150,370,450,330);ctx.strokeStyle="#8e62ff";ctx.lineWidth=8;ctx.shadowBlur=24;ctx.shadowColor="#8e62ff";ctx.beginPath();ctx.moveTo(5350,470);ctx.lineTo(5390,530);ctx.lineTo(5350,590);ctx.lineTo(5310,530);ctx.closePath();ctx.stroke();ctx.shadowBlur=0}
- dog(p.x,p.y,p.face);
- ctx.restore();
- let vg=ctx.createRadialGradient(w*.5,h*.48,100,w*.5,h*.5,w*.75);vg.addColorStop(.55,"#0000");vg.addColorStop(1,"#0007");ctx.fillStyle=vg;ctx.fillRect(0,0,w,h);
- if(flash>0){ctx.globalAlpha=Math.min(1,flash);ctx.fillStyle="#d8c6ff";ctx.fillRect(0,0,w,h);ctx.globalAlpha=1}
- ctx.restore()
-}
-function loop(t){let dt=Math.min(.033,(t-last)/1000||0);last=t;update(dt);draw();requestAnimationFrame(loop)}requestAnimationFrame(loop);
-if("serviceWorker"in navigator)navigator.serviceWorker.register("./sw.js").catch(()=>{});
+requestAnimationFrame(loop);
 })();
 </script>
 </body>
