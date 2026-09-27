@@ -1,5 +1,5 @@
 {
-  "name": "Yupi: Nexus Breuk",
+  "name": "Yupi — De Laatste Rit",
   "short_name": "Yupi",
   "start_url": "./",
   "scope": "./",
@@ -7,5 +7,5 @@
   "orientation": "landscape",
   "background_color": "#07111d",
   "theme_color": "#07111d",
-  "description": "Speelbare webgame van Yupi: Nexus Breuk"
+  "description": "Yupi's Game — Level 1: De Laatste Rit"
 }
