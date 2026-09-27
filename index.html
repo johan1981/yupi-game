@@ -7,14 +7,19 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="theme-color" content="#ffffff">
 <link rel="manifest" href="./manifest.webmanifest">
-<title>Yupi — Sprite test</title>
+<title>Yupi — V2 visual & movement test</title>
 <style>
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#fff;font-family:system-ui,-apple-system,Segoe UI,sans-serif;touch-action:none}
 #game{position:fixed;inset:0;overflow:hidden;background:#fff}
 #yupi{position:absolute;left:120px;bottom:60px;width:220px;height:220px;object-fit:contain;object-position:center bottom;transform-origin:50% 100%;user-select:none;-webkit-user-drag:none}
-#hud{position:absolute;top:max(12px,env(safe-area-inset-top));left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));display:flex;justify-content:space-between;pointer-events:none;z-index:10}
+#hud{position:absolute;top:max(12px,env(safe-area-inset-top));left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));display:flex;justify-content:space-between;align-items:center;gap:10px;z-index:10}
 .badge{padding:8px 12px;border-radius:12px;background:#f2f2f2;border:1px solid #d8d8d8;font-weight:800;font-size:13px;color:#333}
+#refBtn{pointer-events:auto;border:1px solid #cfcfcf;background:#fff;color:#222;border-radius:12px;padding:9px 12px;font-weight:900;font-size:12px}
+#refOverlay{display:none;position:absolute;inset:0;z-index:50;background:rgba(255,255,255,.97);align-items:center;justify-content:center;padding:max(12px,env(safe-area-inset-top)) max(12px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left))}
+#refOverlay.open{display:flex}
+#refOverlay img{max-width:96vw;max-height:92vh;object-fit:contain}
+#closeRef{position:absolute;top:max(12px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));width:46px;height:46px;border-radius:50%;border:1px solid #ccc;background:#fff;font-size:24px;font-weight:900}
 #touch{position:absolute;left:max(14px,env(safe-area-inset-left));right:max(14px,env(safe-area-inset-right));bottom:max(14px,env(safe-area-inset-bottom));display:flex;justify-content:space-between;z-index:20}
 .move{display:flex;gap:12px}
 .tbtn{width:76px;height:76px;border-radius:22px;border:1px solid #cfcfcf;background:#f7f7f7;color:#222;font-size:30px;font-weight:900;touch-action:none}
@@ -26,11 +31,18 @@ html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#fff;font-f
 <body>
 <div id="game">
   <div id="hud">
-    <div class="badge">PUP YUPI</div>
-    <div class="badge">YUPI HEAD-BOB WALK TEST</div>
+    <div class="badge">PUP YUPI V2</div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <div class="badge">BEWEGINGSPROTOTYPE</div>
+      <button id="refBtn" type="button">V2 SHEET</button>
+    </div>
   </div>
 
   <img id="yupi" src="./assets/yupi/pup/walk8-headbob/idle-aligned.png" alt="Pup Yupi">
+  <div id="refOverlay" aria-hidden="true">
+    <button id="closeRef" type="button" aria-label="Sluiten">×</button>
+    <img src="./assets/yupi/pup/design/yupi-v2-approved-sheet.png" alt="Goedgekeurde Yupi v2 character sheet">
+  </div>
 
   <div id="touch">
     <div class="move">
@@ -45,6 +57,12 @@ html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#fff;font-f
 <script>
 (()=>{
 const yupi=document.getElementById("yupi");
+const refBtn=document.getElementById("refBtn");
+const refOverlay=document.getElementById("refOverlay");
+const closeRef=document.getElementById("closeRef");
+refBtn.addEventListener("click",()=>{refOverlay.classList.add("open");refOverlay.setAttribute("aria-hidden","false")});
+closeRef.addEventListener("click",()=>{refOverlay.classList.remove("open");refOverlay.setAttribute("aria-hidden","true")});
+refOverlay.addEventListener("click",e=>{if(e.target===refOverlay){refOverlay.classList.remove("open");refOverlay.setAttribute("aria-hidden","true")}});
 const idle="./assets/yupi/pup/walk8-headbob/idle-aligned.png";
 const walk=[
   "./assets/yupi/pup/walk8-headbob/frame-00.png",
