@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#f7f3ec">
+<title>Yupi v2 — visuele test</title>
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#f7f3ec;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#2f211a}
+body{touch-action:none}
+#app{position:fixed;inset:0;display:flex;flex-direction:column}
+#bar{height:56px;padding:max(8px,env(safe-area-inset-top)) max(12px,env(safe-area-inset-right)) 8px max(12px,env(safe-area-inset-left));display:flex;align-items:center;justify-content:space-between;gap:10px;background:rgba(255,255,255,.94);border-bottom:1px solid #dfd7ce;z-index:5}
+.title{font-size:14px;font-weight:900;letter-spacing:.03em;white-space:nowrap}
+.rule{font-size:12px;font-weight:750;opacity:.75;white-space:nowrap}
+#stage{position:relative;flex:1;overflow:hidden;display:flex;align-items:center;justify-content:center}
+#sheet{display:block;max-width:none;max-height:none;transform-origin:center center;user-select:none;-webkit-user-drag:none;touch-action:none;box-shadow:0 14px 44px rgba(58,38,24,.16);border-radius:10px}
+#controls{position:absolute;right:max(12px,env(safe-area-inset-right));bottom:max(12px,env(safe-area-inset-bottom));display:flex;gap:8px;z-index:4}
+button{width:48px;height:48px;border-radius:14px;border:1px solid #d7cec5;background:rgba(255,255,255,.95);font-size:22px;font-weight:900;color:#2f211a}
+#reset{width:auto;padding:0 14px;font-size:13px}
+.rotate{display:none;position:absolute;inset:0;background:#f7f3ec;z-index:20;align-items:center;justify-content:center;text-align:center;font-weight:800;padding:30px}
+@media (orientation:portrait) and (max-width:900px){.rotate{display:flex}}
+@media (max-height:500px){#bar{height:48px}.title{font-size:12px}.rule{font-size:11px}button{width:44px;height:44px}}
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="bar">
+    <div class="title">YUPI v2 — OFFICIËLE VISUELE TEST</div>
+    <div class="rule">3 poten · 2 achter · 1 rechter voor</div>
+  </div>
+  <div id="stage">
+    <img id="sheet" src="./assets/yupi/pup/v2/character-sheet.png" alt="Goedgekeurde Yupi v2 character sheet">
+    <div id="controls">
+      <button id="minus" aria-label="Uitzoomen">−</button>
+      <button id="reset">PASSEND</button>
+      <button id="plus" aria-label="Inzoomen">+</button>
+    </div>
+  </div>
+  <div class="rotate">↻<br><br>Draai je iPhone horizontaal</div>
+</div>
+<script>
+(()=>{
+const stage=document.getElementById("stage");
+const img=document.getElementById("sheet");
+let scale=1,fitScale=1,tx=0,ty=0;
+let drag=null;
+
+function fit(){
+  if(!img.naturalWidth)return;
+  const pad=24;
+  fitScale=Math.min((stage.clientWidth-pad)/img.naturalWidth,(stage.clientHeight-pad)/img.naturalHeight);
+  scale=fitScale;tx=0;ty=0;apply();
+}
+function apply(){
+  img.style.width=img.naturalWidth+"px";
+  img.style.height=img.naturalHeight+"px";
+  img.style.transform=`translate(${tx}px,${ty}px) scale(${scale})`;
+}
+function zoom(f){
+  scale=Math.max(fitScale*.8,Math.min(fitScale*3.2,scale*f));
+  apply();
+}
+img.addEventListener("load",fit);
+addEventListener("resize",fit);
+document.getElementById("plus").onclick=()=>zoom(1.2);
+document.getElementById("minus").onclick=()=>zoom(1/1.2);
+document.getElementById("reset").onclick=fit;
+
+stage.addEventListener("pointerdown",e=>{
+  if(e.target.closest("button"))return;
+  drag={x:e.clientX,y:e.clientY,tx,ty};
+  stage.setPointerCapture?.(e.pointerId);
+});
+stage.addEventListener("pointermove",e=>{
+  if(!drag)return;
+  tx=drag.tx+(e.clientX-drag.x);
+  ty=drag.ty+(e.clientY-drag.y);
+  apply();
+});
+["pointerup","pointercancel"].forEach(ev=>stage.addEventListener(ev,()=>drag=null));
+})();
+</script>
+</body>
+</html>

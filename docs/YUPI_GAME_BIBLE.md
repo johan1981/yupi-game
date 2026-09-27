@@ -112,7 +112,9 @@ Deze regels gelden voor Yupi en moeten in alle relevante versies bewust worden b
 
 - Yupi is een reu
 - Yupi is bruin in zijn hoofdvorm
+- Yupi heeft **exact drie poten**: twee achterpoten en één rechter voorpoot
 - Yupi mist zijn **linker voorpoot volledig tot aan de schouder**
+- er is **geen stomp, gedeeltelijke poot of extra uitsteeksel** aan de linker voorzijde
 - zijn beperking wordt niet als zielig of als hoofdidentiteit behandeld
 - Yupi is nieuwsgierig, eigenwijs, warm en moedig
 - Yupi moet een herkenbaar silhouet hebben
@@ -175,7 +177,9 @@ Hij is het hoofdpersonage van:
 - warme lichte accenten rond snuit en borst
 - rechteroor / één oor gedeeltelijk hangend
 - ander oor rechtop
+- exact drie poten: twee achterpoten en één rechter voorpoot
 - linker voorpoot ontbreekt volledig tot de schouder
+- geen stompje of gedeeltelijke linker voorpoot
 - vriendelijk en nieuwsgierig uiterlijk
 
 ## Karakter
@@ -221,7 +225,11 @@ waaronder:
 - `startled.png`
 - `sad-searching.png`
 
-Deze bestanden zijn vanaf nu de visuele referentie voor Pup Yupi.
+Deze bestanden blijven bruikbare sprite-/bewegingsreferenties. De actuele officiële visuele ontwerp-basis voor Pup Yupi v2 staat in:
+
+`assets/yupi/pup/v2/character-sheet.png`
+
+Deze v2-sheet is leidend voor vorm, kop, oren, verhoudingen, vacht en de vaste driepotige anatomie.
 
 ---
 
@@ -864,7 +872,8 @@ Dat voorkomt dat verhaal, GitHub-code en illustraties uiteen gaan lopen.
 - side-scroller / 2.5D richting
 - iPhone als belangrijk doelplatform
 - Level 1 heet **De Laatste Rit**
-- Pup Yupi character design
+- Pup Yupi character design v2 (`assets/yupi/pup/v2/character-sheet.png`)
+- harde anatomische regel: exact 3 poten — 2 achter, 1 rechter voor, links voor volledig afwezig tot aan de schouder
 - Pup Yupi sprite-assets
 - meerdere Yupi-vormen maken deel uit van het grotere verhaal
 - Nox is een robothond
