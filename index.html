@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#07111d">
+<link rel="manifest" href="./manifest.webmanifest">
+<title>Yupi: Nexus Breuk</title>
+<style>
+:root{--bg:#07111d;--cyan:#6ee7ff;--vio:#a86cff;--panel:#0b1d2ecc}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#040a11;color:#eef8ff;font-family:system-ui,-apple-system,Segoe UI,sans-serif;touch-action:none}
+.screen{position:fixed;inset:0;display:none}.screen.active{display:flex}
+#start,#win{align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:24px;background:radial-gradient(circle at 50% 35%,#173450,#06101a 70%)}
+.logo{font-size:clamp(56px,17vw,150px);font-weight:1000;letter-spacing:.12em;line-height:.8;text-shadow:0 0 28px #4de8ff77}
+.sub{margin-top:16px;letter-spacing:.45em;color:var(--cyan);font-weight:900}
+p{max-width:650px;color:#bdd0dd}
+button{font:inherit;color:#fff;border:1px solid #79eaff;background:#10263a;border-radius:16px;font-weight:850}
+.primary{margin-top:18px;padding:17px 25px;font-size:18px;background:linear-gradient(135deg,#0f8cae,#7d42bd);box-shadow:0 0 28px #4de8ff33}
+.hint{margin-top:24px;color:#89a7bb;font-size:14px}
+#gameScreen{background:#07111d}
+canvas{width:100%;height:100%;display:block}
+#hud{position:absolute;z-index:5;top:max(10px,env(safe-area-inset-top));left:max(10px,env(safe-area-inset-left));right:max(10px,env(safe-area-inset-right));display:flex;justify-content:space-between;pointer-events:none}
+.badge{background:#07131fe0;border:1px solid #29465d;border-radius:12px;padding:8px 11px;font-weight:900;font-size:13px}
+#msg{position:absolute;z-index:6;top:15%;left:50%;transform:translateX(-50%);padding:10px 14px;border-radius:12px;background:#07131fea;border:1px solid #41647a;font-weight:850;opacity:0;transition:.2s;white-space:nowrap}
+#msg.show{opacity:1}
+#touch{position:absolute;z-index:10;left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));bottom:max(12px,env(safe-area-inset-bottom));display:flex;justify-content:space-between;align-items:end}
+.pad{width:150px;height:150px;border-radius:50%;border:1px solid #65dff677;background:#0b203199;position:relative;touch-action:none}
+.stick{position:absolute;width:64px;height:64px;border-radius:50%;background:#56dff0bb;left:43px;top:43px;box-shadow:0 0 24px #5defff66}
+.actions{display:flex;align-items:end;gap:10px}
+.action{width:78px;height:78px;border-radius:50%;background:#502882cc}.action.small{width:62px;height:62px;border-radius:18px;background:#153752cc}
+.rotate{display:none;position:absolute;inset:0;z-index:30;background:#050b12;align-items:center;justify-content:center;text-align:center;padding:30px;font-size:20px;font-weight:800}
+@media (orientation:portrait) and (max-width:900px){.rotate{display:flex}}
+@media (pointer:fine){#touch{display:none}}
+</style>
+</head>
+<body>
+<section id="start" class="screen active">
+  <div class="logo">YUPI</div><div class="sub">NEXUS BREUK</div>
+  <p>De werkelijkheid breekt. Vind de drie Nexus-fragmenten, ontwijk de drones en bereik samen met Nox het portaal.</p>
+  <button id="startBtn" class="primary" type="button">START LEVEL: DE DOORBRAAK</button>
+  <div class="hint">iPhone: draai je toestel horizontaal. Computer: WASD/pijltjes, Shift en spatie.</div>
+</section>
+<section id="gameScreen" class="screen">
+  <div id="hud"><div class="badge" id="hp">♥ ♥ ♥</div><div class="badge" id="fr">FRAGMENTEN 0 / 3</div></div>
+  <canvas id="game"></canvas><div id="msg"></div>
+  <div id="touch"><div class="pad" id="pad"><div class="stick" id="stick"></div></div>
+    <div class="actions"><button class="action small" id="sprint">SPRINT</button><button class="action" id="pulse">PULS</button></div>
+  </div>
+  <div class="rotate">↻<br><br>Draai je iPhone horizontaal om Yupi te spelen.</div>
+</section>
+<section id="win" class="screen"><div class="logo" style="font-size:clamp(38px,10vw,90px)">DOORBRAAK</div><h1>Het portaal is open.</h1><p>Yupi en Nox hebben de eerste breuk overleefd.</p><button id="again" class="primary">OPNIEUW</button></section>
+<script>
+(()=>{
+const $=s=>document.querySelector(s), start=$("#start"), gs=$("#gameScreen"), win=$("#win"), cv=$("#game"), ctx=cv.getContext("2d"), msg=$("#msg");
+const hpEl=$("#hp"), frEl=$("#fr"); let running=false,last=0,keys={},joy={x:0,y:0},sprint=false,pulse=false,pulseCd=0,wave=0;
+const world={w:1800,h:1100}, p={x:220,y:540,r:24,hp:3,fr:0,a:0,inv:0}, nox={x:150,y:610};
+const fragments=[{x:570,y:220,t:0},{x:1010,y:800,t:0},{x:1380,y:260,t:0}];
+const drones=[{x:680,y:470,vx:95,vy:60,s:0},{x:1170,y:430,vx:-85,vy:70,s:0},{x:1350,y:820,vx:80,vy:-60,s:0},{x:960,y:230,vx:70,vy:80,s:0}];
+const walls=[{x:420,y:100,w:38,h:430},{x:420,y:690,w:38,h:300},{x:780,y:0,w:36,h:330},{x:780,y:510,w:36,h:430},{x:1120,y:170,w:36,h:540},{x:1470,y:0,w:36,h:300},{x:1470,y:500,w:36,h:500}];
+const portal={x:1600,y:545,r:72,open:false};
+function resize(){const d=Math.min(devicePixelRatio||1,2);cv.width=Math.max(700,innerWidth*d);cv.height=Math.max(400,innerHeight*d)} addEventListener("resize",resize);resize();
+function say(t){msg.textContent=t;msg.classList.add("show");clearTimeout(say.t);say.t=setTimeout(()=>msg.classList.remove("show"),1300)}
+function reset(){Object.assign(p,{x:220,y:540,hp:3,fr:0,a:0,inv:0});Object.assign(nox,{x:150,y:610});fragments.forEach(f=>f.t=0);portal.open=false;hpEl.textContent="♥ ♥ ♥";frEl.textContent="FRAGMENTEN 0 / 3"}
+function begin(){reset();start.classList.remove("active");win.classList.remove("active");gs.classList.add("active");running=true;say("Vind de 3 Nexus-fragmenten")}
+$("#startBtn").addEventListener("pointerup",e=>{e.preventDefault();begin()});$("#startBtn").addEventListener("click",begin);$("#again").addEventListener("click",begin);
+addEventListener("keydown",e=>{keys[e.key]=1;if([" ","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].includes(e.key))e.preventDefault()});addEventListener("keyup",e=>keys[e.key]=0);
+function coll(x,y,r,w){let nx=Math.max(w.x,Math.min(x,w.x+w.w)),ny=Math.max(w.y,Math.min(y,w.y+w.h));return (x-nx)**2+(y-ny)**2<r*r}
+function move(dx,dy){let ox=p.x,oy=p.y;p.x=Math.max(p.r,Math.min(world.w-p.r,p.x+dx));if(walls.some(w=>coll(p.x,p.y,p.r,w)))p.x=ox;p.y=Math.max(p.r,Math.min(world.h-p.r,p.y+dy));if(walls.some(w=>coll(p.x,p.y,p.r,w)))p.y=oy}
+function firePulse(){if(pulseCd>0)return;pulseCd=1.15;wave=.22;drones.forEach(d=>{if(Math.hypot(d.x-p.x,d.y-p.y)<190)d.s=2.4});say("Nexus-puls!")}
+$("#pulse").addEventListener("pointerdown",e=>{e.preventDefault();firePulse()});
+$("#sprint").addEventListener("pointerdown",e=>{e.preventDefault();sprint=true});["pointerup","pointercancel","pointerleave"].forEach(ev=>$("#sprint").addEventListener(ev,()=>sprint=false));
+const pad=$("#pad"),stick=$("#stick");function joyAt(e){const r=pad.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2,dx=e.clientX-cx,dy=e.clientY-cy,m=Math.hypot(dx,dy),max=48;if(m>max){dx*=max/m;dy*=max/m}joy.x=dx/max;joy.y=dy/max;stick.style.transform="translate("+dx+"px,"+dy+"px)"}
+pad.addEventListener("pointerdown",e=>{pad.setPointerCapture(e.pointerId);joyAt(e)});pad.addEventListener("pointermove",e=>{if(pad.hasPointerCapture(e.pointerId))joyAt(e)});["pointerup","pointercancel"].forEach(ev=>pad.addEventListener(ev,e=>{joy={x:0,y:0};stick.style.transform=""}));
+function update(dt){if(!running)return;p.inv=Math.max(0,p.inv-dt);pulseCd=Math.max(0,pulseCd-dt);wave=Math.max(0,wave-dt);let dx=joy.x,dy=joy.y;if(keys.a||keys.ArrowLeft)dx--;if(keys.d||keys.ArrowRight)dx++;if(keys.w||keys.ArrowUp)dy--;if(keys.s||keys.ArrowDown)dy++;let m=Math.hypot(dx,dy);if(m>.08){dx/=Math.max(1,m);dy/=Math.max(1,m);p.a=Math.atan2(dy,dx);let sp=225*((sprint||keys.Shift)?1.7:1);move(dx*sp*dt,dy*sp*dt)}
+if(keys[" "]){keys[" "]=0;firePulse()} nox.x+=(p.x-Math.cos(p.a)*78-nox.x)*Math.min(1,dt*3.5);nox.y+=(p.y-Math.sin(p.a)*78-nox.y)*Math.min(1,dt*3.5);
+fragments.forEach(f=>{if(!f.t&&Math.hypot(f.x-p.x,f.y-p.y)<48){f.t=1;p.fr++;frEl.textContent="FRAGMENTEN "+p.fr+" / 3";say("Fragment "+p.fr+" verbonden");if(p.fr===3){portal.open=true;setTimeout(()=>say("Portaal ontgrendeld!"),300)}}});
+drones.forEach(d=>{if(d.s>0){d.s-=dt;return}d.x+=d.vx*dt;d.y+=d.vy*dt;if(d.x<510||d.x>1540)d.vx*=-1;if(d.y<100||d.y>990)d.vy*=-1;if(Math.hypot(d.x-p.x,d.y-p.y)<48&&p.inv<=0){p.hp--;p.inv=1.25;hpEl.textContent="♥ ".repeat(p.hp)+"♡ ".repeat(3-p.hp);say("Yupi geraakt!");if(p.hp<=0)setTimeout(reset,500)}});if(portal.open&&Math.hypot(portal.x-p.x,portal.y-p.y)<100){running=false;gs.classList.remove("active");win.classList.add("active")}}
+function cam(){return{x:Math.max(0,Math.min(world.w-cv.width,p.x-cv.width/2)),y:Math.max(0,Math.min(world.h-cv.height,p.y-cv.height/2))}}
+function dog(x,y,a){ctx.save();ctx.translate(x,y);ctx.rotate(a);if(p.inv&&Math.floor(p.inv*12)%2)ctx.globalAlpha=.3;ctx.fillStyle="#8b4f2b";ctx.beginPath();ctx.ellipse(0,0,34,22,0,0,7);ctx.fill();ctx.beginPath();ctx.arc(26,-10,19,0,7);ctx.fill();ctx.fillStyle="#65341f";ctx.beginPath();ctx.moveTo(28,-27);ctx.lineTo(40,-47);ctx.lineTo(42,-20);ctx.fill();ctx.beginPath();ctx.moveTo(17,-26);ctx.lineTo(8,-43);ctx.lineTo(12,-18);ctx.fill();ctx.fillStyle="#e2ae84";ctx.beginPath();ctx.ellipse(40,-7,12,8,0,0,7);ctx.fill();ctx.fillStyle="#111";ctx.beginPath();ctx.arc(49,-8,3,0,7);ctx.fill();ctx.fillStyle="#bff5ff";ctx.beginPath();ctx.arc(30,-13,3,0,7);ctx.fill();ctx.strokeStyle="#8b4f2b";ctx.lineWidth=10;ctx.lineCap="round";[[10,15,13,36],[-14,16,-18,37],[-27,10,-33,31]].forEach(q=>{ctx.beginPath();ctx.moveTo(q[0],q[1]);ctx.lineTo(q[2],q[3]);ctx.stroke()});ctx.restore()}
+function draw(){const c=cam();ctx.fillStyle="#07111d";ctx.fillRect(0,0,cv.width,cv.height);ctx.save();ctx.translate(-c.x,-c.y);for(let x=0;x<world.w;x+=80)for(let y=0;y<world.h;y+=80){ctx.fillStyle=((x+y)/80)%2?"#081725":"#0a1b2a";ctx.fillRect(x,y,80,80)}ctx.strokeStyle="#8a53df55";ctx.lineWidth=7;ctx.beginPath();ctx.moveTo(860,0);ctx.lineTo(920,230);ctx.lineTo(845,430);ctx.lineTo(940,680);ctx.lineTo(860,1100);ctx.stroke();walls.forEach(w=>{ctx.fillStyle="#2a5368";ctx.fillRect(w.x,w.y,w.w,w.h)});
+fragments.forEach((f,i)=>{if(f.t)return;ctx.save();ctx.translate(f.x,f.y);ctx.rotate(performance.now()/550+i);ctx.shadowBlur=25;ctx.shadowColor="#b16cff";ctx.fillStyle="#bd7cff";ctx.beginPath();ctx.moveTo(0,-23);ctx.lineTo(18,0);ctx.lineTo(0,23);ctx.lineTo(-18,0);ctx.closePath();ctx.fill();ctx.restore()});
+ctx.save();ctx.translate(portal.x,portal.y);ctx.strokeStyle=portal.open?"#6eeaff":"#38505d";ctx.lineWidth=12;ctx.shadowBlur=portal.open?35:0;ctx.shadowColor="#a45cff";ctx.beginPath();ctx.arc(0,0,portal.r,0,7);ctx.stroke();ctx.restore();
+drones.forEach(d=>{ctx.save();ctx.translate(d.x,d.y);ctx.fillStyle=d.s>0?"#71e9ff":"#e15570";ctx.shadowBlur=16;ctx.shadowColor=ctx.fillStyle;ctx.beginPath();ctx.arc(0,0,23,0,7);ctx.fill();ctx.fillStyle="#14202a";ctx.fillRect(-10,-4,20,8);ctx.restore()});
+ctx.save();ctx.translate(nox.x,nox.y);ctx.fillStyle="#607784";ctx.fillRect(-18,-12,34,24);ctx.fillStyle="#72eaff";ctx.fillRect(6,-5,16,8);ctx.restore();dog(p.x,p.y,p.a);if(wave){ctx.strokeStyle="#74edffcc";ctx.lineWidth=8;ctx.beginPath();ctx.arc(p.x,p.y,30+(1-wave/.22)*170,0,7);ctx.stroke()}ctx.fillStyle="#b7d8e8";ctx.font="700 22px system-ui";ctx.fillText("LAB 13 – NIET BETREDEN",510,82);ctx.restore()}
+function loop(t){let dt=Math.min(.033,(t-last)/1000||0);last=t;update(dt);draw();requestAnimationFrame(loop)}requestAnimationFrame(loop);
+if("serviceWorker"in navigator)navigator.serviceWorker.register("./sw.js").catch(()=>{});
+})();
+</script>
+</body></html>
