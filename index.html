@@ -138,52 +138,91 @@ function platformDraw(q){
  ctx.strokeStyle="#15272c";ctx.lineWidth=5;for(let x=q.x+30;x<q.x+q.w;x+=80){ctx.beginPath();ctx.moveTo(x,q.y+15);ctx.lineTo(x+28,q.y+55);ctx.stroke()}
 }
 function dog(x,y,face){
- const speed=Math.abs(p.vx),run=speed>35&&p.on,air=!p.on,phase=performance.now()/95;
- const step=run?Math.sin(phase):0,bodyBob=run?Math.abs(Math.sin(phase))*2:0;
- const squash=p.land>0?1.13:1,stretch=air?.94:1;
- ctx.save();ctx.translate(x+29,y+33+bodyBob);ctx.scale(face,1);ctx.scale(stretch,squash);
+ const speed=Math.abs(p.vx),run=speed>35&&p.on,air=!p.on,phase=performance.now()/90;
+ const step=run?Math.sin(phase):0,bob=run?Math.abs(Math.sin(phase))*2.4:0;
+ const squash=p.land>0?1.10:1,stretch=air?.95:1;
+ ctx.save();ctx.translate(x+30,y+31+bob);ctx.scale(face,1);ctx.scale(stretch,squash);
  if(p.inv&&Math.floor(p.inv*12)%2)ctx.globalAlpha=.35;
- ctx.shadowBlur=14;ctx.shadowColor="#0008";
+ ctx.shadowBlur=18;ctx.shadowColor="#0009";
  // tail
- ctx.strokeStyle="#9b572f";ctx.lineWidth=8;ctx.lineCap="round";ctx.beginPath();ctx.moveTo(-27,-3);ctx.quadraticCurveTo(-44,-18-step*3,-50,-7);ctx.stroke();
- // body + head
- ctx.fillStyle="#9b572f";ctx.beginPath();ctx.ellipse(0,2,31,20,0,0,7);ctx.fill();
- ctx.beginPath();ctx.arc(24,-10,18,0,7);ctx.fill();
- // ears, one slightly hanging
- ctx.fillStyle="#61351f";ctx.beginPath();ctx.moveTo(21,-25);ctx.lineTo(30,-44);ctx.lineTo(35,-20);ctx.fill();
- ctx.beginPath();ctx.moveTo(9,-24);ctx.quadraticCurveTo(-1,-32,4,-15);ctx.lineTo(13,-18);ctx.fill();
- // muzzle/eye
- ctx.fillStyle="#d9a77e";ctx.beginPath();ctx.ellipse(37,-7,11,7,0,0,7);ctx.fill();ctx.fillStyle="#10161a";ctx.beginPath();ctx.arc(45,-8,3,0,7);ctx.fill();
- ctx.fillStyle="#8ee9ff";ctx.beginPath();ctx.arc(27,-13,3,0,7);ctx.fill();
- // harness
- ctx.strokeStyle="#183b4a";ctx.lineWidth=5;ctx.beginPath();ctx.moveTo(-8,-15);ctx.lineTo(22,8);ctx.stroke();
- // legs: three only; left front leg is absent to shoulder
- ctx.strokeStyle="#9b572f";ctx.lineWidth=9;ctx.lineCap="round";
+ ctx.strokeStyle="#8e4c28";ctx.lineWidth=9;ctx.lineCap="round";ctx.beginPath();ctx.moveTo(-28,-2);ctx.quadraticCurveTo(-48,-20-step*4,-54,-8);ctx.stroke();
+ // body with highlight
+ let bg=ctx.createLinearGradient(-30,-18,30,20);bg.addColorStop(0,"#6f351d");bg.addColorStop(.45,"#a95f32");bg.addColorStop(1,"#c77a43");
+ ctx.fillStyle=bg;ctx.beginPath();ctx.ellipse(-1,2,33,21,0,0,Math.PI*2);ctx.fill();
+ ctx.fillStyle="#d98a4d55";ctx.beginPath();ctx.ellipse(4,-5,20,8,0,0,Math.PI*2);ctx.fill();
+ // neck/head
+ ctx.fillStyle="#9f582f";ctx.beginPath();ctx.ellipse(22,-8,19,21,-.12,0,Math.PI*2);ctx.fill();
+ ctx.fillStyle="#b96b3b";ctx.beginPath();ctx.arc(28,-12,18,0,Math.PI*2);ctx.fill();
+ // ears: one upright, one half-hanging
+ ctx.fillStyle="#542d20";ctx.beginPath();ctx.moveTo(26,-28);ctx.lineTo(34,-49);ctx.lineTo(39,-24);ctx.closePath();ctx.fill();
+ ctx.beginPath();ctx.moveTo(13,-27);ctx.quadraticCurveTo(1,-37,5,-18);ctx.quadraticCurveTo(12,-14,17,-21);ctx.closePath();ctx.fill();
+ // muzzle
+ ctx.fillStyle="#e4b089";ctx.beginPath();ctx.ellipse(42,-8,12,8,.05,0,Math.PI*2);ctx.fill();
+ ctx.fillStyle="#111";ctx.beginPath();ctx.arc(51,-9,3.3,0,Math.PI*2);ctx.fill();
+ // eye
+ ctx.fillStyle="#f5f1dd";ctx.beginPath();ctx.arc(33,-15,4.8,0,Math.PI*2);ctx.fill();
+ ctx.fillStyle="#17232a";ctx.beginPath();ctx.arc(34,-15,2.5,0,Math.PI*2);ctx.fill();
+ // harness + nexus light
+ ctx.strokeStyle="#142832";ctx.lineWidth=6;ctx.beginPath();ctx.moveTo(-10,-16);ctx.lineTo(19,8);ctx.stroke();
+ ctx.fillStyle="#173846";ctx.beginPath();ctx.arc(1,-8,7.5,0,Math.PI*2);ctx.fill();
+ ctx.shadowBlur=14;ctx.shadowColor="#58e8ff";ctx.fillStyle="#58e8ff";ctx.beginPath();ctx.arc(1,-8,3.6,0,Math.PI*2);ctx.fill();
+ ctx.shadowBlur=0;
+ // three legs only; front-left completely absent
+ ctx.strokeStyle="#9f582f";ctx.lineWidth=10;ctx.lineCap="round";
  let legs;
- if(air) legs=[[7,15,18,22],[-15,15,-27,18],[-28,8,-38,1]];
- else if(run) legs=[[7,16,11+step*10,31],[-14,15,-20-step*11,31],[-27,9,-34+step*8,27]];
- else legs=[[6,17,8,31],[-16,15,-20,31],[-28,8,-34,27]];
+ if(air) legs=[[11,15,25,18],[-13,15,-29,17],[-27,8,-39,3]];
+ else if(run) legs=[[9,16,14+step*11,32],[-13,16,-20-step*12,32],[-27,9,-35+step*9,28]];
+ else legs=[[8,17,10,32],[-15,16,-20,32],[-28,9,-35,28]];
  legs.forEach(a=>{ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(a[2],a[3]);ctx.stroke()});
  ctx.restore()
 }
+
 function drawNox(x,y){
- const moving=Math.abs(p.vx)>35,air=!nox.on,phase=nox.bob,bob=moving&&nox.on?Math.abs(Math.sin(phase))*2:0,step=moving?Math.sin(phase):0;
+ const moving=Math.abs(p.vx)>35,air=!nox.on,phase=nox.bob,bob=moving&&nox.on?Math.abs(Math.sin(phase))*2.1:0,step=moving?Math.sin(phase):0;
  ctx.save();ctx.translate(x,y+bob);ctx.scale(nox.face,1);
- ctx.shadowBlur=18;ctx.shadowColor="#63e9ff";
- // tail antenna
- ctx.strokeStyle="#8fa6af";ctx.lineWidth=4;ctx.beginPath();ctx.moveTo(-18,-7);ctx.lineTo(-31,-17-step*3);ctx.stroke();ctx.fillStyle="#63e9ff";ctx.beginPath();ctx.arc(-32,-18-step*3,3,0,7);ctx.fill();
- // body/head
- ctx.fillStyle="#d6e4e8";ctx.fillRect(-20,-13,35,22);ctx.fillStyle="#15252e";ctx.fillRect(-7,-20,24,19);
- ctx.fillStyle="#63e9ff";ctx.beginPath();ctx.arc(10,-11,5,0,7);ctx.fill();
- ctx.fillStyle="#31434b";ctx.fillRect(-13,-7,13,5);
- // animated legs
- ctx.strokeStyle="#d6e4e8";ctx.lineWidth=6;ctx.lineCap="round";
- const legs=air?[[-12,8,-24,12],[9,8,22,12]]:[[-12,8,-20-step*8,20],[9,8,18+step*8,19]];
- legs.forEach(a=>{ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(a[2],a[3]);ctx.stroke()});
- // jump thruster glow
- if(air){ctx.fillStyle="#63e9ff88";ctx.beginPath();ctx.moveTo(-7,10);ctx.lineTo(0,27);ctx.lineTo(7,10);ctx.fill()}
+ // overall metallic body
+ ctx.shadowBlur=18;ctx.shadowColor="#43e7ff";
+ let metal=ctx.createLinearGradient(-35,-25,35,25);metal.addColorStop(0,"#18242a");metal.addColorStop(.45,"#3d4b51");metal.addColorStop(1,"#202b30");
+ ctx.fillStyle=metal;
+ ctx.beginPath();ctx.ellipse(-3,-3,29,18,0,0,Math.PI*2);ctx.fill();
+ // rear armor
+ ctx.beginPath();ctx.ellipse(-24,-1,15,17,0,0,Math.PI*2);ctx.fill();
+ // neck/head
+ ctx.fillStyle="#26353b";ctx.fillRect(13,-16,10,14);
+ ctx.beginPath();ctx.ellipse(28,-17,18,16,0,0,Math.PI*2);ctx.fill();
+ // muzzle
+ ctx.fillStyle="#1b272c";ctx.beginPath();ctx.roundRect(31,-16,20,12,5);ctx.fill();
+ ctx.fillStyle="#0c1317";ctx.beginPath();ctx.arc(50,-11,3,0,Math.PI*2);ctx.fill();
+ // ears
+ ctx.fillStyle="#152127";ctx.beginPath();ctx.moveTo(20,-29);ctx.lineTo(24,-48);ctx.lineTo(31,-29);ctx.closePath();ctx.fill();
+ ctx.beginPath();ctx.moveTo(34,-30);ctx.lineTo(41,-47);ctx.lineTo(45,-25);ctx.closePath();ctx.fill();
+ // cyan eyes
+ ctx.shadowBlur=16;ctx.shadowColor="#5eeeff";ctx.fillStyle="#5eeeff";
+ ctx.beginPath();ctx.arc(31,-19,4.5,0,Math.PI*2);ctx.fill();
+ ctx.beginPath();ctx.arc(42,-18,4.2,0,Math.PI*2);ctx.fill();
+ // chest/tail lights
+ ctx.fillStyle="#5eeeff";ctx.fillRect(7,-7,12,3);
+ ctx.strokeStyle="#5eeeff";ctx.lineWidth=4;ctx.beginPath();ctx.moveTo(-29,-7);ctx.quadraticCurveTo(-44,-25-step*3,-49,-8);ctx.stroke();
+ ctx.shadowBlur=0;
+ // plate seams
+ ctx.strokeStyle="#647980";ctx.lineWidth=2;
+ ctx.beginPath();ctx.arc(-3,-3,16,0,Math.PI*2);ctx.stroke();
+ ctx.beginPath();ctx.arc(-24,-1,9,0,Math.PI*2);ctx.stroke();
+ // NO-X marking
+ ctx.fillStyle="#9fb2b8";ctx.font="700 8px system-ui";ctx.fillText("NO-X",-10,0);
+ // four articulated legs
+ const frontA=air?[18,7,31,13]:[17,7,22+step*8,25];
+ const frontB=air?[7,9,18,16]:[7,9,12-step*8,26];
+ const rearA=air?[-17,8,-29,15]:[-17,8,-22+step*8,26];
+ const rearB=air?[-28,7,-39,12]:[-28,7,-34-step*8,24];
+ ctx.strokeStyle="#3b4a50";ctx.lineWidth=7;ctx.lineCap="round";
+ [frontA,frontB,rearA,rearB].forEach(a=>{ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(a[2],a[3]);ctx.stroke();ctx.fillStyle="#1b2529";ctx.beginPath();ctx.arc(a[0],a[1],4,0,Math.PI*2);ctx.fill()});
+ // paws
+ ctx.fillStyle="#151f23";[frontA,frontB,rearA,rearB].forEach(a=>{ctx.beginPath();ctx.ellipse(a[2],a[3]+2,6,3,0,0,Math.PI*2);ctx.fill()});
+ if(air){ctx.shadowBlur=18;ctx.shadowColor="#49e7ff";ctx.fillStyle="#49e7ff99";ctx.beginPath();ctx.moveTo(-8,10);ctx.lineTo(-1,28);ctx.lineTo(6,10);ctx.closePath();ctx.fill()}
  ctx.restore()
 }
+
 function draw(){
  const w=W(),h=H();sky();ctx.save();ctx.translate(-camX,0);
  // foreground mist/water
