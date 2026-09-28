@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="theme-color" content="#ffffff">
 <link rel="manifest" href="./manifest.webmanifest">
-<title>Yupi — V2 visual & movement test</title>
+<title>Yupi — echte beweging test V3</title>
 <style>
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#fff;font-family:system-ui,-apple-system,Segoe UI,sans-serif;touch-action:none}
@@ -31,9 +31,9 @@ html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#fff;font-f
 <body>
 <div id="game">
   <div id="hud">
-    <div class="badge">PUP YUPI V2</div>
+    <div class="badge">YUPI V3 · VIDEO-REFERENTIE</div>
     <div style="display:flex;gap:8px;align-items:center">
-      <div class="badge">BEWEGINGSPROTOTYPE</div>
+      <div class="badge">ECHTE LOOPTEST</div>
       <button id="refBtn" type="button">V2 SHEET</button>
     </div>
   </div>
@@ -49,6 +49,11 @@ html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#fff;font-f
       <button id="left" class="tbtn" aria-label="Links">◀</button>
       <button id="right" class="tbtn" aria-label="Rechts">▶</button>
     </div>
+    <div class="move" style="margin-left:auto">
+      <button id="walkMode" class="tbtn" style="font-size:11px">WANDEL</button>
+      <button id="trotMode" class="tbtn" style="font-size:11px">DRAF</button>
+      <button id="sprintMode" class="tbtn" style="font-size:11px">SPRINT</button>
+    </div>
   </div>
 
   <div class="rotate">↻<br><br>Draai je iPhone horizontaal</div>
@@ -63,43 +68,42 @@ const closeRef=document.getElementById("closeRef");
 refBtn.addEventListener("click",()=>{refOverlay.classList.add("open");refOverlay.setAttribute("aria-hidden","false")});
 closeRef.addEventListener("click",()=>{refOverlay.classList.remove("open");refOverlay.setAttribute("aria-hidden","true")});
 refOverlay.addEventListener("click",e=>{if(e.target===refOverlay){refOverlay.classList.remove("open");refOverlay.setAttribute("aria-hidden","true")}});
+
 const idle="./assets/yupi/pup/walk8-headbob/idle-aligned.png";
-const walk=[
-  "./assets/yupi/pup/walk8-headbob/frame-00.png",
-  "./assets/yupi/pup/walk8-headbob/frame-01.png",
-  "./assets/yupi/pup/walk8-headbob/frame-02.png",
-  "./assets/yupi/pup/walk8-headbob/frame-03.png",
-  "./assets/yupi/pup/walk8-headbob/frame-04.png",
-  "./assets/yupi/pup/walk8-headbob/frame-05.png",
-  "./assets/yupi/pup/walk8-headbob/frame-06.png",
-  "./assets/yupi/pup/walk8-headbob/frame-07.png"
-];
+const walk=Array.from({length:8},(_,i)=>"./assets/yupi/pup/walk8-video/frame-0"+i+".png");
 [idle,...walk].forEach(src=>{const img=new Image();img.src=src});
 
-let x=120,dir=1,last=0,frame=0,frameTime=0;
+const modeCfg={
+  walk:{speed:180,fps:7.2,bob:1.0},
+  trot:{speed:285,fps:10.2,bob:1.35},
+  sprint:{speed:420,fps:13.4,bob:1.65}
+};
+const bob=[0,2,5,7,4,0,-3,-1];
+const tilt=[0,.4,.9,.35,-.35,-.75,-.45,0];
+
+let x=120,dir=1,last=0,frame=0,phase=0,velocity=0,mode="walk",turnKick=0;
 const keys={};
 const touch={l:0,r:0};
-const SPEED=260;
 const YUPI_W=220;
 
 function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
+function setMode(m){mode=m}
+document.getElementById("walkMode").addEventListener("click",()=>setMode("walk"));
+document.getElementById("trotMode").addEventListener("click",()=>setMode("trot"));
+document.getElementById("sprintMode").addEventListener("click",()=>setMode("sprint"));
+
 function bind(id,key){
   const btn=document.querySelector(id);
-  btn.addEventListener("pointerdown",e=>{
-    e.preventDefault();
-    touch[key]=1;
-    btn.setPointerCapture?.(e.pointerId);
-  });
-  ["pointerup","pointercancel","pointerleave"].forEach(ev=>{
-    btn.addEventListener(ev,()=>touch[key]=0);
-  });
+  btn.addEventListener("pointerdown",e=>{e.preventDefault();touch[key]=1;btn.setPointerCapture?.(e.pointerId)});
+  ["pointerup","pointercancel","pointerleave"].forEach(ev=>btn.addEventListener(ev,()=>touch[key]=0));
 }
-bind("#left","l");
-bind("#right","r");
+bind("#left","l");bind("#right","r");
 
 addEventListener("keydown",e=>{
-  const k=e.key.toLowerCase();
-  keys[k]=1;
+  const k=e.key.toLowerCase();keys[k]=1;
+  if(k==="1")setMode("walk");
+  if(k==="2")setMode("trot");
+  if(k==="3")setMode("sprint");
   if(k==="arrowleft"||k==="arrowright")e.preventDefault();
 });
 addEventListener("keyup",e=>keys[e.key.toLowerCase()]=0);
@@ -107,33 +111,37 @@ addEventListener("keyup",e=>keys[e.key.toLowerCase()]=0);
 function update(dt){
   const left=keys["arrowleft"]||keys["a"]||touch.l;
   const right=keys["arrowright"]||keys["d"]||touch.r;
-  const move=(right?1:0)-(left?1:0);
-  const walking=move!==0;
+  const input=(right?1:0)-(left?1:0);
+  const nextDir=input?Math.sign(input):dir;
+  if(input && nextDir!==dir){dir=nextDir;turnKick=.15}
+  turnKick=Math.max(0,turnKick-dt);
 
-  if(move){
-    dir=move;
-    x+=move*SPEED*dt;
-    x=clamp(x,0,Math.max(0,innerWidth-YUPI_W));
-    frameTime+=dt;
-    if(frameTime>.09){
-      frameTime=0;
-      frame=(frame+1)%walk.length;
-    }
+  const cfg=modeCfg[mode];
+  const target=input*cfg.speed;
+  velocity+=(target-velocity)*Math.min(1,dt*(input?7:10));
+  if(!input&&Math.abs(velocity)<4)velocity=0;
+
+  x+=velocity*dt;
+  x=clamp(x,0,Math.max(0,innerWidth-YUPI_W));
+
+  const moving=Math.abs(velocity)>8;
+  if(moving){
+    phase=(phase+dt*cfg.fps)%8;
+    frame=Math.floor(phase);
+    yupi.src=walk[frame];
+    const vertical=bob[frame]*cfg.bob;
+    const shoulder=(frame===2||frame===3)?-.8:(frame===5?.45:0);
+    const rot=(tilt[frame]+shoulder)*dir+(turnKick?dir*2.3:0);
+    yupi.style.transform="scaleX("+dir+") translateY("+vertical+"px) rotate("+rot+"deg)";
   }else{
-    frame=0;
-    frameTime=0;
+    phase=0;frame=0;yupi.src=idle;
+    yupi.style.transform="scaleX("+dir+")";
   }
-
-  yupi.src=walking?walk[frame]:idle;
   yupi.style.left=x+"px";
-  yupi.style.transform=dir<0?"scaleX(-1)":"scaleX(1)";
 }
 
 function loop(t){
-  const dt=Math.min(.033,(t-last)/1000||0);
-  last=t;
-  update(dt);
-  requestAnimationFrame(loop);
+  const dt=Math.min(.033,(t-last)/1000||0);last=t;update(dt);requestAnimationFrame(loop)
 }
 requestAnimationFrame(loop);
 })();
