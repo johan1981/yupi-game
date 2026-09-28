@@ -128,6 +128,21 @@ De driepotige beweging moet natuurlijk aanvoelen.
 
 Hij beweegt niet alsof hij "kapot" is. Zijn manier van lopen is gewoon zijn normale manier van bewegen.
 
+## Bewegingsreferentie — echte Yupi-video's
+
+De aangeleverde video's van Yupi zijn de vaste referentie voor zijn gamebeweging.
+
+- De enige rechter voorpoot draagt het voorlichaam centraal.
+- Bij de opvang zakt de schouder/voorhand zichtbaar en veert daarna weer omhoog.
+- De achterpoten leveren relatief veel afzet en voortstuwing.
+- Hoofd en nek bewegen mee met het pasritme.
+- De staart ondersteunt balans bij draaien en snelle richtingswisselingen.
+- Versnellen, stoppen en omkeren hebben een korte gewichtsverplaatsing; Yupi mag niet als een stijve sprite schuiven.
+- De animatieset omvat minimaal idle, snuffelen, wandelen, draven, sprinten, stoppen, draaien, speels bewegen, Nexus-puls, geraakt en herstellen.
+- Een standaard vierpotige hondenloop met alleen één poot weggehaald geldt niet als correcte Yupi-beweging.
+
+De map walk8-video is de eerste spritecyclus die expliciet tegen deze videoreferentie wordt getest.
+
 ---
 
 # 5. Het Yupi-DNA en de varianten
