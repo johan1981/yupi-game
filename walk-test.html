@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#08111c">
+<title>Yupi Pup — 16-frame looptest</title>
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#08111c;color:#eef8ff;font-family:system-ui,-apple-system,Segoe UI,sans-serif;touch-action:none}
+main{height:100%;display:flex;flex-direction:column;background:radial-gradient(circle at 50% 15%,#17344a 0,#08111c 55%,#050a10 100%)}
+header{padding:max(10px,env(safe-area-inset-top)) 14px 8px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+h1{font-size:16px;margin:0;letter-spacing:.04em}
+.badge{font-size:11px;font-weight:800;color:#73e8ff;border:1px solid #31566d;background:#08141fbb;padding:6px 9px;border-radius:10px}
+#stage{flex:1;position:relative;overflow:hidden;border-top:1px solid #18384c;border-bottom:1px solid #18384c;background:linear-gradient(180deg,#0d2130 0 68%,#16271f 68% 100%)}
+#ground{position:absolute;left:0;right:0;top:68%;height:2px;background:#88d7c055;box-shadow:0 0 16px #88d7c044}
+#walker{position:absolute;left:50%;top:68%;width:300px;height:261px;transform:translate(-50%,-91%);will-change:left}
+#sprite{width:300px;height:261px;background-image:url('./assets/yupi/pup/walk16-test/strip.jpg');background-repeat:no-repeat;background-size:4800px 261px;background-position:0 0;filter:drop-shadow(0 16px 9px rgba(0,0,0,.34))}
+#shadow{position:absolute;left:50%;top:68%;width:210px;height:18px;transform:translate(-50%,-6px);border-radius:50%;background:#0006;filter:blur(7px)}
+#frame{position:absolute;top:12px;left:12px;font-size:14px;font-weight:900;background:#07131fd9;border:1px solid #31566d;padding:7px 10px;border-radius:10px}
+#modeLabel{position:absolute;top:12px;right:12px;font-size:12px;font-weight:800;color:#a8c7d8}
+.controls{padding:10px max(12px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left));display:grid;grid-template-columns:auto auto auto 1fr auto;gap:8px;align-items:center;background:#07131f}
+button{border:1px solid #46677b;background:#102536;color:#fff;border-radius:12px;height:44px;padding:0 13px;font-weight:900;font-size:13px}
+button.active{border-color:#65e8ff;background:#16485d;box-shadow:0 0 16px #65e8ff33}
+input[type=range]{width:100%}
+.speed{font-size:12px;color:#b8d0dd;text-align:center}
+.note{padding:6px 14px 9px;color:#84a2b3;font-size:11px;text-align:center;background:#07131f}
+@media(max-width:700px){
+  #walker{width:255px;height:222px;transform:translate(-50%,-90%)}
+  #sprite{width:255px;height:222px;background-size:4080px 222px}
+  .controls{grid-template-columns:auto auto auto 1fr}
+  #moveBtn{grid-column:1/-1}
+  header h1{font-size:14px}
+}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>YUPI PUP · 16-FRAME WALK CYCLE</h1>
+  <div class="badge">VASTE YUPI PUP DESIGN</div>
+</header>
+<section id="stage">
+  <div id="ground"></div>
+  <div id="shadow"></div>
+  <div id="walker"><div id="sprite"></div></div>
+  <div id="frame">FRAME 1 / 16</div>
+  <div id="modeLabel">LOOP IN PLAATS</div>
+</section>
+<div class="controls">
+  <button id="prev">◀ FRAME</button>
+  <button id="play" class="active">PAUZE</button>
+  <button id="next">FRAME ▶</button>
+  <div><input id="fps" type="range" min="3" max="16" step="1" value="8"><div id="speed" class="speed">8 fps</div></div>
+  <button id="moveBtn">LOOP OVER SCHERM</button>
+</div>
+<div class="note">Alleen beweging testen. Uiterlijk blijft Yupi Pup Design. Gebruik FRAME ◀/▶ om een fout exact aan te wijzen.</div>
+</main>
+<script>
+(()=>{
+const sprite=document.getElementById('sprite');
+const walker=document.getElementById('walker');
+const frameEl=document.getElementById('frame');
+const fpsEl=document.getElementById('fps');
+const speedEl=document.getElementById('speed');
+const playBtn=document.getElementById('play');
+const modeLabel=document.getElementById('modeLabel');
+const moveBtn=document.getElementById('moveBtn');
+let frame=0,playing=true,fps=8,last=0,acc=0,moving=false,x=50,dir=1;
+function size(){return innerWidth<=700?255:300}
+function show(){
+  sprite.style.backgroundPositionX=(-frame*size())+'px';
+  frameEl.textContent='FRAME '+(frame+1)+' / 16';
+}
+function step(n){frame=(frame+n+16)%16;show()}
+document.getElementById('prev').onclick=()=>{playing=false;playBtn.textContent='SPEEL';playBtn.classList.remove('active');step(-1)};
+document.getElementById('next').onclick=()=>{playing=false;playBtn.textContent='SPEEL';playBtn.classList.remove('active');step(1)};
+playBtn.onclick=()=>{playing=!playing;playBtn.textContent=playing?'PAUZE':'SPEEL';playBtn.classList.toggle('active',playing)};
+fpsEl.oninput=()=>{fps=+fpsEl.value;speedEl.textContent=fps+' fps'};
+moveBtn.onclick=()=>{moving=!moving;moveBtn.classList.toggle('active',moving);moveBtn.textContent=moving?'LOOP IN PLAATS':'LOOP OVER SCHERM';modeLabel.textContent=moving?'LOOP OVER SCHERM':'LOOP IN PLAATS'};
+addEventListener('resize',show);
+function loop(t){
+  const dt=Math.min(.05,(t-last)/1000||0);last=t;
+  if(playing){
+    acc+=dt;
+    const frameTime=1/fps;
+    while(acc>=frameTime){acc-=frameTime;step(1)}
+    if(moving){
+      x+=dir*dt*(fps/8)*12;
+      if(x>82){x=82;dir=-1;sprite.style.transform='scaleX(-1)'}
+      if(x<18){x=18;dir=1;sprite.style.transform='scaleX(1)'}
+      walker.style.left=x+'%';
+    }else{
+      x=50;dir=1;walker.style.left='50%';sprite.style.transform='scaleX(1)';
+    }
+  }
+  requestAnimationFrame(loop);
+}
+show();requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>
