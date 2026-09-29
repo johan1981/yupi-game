@@ -1,23 +1,24 @@
-# Pup Yupi game assets
+# Pup Yupi assets
 
-Approved visual baseline for Level 1 — De Laatste Rit.
+Dit is de canonieke asset-root voor Pup Yupi.
 
-Files:
-- character-sheet.png — visual character reference
-- sprite-sheet.png — combined animation reference
-- idle.png
-- walk-01.png
-- walk-02.png
-- run-01.png
-- run-02.png
-- jump.png
-- sniff.png
-- bark.png
-- startled.png
-- sad-searching.png
+## Verplichte bronnen
 
-Canon:
-- brown puppy
-- male
-- left front leg absent completely to the shoulder
-- one upright ear and one partly hanging ear
+Lees vóór Yupi-beeldwerk:
+- `docs/characters/YUPI_SPEC.md`
+- `docs/characters/YUPI_SPEC.json`
+- `docs/IMAGE_GENERATION_PROTOCOL.md`
+- `docs/YUPI_ASSET_PIPELINE.md`
+
+## Structuur
+
+- `design/approved/` — goedgekeurde basisdesigns
+- `poses/` — goedgekeurde volledige poses
+- `expressions/` — goedgekeurde emoties/gezichtsuitdrukkingen
+- `sprites/` — game-ready spriteframes
+- `sprites/_prototype/` — technische, nog niet goedgekeurde tests
+- `sheets/` — samengestelde sheets uit goedgekeurde beelden
+- `archive/` — oude/experimentele assets
+- `asset-manifest.json` — machineleesbare index
+
+Wanneer Michel of Johan zegt **vastleggen**, **vastzetten** of **opslaan**, moet de goedgekeurde asset in de juiste map worden opgeslagen en moet het manifest worden bijgewerkt.
