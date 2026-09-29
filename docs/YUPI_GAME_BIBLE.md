@@ -235,7 +235,7 @@ De verplichte assetworkflow staat in:
 
 De actuele goedgekeurde visuele basis staat in:
 
-`assets/yupi/pup/design/approved/base-sheet.png`
+`assets/yupi/pup/design/approved/base-reference.jpg`
 
 Goedgekeurde poses, expressies en sprites worden gestructureerd opgeslagen en geregistreerd in:
 
@@ -884,7 +884,7 @@ Dat voorkomt dat verhaal, GitHub-code en illustraties uiteen gaan lopen.
 - side-scroller / 2.5D richting
 - iPhone als belangrijk doelplatform
 - Level 1 heet **De Laatste Rit**
-- Pup Yupi character design v2 (`assets/yupi/pup/design/approved/base-sheet.png`)
+- Pup Yupi character design v2 (`assets/yupi/pup/design/approved/base-reference.jpg`)
 - harde anatomische regel: exact 3 poten — 2 achter, 1 rechter voor, links voor volledig afwezig tot aan de schouder
 - Pup Yupi sprite-assets
 - meerdere Yupi-vormen maken deel uit van het grotere verhaal
