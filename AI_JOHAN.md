@@ -58,6 +58,27 @@ Na generatie moet dezelfde relevante specificatie opnieuw worden gebruikt voor v
 
 ---
 
+## Verplichte zichtbare-validatie vóór gebruik
+
+Voor Yupi geldt na iedere generatie een **harde acceptatiecontrole** tegen `docs/characters/YUPI_SPEC.json`.
+
+Een gegenereerd beeld mag **niet als correct, goedgekeurd, referentie of asset worden behandeld** wanneer één anatomische regel faalt.
+
+Minimaal controleren:
+- exact 3 poten;
+- rechter voorpoot aanwezig;
+- linker voorpoot volledig afwezig tot de schouder;
+- beide achterpoten aanwezig;
+- rechter oor rechtop;
+- linker oor hangend;
+- view-specifieke zichtbaarheid klopt.
+
+Voor een **linker zijaanzicht/reference view** moet de rechter voorpoot bewust zichtbaar in beeld staan. Niet accepteren wanneer perspectief die poot verbergt.
+
+Bij een fout: niet vastleggen, niet promoveren, opnieuw maken als los aanzicht.
+
+---
+
 ## Verplichte asset-capture bij goedkeuring
 
 Wanneer Michel of Johan bij een Yupi-beeld zegt **vastleggen**, **vastzetten** of **opslaan**, geldt dit niet alleen als chatgoedkeuring.
