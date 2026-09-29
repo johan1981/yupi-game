@@ -169,7 +169,10 @@
       "vastzetten",
       "opslaan"
     ],
-    "rejected_generation_must_not_become_reference": true
+    "rejected_generation_must_not_become_reference": true,
+    "store_in_repo_immediately": true,
+    "update_asset_manifest": true,
+    "chat_only_is_not_managed_asset": true
   },
   "priority_order": [
     "docs/characters/YUPI_SPEC.md",
@@ -187,5 +190,7 @@
     "docs/characters/YUPI_SPEC.json"
   ],
   "repo_check_required_before_every_image_generation": true,
-  "post_generation_repo_validation_required": true
+  "post_generation_repo_validation_required": true,
+  "asset_pipeline": "docs/YUPI_ASSET_PIPELINE.md",
+  "asset_manifest": "assets/yupi/pup/asset-manifest.json"
 }
