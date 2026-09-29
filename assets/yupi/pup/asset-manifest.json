@@ -57,6 +57,19 @@
       "approval_basis": "Michel/Johan explicitly selected this full-body design as the design to keep ('Dit ontwerp aanhouden').",
       "source_reference": "75F1FA34-806F-4C92-8B3A-75224D88A121.jpeg",
       "notes": "Canonical full-body visual base. Right ear upright, left ear floppy, right foreleg present, left foreleg absent completely to shoulder."
+    },
+    {
+      "id": "yupi-pup-asset-registration-sheet",
+      "type": "sheet",
+      "subtype": "asset-registration",
+      "status": "approved",
+      "path": "assets/yupi/pup/sheets/asset-registration-base.svg",
+      "related_asset_id": "yupi-pup-design-base",
+      "approval_date": "2026-09-29",
+      "approval_basis": "Michel explicitly approved the readable asset-registration sheet layout ('Vastleggen').",
+      "source_reference": "yupi_pup_assetregistratie_voorbeeld_v3.png",
+      "format": "svg",
+      "notes": "Approved registration layout with readable right-side repo data, hard anatomy gate and workflow. Uses the canonical base-reference without regenerating Yupi."
     }
   ],
   "prototypes": [
