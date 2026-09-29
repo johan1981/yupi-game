@@ -143,7 +143,7 @@ De aangeleverde video's van Yupi zijn de vaste referentie voor zijn gamebeweging
 - De animatieset omvat minimaal idle, snuffelen, wandelen, draven, sprinten, stoppen, draaien, speels bewegen, Nexus-puls, geraakt en herstellen.
 - Een standaard vierpotige hondenloop met alleen één poot weggehaald geldt niet als correcte Yupi-beweging.
 
-De map walk8-video is de eerste spritecyclus die expliciet tegen deze videoreferentie wordt getest.
+De huidige videoreferentie-walktest staat als technisch prototype onder `assets/yupi/pup/sprites/_prototype/walk-right/`. Deze sequence is een bewegingsproef en geldt niet automatisch als definitieve canonieke sprite.
 
 ---
 
