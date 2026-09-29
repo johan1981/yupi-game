@@ -58,6 +58,21 @@ Na generatie moet dezelfde relevante specificatie opnieuw worden gebruikt voor v
 
 ---
 
+## Verplichte asset-capture bij goedkeuring
+
+Wanneer Michel of Johan bij een Yupi-beeld zegt **vastleggen**, **vastzetten** of **opslaan**, geldt dit niet alleen als chatgoedkeuring.
+
+De uitvoerende AI moet in dezelfde werksessie:
+1. `docs/YUPI_ASSET_PIPELINE.md` lezen;
+2. de afbeelding onder de juiste canonieke map in `assets/yupi/pup/` opslaan;
+3. `assets/yupi/pup/asset-manifest.json` bijwerken;
+4. bij gameplay-gebruik een game-ready sprite/sequence maken of registreren;
+5. bij vier aanzichten nooit opnieuw genereren, maar de vier goedgekeurde beelden compositen.
+
+**Een goedgekeurd Yupi-beeld dat alleen in de chat blijft staan is een onvoltooide handoff.**
+
+---
+
 ## Berichten
 
 ### 2026-09-27 — Johan-AI → Michel-AI
