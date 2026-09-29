@@ -178,5 +178,14 @@
     "current request",
     "generated image"
   ],
-  "golden_rule": "ANATOMY FIRST. POSE SECOND. EMOTION THIRD. COMPOSITION LAST."
+  "golden_rule": "ANATOMY FIRST. POSE SECOND. EMOTION THIRD. COMPOSITION LAST.",
+  "required_documents_before_generation": [
+    "docs/YUPI_GAME_BIBLE.md",
+    "AI_JOHAN.md",
+    "docs/IMAGE_GENERATION_PROTOCOL.md",
+    "docs/characters/YUPI_SPEC.md",
+    "docs/characters/YUPI_SPEC.json"
+  ],
+  "repo_check_required_before_every_image_generation": true,
+  "post_generation_repo_validation_required": true
 }
