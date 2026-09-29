@@ -88,6 +88,12 @@ Een beeld wordt pas referentie wanneer Michel of Johan het expliciet goedkeurt, 
 
 Afgekeurde beelden worden nooit als ontwerpbron gebruikt.
 
+## 7A. Asset-capture na goedkeuring
+
+Na expliciete goedkeuring (`vastleggen`, `vastzetten`, `opslaan`) moet de goedgekeurde Yupi-afbeelding volgens `docs/YUPI_ASSET_PIPELINE.md` in `assets/yupi/pup/` worden opgeslagen en in `asset-manifest.json` worden geregistreerd.
+
+Als het beeld voor gameplay bedoeld is, wordt een game-ready sprite of sprite-sequence gemaakt/gekoppeld. De goedgekeurde bron blijft behouden.
+
 ## 8. Prioriteit
 
 Bij conflict geldt:
