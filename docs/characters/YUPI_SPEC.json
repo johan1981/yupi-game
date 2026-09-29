@@ -110,7 +110,10 @@
       "color distribution",
       "ear shapes",
       "anatomical asymmetry"
-    ]
+    ],
+    "canonical_base_asset": "assets/yupi/pup/design/approved/base-reference.jpg",
+    "superseded_base_asset": "assets/yupi/pup/archive/legacy-v2/base-sheet.png",
+    "base_asset_approval_date": "2026-09-29"
   },
   "workflow": {
     "generation_order": [
