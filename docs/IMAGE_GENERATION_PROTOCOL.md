@@ -77,6 +77,19 @@ Bij Yupi minimaal:
 
 Bij één fout: **afkeuren en niet als referentie opslaan**.
 
+### Harde acceptatiegate
+
+De post-generation validation is geen administratieve notitie maar een verplichte gate.
+
+Een generatie die de checklist niet haalt:
+- wordt niet als correct beschreven;
+- wordt niet als goedgekeurd aangeduid;
+- wordt niet in canonieke assetmappen opgeslagen;
+- wordt niet in het manifest als approved geregistreerd;
+- wordt niet gebruikt om een sheet te bouwen.
+
+Voor reference/turnaround-views geldt daarnaast dat essentiële anatomie **zichtbaar leesbaar** moet zijn. Bij een linker zijaanzicht moet Yupi's rechter voorpoot zichtbaar aanwezig zijn en moeten beide achterpoten aanwezig/leesbaar zijn.
+
 ## 7. Goedkeuring en referenties
 
 Een beeld wordt pas referentie wanneer Michel of Johan het expliciet goedkeurt, bijvoorbeeld met:
