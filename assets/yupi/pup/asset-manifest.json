@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "character": "Yupi",
+  "form": "pup",
+  "canonical_root": "assets/yupi/pup",
+  "source_of_truth": [
+    "docs/characters/YUPI_SPEC.md",
+    "docs/characters/YUPI_SPEC.json",
+    "docs/IMAGE_GENERATION_PROTOCOL.md",
+    "docs/YUPI_ASSET_PIPELINE.md"
+  ],
+  "approval": {
+    "phrases": [
+      "vastleggen",
+      "vastzetten",
+      "opslaan"
+    ],
+    "action": "store approved asset in canonical folder and update this manifest in the same work session",
+    "chat_only_is_not_managed_asset": true
+  },
+  "conventions": {
+    "views": [
+      "front",
+      "right",
+      "left",
+      "back"
+    ],
+    "laterality": "Yupi's own body",
+    "frame_pattern": "frame-NNN.png",
+    "automatic_mirroring_forbidden": true,
+    "canonical_names_forbid": [
+      "final",
+      "final2",
+      "latest",
+      "new"
+    ],
+    "canonical_folders_are_approved_only": true
+  },
+  "paths": {
+    "design": "design/approved/",
+    "poses": "poses/<pose>/<view>.png",
+    "expressions_head": "expressions/head/<emotion>.png",
+    "expressions_views": "expressions/<emotion>/<view>.png",
+    "sprites": "sprites/<action>/<direction>/frame-NNN.png",
+    "prototypes": "sprites/_prototype/",
+    "sheets": "sheets/",
+    "archive": "archive/"
+  },
+  "approved_assets": [
+    {
+      "id": "yupi-pup-design-base",
+      "type": "design",
+      "status": "approved",
+      "path": "assets/yupi/pup/design/approved/base-sheet.png",
+      "anatomy_spec": "docs/characters/YUPI_SPEC.json"
+    }
+  ],
+  "prototypes": [],
+  "archive_policy": "archive/ contains historical or experimental material and must not be selected as active canon unless explicitly re-approved."
+}
