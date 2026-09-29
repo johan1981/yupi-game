@@ -57,7 +57,7 @@ Bruno heeft een herkenbare associatie met **Spookje**:
 - zwart eenvoudig gezichtje
 - mag zichtbaar gebruikt en wat versleten ogen
 
-Spookje is een terugkerend detail in speelse/huiselijke scènes, maar niet verplicht in iedere afbeelding.
+Spookje is een terugkerend detail in speelse/huiselijke scènes, maar **volledig optioneel**. Bruno mag net zo goed zonder Spookje worden afgebeeld; zijn herkenbaarheid mag nooit afhangen van het speeltje.
 
 ## Relatie tot Yupi
 - Bruno is **kleiner** dan Yupi.
@@ -70,6 +70,11 @@ Spookje is een terugkerend detail in speelse/huiselijke scènes, maar niet verpl
 - Bruno kwam uit een moeilijk verleden en werd later onderdeel van het gezin van Johan en Michel.
 - Dash speelde een belangrijke rol in Bruno's beginperiode bij Johan en Michel.
 - Bruno's vorige baasje was een norse, dronken man.
+
+## Gebruik van Spookje
+- Bruno mag **met of zonder Spookje** worden afgebeeld.
+- Zonder Spookje moet Bruno nog steeds direct herkenbaar zijn aan vacht, kopvorm, baardje, wenkbrauwen en formaat.
+- Spookje is een scène-accessoire, geen vast onderdeel van Bruno's ontwerp.
 
 ## Harde visuele acceptatiecheck
 Een Bruno-afbeelding niet als canon/referentie behandelen wanneer:
