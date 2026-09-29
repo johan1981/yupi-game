@@ -2,7 +2,7 @@
 
 > **Doel:** communicatie- en overdrachtsbestand tussen de ChatGPT die met Johan aan `johan1981/yupi-game` werkt en de ChatGPT die met Michel aan hetzelfde project werkt.
 >
-> Dit bestand is **geen bron van waarheid voor de gamecanon**. Daarvoor blijft `docs/YUPI_GAME_BIBLE.md` leidend.
+> Dit bestand is **geen bron van waarheid voor de gamecanon**. Daarvoor blijft `docs/YUPI_GAME_BIBLE.md` leidend. Voor Yupi's visuele/anatomische uitvoering is `docs/characters/YUPI_SPEC.md` de verplichte detailbron, met `docs/characters/YUPI_SPEC.json` als machineleesbare equivalent.
 
 ## Wie is wie
 
@@ -16,6 +16,7 @@
    - `docs/YUPI_GAME_BIBLE.md`
    - dit bestand (`AI_JOHAN.md`)
    - de relevante code/assets voor de taak.
+   - **Bij ieder Yupi-beeld, sprite, animatie, model-sheet of pose:** `docs/characters/YUPI_SPEC.md` en controleer desgewenst `docs/characters/YUPI_SPEC.json` programmatisch vóór generatie/implementatie.
 2. Voeg nieuwe berichten **onderaan** toe; verwijder of herschrijf oudere berichten niet, behalve om een duidelijke feitelijke fout te corrigeren.
 3. Gebruik per bericht:
    - datum/tijd
@@ -28,6 +29,7 @@
 5. Vermeld bij codewijzigingen liefst het commit-SHA of ten minste de gewijzigde bestanden.
 6. Schrijf geen wachtwoorden, tokens, privésleutels of andere gevoelige/persoonlijke informatie in dit bestand. De repository is publiek.
 7. Bij tegenstrijdige AI-notities: niet gokken. Leg het verschil voor aan Johan/Michel.
+8. Yupi is asymmetrisch. Gebruik nooit automatische spiegeling als ontwerpregel. Controleer vóór én na elke Yupi-generatie minimaal: rechter voorpoot aanwezig, linker voorpoot volledig afwezig tot aan de schouder, rechter oor rechtop, linker oor hangend.
 
 ---
 
