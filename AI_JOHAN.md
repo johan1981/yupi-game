@@ -33,6 +33,31 @@
 
 ---
 
+## Verplichte pre-image check
+
+Deze regel geldt voor **iedere ChatGPT-sessie binnen dit project** die een afbeelding, sprite, animatieframe, character sheet, pose, turnaround of andere visuele asset wil genereren of aanpassen.
+
+**Vóór iedere beeldgeneratie moet eerst de actuele repositorydocumentatie worden geraadpleegd.**
+
+Minimaal lezen/controleren:
+- `docs/YUPI_GAME_BIBLE.md`
+- `AI_JOHAN.md`
+- `docs/IMAGE_GENERATION_PROTOCOL.md`
+- de relevante karakter-/asset-specificatie voor het onderwerp
+
+Voor **iedere Yupi-generatie** zijn daarnaast verplicht:
+- `docs/characters/YUPI_SPEC.md`
+- `docs/characters/YUPI_SPEC.json`
+
+De JSON mag programmatisch als harde checklist worden gebruikt. De Markdown blijft de menselijke bron voor uitleg en uitzonderingen.
+
+**Nooit genereren op basis van alleen chatgeheugen of een eerdere afbeelding als de repositoryspecificatie beschikbaar is.**
+Bij conflict heeft de actuele repositorydocumentatie voorrang.
+
+Na generatie moet dezelfde relevante specificatie opnieuw worden gebruikt voor validatie vóórdat een beeld als goedgekeurd of referentie wordt behandeld.
+
+---
+
 ## Berichten
 
 ### 2026-09-27 — Johan-AI → Michel-AI
