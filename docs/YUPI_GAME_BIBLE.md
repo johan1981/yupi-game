@@ -225,30 +225,23 @@ Hij is in deze fase nog geen geavanceerde vechter en beschikt nog niet over alle
 
 ## Bestaande assets
 
-De huidige officiële game-assets staan onder:
+De canonieke Pup Yupi-assetroot is:
 
 `assets/yupi/pup/`
 
-waaronder:
+De verplichte assetworkflow staat in:
 
-- `character-sheet.png`
-- `sprite-sheet.png`
-- `idle.png`
-- `walk-01.png`
-- `walk-02.png`
-- `run-01.png`
-- `run-02.png`
-- `jump.png`
-- `sniff.png`
-- `bark.png`
-- `startled.png`
-- `sad-searching.png`
+`docs/YUPI_ASSET_PIPELINE.md`
 
-Deze bestanden blijven bruikbare sprite-/bewegingsreferenties. De actuele officiële visuele ontwerp-basis voor Pup Yupi v2 staat in:
+De actuele goedgekeurde visuele basis staat in:
 
-`assets/yupi/pup/v2/character-sheet.png`
+`assets/yupi/pup/design/approved/base-sheet.png`
 
-Deze v2-sheet is leidend voor vorm, kop, oren, verhoudingen, vacht en de vaste driepotige anatomie.
+Goedgekeurde poses, expressies en sprites worden gestructureerd opgeslagen en geregistreerd in:
+
+`assets/yupi/pup/asset-manifest.json`
+
+Oude losse sprites en eerdere walk-experimenten staan onder `assets/yupi/pup/archive/` en gelden niet automatisch als actuele canon. Technische tests die nog door de browserdemo worden gebruikt staan onder `assets/yupi/pup/sprites/_prototype/`.
 
 ---
 
@@ -891,7 +884,7 @@ Dat voorkomt dat verhaal, GitHub-code en illustraties uiteen gaan lopen.
 - side-scroller / 2.5D richting
 - iPhone als belangrijk doelplatform
 - Level 1 heet **De Laatste Rit**
-- Pup Yupi character design v2 (`assets/yupi/pup/v2/character-sheet.png`)
+- Pup Yupi character design v2 (`assets/yupi/pup/design/approved/base-sheet.png`)
 - harde anatomische regel: exact 3 poten — 2 achter, 1 rechter voor, links voor volledig afwezig tot aan de schouder
 - Pup Yupi sprite-assets
 - meerdere Yupi-vormen maken deel uit van het grotere verhaal
