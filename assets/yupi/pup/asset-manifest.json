@@ -55,6 +55,36 @@
       "anatomy_spec": "docs/characters/YUPI_SPEC.json"
     }
   ],
-  "prototypes": [],
-  "archive_policy": "archive/ contains historical or experimental material and must not be selected as active canon unless explicitly re-approved."
+  "prototypes": [
+    {
+      "id": "legacy-active-idle-prototype",
+      "type": "sprite",
+      "status": "prototype",
+      "path": "assets/yupi/pup/sprites/_prototype/idle/idle.png",
+      "note": "Technical asset retained so the current browser test keeps working; not promoted to canon."
+    },
+    {
+      "id": "walk-right-video-prototype",
+      "type": "sprite_sequence",
+      "status": "prototype",
+      "action": "walk",
+      "direction": "right",
+      "frame_count": 8,
+      "path_pattern": "assets/yupi/pup/sprites/_prototype/walk-right/frame-NNN.png",
+      "note": "Existing video-referenced technical sequence; not automatically considered approved."
+    },
+    {
+      "id": "walk16-right-test-strip",
+      "type": "test_strip",
+      "status": "prototype",
+      "path": "assets/yupi/pup/sprites/_prototype/walk16-right/source-strip.jpg"
+    }
+  ],
+  "archive_policy": "archive/ contains historical or experimental material and must not be selected as active canon unless explicitly re-approved.",
+  "migration": {
+    "date": "2026-09-29",
+    "legacy_root_assets": "assets/yupi/pup/archive/legacy-v1/",
+    "experimental_walks": "assets/yupi/pup/archive/experiments/",
+    "note": "Historical files were moved out of the canonical root; canonical folders are approval-driven."
+  }
 }
