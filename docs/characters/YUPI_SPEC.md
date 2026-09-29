@@ -158,7 +158,10 @@ Belangrijk:
 - linker voorpoot ontbreekt volledig tot aan de schouder
 - linker oor hangt
 - rechter oor blijft anatomisch het rechtopstaande oor
-- rechter voorpoot mag alleen zichtbaar zijn wanneer het perspectief dat logisch toelaat
+- rechter voorpoot is anatomisch aanwezig
+- **bij een canoniek linker zijaanzicht / turnaround-reference moet de rechter voorpoot duidelijk zichtbaar in beeld staan**
+- een perspectief dat de rechter voorpoot volledig verbergt is voor zo'n referentie NIET acceptabel
+- beide achterpoten moeten aanwezig en anatomisch leesbaar blijven
 
 ---
 
@@ -370,12 +373,16 @@ Controleer na generatie opnieuw:
 8. Is dit hetzelfde goedgekeurde Yupi-ontwerp?
 9. Klopt de gevraagde emotie?
 10. Klopt de gevraagde pose en camerahoek?
+11. Zijn BEIDE achterpoten aanwezig?
+12. Als dit een linker zijaanzicht/reference view is: is de RECHTER voorpoot daadwerkelijk zichtbaar?
 
 Bij één fout:
 
 **AFKEUREN EN CORRIGEREN.**
 
 Niet opslaan als referentie.
+Niet als "goed" of "approved" behandelen.
+Bij een turnaround/reference view: het foutieve aanzicht afzonderlijk opnieuw maken; niet de volledige sheet regenereren.
 
 ---
 
