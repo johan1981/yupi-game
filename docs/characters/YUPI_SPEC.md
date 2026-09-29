@@ -393,6 +393,12 @@ Yupi-referentiebibliotheek.
 
 Een afgekeurde generatie mag nooit als nieuwe ontwerpbron worden gebruikt.
 
+### Repo-asset verplichting
+
+Na expliciete goedkeuring moet het beeld volgens `docs/YUPI_ASSET_PIPELINE.md` worden opgeslagen onder `assets/yupi/pup/` en worden geregistreerd in `assets/yupi/pup/asset-manifest.json`.
+
+**Goedkeuring alleen in de chat is niet voldoende voor projectbeheer.**
+
 ---
 
 # 13. BRON VAN WAARHEID
