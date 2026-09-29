@@ -117,10 +117,8 @@ Deze regels gelden voor Yupi en moeten in alle relevante versies bewust worden b
 - Yupi is een reu
 - Yupi is bruin in zijn hoofdvorm
 - Yupi heeft **exact drie poten**: twee achterpoten en één rechter voorpoot
-- Yupi heeft **exact drie poten**: twee achterpoten en één rechter voorpoot
 - Yupi mist zijn **linker voorpoot volledig tot aan de schouder**
-- er is **geen stompje, gedeeltelijke poot of uitstekende vorm** aan de linker voorkant
-- er is **geen stomp, gedeeltelijke poot of extra uitsteeksel** aan de linker voorzijde
+- er is **geen stompje, gedeeltelijke poot of extra uitsteeksel** aan de linker voorzijde
 - zijn beperking wordt niet als zielig of als hoofdidentiteit behandeld
 - Yupi is nieuwsgierig, eigenwijs, warm en moedig
 - Yupi moet een herkenbaar silhouet hebben
