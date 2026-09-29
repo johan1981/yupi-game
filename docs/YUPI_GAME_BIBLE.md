@@ -110,6 +110,10 @@ Yupi is het centrale personage van de reeks.
 
 Deze regels gelden voor Yupi en moeten in alle relevante versies bewust worden bewaakt:
 
+> **Verplichte visuele/anatomische detailbron:** `docs/characters/YUPI_SPEC.md`  
+> Machineleesbare equivalent: `docs/characters/YUPI_SPEC.json`  
+> Bij ieder nieuw Yupi-beeld, sprite, animatie, model-sheet of pose moeten deze specificaties vóór én na generatie worden gecontroleerd.
+
 - Yupi is een reu
 - Yupi is bruin in zijn hoofdvorm
 - Yupi heeft **exact drie poten**: twee achterpoten en één rechter voorpoot
@@ -120,8 +124,8 @@ Deze regels gelden voor Yupi en moeten in alle relevante versies bewust worden b
 - zijn beperking wordt niet als zielig of als hoofdidentiteit behandeld
 - Yupi is nieuwsgierig, eigenwijs, warm en moedig
 - Yupi moet een herkenbaar silhouet hebben
-- één oor staat rechtop
-- het andere oor hangt iets / half
+- het **rechter oor staat rechtop**
+- het **linker oor hangt**
 - zijn gezicht is expressief en goed leesbaar tijdens gameplay
 
 De driepotige beweging moet natuurlijk aanvoelen.
@@ -192,8 +196,8 @@ Hij is het hoofdpersonage van:
 - compact lichaam
 - grote expressieve ogen
 - warme lichte accenten rond snuit en borst
-- rechteroor / één oor gedeeltelijk hangend
-- ander oor rechtop
+- **rechter oor staat rechtop**
+- **linker oor hangt**
 - exact drie poten: twee achterpoten en één rechter voorpoot
 - linker voorpoot ontbreekt volledig tot de schouder
 - geen stompje of gedeeltelijke linker voorpoot
