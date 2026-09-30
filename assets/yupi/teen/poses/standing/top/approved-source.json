@@ -3,7 +3,7 @@
   "type": "pose",
   "action": "standing",
   "view": "top",
-  "status": "approved",
+  "status": "approved_pending_binary",
   "approval_date": "2026-09-30",
   "approval_basis": "Michel explicitly approved this exact Teen Yupi top-view image with 'Perfect vastleggen'.",
   "source_filename": "yupi_van_bovenaf_met_gekrulde_staart.png",
@@ -24,5 +24,8 @@
     "left ear floppy",
     "top-down perspective preserves Teen Yupi identity and asymmetry"
   ],
-  "notes": "Approved Teen Yupi top-view reference. Preserve exactly as approved."
+  "notes": "Approved Teen Yupi top-view reference. Preserve exactly as approved.",
+  "recovery_protocol": "docs/MICHEL_AI_ASSET_RECOVERY_PROTOCOL.md",
+  "recovery_note": "Exact approved Library source is known and hash-verified, but the canonical GitHub imagebinary is not yet present. Do not regenerate.",
+  "canonical_path": "assets/yupi/teen/poses/standing/top.png"
 }
