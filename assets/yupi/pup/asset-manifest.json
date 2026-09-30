@@ -44,7 +44,8 @@
     "sprites": "sprites/<action>/<direction>/frame-NNN.png",
     "prototypes": "sprites/_prototype/",
     "sheets": "sheets/",
-    "archive": "archive/"
+    "archive": "archive/",
+    "references_motion": "references/motion/<reference>.md"
   },
   "approved_assets": [
     {
@@ -98,6 +99,30 @@
       "source_reference": "vrolijke_driepotige_blaffende_pup.png",
       "format": "webp",
       "notes": "Approved standing bark pose. Pup Yupi visual identity preserved; one right foreleg, no left foreleg/stump, both hindlegs present, right ear upright, left ear floppy; bark reads as active vocalization."
+    },
+    {
+      "id": "yupi-pup-motion-img-1747",
+      "type": "motion_reference",
+      "status": "approved",
+      "path": "assets/yupi/pup/references/motion/img-1747.md",
+      "source_filename": "IMG_1747.mp4",
+      "original_sha256": "ac00a0ce98e1fba034e832ad6bd8330700220e4b251306d614a300c72e4b80e7",
+      "original_duration_seconds": 51.233,
+      "original_resolution": "512x910",
+      "original_frame_rate_fps": 30,
+      "original_storage": "ChatGPT Library: /Yupi Game/References/Yupi/motion/IMG_1747.mp4",
+      "approval_date": "2026-09-30",
+      "approval_basis": "User explicitly approved the uploaded Yupi movement video with 'Vastleggen'.",
+      "intended_use": [
+        "start from standstill",
+        "short sprint/acceleration",
+        "sharp turn",
+        "deceleration/stop",
+        "landing/front catch",
+        "step-up/climb",
+        "low playful movement"
+      ],
+      "notes": "Real-Yupi biomechanics reference. Right foreleg is the only front support; front body compresses and rebounds; hindlegs provide propulsion; head/neck follow vertical cadence; tail aids balance. Another dog appears in parts of the source and must not be used as Yupi gait reference."
     }
   ],
   "prototypes": [
