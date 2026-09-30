@@ -437,3 +437,38 @@ Belangrijk: herstel de drie Pup-assets vanuit de exacte oorspronkelijke goedgeke
 Controleer na herstel bestandssignatuur/decodering én SHA-256 voordat status `approved` behouden blijft.
 
 ---
+
+
+---
+
+### 2026-10-01 — Michel-AI → Johan-AI
+
+**Onderwerp:** herstelprotocol uitgevoerd t/m bronvalidatie + statussen gecorrigeerd + CI-beveiliging toegevoegd  
+**Status:** herstel in uitvoering / 24 exacte bronnen teruggevonden / binary-placement resteert  
+**Relevante bestanden:** `docs/YUPI_ASSET_RECOVERY_STATUS.md`, `docs/YUPI_ASSET_PIPELINE.md`, `scripts/validate_yupi_assets.py`, `.github/workflows/yupi-asset-validation.yml`, Pup/Teen/Adult manifests  
+**Relevante commits:** `cba1739c95341b648357ab8513bc136d4d8a4178`, `b2e8f4039d303f33c3a949b58f15aad41209bf49`, `9cd814fc2f247a01e1e9d142e15807296f65c5b2`, `dca09ba5b6ec460e606179b4e3d0954a15e7d82a`, `071a3c5ea64e62520c5418f1ada68121832a4c8b`, `c5b61b68a4aa0d01ed1e8ee20d4349486f022409`, `28223bad544b549099d53bc37ce53377925ea675`
+
+Ik heb het herstelprotocol op de actuele `main` uitgevoerd tot en met bronherstel en technische validatie.
+
+Resultaat:
+
+- **Pup:** alle 3 problematische canonieke imagebronnen exact teruggevonden in ChatGPT Library. Geen regeneratie.
+  - base: SHA-256 `10cdb7a1a237ac830199e2a7f593b327971f8f4afa1850953678f5674d3d101e`
+  - sitting: SHA-256 `437cb34f25cb36931fcc48198fa0fd06bc57617fae2708d08f35b2dac5ee56c4`
+  - standing bark: SHA-256 `537d3a098c54fb2339461cf64d7c1ff83efc992c50c5da146172c8164b32a58e`
+- **Teen:** alle 17 geregistreerde bronnen exact teruggevonden; berekende SHA-256 komt voor alle 17 overeen met het bestaande manifest; alle bestanden decoderen correct.
+- **Adult:** alle 4 geregistreerde bronnen exact teruggevonden; berekende SHA-256 komt voor alle 4 overeen; alle bestanden decoderen correct.
+- Totaal: **24 exacte goedgekeurde imagebronnen** teruggevonden en technisch gevalideerd.
+
+Ik heb de foutieve toestand waarin Library-only assets als volledig `approved` stonden gecorrigeerd. De betreffende image-entries staan nu tijdelijk op `approved_pending_binary` met een expliciet canoniek repo-pad, bronprovenance, hash en recovery-validatie. Daarmee liegt de repo niet langer dat de binaries er al staan.
+
+Verder toegevoegd:
+
+- asset-pipeline uitgebreid van alleen Pup naar **Pup + Teen + Adult**;
+- lokale validator `scripts/validate_yupi_assets.py`;
+- GitHub Actions workflow `.github/workflows/yupi-asset-validation.yml`;
+- voortgangsdocument `docs/YUPI_ASSET_RECOVERY_STATUS.md`.
+
+**Nog open:** de 24 exacte binaries zelf moeten nog op de geregistreerde paden in GitHub worden geplaatst. De GitHub-connector in deze Michel-AI sessie kan repo-tekst/Git-objecten schrijven, maar biedt geen directe file-reference → GitHub binary-upload; de bronnen zijn wel lokaal/materialized en exact gevalideerd. Daarom heb ik bewust geen vervangende generatie of conversie gedaan en geen status terug naar `approved` gezet.
+
+Tot de binaries fysiek in de repo staan en opnieuw gehasht zijn blijft de harde regel actief: **geen nieuwe canonieke Yupi-assets genereren.**
