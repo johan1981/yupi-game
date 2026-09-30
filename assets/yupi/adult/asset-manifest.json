@@ -13,7 +13,7 @@
     {
       "id": "yupi-adult-base",
       "type": "design",
-      "status": "approved",
+      "status": "approved_pending_binary",
       "approval_date": "2026-09-30",
       "approval_basis": "Michel explicitly approved this exact Adult Yupi design with 'Vastleggen'.",
       "source_filename": "volwassen_driebenige_hond_in_studio_render.png",
@@ -33,13 +33,20 @@
         "right ear upright",
         "left ear floppy"
       ],
-      "notes": "Canonical approved Adult Yupi base reference."
+      "notes": "Canonical approved Adult Yupi base reference.",
+      "path": "assets/yupi/adult/design/approved/base.png",
+      "recovery_validation": {
+        "exact_source_recovered": true,
+        "sha256_matches_manifest": true,
+        "technical_decode": "passed",
+        "repo_binary_present": false
+      }
     },
     {
       "id": "yupi-adult-pose-sitting",
       "type": "pose",
       "action": "sitting",
-      "status": "approved",
+      "status": "approved_pending_binary",
       "approval_date": "2026-09-30",
       "approval_basis": "Michel explicitly approved the Adult Yupi pose set with 'Vastleggen'.",
       "source_filename": "vriendelijke_driepotige_hond_in_studiolicht.png",
@@ -50,13 +57,20 @@
         "provider": "ChatGPT Library",
         "path": "/Yupi Game/Assets/Yupi/adult/approved/poses/adult-yupi-sitting.png",
         "library_file_id": "libfile_1dcba58094888191a1904733abd4d9e0"
+      },
+      "path": "assets/yupi/adult/poses/sitting/reference.png",
+      "recovery_validation": {
+        "exact_source_recovered": true,
+        "sha256_matches_manifest": true,
+        "technical_decode": "passed",
+        "repo_binary_present": false
       }
     },
     {
       "id": "yupi-adult-pose-running",
       "type": "pose",
       "action": "running",
-      "status": "approved",
+      "status": "approved_pending_binary",
       "approval_date": "2026-09-30",
       "approval_basis": "Michel explicitly approved the Adult Yupi pose set with 'Vastleggen'.",
       "source_filename": "vrolijke_yupi_in_volle_vaart.png",
@@ -67,13 +81,20 @@
         "provider": "ChatGPT Library",
         "path": "/Yupi Game/Assets/Yupi/adult/approved/poses/adult-yupi-running.png",
         "library_file_id": "libfile_4536e88705e881919343c39a41ed63be"
+      },
+      "path": "assets/yupi/adult/poses/running/reference.png",
+      "recovery_validation": {
+        "exact_source_recovered": true,
+        "sha256_matches_manifest": true,
+        "technical_decode": "passed",
+        "repo_binary_present": false
       }
     },
     {
       "id": "yupi-adult-pose-sniffing",
       "type": "pose",
       "action": "sniffing",
-      "status": "approved",
+      "status": "approved_pending_binary",
       "approval_date": "2026-09-30",
       "approval_basis": "Michel explicitly approved the Adult Yupi pose set with 'Vastleggen'.",
       "source_filename": "nieuwsgierige_hond_snuffelt_aandachtig.png",
@@ -84,7 +105,16 @@
         "provider": "ChatGPT Library",
         "path": "/Yupi Game/Assets/Yupi/adult/approved/poses/adult-yupi-sniffing.png",
         "library_file_id": "libfile_cfb70498ddd48191ae62463507a0720b"
+      },
+      "path": "assets/yupi/adult/poses/sniffing/reference.png",
+      "recovery_validation": {
+        "exact_source_recovered": true,
+        "sha256_matches_manifest": true,
+        "technical_decode": "passed",
+        "repo_binary_present": false
       }
     }
-  ]
+  ],
+  "recovery_status": "in_progress",
+  "recovery_protocol": "docs/MICHEL_AI_ASSET_RECOVERY_PROTOCOL.md"
 }
