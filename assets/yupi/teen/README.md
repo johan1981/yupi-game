@@ -63,3 +63,5 @@ Both exact PNG sources are persisted in ChatGPT Library under `/Yupi Game/Assets
 - standing left — approved 2026-09-30
 
 - standing top — approved 2026-09-30
+
+- standing bottom — approved 2026-09-30
