@@ -25,6 +25,6 @@
   ],
   "notes": "Approved corrected right-side reference. The less-visible left floppy ear is intentional for this angle.",
   "recovery_protocol": "docs/MICHEL_AI_ASSET_RECOVERY_PROTOCOL.md",
-  "recovery_note": "Exact approved binary restored to the canonical GitHub path and hash-verified. No regeneration was used.",
+  "recovery_note": "Exact approved source binary is restored in GitHub and hash-verified.",
   "canonical_path": "assets/yupi/teen/poses/standing/right.png"
 }
