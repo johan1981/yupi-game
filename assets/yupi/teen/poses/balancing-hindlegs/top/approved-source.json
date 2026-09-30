@@ -1,0 +1,27 @@
+{
+  "id": "yupi-teen-balance-hindlegs-top",
+  "type": "pose",
+  "action": "balancing-on-hindlegs",
+  "view": "top",
+  "status": "approved",
+  "approval_date": "2026-09-30",
+  "approval_basis": "Michel explicitly approved this exact top-view balancing pose with 'Vastleggen'.",
+  "source_filename": "tienerhond_yupi_van_bovenaf.png",
+  "sha256": "2a3cef288904e4b8b81c22604792e9daab33940a198d1731843b798c2049795a",
+  "mime_type": "image/png",
+  "dimensions": "1122x1402",
+  "persistent_source": {
+    "provider": "ChatGPT Library",
+    "path": "/Yupi Game/Assets/Yupi/teen/approved/poses/teen-yupi-balance-hindlegs-top.png",
+    "library_file_id": "libfile_f8a3d6a80be08191abf979887ed0ab02"
+  },
+  "anatomy_validation": [
+    "balanced on both hindlegs",
+    "right foreleg present",
+    "left foreleg absent completely to shoulder with no stump",
+    "right ear upright",
+    "left ear floppy",
+    "top-view perspective preserved"
+  ],
+  "notes": "Recovered and formally registered after an earlier chat save step was not completed."
+}
