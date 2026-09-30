@@ -3,7 +3,7 @@
   "type": "pose",
   "action": "standing",
   "view": "right",
-  "status": "approved",
+  "status": "approved_pending_binary",
   "approval_date": "2026-09-30",
   "approval_basis": "Michel explicitly approved the corrected standing Teen Yupi right-side view with 'Vastleggen'.",
   "source_filename": "driepotige_vos_in_profiel.png",
@@ -23,5 +23,8 @@
     "right ear upright",
     "left floppy ear only minimally visible due to angle"
   ],
-  "notes": "Approved corrected right-side reference. The less-visible left floppy ear is intentional for this angle."
+  "notes": "Approved corrected right-side reference. The less-visible left floppy ear is intentional for this angle.",
+  "recovery_protocol": "docs/MICHEL_AI_ASSET_RECOVERY_PROTOCOL.md",
+  "recovery_note": "Exact approved Library source is known and hash-verified, but the canonical GitHub imagebinary is not yet present. Do not regenerate.",
+  "canonical_path": "assets/yupi/teen/poses/standing/right.png"
 }
