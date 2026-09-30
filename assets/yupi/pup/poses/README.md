@@ -9,3 +9,7 @@ Een pose wordt hier alleen toegevoegd na expliciete goedkeuring (`vastleggen`, `
 ## Sitting
 
 - `poses/sitting/front.webp` — approved front sitting pose; explicit Michel approval on 2026-09-30.
+
+## Standing bark
+
+- `poses/standing-bark/front.webp` — approved standing barking pose; explicit Michel approval on 2026-09-30.
