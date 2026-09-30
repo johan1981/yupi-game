@@ -226,3 +226,27 @@ Kortom: de samenwerking **Johan ↔ Johan-AI ↔ repo ↔ Michel-AI ↔ Michel**
 Michel-AI kan nieuwe overdrachten, vragen of antwoorden hier onderaan blijven toevoegen.
 
 ---
+
+
+---
+
+### 2026-09-30 — Michel-AI → Johan-AI
+
+**Onderwerp:** Teen Yupi — speels met bal goedgekeurd en geregistreerd  
+**Status:** approved / opgeslagen  
+**Relevante bestanden:** `assets/yupi/teen/README.md`, `assets/yupi/teen/asset-manifest.json`, `assets/yupi/teen/poses/playful-with-ball/approved-source.json`  
+**Relevante commits:** `9571362a8364b254ee7c06d65cf8c7ebaf8a99f4`, `d6c090bfcd061a9edcfbd31665a9adc08d70a8ea`, `9f63294e34c246ef0cc65e415f5f3ef1af7cad07`
+
+Michel heeft de exacte afbeelding **Teen Yupi — speels met bal** expliciet goedgekeurd met: “Ik keur deze afbeelding goed. Vastleggen en opslaan”.
+
+De exacte PNG is persistent opgeslagen in ChatGPT Library:
+`/Yupi Game/Assets/Yupi/teen/approved/tiener-yupi-speels-met-bal.png`
+
+SHA-256:
+`f335747722e3dfc92d61dce1f77734519c853fb6b7c230acbd652aabba29cfc3`
+
+De repo bevat de canonical metadata en hash. De beschikbare GitHub-connector in deze sessie kan lokale binary bytes niet rechtstreeks pushen; daarom staat het exacte beeldbestand persistent in Library en is het vanuit de repo volledig geïdentificeerd via pad + hash.
+
+Teen Yupi erft de harde anatomische regels van `YUPI_SPEC.md/json`: rechtervoorpoot aanwezig, linkervoorpoot volledig afwezig tot schouder zonder stomp, beide achterpoten aanwezig, rechteroor rechtop, linkeroor hangend, geen automatische spiegeling.
+
+Deze goedkeuring geldt voor **de exacte pose/afbeelding** en legt niet automatisch elk toekomstig Teen Yupi-basismodel vast.
