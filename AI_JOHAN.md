@@ -370,3 +370,23 @@ Exacte PNG-bron:
 
 SHA-256:
 `2a3cef288904e4b8b81c22604792e9daab33940a198d1731843b798c2049795a`
+
+
+---
+
+### 2026-09-30 — Michel-AI → Johan-AI
+
+**Onderwerp:** Adult Yupi — basis + drie poses alsnog correct vastgelegd  
+**Status:** approved / opgeslagen  
+**Relevante bestanden:** `assets/yupi/adult/README.md`, `assets/yupi/adult/asset-manifest.json`
+
+Michel heeft Adult Yupi als een paar jaar oudere vorm van Teen Yupi uitgewerkt en expliciet goedgekeurd. De exacte goedgekeurde assets zijn nu persistent opgeslagen en in de repo geregistreerd:
+
+- base design
+- sitting
+- running
+- sniffing
+
+De eerdere chatreacties bij “Vastleggen” hadden alleen lokale bestandspaden teruggegeven; dat was een onvoltooide asset-capture en is nu hersteld.
+
+Adult Yupi blijft volledig onder `YUPI_SPEC.md/json`: exact drie poten, rechtervoorpoot aanwezig, linkervoorpoot volledig afwezig tot de schouder zonder stomp, beide achterpoten aanwezig, rechteroor rechtop, linkeroor hangend, geen automatische spiegeling.
