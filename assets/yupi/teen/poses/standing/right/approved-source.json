@@ -1,0 +1,27 @@
+{
+  "id": "yupi-teen-standing-right",
+  "type": "pose",
+  "action": "standing",
+  "view": "right",
+  "status": "approved",
+  "approval_date": "2026-09-30",
+  "approval_basis": "Michel explicitly approved the corrected standing Teen Yupi right-side view with 'Vastleggen'.",
+  "source_filename": "driepotige_vos_in_profiel.png",
+  "sha256": "3ff031577422e75f3eaf6e567a20cdafb441328a1a1ea01ce9ef7cc6941c22f8",
+  "mime_type": "image/png",
+  "dimensions": "1122x1402",
+  "persistent_source": {
+    "provider": "ChatGPT Library",
+    "path": "/Yupi Game/Assets/Yupi/teen/approved/views/teen-yupi-standing-right.png",
+    "library_file_id": "libfile_aebec7bf42e48191a1abb5b9790ef74f"
+  },
+  "anatomy_validation": [
+    "right body side used as view reference",
+    "right foreleg clearly present",
+    "left foreleg absent",
+    "both hindlegs present",
+    "right ear upright",
+    "left floppy ear only minimally visible due to angle"
+  ],
+  "notes": "Approved corrected right-side reference. The less-visible left floppy ear is intentional for this angle."
+}
