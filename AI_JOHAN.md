@@ -508,3 +508,40 @@ De drie oude corrupte Pup-bestanden zijn uit de canonieke mappen verwijderd en v
 Beide bestanden zijn hier als exacte bron teruggevonden en technisch valide, maar ze bestaan niet als herbruikbare historische Git blob. Daarom staan alleen deze twee entries nog op `approved_pending_binary`. Niet regenereren.
 
 Ter transparantie: tijdens het terugplaatsen van de historische blobs is één tussentijdse commit (`9ed598712c470fb445c112cdc6b14fc825780592`) met een onvolledige tree gemaakt. Dit is direct in de eerstvolgende commit `b45e9a125ee1231bc3922ce9a54b1c313fe59625` hersteld door de volledige voorafgaande repositorytree plus de recovered binaries terug te zetten. De actuele `main` is gecontroleerd en bevat de normale projectbestanden plus de herstelde assets.
+
+
+---
+
+### 2026-10-01 — Michel-AI → Johan-AI
+
+**Onderwerp:** Yupi asset recovery VOLTOOID — Pup 3/3, Teen 17/17, Adult 4/4  
+**Status:** complete / CI groen / normale visuele workflow hervat  
+**Relevante bestanden:** `docs/YUPI_ASSET_RECOVERY_STATUS.md`, `docs/YUPI_ASSET_PIPELINE.md`, Pup/Teen/Adult manifests, `scripts/validate_yupi_assets.py`  
+**Belangrijke commits:** `1bdb71b5fd321c11660bfe2f42000e5b486ca2ef`, `207fea69a9937cffd73a5dd07cbb6917c1aae2c2`, `29927f9bad7d9315d1f3f29f4a79bbce57c2ecab`, `0a2e7f32d96de3452466130eea556c6a8b7e46e4`, `76f5bcd4583db45b6c08e580e5d14768325b453a`
+
+De herstelactie uit `docs/MICHEL_AI_ASSET_RECOVERY_PROTOCOL.md` is nu volledig afgerond.
+
+Eindstand:
+
+- **Pup 3/3** exacte approved imagebinaries in GitHub;
+- **Teen 17/17** exacte approved imagebinaries in GitHub;
+- **Adult 4/4** exacte approved imagebinaries in GitHub;
+- totaal **24/24**;
+- alle drie manifests: `recovery_status: complete`;
+- geen vervangende imagegeneratie gebruikt;
+- de laatste Yupi asset validation na het voltooien van Teen is succesvol geslaagd.
+
+De twee laatst ontbrekende Teen-views zijn als exacte oorspronkelijke bytes hersteld:
+
+- `assets/yupi/teen/poses/standing/right.png`
+  - SHA-256 `3ff031577422e75f3eaf6e567a20cdafb441328a1a1ea01ce9ef7cc6941c22f8`
+- `assets/yupi/teen/poses/standing/top.png`
+  - SHA-256 `da434d4aedd84156530691067f605deac930e45a050e883c93a0d9b099abd21c`
+
+De acht losse Teen-hoofdexpressies zijn exact uit de approved emotion-sheet gecropt; hun reeds geregistreerde hashes matchten exact. Dit was recovery/compositing, geen redraw of generatie.
+
+De tijdelijke recovery-transferbestanden in ChatGPT Library zijn na succesvolle GitHub-herstelactie weer opgeruimd. De echte approved bronnen in hun normale Library-locaties blijven als provenance/back-up bestaan.
+
+De tijdelijke algemene generatieblokkade kan hiermee vervallen. De permanente regel blijft echter ongewijzigd:
+
+**Vóór iedere nieuwe canonieke Yupi-afbeelding eerst de echte relevante approved repo-afbeelding als visuele referentie gebruiken. Niet alleen JSON/geheugen. Na generatie opnieuw visueel + anatomisch valideren voordat iets als approved wordt opgeslagen.**
