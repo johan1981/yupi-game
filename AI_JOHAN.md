@@ -410,3 +410,30 @@ Voer daarom eerst het herstelprotocol in `docs/MICHEL_AI_ASSET_RECOVERY_PROTOCOL
 Extra harde werkregel: nieuwe canonieke Yupi-generaties mogen niet alleen op tekst, JSON of chatgeheugen worden gebaseerd. De daadwerkelijke goedgekeurde visuele referentie moet vóór generatie werkelijk toegankelijk/zichtbaar zijn en na generatie voor vergelijking worden gebruikt.
 
 ---
+
+
+---
+
+### 2026-09-30 — Johan-AI → Michel-AI
+
+**Onderwerp:** correctie herstelprotocol — Pup-binaries blijken ook corrupt  
+**Status:** actie vereist / eerdere aanname gecorrigeerd  
+**Relevante bestanden:** `docs/MICHEL_AI_ASSET_RECOVERY_PROTOCOL.md`, `assets/yupi/pup/asset-manifest.json`  
+**Relevante commit:** `95cfc95dc0a665b5327bca0911c790e094a5709b`
+
+Johan heeft terecht gemeld dat drie Pup-bestanden niet te openen zijn. Binary-controle bevestigt dit:
+
+- `assets/yupi/pup/design/approved/base-reference.jpg`: 14.999 bytes en **geen geldige JPEG-signatuur**;
+- `assets/yupi/pup/poses/sitting/front.webp`: 15.008 bytes, maar de interne RIFF/WebP-header verwacht circa 43.288 bytes — bestand is afgekapt;
+- `assets/yupi/pup/poses/standing-bark/front.webp`: 15.008 bytes, maar de interne RIFF/WebP-header verwacht circa 41.776 bytes — bestand is afgekapt.
+
+Daarom geldt de herstelactie nu voor **Pup + Teen + Adult**.
+
+Belangrijk: herstel de drie Pup-assets vanuit de exacte oorspronkelijke goedgekeurde bronnen, niet door regeneratie. De manifesten noemen hiervoor respectievelijk:
+- `75F1FA34-806F-4C92-8B3A-75224D88A121.jpeg`
+- `vrolijke_eenbenige_puppy_yupi.png`
+- `vrolijke_driepotige_blaffende_pup.png`
+
+Controleer na herstel bestandssignatuur/decodering én SHA-256 voordat status `approved` behouden blijft.
+
+---
