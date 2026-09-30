@@ -2,180 +2,206 @@
 
 > **STATUS: VERPLICHTE PROJECTWERKWIJZE**
 >
-> Deze workflow geldt voor alle Yupi Pup-assets in `assets/yupi/pup/`.
+> Deze workflow geldt voor **alle Yupi-levensfasen** onder `assets/yupi/<form>/`, momenteel `pup`, `teen` en `adult`.
 
 ## 1. Hoofdregel
 
-Een afbeelding die alleen in een chat staat, is **geen beheerde game-asset**.
+Een afbeelding die alleen in chat of alleen in ChatGPT Library staat, is **geen volledig beheerde canonieke game-asset**.
 
-Wanneer Michel of Johan expliciet zegt **vastleggen**, **vastzetten** of **opslaan**, wordt het goedgekeurde beeld in dezelfde werksessie:
+Wanneer Michel of Johan expliciet zegt **vastleggen**, **vastzetten** of **opslaan**, wordt het goedgekeurde beeld in dezelfde werkstroom:
 
-1. als goedgekeurde bron in de juiste map onder `assets/yupi/pup/` geplaatst;
-2. opgenomen of bijgewerkt in `assets/yupi/pup/asset-manifest.json`;
-3. indien bedoeld voor gameplay, omgezet naar of gekoppeld aan een game-ready sprite/sequence;
-4. indien onderdeel van een vier-aanzichten-set, gekoppeld aan de andere afzonderlijk goedgekeurde aanzichten.
+1. als exacte bron veiliggesteld;
+2. als echte imagebinary onder de juiste canonieke map in GitHub geplaatst;
+3. opgenomen in `assets/yupi/<form>/asset-manifest.json`;
+4. voorzien van SHA-256;
+5. technisch gedecodeerd/gevalideerd;
+6. visueel gecontroleerd tegen de relevante goedgekeurde bron;
+7. pas daarna op status `approved` gezet.
 
-Een goedgekeurde asset mag dus niet alleen in chatgeheugen blijven bestaan.
+Library-opslag blijft waardevolle provenance/back-up, maar vervangt de repo-binary niet.
 
-## 2. Canonieke structuur
+## 2. Statusmodel
+
+### `approved`
+
+Alle voorwaarden zijn waar:
+
+- expliciet goedgekeurd door Michel of Johan;
+- de exacte binary staat in GitHub;
+- het manifest bevat het echte repo-pad;
+- SHA-256 correspondeert met de goedgekeurde bron;
+- technische decode is geslaagd;
+- relevante anatomische/visuele validatie is geslaagd.
+
+### `approved_pending_binary`
+
+De exacte goedgekeurde bron is teruggevonden en geïdentificeerd, maar de binary staat nog niet correct in GitHub.
+
+Deze status is tijdelijk. Een entry met deze status mag niet als complete canonieke repo-asset worden behandeld.
+
+### `prototype`
+
+Niet canoniek. Niet gebruiken als vaste visuele referentie.
+
+## 3. Canonieke structuur
+
+Iedere levensfase heeft een eigen root:
 
 ```text
-assets/yupi/pup/
-├── README.md
-├── asset-manifest.json
-├── design/
-│   └── approved/
-│       └── base-sheet.png
-├── poses/
-├── expressions/
-├── sprites/
-│   └── _prototype/
-├── sheets/
-└── archive/
-    ├── legacy-v1/
-    └── experiments/
+assets/yupi/
+├── pup/
+│   ├── asset-manifest.json
+│   ├── design/approved/
+│   ├── poses/
+│   ├── expressions/
+│   ├── sprites/
+│   ├── sheets/
+│   ├── references/
+│   └── archive/
+├── teen/
+│   ├── asset-manifest.json
+│   ├── design/approved/
+│   ├── poses/
+│   ├── expressions/
+│   ├── sprites/
+│   └── archive/
+└── adult/
+    ├── asset-manifest.json
+    ├── design/approved/
+    ├── poses/
+    ├── expressions/
+    ├── sprites/
+    └── archive/
 ```
 
-### design/approved
-Alleen het actuele goedgekeurde basisontwerp.
+Pup, Teen en Adult zijn **afzonderlijke visuele vormen**. Een pose voor Teen wordt gebaseerd op echte Teen-referenties; Adult op Adult; Pup op Pup.
 
-### poses
-Goedgekeurde volledige poses per betekenis en camerastandpunt:
+## 4. Visuele bron vóór generatie
+
+Voor iedere nieuwe canonieke Yupi-generatie moet de daadwerkelijke goedgekeurde referentie als beeld beschikbaar zijn.
+
+Voorkeursvolgorde:
+
+1. canonieke repo-binary;
+2. exact dezelfde approved binary uit Library;
+3. exact opnieuw aangeleverde approved bron.
+
+Alleen JSON, bestandsnamen, hashes, beschrijvingen of chatgeheugen zijn onvoldoende.
+
+**Geen echte visuele bron zichtbaar/toegankelijk = geen nieuwe canonieke Yupi-generatie.**
+
+## 5. Canonieke paden
+
+Voorbeelden:
 
 ```text
-poses/determined/front.png
-poses/determined/right.png
-poses/determined/left.png
-poses/determined/back.png
-```
-
-### expressions
-Goedgekeurde hoofd-/emotie-assets:
-
-```text
+design/approved/base.png
+poses/standing/front.png
+poses/standing/right.png
+poses/standing/left.png
+poses/standing/top.png
 expressions/head/happy.png
 expressions/head/surprised.png
-```
-
-Voor emoties met meerdere camerastandpunten:
-
-```text
-expressions/angry-bark/front.png
-expressions/angry-bark/right.png
-expressions/angry-bark/left.png
-expressions/angry-bark/back.png
-```
-
-### sprites
-Definitieve game-ready animatieframes:
-
-```text
 sprites/walk/right/frame-000.png
-sprites/walk/right/frame-001.png
 sprites/walk/left/frame-000.png
-sprites/run/right/frame-000.png
-sprites/run/left/frame-000.png
 ```
 
-Links en rechts zijn afzonderlijke assets. **Nooit automatisch spiegelen.**
+Gebruik bij herstel het oorspronkelijke goedgekeurde bestandsformaat wanneer conversie de bytes zou veranderen.
 
-### sprites/_prototype
-Technische tests die nog niet als definitieve sprite zijn goedgekeurd. Prototype is nadrukkelijk geen canon.
-
-### sheets
-Overzichten die door compositing uit reeds goedgekeurde losse beelden worden opgebouwd. **Geen regeneration.**
-
-### references/motion
-Goedgekeurde echte Yupi-bewegingsreferenties.
-
-Voor grote bronvideo's mag het origineel in de beheerde ChatGPT Library blijven. De repository bevat dan minimaal:
-- een vaste reference-id;
-- bronbestandsnaam;
-- SHA-256 van het origineel;
-- bronduur/resolutie/fps;
-- goedkeuringsstatus;
-- biomechanische observaties en intended animation use.
-
-De repo-metadata is canoniek voor **hoe de video gebruikt moet worden**. De video verandert nooit de visuele/anatomische canon uit `YUPI_SPEC.md/json`.
-
-### archive
-Oude of experimentele bestanden. Niet automatisch als actuele referentie gebruiken.
-
-## 3. Naamconventie
+## 6. Naamconventie
 
 - kleine letters;
 - Engelse technische slugs;
 - koppeltekens tussen woorden;
-- frames: `frame-000.png`, `frame-001.png`, enzovoort;
-- geen `final`, `latest`, `new`, `final2` of losse versienummers in canonieke namen.
+- frames: `frame-000.png`, `frame-001.png`, enz.;
+- geen `final`, `latest`, `new`, `final2` in canonieke namen;
+- versiehistorie hoort in Git.
 
-Versiehistorie hoort in Git.
-
-## 4. Goedkeuring
-
-De woorden **vastleggen**, **vastzetten** en **opslaan** betekenen bij een duidelijk benoemd beeld dat de asset is goedgekeurd.
-
-| Type | Canonieke plek |
-|---|---|
-| basisontwerp | `design/approved/` |
-| statische pose | `poses/<pose>/<view>.png` |
-| hoofd/emotie | `expressions/...` |
-| animatieframes | `sprites/<action>/<direction>/frame-NNN.png` |
-| samengesteld overzicht | `sheets/` |
-| bewegingsreferentie | `references/motion/<reference>.md` |
-
-## 5. Source versus runtime sprite
+## 7. Source versus runtime sprite
 
 Een goedgekeurde pose is eerst een canonieke bronasset.
 
-Als die pose in gameplay wordt gebruikt, mag daar een runtime sprite van worden afgeleid. De runtime sprite:
-- gebruikt PNG met transparante achtergrond waar mogelijk;
+Voor gameplay mag daar een runtime sprite van worden afgeleid. Die runtime sprite:
+
 - behoudt exact hetzelfde ontwerp;
-- heeft binnen één sequence dezelfde canvasmaat;
-- gebruikt een consistente grond-/voetbaseline;
-- verandert de anatomie niet;
-- wordt in het manifest aan de bronasset gekoppeld.
+- verandert Yupi's anatomie niet;
+- heeft binnen één sequence consistente canvasmaat en baseline;
+- krijgt een manifestkoppeling naar de bronasset.
 
-## 6. Animaties
+## 8. Richtingen en asymmetrie
 
-Iedere richting krijgt een eigen sequence wanneer richting relevant is.
+Yupi is asymmetrisch.
 
-Voor Yupi:
-- `walk/right` en `walk/left` zijn afzonderlijk;
-- `run/right` en `run/left` zijn afzonderlijk;
-- draaien kan eigen overgangsframes krijgen;
-- definitieve Yupi-characterart gebruikt geen CSS-`scaleX` als vervanging voor een ontbrekende richting.
+- rechter voorpoot aanwezig;
+- linker voorpoot volledig afwezig tot de schouder;
+- rechter oor rechtop;
+- linker oor hangend;
+- geen automatische spiegeling.
 
-## 7. Manifest
+`walk/right` en `walk/left` zijn dus afzonderlijke assets wanneer richting relevant is.
 
-`asset-manifest.json` is de machineleesbare index.
+## 9. Vier aanzichten en sheets
 
-Elke canonieke goedgekeurde asset krijgt minimaal:
+1. elk aanzicht afzonderlijk maken/herstellen;
+2. elk aanzicht afzonderlijk goedkeuren en opslaan;
+3. daarna de exacte bestanden compositen;
+4. niet opnieuw genereren om een sheet te maken;
+5. niet spiegelen.
+
+Een sheet vervangt nooit de losse approved bronnen.
+
+## 10. Manifest
+
+`asset-manifest.json` is de machineleesbare index, niet de visuele bron zelf.
+
+Een canonieke image-entry bevat minimaal:
+
 - uniek `id`;
 - `type`;
 - betekenis/actie/emotie;
-- view of direction;
-- pad;
-- status `approved`;
-- bron/runtime-relatie indien relevant.
+- view/richting indien relevant;
+- `path`;
+- `status`;
+- `sha256`;
+- `mime_type`;
+- provenance naar de exacte goedgekeurde bron.
 
-## 8. Vier aanzichten
+## 11. Automatische validatie
 
-1. front los maken → goedkeuren → opslaan;
-2. right los maken → goedkeuren → opslaan;
-3. left los maken → goedkeuren → opslaan;
-4. back los maken → goedkeuren → opslaan;
-5. daarna exact deze vier bestanden compositen.
+Lokaal:
 
-## 9. Verplichte repo-check
+```bash
+python scripts/validate_yupi_assets.py
+```
 
-Voor nieuwe Yupi-assets gelden ook:
-- `docs/IMAGE_GENERATION_PROTOCOL.md`
-- `docs/characters/YUPI_SPEC.md`
-- `docs/characters/YUPI_SPEC.json`
+CI draait dezelfde controle.
 
-## 10. Golden rule
+Voor `approved` controleert de validator minimaal:
 
-> **GOEDGEKEURD IN CHAT = DIRECT BEHEERD IN DE REPO.**
+- repo-pad bestaat;
+- bestand is niet leeg;
+- image-extensie klopt voor image-assets;
+- SHA-256 klopt wanneer in manifest geregistreerd;
+- een asset staat niet alleen als Library-verwijzing geregistreerd.
+
+`approved_pending_binary` wordt als herstelstatus gerapporteerd, niet als volledig approved.
+
+Wanneer een manifest `recovery_status: complete` meldt, zijn pending binaries niet meer toegestaan.
+
+## 12. Verplichte repo-check vóór beeldwerk
+
+Altijd raadplegen:
+
+- `docs/YUPI_GAME_BIBLE.md`;
+- `AI_JOHAN.md`;
+- `docs/IMAGE_GENERATION_PROTOCOL.md`;
+- `docs/characters/YUPI_SPEC.md`;
+- `docs/characters/YUPI_SPEC.json`;
+- het relevante `asset-manifest.json`;
+- de echte goedgekeurde visuele referentie.
+
+## 13. Golden rule
+
+> **GOEDGEKEURD = EXPLICIETE GOEDKEURING + ECHTE REPO-BINARY + JUISTE HASH + GESLAAGDE VALIDATIE.**
 >
-> **CANONIEKE ASSET = VASTE NAAM + VASTE MAP + MANIFEST-ENTRY.**
+> **JSON/LIBRARY ALLEEN IS NIET GENOEG.**
