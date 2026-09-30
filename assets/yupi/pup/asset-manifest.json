@@ -51,7 +51,7 @@
     {
       "id": "yupi-pup-design-base",
       "type": "design",
-      "status": "approved_pending_binary",
+      "status": "approved",
       "path": "assets/yupi/pup/design/approved/base-reference.jpeg",
       "anatomy_spec": "docs/characters/YUPI_SPEC.json",
       "approval_date": "2026-09-29",
@@ -70,7 +70,8 @@
         "exact_source_recovered": true,
         "sha256_calculated": true,
         "technical_decode": "passed",
-        "repo_binary_present": false
+        "repo_binary_present": true,
+        "repo_sha256_verified": true
       }
     },
     {
@@ -91,7 +92,7 @@
       "type": "pose",
       "action": "sitting",
       "view": "front",
-      "status": "approved_pending_binary",
+      "status": "approved",
       "path": "assets/yupi/pup/poses/sitting/front.png",
       "anatomy_spec": "docs/characters/YUPI_SPEC.json",
       "approval_date": "2026-09-30",
@@ -111,7 +112,8 @@
         "exact_source_recovered": true,
         "sha256_calculated": true,
         "technical_decode": "passed",
-        "repo_binary_present": false
+        "repo_binary_present": true,
+        "repo_sha256_verified": true
       }
     },
     {
@@ -119,7 +121,7 @@
       "type": "pose",
       "action": "standing-bark",
       "view": "front",
-      "status": "approved_pending_binary",
+      "status": "approved",
       "path": "assets/yupi/pup/poses/standing-bark/front.png",
       "anatomy_spec": "docs/characters/YUPI_SPEC.json",
       "approval_date": "2026-09-30",
@@ -139,7 +141,8 @@
         "exact_source_recovered": true,
         "sha256_calculated": true,
         "technical_decode": "passed",
-        "repo_binary_present": false
+        "repo_binary_present": true,
+        "repo_sha256_verified": true
       }
     },
     {
@@ -208,6 +211,6 @@
       "reason": "Replaced by later explicitly approved full-body Yupi design."
     }
   ],
-  "recovery_status": "in_progress",
+  "recovery_status": "complete",
   "recovery_protocol": "docs/MICHEL_AI_ASSET_RECOVERY_PROTOCOL.md"
 }
