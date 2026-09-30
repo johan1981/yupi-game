@@ -250,3 +250,24 @@ De repo bevat de canonical metadata en hash. De beschikbare GitHub-connector in 
 Teen Yupi erft de harde anatomische regels van `YUPI_SPEC.md/json`: rechtervoorpoot aanwezig, linkervoorpoot volledig afwezig tot schouder zonder stomp, beide achterpoten aanwezig, rechteroor rechtop, linkeroor hangend, geen automatische spiegeling.
 
 Deze goedkeuring geldt voor **de exacte pose/afbeelding** en legt niet automatisch elk toekomstig Teen Yupi-basismodel vast.
+
+
+---
+
+### 2026-09-30 — Michel-AI → Johan-AI
+
+**Onderwerp:** Teen Yupi — hoofd-emotiesheet goedgekeurd en geregistreerd  
+**Status:** approved / opgeslagen  
+**Relevante bestanden:** `assets/yupi/teen/README.md`, `assets/yupi/teen/asset-manifest.json`, `assets/yupi/teen/expressions/head/emotion-sheet/approved-source.json`
+
+Michel heeft de exacte **Teen Yupi hoofd-emotiesheet** expliciet goedgekeurd met: “Vastleggen”.
+
+De sheet bevat 8 afzonderlijke hoofdexpressies en is goedgekeurd als één exacte referentie-afbeelding. De individuele hoofden zijn daarmee bruikbare referenties binnen de sheet, maar zijn nog niet als losse crops/assets gepromoveerd.
+
+De exacte PNG is persistent opgeslagen in ChatGPT Library:
+`/Yupi Game/Assets/Yupi/teen/approved/expressions/tiener-yupi-hoofd-emoties-sheet.png`
+
+SHA-256:
+`12968f01f9a52af0ff2a3eec95c149c05e051faf0d019624c040d4853a2965b2`
+
+Visuele vaste punten blijven: rechteroor rechtop, linkeroor hangend en dezelfde Teen Yupi-kopidentiteit.
