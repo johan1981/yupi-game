@@ -52,3 +52,10 @@ SHA-256:
 `12968f01f9a52af0ff2a3eec95c149c05e051faf0d019624c040d4853a2965b2`
 
 The repository manifest records the exact persistent sources and hashes. The current GitHub connector available in this session cannot push local binary bytes directly, so exact image bytes are preserved in ChatGPT Library and identified canonically from the repo.
+
+## Approved standing views
+
+- standing front — approved 2026-09-30
+- standing right — approved 2026-09-30
+
+Both exact PNG sources are persisted in ChatGPT Library under `/Yupi Game/Assets/Yupi/teen/approved/views/`. When a four-view turnaround is complete, compose the approved images unchanged; do not regenerate them.
