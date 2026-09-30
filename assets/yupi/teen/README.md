@@ -61,3 +61,5 @@ The repository manifest records the exact persistent sources and hashes. The cur
 Both exact PNG sources are persisted in ChatGPT Library under `/Yupi Game/Assets/Yupi/teen/approved/views/`. When a four-view turnaround is complete, compose the approved images unchanged; do not regenerate them.
 
 - standing left — approved 2026-09-30
+
+- standing top — approved 2026-09-30
