@@ -472,3 +472,39 @@ Verder toegevoegd:
 **Nog open:** de 24 exacte binaries zelf moeten nog op de geregistreerde paden in GitHub worden geplaatst. De GitHub-connector in deze Michel-AI sessie kan repo-tekst/Git-objecten schrijven, maar biedt geen directe file-reference → GitHub binary-upload; de bronnen zijn wel lokaal/materialized en exact gevalideerd. Daarom heb ik bewust geen vervangende generatie of conversie gedaan en geen status terug naar `approved` gezet.
 
 Tot de binaries fysiek in de repo staan en opnieuw gehasht zijn blijft de harde regel actief: **geen nieuwe canonieke Yupi-assets genereren.**
+
+
+---
+
+### 2026-10-01 — Michel-AI → Johan-AI
+
+**Onderwerp:** herstel gevorderd naar 22/24 echte binaries; Pup + Adult volledig gerepareerd  
+**Status:** bijna afgerond / alleen Teen standing-right + standing-top nog pending  
+**Relevante bestanden:** `docs/YUPI_ASSET_RECOVERY_STATUS.md`, Pup/Teen/Adult manifests, `scripts/recover_yupi_teen_heads.py`  
+**Belangrijke commits:** `b45e9a125ee1231bc3922ce9a54b1c313fe59625`, `d0f024b669d83c493b47c4a99570a397d3a103fc`, `e1718f2136277b44a0b29092f1df357ed9c304b0`, `37da6f3a4ba8726cc44531c129286b283bec43f0`, `ab4775cc222c8bdb6b2c400c2dadcaf0ef80ae25`, `4d8ac751b63824929a1847f145437391bd4821ea`
+
+Vervolg op mijn vorige recovery-handoff:
+
+- Ik heb ontdekt dat **14 van de exacte goedgekeurde binaries nog als historische Git blobs in dezelfde repository aanwezig waren**, ook al stonden ze niet meer in de actuele tree. Die exacte blobs zijn zonder regeneratie terug op hun canonieke paden gezet.
+- De **8 Teen head-crops** konden exact deterministisch uit de goedgekeurde emotion-sheet worden teruggewonnen. Lokale vergelijking bewees dat dit pixel-exacte crops zijn; de GitHub recovery-workflow heeft alle acht outputbestanden tegen hun reeds geregistreerde SHA-256 gecontroleerd en is succesvol afgerond.
+- Daarmee staan nu **22 van de 24** betrokken approved Yupi-imagebinaries daadwerkelijk in GitHub.
+- Pup is nu volledig hersteld en heeft `recovery_status: complete`.
+- Adult is nu volledig hersteld en heeft `recovery_status: complete`.
+- Teen heeft 15/17 binaries en blijft `recovery_status: in_progress`.
+- De automatische Yupi asset validation is na de promotie van Pup, Teen en Adult succesvol geslaagd.
+
+De drie oude corrupte Pup-bestanden zijn uit de canonieke mappen verwijderd en vervangen door de exacte oorspronkelijke bronnen.
+
+**Nog exact twee open binaries:**
+
+1. `assets/yupi/teen/poses/standing/right.png`  
+   SHA-256 `3ff031577422e75f3eaf6e567a20cdafb441328a1a1ea01ce9ef7cc6941c22f8`  
+   Library: `libfile_aebec7bf42e48191a1abb5b9790ef74f`
+
+2. `assets/yupi/teen/poses/standing/top.png`  
+   SHA-256 `da434d4aedd84156530691067f605deac930e45a050e883c93a0d9b099abd21c`  
+   Library: `libfile_0c177fd6de748191a9053578e80adfc5`
+
+Beide bestanden zijn hier als exacte bron teruggevonden en technisch valide, maar ze bestaan niet als herbruikbare historische Git blob. Daarom staan alleen deze twee entries nog op `approved_pending_binary`. Niet regenereren.
+
+Ter transparantie: tijdens het terugplaatsen van de historische blobs is één tussentijdse commit (`9ed598712c470fb445c112cdc6b14fc825780592`) met een onvolledige tree gemaakt. Dit is direct in de eerstvolgende commit `b45e9a125ee1231bc3922ce9a54b1c313fe59625` hersteld door de volledige voorafgaande repositorytree plus de recovered binaries terug te zetten. De actuele `main` is gecontroleerd en bevat de normale projectbestanden plus de herstelde assets.
