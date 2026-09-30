@@ -6,7 +6,7 @@
 
 ## 1. Waarom dit bestand bestaat
 
-Op 2026-09-30 is vastgesteld dat een groot deel van de goedgekeurde Teen- en Adult-Yupi-assets in de repository alleen als metadata/JSON is geregistreerd.
+Op 2026-09-30 is vastgesteld dat de goedgekeurde asset-opslag van **Pup, Teen en Adult Yupi** niet betrouwbaar compleet is.
 
 De huidige situatie op `main`:
 
@@ -14,6 +14,10 @@ De huidige situatie op `main`:
 - onder `assets/yupi/teen/` staan **0 echte PNG/JPG/WebP-afbeeldingen**;
 - `assets/yupi/adult/asset-manifest.json` bevat **4 approved assets**;
 - onder `assets/yupi/adult/` staan **0 echte PNG/JPG/WebP-afbeeldingen**;
+- Pup bevat wel imagebestanden, maar minstens drie canonieke bestanden zijn aantoonbaar corrupt of afgekapt:
+  - `assets/yupi/pup/design/approved/base-reference.jpg` — 14.999 bytes; begint niet met een geldige JPEG-signatuur (`FF D8 FF`), maar met `9B 0D E7 4A ...`;
+  - `assets/yupi/pup/poses/sitting/front.webp` — bestand is 15.008 bytes, terwijl de RIFF/WebP-header een totale bestandsgrootte van circa **43.288 bytes** aangeeft;
+  - `assets/yupi/pup/poses/standing-bark/front.webp` — bestand is 15.008 bytes, terwijl de RIFF/WebP-header een totale bestandsgrootte van circa **41.776 bytes** aangeeft;
 - meerdere `approved-source.json`-bestanden verwijzen naar bestanden in ChatGPT Library;
 - `assets/nexus-breuk/session-2026-09-30/README.md` noemt meerdere gegenereerde beelden die eveneens niet als binaries in GitHub staan.
 
@@ -37,7 +41,7 @@ Reden: eerst de bestaande, reeds goedgekeurde visuele waarheid veiligstellen voo
 
 ## 3. Herstelprocedure per ontbrekende approved asset
 
-Voor iedere approved asset in de Teen- en Adult-manifests:
+Voor iedere approved asset in de Pup-, Teen- en Adult-manifests:
 
 1. Lees de bestaande manifest-entry en/of `approved-source.json`.
 2. Haal het **exacte reeds goedgekeurde bronbestand** terug uit de daar geregistreerde ChatGPT Library-bron.
@@ -250,20 +254,33 @@ Een fout moet de asset-validatie laten falen.
 
 Zo kan toekomstige AI-output niet opnieuw een "approved" manifest maken zonder daadwerkelijke bestanden.
 
-## 13. Pup als voorbeeld
+## 13. Pup vereist eveneens herstel
 
-De Pup-structuur bevat al echte goedgekeurde binaries, bijvoorbeeld:
+Pup leek aanvankelijk het goede voorbeeld omdat daar imagebestanden in GitHub staan. Binary-validatie toont echter aan dat minstens drie canonieke bestanden niet bruikbaar zijn:
 
-- `assets/yupi/pup/design/approved/base-reference.jpg`
-- `assets/yupi/pup/poses/sitting/front.webp`
-- `assets/yupi/pup/poses/standing-bark/front.webp`
+- `design/approved/base-reference.jpg` is geen geldige JPEG;
+- `poses/sitting/front.webp` is een afgekapt WebP-bestand;
+- `poses/standing-bark/front.webp` is een afgekapt WebP-bestand.
 
-Dit is het gewenste principe: metadata **én** het echte visuele bestand samen in de repository.
+De bijbehorende manifest-`source_reference` waarden zijn belangrijk voor herstel:
+
+- base design: `75F1FA34-806F-4C92-8B3A-75224D88A121.jpeg`;
+- sitting: `vrolijke_eenbenige_puppy_yupi.png`;
+- standing bark: `vrolijke_driepotige_blaffende_pup.png`.
+
+Zoek eerst naar de **exacte oorspronkelijke goedgekeurde bron** in ChatGPT Library / de oorspronkelijke sessie. Herstel niet door regeneratie.
+
+De Pup-binaries mogen pas weer als betrouwbaar `approved` worden beschouwd nadat:
+1. ze opnieuw uit de exacte bron zijn opgeslagen;
+2. het bestand technisch valide opent/decodet;
+3. SHA-256 is vastgelegd en gecontroleerd;
+4. de visuele inhoud tegen de goedgekeurde bron is gecontroleerd.
 
 ## 14. Definition of Done voor deze herstelactie
 
 De herstelactie is pas klaar wanneer:
 
+- alle recoverable Pup approved assets als technisch geldige echte binaries in GitHub staan;
 - alle recoverable Teen approved assets als echte binaries in GitHub staan;
 - alle recoverable Adult approved assets als echte binaries in GitHub staan;
 - hashes zijn gecontroleerd;
