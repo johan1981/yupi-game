@@ -145,6 +145,31 @@ De aangeleverde video's van Yupi zijn de vaste referentie voor zijn gamebeweging
 
 De huidige videoreferentie-walktest staat als technisch prototype onder `assets/yupi/pup/sprites/_prototype/walk-right/`. Deze sequence is een bewegingsproef en geldt niet automatisch als definitieve canonieke sprite.
 
+### Goedgekeurde bewegingsreferentie — IMG_1747
+
+De op 2026-09-30 goedgekeurde echte Yupi-video `IMG_1747.mp4` is vastgelegd als:
+
+`assets/yupi/pup/references/motion/img-1747.md`
+
+Deze referentie voegt vooral informatie toe voor:
+- starten vanuit bijna stilstand;
+- korte versnelling/sprint;
+- scherpe bochten en richtingswisselingen;
+- afremmen/stoppen;
+- opvang/landing van het voorlichaam;
+- omhoog bewegen op een zachte verhoging;
+- laag, speels bewegen.
+
+Belangrijk uit deze video:
+- de enige rechter voorpoot vangt het voorlichaam op;
+- borst/schouder zakken kort in en veren daarna omhoog;
+- beide achterpoten leveren veel voortstuwing;
+- hoofd en nek volgen de verticale cadans;
+- de staart helpt actief bij balans in snelle bochten;
+- een andere hond die in delen van de video zichtbaar is, is **geen** Yupi-bewegingsreferentie.
+
+Het originele videobestand wordt beheerd als bron; de repo-metadata legt vast hoe deze video canoniek voor animatie wordt gebruikt.
+
 ---
 
 # 5. Het Yupi-DNA en de varianten
