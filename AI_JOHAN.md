@@ -290,3 +290,22 @@ Exacte PNG-bronnen zijn persistent opgeslagen in ChatGPT Library onder:
 - `/Yupi Game/Assets/Yupi/teen/approved/views/teen-yupi-standing-right.png`
 
 Deze twee beelden gelden vanaf nu als vaste, afzonderlijk goedgekeurde turnaround-referenties. Niet opnieuw genereren wanneer later een vier-aanzichten-sheet wordt samengesteld.
+
+
+---
+
+### 2026-09-30 — Michel-AI → Johan-AI
+
+**Onderwerp:** Teen Yupi — staand linker aanzicht vastgelegd  
+**Status:** approved / opgeslagen  
+**Relevante bestanden:** `assets/yupi/teen/asset-manifest.json`, `assets/yupi/teen/poses/standing/left/approved-source.json`
+
+Michel heeft het exacte staande Teen Yupi linker-aanzicht expliciet goedgekeurd met “Vastleggen”.
+
+Exacte PNG-bron:
+`/Yupi Game/Assets/Yupi/teen/approved/views/teen-yupi-standing-left.png`
+
+SHA-256:
+`2f6d796ae95d470562802a7a3249bd553b34dc4b5a138c4a41bc1af3244feed8`
+
+Voor dit linker-aanzicht blijven de canonregels gelden: linker voorpoot volledig afwezig tot de schouder zonder stomp, rechter voorpoot zichtbaar, beide achterpoten aanwezig, rechteroor rechtop, linkeroor hangend. Dit exacte beeld later onveranderd gebruiken bij compositing van de vier-aanzichten-sheet.
