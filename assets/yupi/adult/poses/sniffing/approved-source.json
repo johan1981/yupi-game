@@ -1,0 +1,17 @@
+{
+  "id": "yupi-adult-pose-sniffing",
+  "type": "pose",
+  "action": "sniffing",
+  "status": "approved",
+  "approval_date": "2026-09-30",
+  "approval_basis": "Michel explicitly approved the Adult Yupi pose set with 'Vastleggen'.",
+  "source_filename": "nieuwsgierige_hond_snuffelt_aandachtig.png",
+  "sha256": "3bff30a46745ff255458dc1462c20373e9afb58c059261523c0cc3e23da951e7",
+  "mime_type": "image/png",
+  "dimensions": "1122x1402",
+  "persistent_source": {
+    "provider": "ChatGPT Library",
+    "path": "/Yupi Game/Assets/Yupi/adult/approved/poses/adult-yupi-sniffing.png",
+    "library_file_id": "libfile_cfb70498ddd48191ae62463507a0720b"
+  }
+}

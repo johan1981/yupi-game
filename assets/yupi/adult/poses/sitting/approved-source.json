@@ -1,0 +1,17 @@
+{
+  "id": "yupi-adult-pose-sitting",
+  "type": "pose",
+  "action": "sitting",
+  "status": "approved",
+  "approval_date": "2026-09-30",
+  "approval_basis": "Michel explicitly approved the Adult Yupi pose set with 'Vastleggen'.",
+  "source_filename": "vriendelijke_driepotige_hond_in_studiolicht.png",
+  "sha256": "0d8affe10d458a2b3018f73d60b2e0a7fc85065e6f50cbd52734461165ccfb5a",
+  "mime_type": "image/png",
+  "dimensions": "1122x1402",
+  "persistent_source": {
+    "provider": "ChatGPT Library",
+    "path": "/Yupi Game/Assets/Yupi/adult/approved/poses/adult-yupi-sitting.png",
+    "library_file_id": "libfile_1dcba58094888191a1904733abd4d9e0"
+  }
+}

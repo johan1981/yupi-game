@@ -1,0 +1,214 @@
+{
+  "schema_version": "1.1.0",
+  "status": "canon",
+  "character": "Yupi",
+  "species": "dog",
+  "sex": "male",
+  "asymmetrical_character": true,
+  "source_of_truth": "docs/characters/YUPI_SPEC.md",
+  "must_read_before_generation": true,
+  "anatomy": {
+    "total_legs": 3,
+    "forelegs": {
+      "right": {
+        "present": true,
+        "complete": true,
+        "functional": true,
+        "load_bearing": true
+      },
+      "left": {
+        "present": false,
+        "absent_to_shoulder": true,
+        "stump_allowed": false,
+        "partial_limb_allowed": false,
+        "protrusion_allowed": false
+      }
+    },
+    "hindlegs": {
+      "right": {
+        "present": true,
+        "complete": true
+      },
+      "left": {
+        "present": true,
+        "complete": true
+      }
+    }
+  },
+  "ears": {
+    "count": 2,
+    "right": {
+      "state": "upright",
+      "shape": "pointed"
+    },
+    "left": {
+      "state": "floppy",
+      "direction": "down"
+    }
+  },
+  "laterality": {
+    "reference_frame": "Yupi's own body",
+    "viewer_relative_left_right_forbidden": true,
+    "automatic_mirroring_forbidden": true,
+    "front_view": {
+      "image_left": [
+        "right foreleg",
+        "right upright ear"
+      ],
+      "image_right": [
+        "missing left foreleg",
+        "left floppy ear"
+      ]
+    },
+    "back_view": {
+      "image_right": [
+        "right body side",
+        "right foreleg",
+        "right upright ear"
+      ],
+      "image_left": [
+        "left body side",
+        "missing left foreleg",
+        "left floppy ear"
+      ]
+    },
+    "right_side_view": {
+      "camera_views": "right body side",
+      "right_foreleg_present": true,
+      "left_foreleg_absent": true,
+      "right_ear_upright": true
+    },
+    "left_side_view": {
+      "camera_views": "left body side",
+      "left_foreleg_absent_to_shoulder": true,
+      "left_ear_floppy": true,
+      "right_ear_remains_upright": true,
+      "right_foreleg_visibility": "must be clearly visible in canonical side-view/reference assets",
+      "right_foreleg_present": true,
+      "both_hindlegs_present": true,
+      "reference_acceptance": "reject if right foreleg is hidden/missing or either hindleg is missing"
+    }
+  },
+  "visual_design": {
+    "lock_identity_across_poses": true,
+    "base_fur_color": "warm reddish-brown / orange-brown",
+    "light_areas": [
+      "muzzle",
+      "chin",
+      "neck",
+      "chest",
+      "belly",
+      "parts of paws/legs",
+      "approved tail highlights"
+    ],
+    "preserve": [
+      "head shape",
+      "muzzle shape",
+      "large expressive eyes",
+      "eyebrows",
+      "nose",
+      "body proportions",
+      "fur structure",
+      "tail shape",
+      "color distribution",
+      "ear shapes",
+      "anatomical asymmetry"
+    ],
+    "canonical_base_asset": "assets/yupi/pup/design/approved/base-reference.jpg",
+    "superseded_base_asset": "assets/yupi/pup/archive/legacy-v2/base-sheet.png",
+    "base_asset_approval_date": "2026-09-29"
+  },
+  "workflow": {
+    "generation_order": [
+      "read YUPI_SPEC.md",
+      "validate anatomy",
+      "validate ears",
+      "validate camera laterality",
+      "apply pose",
+      "apply emotion",
+      "generate",
+      "post-generation validation"
+    ],
+    "difficult_pose_views": [
+      "front",
+      "right",
+      "left",
+      "back"
+    ],
+    "approve_each_view_separately": true,
+    "four_view_sheet": {
+      "regenerate": false,
+      "method": "composite approved individual images unchanged"
+    }
+  },
+  "pre_generation_check": {
+    "exact_three_legs": true,
+    "right_foreleg_present": true,
+    "left_foreleg_absent_to_shoulder": true,
+    "no_left_stump": true,
+    "both_hindlegs_present": true,
+    "right_ear_upright": true,
+    "left_ear_floppy": true,
+    "exactly_two_ears": true,
+    "use_approved_head_design": true,
+    "use_approved_proportions": true,
+    "use_approved_fur_and_colors": true,
+    "use_approved_tail": true,
+    "laterality_from_yupi_not_viewer": true,
+    "no_automatic_mirroring": true
+  },
+  "post_generation_validation": [
+    "exactly 3 legs",
+    "present foreleg is Yupi's right foreleg",
+    "left foreleg absent completely to shoulder",
+    "no stump or partial left foreleg",
+    "both hindlegs present",
+    "right ear upright",
+    "left ear floppy",
+    "exactly 2 ears",
+    "approved Yupi design preserved",
+    "requested emotion correct",
+    "requested pose and camera angle correct",
+    "for canonical left side/reference view: right foreleg visibly present",
+    "for turnaround/reference view: essential anatomy is visibly readable"
+  ],
+  "approval": {
+    "accepted_phrases": [
+      "vastleggen",
+      "vastzetten",
+      "opslaan"
+    ],
+    "rejected_generation_must_not_become_reference": true,
+    "store_in_repo_immediately": true,
+    "update_asset_manifest": true,
+    "chat_only_is_not_managed_asset": true
+  },
+  "priority_order": [
+    "docs/characters/YUPI_SPEC.md",
+    "approved fixed Yupi reference images",
+    "approved pose/emotion images",
+    "current request",
+    "generated image"
+  ],
+  "golden_rule": "ANATOMY FIRST. POSE SECOND. EMOTION THIRD. COMPOSITION LAST.",
+  "required_documents_before_generation": [
+    "docs/YUPI_GAME_BIBLE.md",
+    "AI_JOHAN.md",
+    "docs/IMAGE_GENERATION_PROTOCOL.md",
+    "docs/characters/YUPI_SPEC.md",
+    "docs/characters/YUPI_SPEC.json"
+  ],
+  "repo_check_required_before_every_image_generation": true,
+  "post_generation_repo_validation_required": true,
+  "asset_pipeline": "docs/YUPI_ASSET_PIPELINE.md",
+  "asset_manifest": "assets/yupi/pup/asset-manifest.json",
+  "validation_gate": {
+    "mandatory": true,
+    "failed_generation_is_approved": false,
+    "failed_generation_must_not_be_saved_as_reference": true,
+    "failed_generation_must_not_enter_manifest_as_approved": true,
+    "validate_against_json_after_generation": true,
+    "turnaround_rule": "correct only the failing individual view; never regenerate an already-approved full sheet",
+    "left_side_reference_rule": "right foreleg must be visibly present; both hindlegs must be present"
+  }
+}

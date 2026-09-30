@@ -1,0 +1,213 @@
+{
+  "schema_version": "1.0.0",
+  "character": "Yupi",
+  "form": "pup",
+  "canonical_root": "assets/yupi/pup",
+  "source_of_truth": [
+    "docs/characters/YUPI_SPEC.md",
+    "docs/characters/YUPI_SPEC.json",
+    "docs/IMAGE_GENERATION_PROTOCOL.md",
+    "docs/YUPI_ASSET_PIPELINE.md"
+  ],
+  "approval": {
+    "phrases": [
+      "vastleggen",
+      "vastzetten",
+      "opslaan"
+    ],
+    "action": "store approved asset in canonical folder and update this manifest in the same work session",
+    "chat_only_is_not_managed_asset": true
+  },
+  "conventions": {
+    "views": [
+      "front",
+      "right",
+      "left",
+      "back"
+    ],
+    "laterality": "Yupi's own body",
+    "frame_pattern": "frame-NNN.png",
+    "automatic_mirroring_forbidden": true,
+    "canonical_names_forbid": [
+      "final",
+      "final2",
+      "latest",
+      "new"
+    ],
+    "canonical_folders_are_approved_only": true
+  },
+  "paths": {
+    "design": "design/approved/",
+    "poses": "poses/<pose>/<view>.png",
+    "expressions_head": "expressions/head/<emotion>.png",
+    "expressions_views": "expressions/<emotion>/<view>.png",
+    "sprites": "sprites/<action>/<direction>/frame-NNN.png",
+    "prototypes": "sprites/_prototype/",
+    "sheets": "sheets/",
+    "archive": "archive/",
+    "references_motion": "references/motion/<reference>.md"
+  },
+  "approved_assets": [
+    {
+      "id": "yupi-pup-design-base",
+      "type": "design",
+      "status": "approved_pending_binary",
+      "path": "assets/yupi/pup/design/approved/base-reference.jpeg",
+      "anatomy_spec": "docs/characters/YUPI_SPEC.json",
+      "approval_date": "2026-09-29",
+      "approval_basis": "Michel/Johan explicitly selected this full-body design as the design to keep ('Dit ontwerp aanhouden').",
+      "source_reference": "75F1FA34-806F-4C92-8B3A-75224D88A121.jpeg",
+      "notes": "Canonical full-body visual base. Right ear upright, left ear floppy, right foreleg present, left foreleg absent completely to shoulder.",
+      "sha256": "10cdb7a1a237ac830199e2a7f593b327971f8f4afa1850953678f5674d3d101e",
+      "mime_type": "image/jpeg",
+      "dimensions": "1122x1402",
+      "persistent_source": {
+        "provider": "ChatGPT Library",
+        "path": "/Yupi’s game2/75F1FA34-806F-4C92-8B3A-75224D88A121.jpeg",
+        "library_file_id": "libfile_4d9c63601f608191b2c483b07c728761"
+      },
+      "recovery_validation": {
+        "exact_source_recovered": true,
+        "sha256_calculated": true,
+        "technical_decode": "passed",
+        "repo_binary_present": false
+      }
+    },
+    {
+      "id": "yupi-pup-asset-registration-sheet",
+      "type": "sheet",
+      "subtype": "asset-registration",
+      "status": "approved",
+      "path": "assets/yupi/pup/sheets/asset-registration-base.svg",
+      "related_asset_id": "yupi-pup-design-base",
+      "approval_date": "2026-09-29",
+      "approval_basis": "Michel explicitly approved the readable asset-registration sheet layout ('Vastleggen').",
+      "source_reference": "yupi_pup_assetregistratie_voorbeeld_v3.png",
+      "format": "svg",
+      "notes": "Approved registration layout with readable right-side repo data, hard anatomy gate and workflow. Uses the canonical base-reference without regenerating Yupi."
+    },
+    {
+      "id": "yupi-pup-pose-sitting-front",
+      "type": "pose",
+      "action": "sitting",
+      "view": "front",
+      "status": "approved_pending_binary",
+      "path": "assets/yupi/pup/poses/sitting/front.png",
+      "anatomy_spec": "docs/characters/YUPI_SPEC.json",
+      "approval_date": "2026-09-30",
+      "approval_basis": "Michel explicitly approved this exact sitting Yupi image ('Vastleggen en opslaan dit is perfect').",
+      "source_reference": "vrolijke_eenbenige_puppy_yupi.png",
+      "format": "webp",
+      "notes": "Approved sitting/front pose. Same canonical Pup Yupi visual identity; right foreleg present, left foreleg fully absent to the shoulder with no stump, both hindlegs present, right ear upright, left ear floppy.",
+      "sha256": "437cb34f25cb36931fcc48198fa0fd06bc57617fae2708d08f35b2dac5ee56c4",
+      "mime_type": "image/png",
+      "dimensions": "1198x1313",
+      "persistent_source": {
+        "provider": "ChatGPT Library",
+        "path": "/Yupi’s game2/Vrolijke eenbenige puppy Yupi.png",
+        "library_file_id": "libfile_9910b67a8c6c81919691a03e767cb58d"
+      },
+      "recovery_validation": {
+        "exact_source_recovered": true,
+        "sha256_calculated": true,
+        "technical_decode": "passed",
+        "repo_binary_present": false
+      }
+    },
+    {
+      "id": "yupi-pup-pose-standing-bark-front",
+      "type": "pose",
+      "action": "standing-bark",
+      "view": "front",
+      "status": "approved_pending_binary",
+      "path": "assets/yupi/pup/poses/standing-bark/front.png",
+      "anatomy_spec": "docs/characters/YUPI_SPEC.json",
+      "approval_date": "2026-09-30",
+      "approval_basis": "Michel explicitly approved this exact standing, barking Yupi image ('Goed gekeurd').",
+      "source_reference": "vrolijke_driepotige_blaffende_pup.png",
+      "format": "webp",
+      "notes": "Approved standing bark pose. Pup Yupi visual identity preserved; one right foreleg, no left foreleg/stump, both hindlegs present, right ear upright, left ear floppy; bark reads as active vocalization.",
+      "sha256": "537d3a098c54fb2339461cf64d7c1ff83efc992c50c5da146172c8164b32a58e",
+      "mime_type": "image/png",
+      "dimensions": "1199x1312",
+      "persistent_source": {
+        "provider": "ChatGPT Library",
+        "path": "/Yupi’s game2/Vrolijke Driepotige Blaffende Pup.png",
+        "library_file_id": "libfile_62b19dd684388191bf3e985df751bd93"
+      },
+      "recovery_validation": {
+        "exact_source_recovered": true,
+        "sha256_calculated": true,
+        "technical_decode": "passed",
+        "repo_binary_present": false
+      }
+    },
+    {
+      "id": "yupi-pup-motion-img-1747",
+      "type": "motion_reference",
+      "status": "approved",
+      "path": "assets/yupi/pup/references/motion/img-1747.md",
+      "source_filename": "IMG_1747.mp4",
+      "original_sha256": "ac00a0ce98e1fba034e832ad6bd8330700220e4b251306d614a300c72e4b80e7",
+      "original_duration_seconds": 51.233,
+      "original_resolution": "512x910",
+      "original_frame_rate_fps": 30,
+      "original_storage": "ChatGPT Library: /Yupi Game/References/Yupi/motion/IMG_1747.mp4",
+      "approval_date": "2026-09-30",
+      "approval_basis": "User explicitly approved the uploaded Yupi movement video with 'Vastleggen'.",
+      "intended_use": [
+        "start from standstill",
+        "short sprint/acceleration",
+        "sharp turn",
+        "deceleration/stop",
+        "landing/front catch",
+        "step-up/climb",
+        "low playful movement"
+      ],
+      "notes": "Real-Yupi biomechanics reference. Right foreleg is the only front support; front body compresses and rebounds; hindlegs provide propulsion; head/neck follow vertical cadence; tail aids balance. Another dog appears in parts of the source and must not be used as Yupi gait reference."
+    }
+  ],
+  "prototypes": [
+    {
+      "id": "legacy-active-idle-prototype",
+      "type": "sprite",
+      "status": "prototype",
+      "path": "assets/yupi/pup/sprites/_prototype/idle/idle.png",
+      "note": "Technical asset retained so the current browser test keeps working; not promoted to canon."
+    },
+    {
+      "id": "walk-right-video-prototype",
+      "type": "sprite_sequence",
+      "status": "prototype",
+      "action": "walk",
+      "direction": "right",
+      "frame_count": 8,
+      "path_pattern": "assets/yupi/pup/sprites/_prototype/walk-right/frame-NNN.png",
+      "note": "Existing video-referenced technical sequence; not automatically considered approved."
+    },
+    {
+      "id": "walk16-right-test-strip",
+      "type": "test_strip",
+      "status": "prototype",
+      "path": "assets/yupi/pup/sprites/_prototype/walk16-right/source-strip.jpg"
+    }
+  ],
+  "archive_policy": "archive/ contains historical or experimental material and must not be selected as active canon unless explicitly re-approved.",
+  "migration": {
+    "date": "2026-09-29",
+    "legacy_root_assets": "assets/yupi/pup/archive/legacy-v1/",
+    "experimental_walks": "assets/yupi/pup/archive/experiments/",
+    "note": "Historical files were moved out of the canonical root; canonical folders are approval-driven."
+  },
+  "superseded_assets": [
+    {
+      "id": "yupi-pup-design-v2-old",
+      "status": "archived",
+      "path": "assets/yupi/pup/archive/legacy-v2/base-sheet.png",
+      "superseded_by": "yupi-pup-design-base",
+      "reason": "Replaced by later explicitly approved full-body Yupi design."
+    }
+  ],
+  "recovery_status": "in_progress",
+  "recovery_protocol": "docs/MICHEL_AI_ASSET_RECOVERY_PROTOCOL.md"
+}

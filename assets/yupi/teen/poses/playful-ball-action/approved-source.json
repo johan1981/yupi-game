@@ -1,0 +1,28 @@
+{
+  "id": "yupi-teen-action-ball-focus",
+  "type": "pose",
+  "action": "playful-ball-chase",
+  "view": "low-front-action",
+  "status": "approved",
+  "approval_date": "2026-09-30",
+  "approval_basis": "Michel explicitly approved this exact Teen Yupi action image with 'Vastleggen'.",
+  "source_filename": "tiener_yupi_jaagt_op_een_bal.png",
+  "sha256": "4fd5a5007a36e38ffb84edbcc107a5ea20b8e8d9a470730fe751363c7e35e3f9",
+  "mime_type": "image/png",
+  "dimensions": "1448x1086",
+  "persistent_source": {
+    "provider": "ChatGPT Library",
+    "path": "/Yupi Game/Assets/Yupi/teen/approved/poses/teen-yupi-action-ball-focus.png",
+    "library_file_id": "libfile_212df6c8e0a88191b400f3b102b987cf"
+  },
+  "anatomy_validation": [
+    "exactly three legs",
+    "right foreleg present and reaching toward ball",
+    "left foreleg absent completely to shoulder with no stump",
+    "both hindlegs present",
+    "right ear upright",
+    "left ear floppy",
+    "Teen Yupi approved 3D character style preserved"
+  ],
+  "notes": "Approved dynamic ball-focused Teen Yupi action pose. Preserve exact image as reference."
+}

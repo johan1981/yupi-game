@@ -1,0 +1,11 @@
+{
+  "name": "Yupi — De Laatste Rit",
+  "short_name": "Yupi",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#07111d",
+  "theme_color": "#07111d",
+  "description": "Yupi's Game — Level 1: De Laatste Rit"
+}

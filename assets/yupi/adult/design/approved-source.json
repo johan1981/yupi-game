@@ -1,0 +1,25 @@
+{
+  "id": "yupi-adult-base",
+  "type": "design",
+  "status": "approved",
+  "approval_date": "2026-09-30",
+  "approval_basis": "Michel explicitly approved this exact Adult Yupi design with 'Vastleggen'.",
+  "source_filename": "volwassen_driebenige_hond_in_studio_render.png",
+  "sha256": "8ab63c50e9a4cde518f5d9e89c96c40f27bfed898bb8098b2486b38a91b8c166",
+  "mime_type": "image/png",
+  "dimensions": "1122x1402",
+  "persistent_source": {
+    "provider": "ChatGPT Library",
+    "path": "/Yupi Game/Assets/Yupi/adult/approved/base/adult-yupi-base.png",
+    "library_file_id": "libfile_d07e235c92508191bcf1296d30b84853"
+  },
+  "anatomy_validation": [
+    "exactly three legs",
+    "right foreleg present",
+    "left foreleg absent completely to shoulder with no stump",
+    "both hindlegs present",
+    "right ear upright",
+    "left ear floppy"
+  ],
+  "notes": "Canonical approved Adult Yupi base reference."
+}
