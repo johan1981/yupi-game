@@ -85,6 +85,19 @@ Technische tests die nog niet als definitieve sprite zijn goedgekeurd. Prototype
 ### sheets
 Overzichten die door compositing uit reeds goedgekeurde losse beelden worden opgebouwd. **Geen regeneration.**
 
+### references/motion
+Goedgekeurde echte Yupi-bewegingsreferenties.
+
+Voor grote bronvideo's mag het origineel in de beheerde ChatGPT Library blijven. De repository bevat dan minimaal:
+- een vaste reference-id;
+- bronbestandsnaam;
+- SHA-256 van het origineel;
+- bronduur/resolutie/fps;
+- goedkeuringsstatus;
+- biomechanische observaties en intended animation use.
+
+De repo-metadata is canoniek voor **hoe de video gebruikt moet worden**. De video verandert nooit de visuele/anatomische canon uit `YUPI_SPEC.md/json`.
+
 ### archive
 Oude of experimentele bestanden. Niet automatisch als actuele referentie gebruiken.
 
@@ -109,6 +122,7 @@ De woorden **vastleggen**, **vastzetten** en **opslaan** betekenen bij een duide
 | hoofd/emotie | `expressions/...` |
 | animatieframes | `sprites/<action>/<direction>/frame-NNN.png` |
 | samengesteld overzicht | `sheets/` |
+| bewegingsreferentie | `references/motion/<reference>.md` |
 
 ## 5. Source versus runtime sprite
 
