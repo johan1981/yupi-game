@@ -273,6 +273,33 @@
         "left floppy ear only minimally visible due to angle"
       ],
       "notes": "Approved corrected right-side reference. The less-visible left floppy ear is intentional for this angle."
+    },
+    {
+      "id": "yupi-teen-standing-left",
+      "type": "pose",
+      "action": "standing",
+      "view": "left",
+      "status": "approved",
+      "approval_date": "2026-09-30",
+      "approval_basis": "Michel explicitly approved this exact standing Teen Yupi left-view image with 'Vastleggen'.",
+      "source_filename": "a_clean_studio_style_render_illustration_scene_wit.png",
+      "sha256": "2f6d796ae95d470562802a7a3249bd553b34dc4b5a138c4a41bc1af3244feed8",
+      "mime_type": "image/png",
+      "dimensions": "1122x1402",
+      "persistent_source": {
+        "provider": "ChatGPT Library",
+        "path": "/Yupi Game/Assets/Yupi/teen/approved/views/teen-yupi-standing-left.png",
+        "library_file_id": "libfile_33387b6cadb48191a297b99c9428b7bb"
+      },
+      "anatomy_validation": [
+        "left foreleg absent completely to shoulder with no stump",
+        "right foreleg visibly present",
+        "both hindlegs present",
+        "right ear upright",
+        "left ear floppy",
+        "three-leg anatomy preserved"
+      ],
+      "notes": "Approved Teen Yupi standing left-side/three-quarter-left reference. Preserve this exact image; do not regenerate when composing the turnaround sheet."
     }
   ]
 }
