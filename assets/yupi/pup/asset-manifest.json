@@ -84,6 +84,20 @@
       "source_reference": "vrolijke_eenbenige_puppy_yupi.png",
       "format": "webp",
       "notes": "Approved sitting/front pose. Same canonical Pup Yupi visual identity; right foreleg present, left foreleg fully absent to the shoulder with no stump, both hindlegs present, right ear upright, left ear floppy."
+    },
+    {
+      "id": "yupi-pup-pose-standing-bark-front",
+      "type": "pose",
+      "action": "standing-bark",
+      "view": "front",
+      "status": "approved",
+      "path": "assets/yupi/pup/poses/standing-bark/front.webp",
+      "anatomy_spec": "docs/characters/YUPI_SPEC.json",
+      "approval_date": "2026-09-30",
+      "approval_basis": "Michel explicitly approved this exact standing, barking Yupi image ('Goed gekeurd').",
+      "source_reference": "vrolijke_driepotige_blaffende_pup.png",
+      "format": "webp",
+      "notes": "Approved standing bark pose. Pup Yupi visual identity preserved; one right foreleg, no left foreleg/stump, both hindlegs present, right ear upright, left ear floppy; bark reads as active vocalization."
     }
   ],
   "prototypes": [
