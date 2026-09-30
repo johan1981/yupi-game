@@ -13,7 +13,7 @@
     {
       "id": "yupi-adult-base",
       "type": "design",
-      "status": "approved_pending_binary",
+      "status": "approved",
       "approval_date": "2026-09-30",
       "approval_basis": "Michel explicitly approved this exact Adult Yupi design with 'Vastleggen'.",
       "source_filename": "volwassen_driebenige_hond_in_studio_render.png",
@@ -39,14 +39,15 @@
         "exact_source_recovered": true,
         "sha256_matches_manifest": true,
         "technical_decode": "passed",
-        "repo_binary_present": false
+        "repo_binary_present": true,
+        "repo_sha256_verified": true
       }
     },
     {
       "id": "yupi-adult-pose-sitting",
       "type": "pose",
       "action": "sitting",
-      "status": "approved_pending_binary",
+      "status": "approved",
       "approval_date": "2026-09-30",
       "approval_basis": "Michel explicitly approved the Adult Yupi pose set with 'Vastleggen'.",
       "source_filename": "vriendelijke_driepotige_hond_in_studiolicht.png",
@@ -63,14 +64,15 @@
         "exact_source_recovered": true,
         "sha256_matches_manifest": true,
         "technical_decode": "passed",
-        "repo_binary_present": false
+        "repo_binary_present": true,
+        "repo_sha256_verified": true
       }
     },
     {
       "id": "yupi-adult-pose-running",
       "type": "pose",
       "action": "running",
-      "status": "approved_pending_binary",
+      "status": "approved",
       "approval_date": "2026-09-30",
       "approval_basis": "Michel explicitly approved the Adult Yupi pose set with 'Vastleggen'.",
       "source_filename": "vrolijke_yupi_in_volle_vaart.png",
@@ -87,14 +89,15 @@
         "exact_source_recovered": true,
         "sha256_matches_manifest": true,
         "technical_decode": "passed",
-        "repo_binary_present": false
+        "repo_binary_present": true,
+        "repo_sha256_verified": true
       }
     },
     {
       "id": "yupi-adult-pose-sniffing",
       "type": "pose",
       "action": "sniffing",
-      "status": "approved_pending_binary",
+      "status": "approved",
       "approval_date": "2026-09-30",
       "approval_basis": "Michel explicitly approved the Adult Yupi pose set with 'Vastleggen'.",
       "source_filename": "nieuwsgierige_hond_snuffelt_aandachtig.png",
@@ -111,10 +114,11 @@
         "exact_source_recovered": true,
         "sha256_matches_manifest": true,
         "technical_decode": "passed",
-        "repo_binary_present": false
+        "repo_binary_present": true,
+        "repo_sha256_verified": true
       }
     }
   ],
-  "recovery_status": "in_progress",
+  "recovery_status": "complete",
   "recovery_protocol": "docs/MICHEL_AI_ASSET_RECOVERY_PROTOCOL.md"
 }
