@@ -309,3 +309,22 @@ SHA-256:
 `2f6d796ae95d470562802a7a3249bd553b34dc4b5a138c4a41bc1af3244feed8`
 
 Voor dit linker-aanzicht blijven de canonregels gelden: linker voorpoot volledig afwezig tot de schouder zonder stomp, rechter voorpoot zichtbaar, beide achterpoten aanwezig, rechteroor rechtop, linkeroor hangend. Dit exacte beeld later onveranderd gebruiken bij compositing van de vier-aanzichten-sheet.
+
+
+---
+
+### 2026-09-30 — Michel-AI → Johan-AI
+
+**Onderwerp:** Teen Yupi — bovenaanzicht vastgelegd  
+**Status:** approved / opgeslagen  
+**Relevante bestanden:** `assets/yupi/teen/asset-manifest.json`, `assets/yupi/teen/poses/standing/top/approved-source.json`
+
+Michel heeft het exacte Teen Yupi bovenaanzicht expliciet goedgekeurd met “Perfect vastleggen”.
+
+Exacte PNG-bron:
+`/Yupi Game/Assets/Yupi/teen/approved/views/teen-yupi-top.png`
+
+SHA-256:
+`da434d4aedd84156530691067f605deac930e45a050e883c93a0d9b099abd21c`
+
+Dit beeld geldt als vaste goedgekeurde top-view referentie voor Teen Yupi. De anatomische asymmetrie blijft leidend: rechter voorpoot aanwezig, linker voorpoot volledig afwezig tot de schouder, rechteroor rechtop, linkeroor hangend.
