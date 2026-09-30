@@ -340,7 +340,7 @@
       "type": "pose",
       "action": "standing",
       "view": "right",
-      "status": "approved_pending_binary",
+      "status": "approved",
       "approval_date": "2026-09-30",
       "approval_basis": "Michel explicitly approved the corrected standing Teen Yupi right-side view with 'Vastleggen'.",
       "source_filename": "driepotige_vos_in_profiel.png",
@@ -366,7 +366,8 @@
         "exact_source_recovered": true,
         "sha256_matches_manifest": true,
         "technical_decode": "passed",
-        "repo_binary_present": false
+        "repo_binary_present": true,
+        "repo_sha256_verified": true
       }
     },
     {
@@ -409,7 +410,7 @@
       "type": "pose",
       "action": "standing",
       "view": "top",
-      "status": "approved_pending_binary",
+      "status": "approved",
       "approval_date": "2026-09-30",
       "approval_basis": "Michel explicitly approved this exact Teen Yupi top-view image with 'Perfect vastleggen'.",
       "source_filename": "yupi_van_bovenaf_met_gekrulde_staart.png",
@@ -436,7 +437,8 @@
         "exact_source_recovered": true,
         "sha256_matches_manifest": true,
         "technical_decode": "passed",
-        "repo_binary_present": false
+        "repo_binary_present": true,
+        "repo_sha256_verified": true
       }
     },
     {
@@ -547,6 +549,6 @@
       }
     }
   ],
-  "recovery_status": "in_progress",
+  "recovery_status": "complete",
   "recovery_protocol": "docs/MICHEL_AI_ASSET_RECOVERY_PROTOCOL.md"
 }
