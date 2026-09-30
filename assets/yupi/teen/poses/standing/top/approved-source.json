@@ -1,0 +1,28 @@
+{
+  "id": "yupi-teen-standing-top",
+  "type": "pose",
+  "action": "standing",
+  "view": "top",
+  "status": "approved",
+  "approval_date": "2026-09-30",
+  "approval_basis": "Michel explicitly approved this exact Teen Yupi top-view image with 'Perfect vastleggen'.",
+  "source_filename": "yupi_van_bovenaf_met_gekrulde_staart.png",
+  "sha256": "da434d4aedd84156530691067f605deac930e45a050e883c93a0d9b099abd21c",
+  "mime_type": "image/png",
+  "dimensions": "1122x1402",
+  "persistent_source": {
+    "provider": "ChatGPT Library",
+    "path": "/Yupi Game/Assets/Yupi/teen/approved/views/teen-yupi-top.png",
+    "library_file_id": "libfile_0c177fd6de748191a9053578e80adfc5"
+  },
+  "anatomy_validation": [
+    "exactly three legs",
+    "right foreleg present",
+    "left foreleg absent completely to shoulder with no stump",
+    "both hindlegs present",
+    "right ear upright",
+    "left ear floppy",
+    "top-down perspective preserves Teen Yupi identity and asymmetry"
+  ],
+  "notes": "Approved Teen Yupi top-view reference. Preserve exactly as approved."
+}
