@@ -65,3 +65,7 @@ Both exact PNG sources are persisted in ChatGPT Library under `/Yupi Game/Assets
 - standing top — approved 2026-09-30
 
 - standing bottom — approved 2026-09-30
+
+- playful ball action / ball-focused shot — approved 2026-09-30
+
+- balancing on hindlegs, top view — approved 2026-09-30
