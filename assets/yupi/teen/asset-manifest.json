@@ -14,7 +14,7 @@
       "id": "yupi-teen-pose-playful-ball",
       "type": "pose",
       "action": "playful-with-ball",
-      "status": "approved_pending_binary",
+      "status": "approved",
       "approval_date": "2026-09-30",
       "approval_basis": "Michel explicitly approved this exact image: 'Ik keur deze afbeelding goed. Vastleggen en opslaan'.",
       "source_filename": "tienerhond_yupi_speelt_met_bal.png",
@@ -39,14 +39,15 @@
         "exact_source_recovered": true,
         "sha256_matches_manifest": true,
         "technical_decode": "passed",
-        "repo_binary_present": false
+        "repo_binary_present": true,
+        "repo_sha256_verified": true
       }
     },
     {
       "id": "yupi-teen-expressions-head-sheet",
       "type": "expression_sheet",
       "subtype": "head-only",
-      "status": "approved_pending_binary",
+      "status": "approved",
       "approval_date": "2026-09-30",
       "approval_basis": "Michel explicitly approved the exact head-only emotion sheet with 'Vastleggen'.",
       "source_filename": "expressieve_hondenemoties_in_3d.png",
@@ -71,7 +72,8 @@
         "exact_source_recovered": true,
         "sha256_matches_manifest": true,
         "technical_decode": "passed",
-        "repo_binary_present": false
+        "repo_binary_present": true,
+        "repo_sha256_verified": true
       }
     },
     {
@@ -79,7 +81,7 @@
       "type": "expression",
       "subtype": "head-only",
       "emotion": "happy",
-      "status": "approved_pending_binary",
+      "status": "approved",
       "approval_date": "2026-09-30",
       "approval_basis": "Derived unchanged as an individual crop from Michel's approved Teen Yupi head-only emotion sheet.",
       "source_sheet_id": "yupi-teen-expressions-head-sheet",
@@ -98,7 +100,8 @@
         "exact_source_recovered": true,
         "sha256_matches_manifest": true,
         "technical_decode": "passed",
-        "repo_binary_present": false
+        "repo_binary_present": true,
+        "repo_sha256_verified": true
       }
     },
     {
@@ -106,7 +109,7 @@
       "type": "expression",
       "subtype": "head-only",
       "emotion": "sad",
-      "status": "approved_pending_binary",
+      "status": "approved",
       "approval_date": "2026-09-30",
       "approval_basis": "Derived unchanged as an individual crop from Michel's approved Teen Yupi head-only emotion sheet.",
       "source_sheet_id": "yupi-teen-expressions-head-sheet",
@@ -125,7 +128,8 @@
         "exact_source_recovered": true,
         "sha256_matches_manifest": true,
         "technical_decode": "passed",
-        "repo_binary_present": false
+        "repo_binary_present": true,
+        "repo_sha256_verified": true
       }
     },
     {
@@ -133,7 +137,7 @@
       "type": "expression",
       "subtype": "head-only",
       "emotion": "angry",
-      "status": "approved_pending_binary",
+      "status": "approved",
       "approval_date": "2026-09-30",
       "approval_basis": "Derived unchanged as an individual crop from Michel's approved Teen Yupi head-only emotion sheet.",
       "source_sheet_id": "yupi-teen-expressions-head-sheet",
@@ -152,7 +156,8 @@
         "exact_source_recovered": true,
         "sha256_matches_manifest": true,
         "technical_decode": "passed",
-        "repo_binary_present": false
+        "repo_binary_present": true,
+        "repo_sha256_verified": true
       }
     },
     {
@@ -160,7 +165,7 @@
       "type": "expression",
       "subtype": "head-only",
       "emotion": "surprised",
-      "status": "approved_pending_binary",
+      "status": "approved",
       "approval_date": "2026-09-30",
       "approval_basis": "Derived unchanged as an individual crop from Michel's approved Teen Yupi head-only emotion sheet.",
       "source_sheet_id": "yupi-teen-expressions-head-sheet",
@@ -179,7 +184,8 @@
         "exact_source_recovered": true,
         "sha256_matches_manifest": true,
         "technical_decode": "passed",
-        "repo_binary_present": false
+        "repo_binary_present": true,
+        "repo_sha256_verified": true
       }
     },
     {
@@ -187,7 +193,7 @@
       "type": "expression",
       "subtype": "head-only",
       "emotion": "scared",
-      "status": "approved_pending_binary",
+      "status": "approved",
       "approval_date": "2026-09-30",
       "approval_basis": "Derived unchanged as an individual crop from Michel's approved Teen Yupi head-only emotion sheet.",
       "source_sheet_id": "yupi-teen-expressions-head-sheet",
@@ -206,7 +212,8 @@
         "exact_source_recovered": true,
         "sha256_matches_manifest": true,
         "technical_decode": "passed",
-        "repo_binary_present": false
+        "repo_binary_present": true,
+        "repo_sha256_verified": true
       }
     },
     {
@@ -214,7 +221,7 @@
       "type": "expression",
       "subtype": "head-only",
       "emotion": "determined",
-      "status": "approved_pending_binary",
+      "status": "approved",
       "approval_date": "2026-09-30",
       "approval_basis": "Derived unchanged as an individual crop from Michel's approved Teen Yupi head-only emotion sheet.",
       "source_sheet_id": "yupi-teen-expressions-head-sheet",
@@ -233,7 +240,8 @@
         "exact_source_recovered": true,
         "sha256_matches_manifest": true,
         "technical_decode": "passed",
-        "repo_binary_present": false
+        "repo_binary_present": true,
+        "repo_sha256_verified": true
       }
     },
     {
@@ -241,7 +249,7 @@
       "type": "expression",
       "subtype": "head-only",
       "emotion": "curious",
-      "status": "approved_pending_binary",
+      "status": "approved",
       "approval_date": "2026-09-30",
       "approval_basis": "Derived unchanged as an individual crop from Michel's approved Teen Yupi head-only emotion sheet.",
       "source_sheet_id": "yupi-teen-expressions-head-sheet",
@@ -260,7 +268,8 @@
         "exact_source_recovered": true,
         "sha256_matches_manifest": true,
         "technical_decode": "passed",
-        "repo_binary_present": false
+        "repo_binary_present": true,
+        "repo_sha256_verified": true
       }
     },
     {
@@ -268,7 +277,7 @@
       "type": "expression",
       "subtype": "head-only",
       "emotion": "playful",
-      "status": "approved_pending_binary",
+      "status": "approved",
       "approval_date": "2026-09-30",
       "approval_basis": "Derived unchanged as an individual crop from Michel's approved Teen Yupi head-only emotion sheet.",
       "source_sheet_id": "yupi-teen-expressions-head-sheet",
@@ -287,7 +296,8 @@
         "exact_source_recovered": true,
         "sha256_matches_manifest": true,
         "technical_decode": "passed",
-        "repo_binary_present": false
+        "repo_binary_present": true,
+        "repo_sha256_verified": true
       }
     },
     {
@@ -295,7 +305,7 @@
       "type": "pose",
       "action": "standing",
       "view": "front",
-      "status": "approved_pending_binary",
+      "status": "approved",
       "approval_date": "2026-09-30",
       "approval_basis": "Michel explicitly approved this exact standing Teen Yupi front-view image with 'Deze ook vastleggen'.",
       "source_filename": "driepotige_oranje_animatiehond.png",
@@ -321,7 +331,8 @@
         "exact_source_recovered": true,
         "sha256_matches_manifest": true,
         "technical_decode": "passed",
-        "repo_binary_present": false
+        "repo_binary_present": true,
+        "repo_sha256_verified": true
       }
     },
     {
@@ -363,7 +374,7 @@
       "type": "pose",
       "action": "standing",
       "view": "left",
-      "status": "approved_pending_binary",
+      "status": "approved",
       "approval_date": "2026-09-30",
       "approval_basis": "Michel explicitly approved this exact standing Teen Yupi left-view image with 'Vastleggen'.",
       "source_filename": "a_clean_studio_style_render_illustration_scene_wit.png",
@@ -389,7 +400,8 @@
         "exact_source_recovered": true,
         "sha256_matches_manifest": true,
         "technical_decode": "passed",
-        "repo_binary_present": false
+        "repo_binary_present": true,
+        "repo_sha256_verified": true
       }
     },
     {
@@ -432,7 +444,7 @@
       "type": "pose",
       "action": "standing",
       "view": "bottom",
-      "status": "approved_pending_binary",
+      "status": "approved",
       "approval_date": "2026-09-30",
       "approval_basis": "Michel explicitly approved this exact Teen Yupi bottom-view image with 'Vastleggen'.",
       "source_filename": "yupi_boven_de_camera_gezien.png",
@@ -459,7 +471,8 @@
         "exact_source_recovered": true,
         "sha256_matches_manifest": true,
         "technical_decode": "passed",
-        "repo_binary_present": false
+        "repo_binary_present": true,
+        "repo_sha256_verified": true
       }
     },
     {
@@ -467,7 +480,7 @@
       "type": "pose",
       "action": "playful-ball-chase",
       "view": "low-front-action",
-      "status": "approved_pending_binary",
+      "status": "approved",
       "approval_date": "2026-09-30",
       "approval_basis": "Michel explicitly approved this exact Teen Yupi action image with 'Vastleggen'.",
       "source_filename": "tiener_yupi_jaagt_op_een_bal.png",
@@ -494,7 +507,8 @@
         "exact_source_recovered": true,
         "sha256_matches_manifest": true,
         "technical_decode": "passed",
-        "repo_binary_present": false
+        "repo_binary_present": true,
+        "repo_sha256_verified": true
       }
     },
     {
@@ -502,7 +516,7 @@
       "type": "pose",
       "action": "balancing-on-hindlegs",
       "view": "top",
-      "status": "approved_pending_binary",
+      "status": "approved",
       "approval_date": "2026-09-30",
       "approval_basis": "Michel explicitly approved this exact top-view balancing pose with 'Vastleggen'.",
       "source_filename": "tienerhond_yupi_van_bovenaf.png",
@@ -528,7 +542,8 @@
         "exact_source_recovered": true,
         "sha256_matches_manifest": true,
         "technical_decode": "passed",
-        "repo_binary_present": false
+        "repo_binary_present": true,
+        "repo_sha256_verified": true
       }
     }
   ],
