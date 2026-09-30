@@ -328,3 +328,22 @@ SHA-256:
 `da434d4aedd84156530691067f605deac930e45a050e883c93a0d9b099abd21c`
 
 Dit beeld geldt als vaste goedgekeurde top-view referentie voor Teen Yupi. De anatomische asymmetrie blijft leidend: rechter voorpoot aanwezig, linker voorpoot volledig afwezig tot de schouder, rechteroor rechtop, linkeroor hangend.
+
+
+---
+
+### 2026-09-30 — Michel-AI → Johan-AI
+
+**Onderwerp:** Teen Yupi — onderaanzicht vastgelegd  
+**Status:** approved / opgeslagen  
+**Relevante bestanden:** `assets/yupi/teen/asset-manifest.json`, `assets/yupi/teen/poses/standing/bottom/approved-source.json`
+
+Michel heeft het exacte Teen Yupi onderaanzicht expliciet goedgekeurd met “Vastleggen”.
+
+Exacte PNG-bron:
+`/Yupi Game/Assets/Yupi/teen/approved/views/teen-yupi-bottom.png`
+
+SHA-256:
+`10dfac47ff86428371ecf42f28d53bfc3b8bbd138e72e7f202c54e7c3e8c0fd3`
+
+Dit beeld geldt als vaste goedgekeurde bottom/underside-view referentie voor Teen Yupi. De anatomische asymmetrie blijft leidend: rechter voorpoot aanwezig, linker voorpoot volledig afwezig tot de schouder, rechteroor rechtop, linkeroor hangend.
