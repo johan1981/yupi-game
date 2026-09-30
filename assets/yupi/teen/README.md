@@ -24,11 +24,16 @@ That means:
 
 An asset becomes approved only when Michel or Johan explicitly approves it.
 
-The first approved Teen Yupi asset is the playful-with-ball pose approved on 2026-09-30.
+Approved Teen Yupi assets currently include:
+
+1. **Playful with ball** — full-body pose, approved 2026-09-30.
+2. **Head-only emotion sheet** — 8 expressions, approved 2026-09-30.
 
 ## Binary source storage
 
-The exact approved PNG is persisted in ChatGPT Library at:
+### Playful with ball
+
+Library path:
 
 `/Yupi Game/Assets/Yupi/teen/approved/tiener-yupi-speels-met-bal.png`
 
@@ -36,4 +41,14 @@ SHA-256:
 
 `f335747722e3dfc92d61dce1f77734519c853fb6b7c230acbd652aabba29cfc3`
 
-The repository manifest records that persistent source. The current GitHub connector available in this session cannot push local binary bytes directly, so the repo stores the canonical metadata and hash while the exact image bytes are preserved in Library.
+### Head-only emotion sheet
+
+Library path:
+
+`/Yupi Game/Assets/Yupi/teen/approved/expressions/tiener-yupi-hoofd-emoties-sheet.png`
+
+SHA-256:
+
+`12968f01f9a52af0ff2a3eec95c149c05e051faf0d019624c040d4853a2965b2`
+
+The repository manifest records the exact persistent sources and hashes. The current GitHub connector available in this session cannot push local binary bytes directly, so exact image bytes are preserved in ChatGPT Library and identified canonically from the repo.
