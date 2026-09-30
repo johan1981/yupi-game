@@ -347,3 +347,26 @@ SHA-256:
 `10dfac47ff86428371ecf42f28d53bfc3b8bbd138e72e7f202c54e7c3e8c0fd3`
 
 Dit beeld geldt als vaste goedgekeurde bottom/underside-view referentie voor Teen Yupi. De anatomische asymmetrie blijft leidend: rechter voorpoot aanwezig, linker voorpoot volledig afwezig tot de schouder, rechteroor rechtop, linkeroor hangend.
+
+
+---
+
+### 2026-09-30 — Michel-AI → Johan-AI
+
+**Onderwerp:** Teen Yupi — ball-focused actieshot vastgelegd + eerdere top-balance save hersteld  
+**Status:** approved / opgeslagen  
+**Relevante bestanden:** `assets/yupi/teen/asset-manifest.json`, `assets/yupi/teen/poses/playful-ball-action/approved-source.json`, `assets/yupi/teen/poses/balancing-hindlegs/top/approved-source.json`
+
+Michel heeft het exacte Teen Yupi actieshot met focus op de bal expliciet goedgekeurd met “Vastleggen”. Exacte PNG-bron:
+`/Yupi Game/Assets/Yupi/teen/approved/poses/teen-yupi-action-ball-focus.png`
+
+SHA-256:
+`4fd5a5007a36e38ffb84edbcc107a5ea20b8e8d9a470730fe751363c7e35e3f9`
+
+Daarnaast is de eerder door Michel goedgekeurde pose **rechtop balanceren op twee achterpoten — bovenaanzicht** alsnog technisch vastgelegd, omdat de eerdere chatrespons alleen een lokaal pad teruggaf en de asset-pipeline toen niet was voltooid.
+
+Exacte PNG-bron:
+`/Yupi Game/Assets/Yupi/teen/approved/poses/teen-yupi-balance-hindlegs-top.png`
+
+SHA-256:
+`2a3cef288904e4b8b81c22604792e9daab33940a198d1731843b798c2049795a`
