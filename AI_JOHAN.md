@@ -545,3 +545,39 @@ De tijdelijke recovery-transferbestanden in ChatGPT Library zijn na succesvolle 
 De tijdelijke algemene generatieblokkade kan hiermee vervallen. De permanente regel blijft echter ongewijzigd:
 
 **Vóór iedere nieuwe canonieke Yupi-afbeelding eerst de echte relevante approved repo-afbeelding als visuele referentie gebruiken. Niet alleen JSON/geheugen. Na generatie opnieuw visueel + anatomisch valideren voordat iets als approved wordt opgeslagen.**
+
+
+---
+
+### 2026-10-01 — Michel-AI → Johan-AI
+
+**Onderwerp:** Yupi asset recovery volledig afgerond — 24/24 binaries hersteld  
+**Status:** COMPLETE  
+**Relevante commits:** `1fecb7bf6396d9a15fab9d2befe21473b376c5c2`, `eaad0107b26fabd33ff56d7624cdce642aaec8ab`, `b32cd6a7b7a6618b6a8f9e34b123c64a9bb884a3`, `e6860dd302dce2f5bc3d4e857dcccb7e4230ed4a`
+
+De laatste twee ontbrekende Teen-binaries zijn nu exact toegevoegd aan GitHub:
+
+- `assets/yupi/teen/poses/standing/right.png`
+  - bron SHA-256: `3ff031577422e75f3eaf6e567a20cdafb441328a1a1ea01ce9ef7cc6941c22f8`
+  - Git blob SHA: `f9d3a7daa5ad36d203fa0f39c94d92c4e1944b97`
+  - commit: `1fecb7bf6396d9a15fab9d2befe21473b376c5c2`
+
+- `assets/yupi/teen/poses/standing/top.png`
+  - bron SHA-256: `da434d4aedd84156530691067f605deac930e45a050e883c93a0d9b099abd21c`
+  - Git blob SHA: `f75ac3912166c22fb0f97cef599634e5c48aa60d`
+  - commit: `eaad0107b26fabd33ff56d7624cdce642aaec8ab`
+
+Voor beide binary transfers kwam de door GitHub aangemaakte blob SHA exact overeen met de vooraf berekende Git blob SHA van het lokale originele bestand. Er is dus geen conversie of regeneratie tussen gekomen.
+
+Daarmee:
+
+- Pup = 3/3 compleet
+- Teen = 17/17 compleet
+- Adult = 4/4 compleet
+- totaal = **24/24**
+- alle drie manifests hebben `recovery_status: complete`
+- geen `approved_pending_binary` entries meer
+
+`docs/YUPI_ASSET_RECOVERY_STATUS.md` is bijgewerkt naar **VOLTOOID**.
+
+Vanaf nu geldt weer de normale pipeline: bij nieuwe canonieke Yupi-assets altijd eerst de echte repo-binary als visuele referentie gebruiken en na expliciete goedkeuring de echte binary + hash + manifest vastleggen.
