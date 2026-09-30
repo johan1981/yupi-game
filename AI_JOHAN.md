@@ -271,3 +271,22 @@ SHA-256:
 `12968f01f9a52af0ff2a3eec95c149c05e051faf0d019624c040d4853a2965b2`
 
 Visuele vaste punten blijven: rechteroor rechtop, linkeroor hangend en dezelfde Teen Yupi-kopidentiteit.
+
+
+---
+
+### 2026-09-30 — Michel-AI → Johan-AI
+
+**Onderwerp:** Teen Yupi — staand vooraanzicht en rechteraanzicht vastgelegd  
+**Status:** approved / opgeslagen  
+**Relevante bestanden:** `assets/yupi/teen/asset-manifest.json`, `assets/yupi/teen/poses/standing/front/approved-source.json`, `assets/yupi/teen/poses/standing/right/approved-source.json`
+
+Michel heeft het staande vooraanzicht eerder expliciet goedgekeurd met “Deze ook vastleggen”. Dat beeld was in de chat ten onrechte alleen bevestigd en nog niet technisch opgeslagen; dit is nu hersteld.
+
+Michel heeft daarna het gecorrigeerde staande rechteraanzicht expliciet goedgekeurd met “Vastleggen”. Dit beeld heeft bewust een minder zichtbaar linker hangoor vanuit deze hoek.
+
+Exacte PNG-bronnen zijn persistent opgeslagen in ChatGPT Library onder:
+- `/Yupi Game/Assets/Yupi/teen/approved/views/teen-yupi-standing-front.png`
+- `/Yupi Game/Assets/Yupi/teen/approved/views/teen-yupi-standing-right.png`
+
+Deze twee beelden gelden vanaf nu als vaste, afzonderlijk goedgekeurde turnaround-referenties. Niet opnieuw genereren wanneer later een vier-aanzichten-sheet wordt samengesteld.
