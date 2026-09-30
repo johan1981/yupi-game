@@ -1,0 +1,76 @@
+# Yupi Visual Index
+
+Dit document toont de **daadwerkelijk aanwezige approved imagebinaries** uit de repository.  
+De afbeeldingen hieronder worden rechtstreeks uit `assets/yupi/` gerenderd; dit zijn dus geen chat-previews.
+
+## Pup
+
+### Canonical base
+[Open bestand](../assets/yupi/pup/design/approved/base-reference.jpeg)
+
+![Pup canonical base](../assets/yupi/pup/design/approved/base-reference.jpeg)
+
+### Sitting — front
+[Open bestand](../assets/yupi/pup/poses/sitting/front.png)
+
+![Pup sitting front](../assets/yupi/pup/poses/sitting/front.png)
+
+### Standing bark — front
+[Open bestand](../assets/yupi/pup/poses/standing-bark/front.png)
+
+![Pup standing bark front](../assets/yupi/pup/poses/standing-bark/front.png)
+
+---
+
+## Teen
+
+### Standing views
+
+| Front | Right | Left |
+|---|---|---|
+| ![Teen front](../assets/yupi/teen/poses/standing/front.png) | ![Teen right](../assets/yupi/teen/poses/standing/right.png) | ![Teen left](../assets/yupi/teen/poses/standing/left.png) |
+
+| Top | Bottom |
+|---|---|
+| ![Teen top](../assets/yupi/teen/poses/standing/top.png) | ![Teen bottom](../assets/yupi/teen/poses/standing/bottom.png) |
+
+### Action poses
+
+| Playful with ball | Ball action | Balance on hindlegs |
+|---|---|---|
+| ![Teen playful ball](../assets/yupi/teen/poses/playful-with-ball/reference.png) | ![Teen ball action](../assets/yupi/teen/poses/playful-ball-action/low-front-action.png) | ![Teen balance](../assets/yupi/teen/poses/balancing-hindlegs/top.png) |
+
+### Emotion sheet
+
+![Teen emotion sheet](../assets/yupi/teen/expressions/head/emotion-sheet.png)
+
+### Individual head expressions
+
+| Happy | Sad | Angry | Surprised |
+|---|---|---|---|
+| ![Happy](../assets/yupi/teen/expressions/head/happy.png) | ![Sad](../assets/yupi/teen/expressions/head/sad.png) | ![Angry](../assets/yupi/teen/expressions/head/angry.png) | ![Surprised](../assets/yupi/teen/expressions/head/surprised.png) |
+
+| Scared | Determined | Curious | Playful |
+|---|---|---|---|
+| ![Scared](../assets/yupi/teen/expressions/head/scared.png) | ![Determined](../assets/yupi/teen/expressions/head/determined.png) | ![Curious](../assets/yupi/teen/expressions/head/curious.png) | ![Playful](../assets/yupi/teen/expressions/head/playful.png) |
+
+---
+
+## Adult
+
+### Canonical base
+
+![Adult canonical base](../assets/yupi/adult/design/approved/base.png)
+
+### Poses
+
+| Sitting | Running | Sniffing |
+|---|---|---|
+| ![Adult sitting](../assets/yupi/adult/poses/sitting/reference.png) | ![Adult running](../assets/yupi/adult/poses/running/reference.png) | ![Adult sniffing](../assets/yupi/adult/poses/sniffing/reference.png) |
+
+---
+
+## Opmerking
+
+Oudere experimenten, legacy sheets en prototype-sprites staan bewust niet in deze approved galerij.  
+Die blijven onder de archive/prototype-paden beschikbaar voor ontwikkelreferentie, maar zijn niet automatisch canoniek.
