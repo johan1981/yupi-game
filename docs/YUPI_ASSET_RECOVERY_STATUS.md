@@ -2,21 +2,20 @@
 
 > Laatste update: 2026-10-01  
 > Protocol: `docs/MICHEL_AI_ASSET_RECOVERY_PROTOCOL.md`  
-> Status: **VOLTOOID — 24/24 exacte approved imagebinaries hersteld en gevalideerd**
+> Status: **voltooid — 24/24 exacte imagebinaries hersteld**
 
-## Eindresultaat
+## Samenvatting
 
-De herstelactie is afgerond.
+De volledige herstelactie is afgerond.
 
-- **Pup: 3/3 hersteld — complete**
-- **Teen: 17/17 hersteld — complete**
-- **Adult: 4/4 hersteld — complete**
-- totaal: **24/24 exacte goedgekeurde imagebinaries staan daadwerkelijk in GitHub**
-- geen van deze assets is opnieuw gegenereerd
-- alle drie manifests hebben `recovery_status: complete`
-- de automatische Yupi asset validation is succesvol geslaagd nadat de laatste Teen-binaries zijn gepromoveerd
+- **Pup: 3/3 hersteld — recovery complete**
+- **Teen: 17/17 hersteld — recovery complete**
+- **Adult: 4/4 hersteld — recovery complete**
+- totaal: **24/24 exacte goedgekeurde imagebinaries staan nu daadwerkelijk op hun canonieke GitHub-pad**
 
-## Pup
+Er is tijdens deze herstelactie **niets opnieuw gegenereerd**. Alle assets zijn hersteld vanuit de exacte goedgekeurde bron of via deterministische crop/compositing uit een exact goedgekeurde bron, met SHA-256-controle.
+
+## Pup — compleet
 
 De drie corrupte/afgekapt opgeslagen bestanden zijn vervangen door de exacte oorspronkelijke goedgekeurde bronnen:
 
@@ -26,56 +25,31 @@ De drie corrupte/afgekapt opgeslagen bestanden zijn vervangen door de exacte oor
 | sitting front | `assets/yupi/pup/poses/sitting/front.png` | `437cb34f25cb36931fcc48198fa0fd06bc57617fae2708d08f35b2dac5ee56c4` |
 | standing bark front | `assets/yupi/pup/poses/standing-bark/front.png` | `537d3a098c54fb2339461cf64d7c1ff83efc992c50c5da146172c8164b32a58e` |
 
-De oude corrupte bestanden zijn uit de canonieke mappen verwijderd:
+De oude corrupte varianten zijn uit de canonieke mappen verwijderd.
 
-- `design/approved/base-reference.jpg`
-- `poses/sitting/front.webp`
-- `poses/standing-bark/front.webp`
+Pup manifest: `recovery_status: complete`.
 
-## Teen
+## Teen — compleet
 
-Alle 17 goedgekeurde Teen-assets staan als echte binaries op de canonieke repo-paden:
+Alle 17 Teen-assets zijn nu fysiek aanwezig en hash-geverifieerd.
 
-- `poses/playful-with-ball/reference.png`
-- `expressions/head/emotion-sheet.png`
-- `expressions/head/happy.png`
-- `expressions/head/sad.png`
-- `expressions/head/angry.png`
-- `expressions/head/surprised.png`
-- `expressions/head/scared.png`
-- `expressions/head/determined.png`
-- `expressions/head/curious.png`
-- `expressions/head/playful.png`
-- `poses/standing/front.png`
-- `poses/standing/right.png`
-- `poses/standing/left.png`
-- `poses/standing/top.png`
-- `poses/standing/bottom.png`
-- `poses/playful-ball-action/low-front-action.png`
-- `poses/balancing-hindlegs/top.png`
+De laatste twee ontbrekende binaries zijn exact toegevoegd:
 
-### Head-expressions
+1. `assets/yupi/teen/poses/standing/right.png`
+   - SHA-256 bron: `3ff031577422e75f3eaf6e567a20cdafb441328a1a1ea01ce9ef7cc6941c22f8`
+   - Git blob SHA: `f9d3a7daa5ad36d203fa0f39c94d92c4e1944b97`
 
-De acht losse hoofdexpressies zijn exact deterministisch teruggewonnen uit de goedgekeurde `emotion-sheet.png`.
+2. `assets/yupi/teen/poses/standing/top.png`
+   - SHA-256 bron: `da434d4aedd84156530691067f605deac930e45a050e883c93a0d9b099abd21c`
+   - Git blob SHA: `f75ac3912166c22fb0f97cef599634e5c48aa60d`
 
-Dit was **uitsluitend cropping van de bestaande approved bron**, geen regeneratie. Iedere output is tegen de reeds geregistreerde SHA-256 gecontroleerd en exact gelijk bevonden.
+Beide bestanden zijn vanuit de exact teruggevonden Library-bron als binary in GitHub geplaatst. Voor beide kwam de berekende Git blob SHA exact overeen met de vooraf berekende lokale blob SHA.
 
-Recovery utility:
+De acht losse hoofdexpressies zijn exact deterministisch teruggewonnen uit de goedgekeurde `emotion-sheet.png` en hun SHA-256 hashes kwamen exact overeen met de bestaande manifestwaarden.
 
-- `scripts/recover_yupi_teen_heads.py`
+Teen manifest: `recovery_status: complete`.
 
-### Standing right en top
-
-De laatste twee Teen-bronnen zijn uiteindelijk eveneens als exacte originele bytes in GitHub gezet:
-
-- `assets/yupi/teen/poses/standing/right.png`
-  - SHA-256 `3ff031577422e75f3eaf6e567a20cdafb441328a1a1ea01ce9ef7cc6941c22f8`
-- `assets/yupi/teen/poses/standing/top.png`
-  - SHA-256 `da434d4aedd84156530691067f605deac930e45a050e883c93a0d9b099abd21c`
-
-Geen vervangende generatie of conversie gebruikt.
-
-## Adult
+## Adult — compleet
 
 Alle vier exact goedgekeurde Adult-bronnen staan als echte binaries in GitHub:
 
@@ -84,26 +58,28 @@ Alle vier exact goedgekeurde Adult-bronnen staan als echte binaries in GitHub:
 - `assets/yupi/adult/poses/running/reference.png`
 - `assets/yupi/adult/poses/sniffing/reference.png`
 
-Hun repo-binaries corresponderen met de geregistreerde SHA-256 hashes.
+Adult manifest: `recovery_status: complete`.
 
-## Automatische beveiliging
+## Beveiliging tegen herhaling
 
 Actief:
 
 - `scripts/validate_yupi_assets.py`
 - `.github/workflows/yupi-asset-validation.yml`
-- uitgebreid `docs/YUPI_ASSET_PIPELINE.md`
+- `docs/YUPI_ASSET_PIPELINE.md`
 
-De validator controleert repo-paden en SHA-256 voor `approved` assets en voorkomt dat een levensfase met `recovery_status: complete` nog pending binaries bevat.
+De validator controleert voor `approved` assets:
 
-De validatie na voltooiing van Teen is **success**.
+- echt repo-pad aanwezig;
+- bestand niet leeg;
+- juiste image-extensie;
+- SHA-256 overeenkomst;
+- geen Library-only asset die als volledig approved wordt voorgesteld.
 
-## Werkregel vanaf nu
+Een levensfase mag alleen `recovery_status: complete` hebben als er geen `approved_pending_binary` entries meer zijn.
 
-De tijdelijke totale generatieblokkade uit de herstelperiode is opgeheven, maar de normale harde pre-image regel blijft gelden:
+## Eindstatus
 
-> **Voor iedere nieuwe canonieke Yupi-generatie eerst de echte relevante approved repo-afbeelding als visuele referentie gebruiken.**
+> **Yupi asset recovery: VOLTOOID.**
 >
-> **Niet genereren op basis van alleen JSON, bestandsnamen of chatgeheugen.**
->
-> **Nieuwe approval = echte repo-binary + correcte SHA-256 + geslaagde validatie.**
+> Pup + Teen + Adult gebruiken voortaan de echte goedgekeurde visuele bronnen als canonieke referentie, niet alleen JSON of chatgeheugen.
