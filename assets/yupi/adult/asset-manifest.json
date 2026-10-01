@@ -117,8 +117,36 @@
         "repo_binary_present": true,
         "repo_sha256_verified": true
       }
+    },
+    {
+      "id": "yupi-adult-pose-lying-resting",
+      "type": "pose",
+      "action": "lying-resting",
+      "status": "approved_pending_binary",
+      "approval_date": "2026-10-01",
+      "approval_basis": "Michel explicitly approved this exact Adult Yupi lying/resting pose with 'Vastleggen'.",
+      "source_filename": "vriendelijke_yupi_met_pluimstaart.png",
+      "sha256": "d36ecbe2c5402f3fbb15646d818ff63238983197a024329ad216a2697668e093",
+      "mime_type": "image/png",
+      "dimensions": "1122x1402",
+      "persistent_source": {
+        "provider": "ChatGPT Library",
+        "path": "/Yupi Game/Assets/Yupi/adult/approved/poses/adult-yupi-lying-resting.png",
+        "library_file_id": "libfile_dff527e961248191963224283f9cb7a3"
+      },
+      "path": "assets/yupi/adult/poses/lying/reference.png",
+      "anatomy_validation": [
+        "exactly three legs",
+        "right foreleg present",
+        "left foreleg absent completely to shoulder with no stump",
+        "both hindlegs present",
+        "right ear upright",
+        "left ear floppy",
+        "approved Adult Yupi 3D style preserved"
+      ],
+      "notes": "Exact approved source is safely stored in Library. Repo binary still needs direct binary transfer before status can become fully approved under the current asset pipeline."
     }
   ],
-  "recovery_status": "complete",
+  "recovery_status": "in_progress",
   "recovery_protocol": "docs/MICHEL_AI_ASSET_RECOVERY_PROTOCOL.md"
 }
