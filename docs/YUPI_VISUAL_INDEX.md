@@ -20,6 +20,41 @@ De afbeeldingen hieronder worden rechtstreeks uit `assets/yupi/` gerenderd; dit 
 
 ![Pup standing bark front](../assets/yupi/pup/poses/standing-bark/front.png)
 
+
+## Pup — teruggevonden uit Michels chats
+
+Deze bestanden zijn op 2026-10-01 uit de oorspronkelijke ChatGPT Library-bronnen teruggezet in GitHub.  
+Ze worden hier bewust apart gehouden van de primaire canonieke Pup-assets.
+
+### Teruggevonden goedgekeurde referenties
+
+| Rechtopstaand — front | Staand — vier aanzichten |
+|---|---|
+| ![Pup upright front](../assets/yupi/pup/recovered-chat/approved/upright-front.png) | ![Pup standing four view](../assets/yupi/pup/recovered-chat/approved/standing-four-view.png) |
+
+### Teruggevonden ontwikkelreferenties
+
+Deze beelden zijn bewaard omdat ze nuttige pose-, expressie- of constructie-informatie bevatten.  
+Ze zijn **niet automatisch canoniek**; sommige gegenereerde panelen kunnen anatomische inconsistenties bevatten.
+
+| Liggend — vier aanzichten | Rennen — vier aanzichten |
+|---|---|
+| ![Pup lying four view](../assets/yupi/pup/recovered-chat/reference/lying-four-view.png) | ![Pup running four view](../assets/yupi/pup/recovered-chat/reference/running-four-view.png) |
+
+#### Expressies
+
+![Pup recovered expression sheet](../assets/yupi/pup/recovered-chat/reference/expression-sheet.png)
+
+#### Anatomie / constructie
+
+| Modelsheet | Constructiesheet |
+|---|---|
+| ![Pup anatomy model sheet](../assets/yupi/pup/recovered-chat/reference/anatomy-model-sheet.png) | ![Pup anatomy construction sheet](../assets/yupi/pup/recovered-chat/reference/anatomy-construction-sheet.png) |
+
+Provenance, hashes en status per bestand staan in:
+
+`assets/yupi/pup/recovered-chat/manifest.json`
+
 ---
 
 ## Teen
