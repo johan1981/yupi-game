@@ -27,3 +27,5 @@ Hard rules:
 
 Exact PNG sources are persisted in ChatGPT Library under:
 `/Yupi Game/Assets/Yupi/adult/approved/`
+
+- lying/resting — approved source saved 2026-10-01; repo binary transfer pending
