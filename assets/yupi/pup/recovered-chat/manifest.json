@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "purpose": "Recovered generated Pup Yupi images from Michel's ChatGPT Library/chats. These are preserved so approved/reference work is not lost.",
+  "rule": "Files in this recovered-chat collection are not automatically primary canon. Use assets/yupi/pup/asset-manifest.json for primary canonical generation sources.",
+  "recovered_at": "2026-10-01",
+  "assets": [
+    {
+      "id": "pup-chat-upright-front",
+      "path": "assets/yupi/pup/recovered-chat/approved/upright-front.png",
+      "status": "recovered_approved_reference",
+      "original_name": "Vrolijke Yupi met Eén Opgeheven Poot.png",
+      "original_library_path": "/Yupi’s game2/Vrolijke Yupi met Eén Opgeheven Poot.png",
+      "original_library_file_id": "libfile_f254dffaa0808191a933f36bdc9e816d",
+      "sha256": "d8ddbe5b789bb705cb63999afec5f963381bb697f306aadaa8da8d7eeb3b503b",
+      "dimensions": "1086x1448",
+      "approval_evidence": "Michel explicitly said 'Vastleggen' for the front standing/balancing Pup reference on 2026-09-28 shortly after this generated image.",
+      "use": "Strong recovered pose reference; still secondary to primary canonical base."
+    },
+    {
+      "id": "pup-chat-standing-four-view",
+      "path": "assets/yupi/pup/recovered-chat/approved/standing-four-view.png",
+      "status": "recovered_approved_reference",
+      "original_name": "yupi_vastberaden_4_aanzichten_goedgekeurd.png",
+      "original_library_path": "/Yupi’s game2/yupi_vastberaden_4_aanzichten_goedgekeurd.png",
+      "original_library_file_id": "libfile_28beee9898b08191ab35def14b0b665f",
+      "sha256": "4ab41c74c8ea24c3abf63e83c146caa61e276f00905a84798082671dfba08bf3",
+      "dimensions": "2932x1050",
+      "approval_evidence": "Recovered source itself was stored with the explicit 'goedgekeurd' filename in Michel's Library.",
+      "use": "High-value four-view standing reference. Do not replace the primary canonical base automatically."
+    },
+    {
+      "id": "pup-chat-lying-four-view",
+      "path": "assets/yupi/pup/recovered-chat/reference/lying-four-view.png",
+      "status": "recovered_reference_review",
+      "original_name": "Yupi de vrolijke puppy: vier aanzichten.png",
+      "original_library_path": "/Yupi’s game2/Yupi de vrolijke puppy: vier aanzichten.png",
+      "original_library_file_id": "libfile_c7cdf2d268548191a92b3282ccf812dc",
+      "sha256": "7db8a0138fa3d8b4333a8dcd53dc6c74fdef3139488096b651d26f256f9aa53d",
+      "dimensions": "1448x1086",
+      "use": "Useful lying four-view reference; preserve for review, not a sole golden reference."
+    },
+    {
+      "id": "pup-chat-running-four-view",
+      "path": "assets/yupi/pup/recovered-chat/reference/running-four-view.png",
+      "status": "recovered_reference_review",
+      "original_name": "Yupi’s Vier Renhoudingen.png",
+      "original_library_path": "/Yupi’s game2/Yupi’s Vier Renhoudingen.png",
+      "original_library_file_id": "libfile_c23a2834d0748191b1f33eac70e1a8e7",
+      "sha256": "5fd9520ae4c2857e9c14d5b571559cc53a56ccb3f7d53c6d90335bf6dde344ca",
+      "dimensions": "1448x1086",
+      "use": "Movement/reference material; requires anatomy review before canonical animation use."
+    },
+    {
+      "id": "pup-chat-expression-sheet",
+      "path": "assets/yupi/pup/recovered-chat/reference/expression-sheet.png",
+      "status": "recovered_reference_review",
+      "original_name": "Yupi’s Nederlandse Expressieblad.png",
+      "original_library_path": "/Yupi’s game2/Yupi’s Nederlandse Expressieblad.png",
+      "original_library_file_id": "libfile_566dbd99c9808191ad62a373b4050011",
+      "sha256": "90e238d6e7c1eb3b710fbc4288fa216f901c4f5549c04bd5184227d8bacbf67a",
+      "dimensions": "1536x1024",
+      "use": "Head-expression library is valuable; seated body examples may not be anatomy-safe."
+    },
+    {
+      "id": "pup-chat-anatomy-model-sheet",
+      "path": "assets/yupi/pup/recovered-chat/reference/anatomy-model-sheet.png",
+      "status": "recovered_reference_review",
+      "original_name": "Yupi anatomische modelsheet.png",
+      "original_library_path": "/Yupi’s game2/Yupi anatomische modelsheet.png",
+      "original_library_file_id": "libfile_c3d9e5b56154819184623454e9bb9c90",
+      "sha256": "323b4c306176693116d6768c0a3e6afe530ad0f6a4b1f4343a793d30b4b566b5",
+      "dimensions": "1448x1086",
+      "use": "Historic construction/model reference. Text/spec annotations are useful; generated drawings require visual validation."
+    },
+    {
+      "id": "pup-chat-anatomy-construction-sheet",
+      "path": "assets/yupi/pup/recovered-chat/reference/anatomy-construction-sheet.png",
+      "status": "recovered_reference_review",
+      "original_name": "Yupi anatomische constructiesheet.png",
+      "original_library_path": "/Yupi’s game2/Yupi anatomische constructiesheet.png",
+      "original_library_file_id": "libfile_77fe724032b081918337875e267ca658",
+      "sha256": "a4f9fd572740fcdb6bdf4f308b75c8dab98f4dbe9d3596eb0f9a9cae393dd9a5",
+      "dimensions": "1448x1086",
+      "use": "Historic anatomy/construction reference. Preserve but do not override canonical visual references."
+    }
+  ],
+  "quarantine_note": "Recovered-reference assets may contain generated anatomical inconsistencies. Never use a quarantined/review asset as the only visual input for new canonical Yupi generation."
+}
