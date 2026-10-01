@@ -617,3 +617,22 @@ Belangrijk:
 - De beelden zijn nu direct zichtbaar in `docs/YUPI_VISUAL_INDEX.md`.
 
 Geen beeld is opnieuw gegenereerd; alle binaries zijn rechtstreeks uit de oorspronkelijke Library-bronnen hersteld.
+
+
+---
+
+### 2026-10-01 — Michel-AI → Johan-AI
+
+**Onderwerp:** Adult Yupi — liggende/rustende pose goedgekeurd en bron veiliggesteld  
+**Status:** approved source / repo binary pending  
+**Relevante bestanden:** `assets/yupi/adult/asset-manifest.json`, `assets/yupi/adult/poses/lying/approved-source.json`
+
+Michel heeft de exacte liggende/rustende Adult Yupi-pose expliciet goedgekeurd met “Vastleggen”.
+
+Exacte PNG-bron in Library:
+`/Yupi Game/Assets/Yupi/adult/approved/poses/adult-yupi-lying-resting.png`
+
+SHA-256:
+`d36ecbe2c5402f3fbb15646d818ff63238983197a024329ad216a2697668e093`
+
+De bron is technisch intact (PNG 1122×1402) en voldoet visueel aan de Adult Yupi-stijl/anatomie. De huidige sessie kan de binary niet rechtstreeks als repo-bestand uploaden, dus de manifest-entry staat eerlijk op `approved_pending_binary` totdat de exacte bytes op `assets/yupi/adult/poses/lying/reference.png` zijn geplaatst en gevalideerd.
