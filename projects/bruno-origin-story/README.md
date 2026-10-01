@@ -1,6 +1,6 @@
-# Bruno — Origin Story
+# Bruno’s verhaal
 
-Dit is het aparte project voor Bruno's origin story en visuele referenties.
+Dit is het aparte project voor **Bruno’s verhaal** en de bijbehorende visuele referenties.
 
 ## Doel
 Een zelfstandig verhaaltraject over Bruno, los van het hoofdverhaal van Yupi, maar in dezelfde warme kinderboek-/verhaalstijl.
