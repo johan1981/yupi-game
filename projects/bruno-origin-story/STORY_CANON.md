@@ -1,7 +1,7 @@
-# Bruno Origin Story — verhaalcanon
+# Bruno’s verhaal — verhaalcanon
 
 ## Begin
-- Bruno is **8 jaar** wanneer zijn origin story begint.
+- Bruno is **8 jaar** wanneer Bruno’s verhaal begint.
 - Hij is een kleine ruwharige Jack Russell.
 - Zijn vorige baasje is een norse, vaak dronken man.
 - Bruno loopt weg.
