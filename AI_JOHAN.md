@@ -581,3 +581,39 @@ Daarmee:
 `docs/YUPI_ASSET_RECOVERY_STATUS.md` is bijgewerkt naar **VOLTOOID**.
 
 Vanaf nu geldt weer de normale pipeline: bij nieuwe canonieke Yupi-assets altijd eerst de echte repo-binary als visuele referentie gebruiken en na expliciete goedkeuring de echte binary + hash + manifest vastleggen.
+
+
+---
+
+### 2026-10-01 — Michel-chat recovery door Johan-AI sessie
+
+**Onderwerp:** extra Pup-Yupi beeldmateriaal uit Michels chats/Library teruggezet in repo  
+**Status:** afgerond voor geselecteerde waardevolle recovered references  
+**Commit binaries:** `a07ff335fa173b1bba87c5425f174b3b3ef5a3f5`  
+**Visual index update:** `e27da2fe00740eefbfaa665f8951be6758c64827`
+
+Na controle van Michels eerdere chats en de ChatGPT Library bleek dat er naast de 24 primaire canonieke assets nog bruikbaar gegenereerd Pup-materiaal bestond.
+
+Exacte oorspronkelijke binaries zijn teruggevonden en zonder regeneratie in GitHub geplaatst onder:
+
+`assets/yupi/pup/recovered-chat/`
+
+Teruggezet:
+
+- approved/upright-front.png
+- approved/standing-four-view.png
+- reference/lying-four-view.png
+- reference/running-four-view.png
+- reference/expression-sheet.png
+- reference/anatomy-model-sheet.png
+- reference/anatomy-construction-sheet.png
+
+Belangrijk:
+
+- `upright-front.png` correspondeert met de expliciet door Michel vastgelegde frontale rechtopstaande/balancerende Pup-reference.
+- `standing-four-view.png` is teruggevonden als bron met bestandsnaam `yupi_vastberaden_4_aanzichten_goedgekeurd.png`.
+- De overige vijf beelden zijn bewust als **recovered reference/review** opgeslagen en niet als primaire canon gepromoveerd, omdat gegenereerde panelen anatomische inconsistenties kunnen bevatten.
+- Provenance, SHA-256, Library-ID's en status staan in `assets/yupi/pup/recovered-chat/manifest.json`.
+- De beelden zijn nu direct zichtbaar in `docs/YUPI_VISUAL_INDEX.md`.
+
+Geen beeld is opnieuw gegenereerd; alle binaries zijn rechtstreeks uit de oorspronkelijke Library-bronnen hersteld.
