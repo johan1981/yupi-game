@@ -1,0 +1,26 @@
+{
+  "id": "nexus-mechanical-variant-base",
+  "type": "design",
+  "status": "approved",
+  "approval_date": "2026-10-03",
+  "approval_basis": "Michel explicitly approved this exact image with 'Yeahh bewaren'.",
+  "source_filename": "wide_cinematic_high_detail_3d_cgi_scene_a_reali.png",
+  "sha256": "1061596f94106facb43272d0d6b60d6c14e710bc25459db83225278cd2f18991",
+  "mime_type": "image/png",
+  "dimensions": "1536x1024",
+  "persistent_source": {
+    "provider": "ChatGPT Library",
+    "path": "/Yupi Game/Assets/Nexus Breuk/Mechanical Variant/approved/mechanical-variant-base.png",
+    "library_file_id": "libfile_0b9acf86f0a48191a6d9ce1a0d0e026e"
+  },
+  "design_validation": [
+    "fully mechanical canine body",
+    "four legs",
+    "brown, tan, white and silver armor",
+    "orange glowing energy accents",
+    "expressive amber eyes",
+    "segmented illuminated tail",
+    "distinct silhouette from Nox"
+  ],
+  "notes": "Approved mechanical Nexus character direction. Do not apply Yupi's one-foreleg anatomy rule to this character."
+}
