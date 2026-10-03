@@ -1,0 +1,27 @@
+{
+  "id": "nox-nexus-base",
+  "type": "design",
+  "status": "approved",
+  "approval_date": "2026-10-03",
+  "approval_basis": "Michel explicitly approved this exact Nox image with 'Vastleggen'.",
+  "source_filename": "A5DD2639-F572-4902-A733-7C1BB79558C9.jpeg",
+  "sha256": "50b00b5b4c7bdbd9bc5d0feb6805d05f225ccb38e34049b284e3b63837d1f1ca",
+  "mime_type": "image/jpeg",
+  "dimensions": "1122x1402",
+  "persistent_source": {
+    "provider": "ChatGPT Library",
+    "path": "/Yupi Game/Assets/Nexus Breuk/Nox/approved/nox-base.jpeg",
+    "library_file_id": "libfile_9172d5b3f2c48191b1744aab9bd38f86"
+  },
+  "design_validation": [
+    "Nox is a robotic dog",
+    "four legs: two forelegs and two hindlegs",
+    "compact canine silhouette",
+    "white and dark metallic armor panels",
+    "cyan-blue glowing eyes and energy accents",
+    "upright pointed ears",
+    "friendly ally readability",
+    "distinct from Yupi"
+  ],
+  "notes": "Canonical approved Nox base reference for Yupi: Nexus Breuk. Nox is not subject to Yupi's three-legged anatomy rule."
+}
