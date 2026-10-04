@@ -55,13 +55,14 @@
     {
       "id": "pup-chat-expression-sheet",
       "path": "assets/yupi/pup/recovered-chat/reference/expression-sheet.png",
-      "status": "recovered_reference_review",
+      "status": "recovered_approved_reference",
       "original_name": "Yupi’s Nederlandse Expressieblad.png",
       "original_library_path": "/Yupi’s game2/Yupi’s Nederlandse Expressieblad.png",
       "original_library_file_id": "libfile_566dbd99c9808191ad62a373b4050011",
       "sha256": "90e238d6e7c1eb3b710fbc4288fa216f901c4f5549c04bd5184227d8bacbf67a",
       "dimensions": "1536x1024",
-      "use": "Head-expression library is valuable; seated body examples may not be anatomy-safe."
+      "use": "Approved recovered Pup Yupi expression reference. Preserve the exact image; use the expressions as visual guidance while keeping the canonical Pup anatomy and proportions unchanged.",
+      "approval_evidence": "Johan explicitly reconfirmed this exact Pup Yupi expression sheet as approved on 2026-10-05."
     },
     {
       "id": "pup-chat-anatomy-model-sheet",
