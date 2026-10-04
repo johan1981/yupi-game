@@ -51,7 +51,9 @@ Ze zijn **niet automatisch canoniek**; sommige gegenereerde panelen kunnen anato
 
 | Modelsheet | Constructiesheet |
 |---|---|
-| ![Pup anatomy model sheet](../assets/yupi/pup/recovered-chat/reference/anatomy-model-sheet.png) | ![Pup anatomy construction sheet](../assets/yupi/pup/recovered-chat/reference/anatomy-construction-sheet.png) |
+| ![Pup anatomy model sheet](../assets/yupi/pup/recovered-chat/reference/anatomy-model-sheet.png) | ![Pup anatomy construction sheet](../assets/yupi/pup/recovered-chat/reference/anatomy-construction-sheet.png)
+
+> ⚠️ Niet-canoniek voor anatomie: in het linker zijaanzicht ontbreekt ook Yupi's rechter voorpoot. Alleen bewaren als historische ontwikkelreferentie. |
 
 Provenance, hashes en status per bestand staan in:
 
