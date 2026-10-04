@@ -31,13 +31,14 @@
     {
       "id": "pup-chat-lying-four-view",
       "path": "assets/yupi/pup/recovered-chat/reference/lying-four-view.png",
-      "status": "recovered_reference_review",
+      "status": "recovered_approved_reference",
       "original_name": "Yupi de vrolijke puppy: vier aanzichten.png",
       "original_library_path": "/Yupi’s game2/Yupi de vrolijke puppy: vier aanzichten.png",
       "original_library_file_id": "libfile_c7cdf2d268548191a92b3282ccf812dc",
       "sha256": "7db8a0138fa3d8b4333a8dcd53dc6c74fdef3139488096b651d26f256f9aa53d",
       "dimensions": "1448x1086",
-      "use": "Useful lying four-view reference; preserve for review, not a sole golden reference."
+      "use": "Approved recovered four-view lying Pup Yupi reference. Preserve the exact image; use together with the canonical Pup base and anatomy specification.",
+      "approval_evidence": "Johan explicitly reconfirmed this exact lying four-view Pup Yupi image as approved on 2026-10-05."
     },
     {
       "id": "pup-chat-running-four-view",
