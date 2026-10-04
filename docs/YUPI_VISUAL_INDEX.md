@@ -10,10 +10,9 @@ De afbeeldingen hieronder worden rechtstreeks uit `assets/yupi/` gerenderd; dit 
 
 ![Pup canonical base](../assets/yupi/pup/design/approved/base-reference.jpeg)
 
-### Sitting — front
-[Open bestand](../assets/yupi/pup/poses/sitting/front.png)
+### Afgewezen / verkeerd geclassificeerd
 
-![Pup sitting front](../assets/yupi/pup/poses/sitting/front.png)
+`assets/yupi/pup/poses/sitting/front.png` is door Johan op 2026-10-05 visueel beoordeeld als **geen Pup Yupi** en hoort niet bij de Pup-canon.
 
 ### Standing bark — front
 [Open bestand](../assets/yupi/pup/poses/standing-bark/front.png)
