@@ -43,13 +43,14 @@
     {
       "id": "pup-chat-running-four-view",
       "path": "assets/yupi/pup/recovered-chat/reference/running-four-view.png",
-      "status": "recovered_reference_review",
+      "status": "recovered_approved_reference",
       "original_name": "Yupi’s Vier Renhoudingen.png",
       "original_library_path": "/Yupi’s game2/Yupi’s Vier Renhoudingen.png",
       "original_library_file_id": "libfile_c23a2834d0748191b1f33eac70e1a8e7",
       "sha256": "5fd9520ae4c2857e9c14d5b571559cc53a56ccb3f7d53c6d90335bf6dde344ca",
       "dimensions": "1448x1086",
-      "use": "Movement/reference material; requires anatomy review before canonical animation use."
+      "use": "Approved recovered four-view running Pup Yupi reference. Preserve the exact image; use together with the canonical Pup base, anatomy specification, and real-Yupi motion reference when developing animation.",
+      "approval_evidence": "Johan explicitly reconfirmed this exact running four-view Pup Yupi image as approved on 2026-10-05."
     },
     {
       "id": "pup-chat-expression-sheet",
