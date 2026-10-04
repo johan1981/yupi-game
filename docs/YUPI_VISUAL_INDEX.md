@@ -32,6 +32,10 @@ Ze worden hier bewust apart gehouden van de primaire canonieke Pup-assets.
 |---|---|---|---|
 | ![Pup upright front](../assets/yupi/pup/recovered-chat/approved/upright-front.png) | ![Pup standing four view](../assets/yupi/pup/recovered-chat/approved/standing-four-view.png) | ![Pup lying four view](../assets/yupi/pup/recovered-chat/reference/lying-four-view.png) | ![Pup running four view](../assets/yupi/pup/recovered-chat/reference/running-four-view.png) |
 
+#### Expressies
+
+![Pup approved expression sheet](../assets/yupi/pup/recovered-chat/reference/expression-sheet.png)
+
 ### Teruggevonden ontwikkelreferenties
 
 Deze beelden zijn bewaard omdat ze nuttige pose-, expressie- of constructie-informatie bevatten.  
