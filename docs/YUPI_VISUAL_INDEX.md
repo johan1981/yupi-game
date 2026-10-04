@@ -28,18 +28,18 @@ Ze worden hier bewust apart gehouden van de primaire canonieke Pup-assets.
 
 ### Teruggevonden goedgekeurde referenties
 
-| Rechtopstaand — front | Staand — vier aanzichten |
-|---|---|
-| ![Pup upright front](../assets/yupi/pup/recovered-chat/approved/upright-front.png) | ![Pup standing four view](../assets/yupi/pup/recovered-chat/approved/standing-four-view.png) |
+| Rechtopstaand — front | Staand — vier aanzichten | Liggend — vier aanzichten |
+|---|---|---|
+| ![Pup upright front](../assets/yupi/pup/recovered-chat/approved/upright-front.png) | ![Pup standing four view](../assets/yupi/pup/recovered-chat/approved/standing-four-view.png) | ![Pup lying four view](../assets/yupi/pup/recovered-chat/reference/lying-four-view.png) |
 
 ### Teruggevonden ontwikkelreferenties
 
 Deze beelden zijn bewaard omdat ze nuttige pose-, expressie- of constructie-informatie bevatten.  
 Ze zijn **niet automatisch canoniek**; sommige gegenereerde panelen kunnen anatomische inconsistenties bevatten.
 
-| Liggend — vier aanzichten | Rennen — vier aanzichten |
-|---|---|
-| ![Pup lying four view](../assets/yupi/pup/recovered-chat/reference/lying-four-view.png) | ![Pup running four view](../assets/yupi/pup/recovered-chat/reference/running-four-view.png) |
+| Rennen — vier aanzichten |
+|---|
+| ![Pup running four view](../assets/yupi/pup/recovered-chat/reference/running-four-view.png) |
 
 #### Expressies
 
