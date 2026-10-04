@@ -87,7 +87,10 @@
       "original_library_file_id": "libfile_77fe724032b081918337875e267ca658",
       "sha256": "a4f9fd572740fcdb6bdf4f308b75c8dab98f4dbe9d3596eb0f9a9cae393dd9a5",
       "dimensions": "1448x1086",
-      "use": "Historic anatomy/construction reference. Preserve but do not override canonical visual references."
+      "use": "Keep only as historical/development reference. Do not use this sheet as a canonical anatomy/construction source or as the sole visual input for generation. The left-side view violates YUPI_SPEC because the right foreleg is missing.",
+      "review_status": "rejected_for_canonical_anatomy",
+      "review_date": "2026-10-05",
+      "review_basis": "Johan identified a hard anatomy error in the left-side view: no foreleg is visible, so Yupi's required right foreleg is missing as well."
     }
   ],
   "quarantine_note": "Recovered-reference assets may contain generated anatomical inconsistencies. Never use a quarantined/review asset as the only visual input for new canonical Yupi generation."
