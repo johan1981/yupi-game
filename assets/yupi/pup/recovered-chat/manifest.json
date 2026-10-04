@@ -73,7 +73,10 @@
       "original_library_file_id": "libfile_c3d9e5b56154819184623454e9bb9c90",
       "sha256": "323b4c306176693116d6768c0a3e6afe530ad0f6a4b1f4343a793d30b4b566b5",
       "dimensions": "1448x1086",
-      "use": "Historic construction/model reference. Text/spec annotations are useful; generated drawings require visual validation."
+      "use": "Keep only as historical/development reference. Do not use this sheet as a canonical anatomy source or as the sole visual input for generation. The third view violates YUPI_SPEC because the right foreleg is missing.",
+      "review_status": "rejected_for_canonical_anatomy",
+      "review_date": "2026-10-05",
+      "review_basis": "Johan identified a hard anatomy error in the third view: Yupi has no visible foreleg there, so the required right foreleg is missing as well."
     },
     {
       "id": "pup-chat-anatomy-construction-sheet",
