@@ -96,6 +96,8 @@ Alle 8 frames van `experiments/walk8-v2/` zijn door Johan visueel gecontroleerd.
 | `experiments/walk8-headbob/frame-001.png` | partial_reference | Oor-laterality staat verkeerd om. Daarnaast ontbreekt/cropt een deel aan de onderkant van het beeld, waardoor het frame niet volledig is. Bewaren als historische animatiereferentie; niet gebruiken als canonieke Yupi-bron. |
 | `experiments/walk8-headbob/frame-002.png` | partial_reference | Visueel mooi en bruikbaar als animatie-/bewegingsreferentie, maar de oor-laterality staat verkeerd om ten opzichte van de Pup-canon. Bewaren; niet als canonieke Yupi-bron gebruiken totdat de oorstand is gecorrigeerd. |
 | `experiments/walk8-headbob/frame-003.png` | partial_reference | Visueel mooi en bruikbaar als animatie-/bewegingsreferentie, maar de oor-laterality staat verkeerd om ten opzichte van de Pup-canon. Bewaren; niet als canonieke Yupi-bron gebruiken totdat de oorstand is gecorrigeerd. |
+| `experiments/walk8-headbob/frame-004.png` | historical_reference | Oor-laterality staat verkeerd om. Daarnaast is het frame visueel defect: de onderkant van de poten verschijnt bovenin het beeld. Alleen bewaren als historische ontwikkelreferentie; niet gebruiken als canonieke of serieuze spritebron. |
+| `experiments/walk8-headbob/frame-005.png` | historical_reference | Zelfde defect als frame-004: oor-laterality staat verkeerd om en de onderkant van de poten verschijnt bovenin het beeld. Alleen bewaren als historische ontwikkelreferentie; niet gebruiken als canonieke of serieuze spritebron. |
 
 
 ## Walk8-final experiment
