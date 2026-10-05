@@ -23,6 +23,7 @@ Niets in deze map wordt door deze audit verwijderd of overschreven.
 | `legacy-v1/startled.png` | partial_reference | Verder bruikbaar/mooi als houding en expressie, maar de oren staan verkeerd ten opzichte van de canon. Bewaren als pose-/expressiereferentie; niet als canonieke Yupi-bron gebruiken. |
 | `legacy-v1/walk-01.png` | partial_reference | Verder goed en bruikbaar voor loop-/houdingsreferentie, maar de oren zijn omgewisseld. Bewaren als bewegingsreferentie; niet als canonieke Yupi-bron gebruiken totdat alleen de oorstand is gecorrigeerd. |
 | `legacy-v1/walk-02.png` | partial_reference | Zelfde als walk-01: verder goed en bruikbaar voor loop-/houdingsreferentie, maar de oren zijn omgewisseld. Bewaren als bewegingsreferentie; niet als canonieke Yupi-bron gebruiken totdat alleen de oorstand is gecorrigeerd. |
+| `legacy-v1/character-sheet.png` | partial_reference | Visueel verder heel mooi en bruikbaar, maar de oren staan verkeerd ten opzichte van de canon. Bewaren als karakter-/pose-referentie; niet als canonieke Yupi-bron gebruiken totdat de oorstand is gecorrigeerd. |
 
 ## Harde Pup-regels tijdens audit
 
