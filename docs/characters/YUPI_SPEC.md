@@ -80,13 +80,15 @@ Nooit 4.
 # 3. OREN
 
 ## RECHTER OOR
-- Staat RECHTOP
+- Staat RECHTOP / NORMAAL
 - Puntig
 - Duidelijk verticaal silhouet
+- Mag nooit het hangende oor worden
 
 ## LINKER OOR
-- HANGT
-- Zacht naar beneden gevouwen
+- HANGT HALVERWEGE
+- Is half omgeklapt / half hangend, niet volledig plat omlaag
+- Heeft duidelijk een andere stand dan het rechteroor
 - Mag nooit als tweede rechtopstaand oor verschijnen
 
 Yupi heeft dus:
