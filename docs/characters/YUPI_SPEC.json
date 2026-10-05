@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "status": "canon",
   "character": "Yupi",
   "species": "dog",
@@ -39,11 +39,13 @@
     "count": 2,
     "right": {
       "state": "upright",
-      "shape": "pointed"
+      "shape": "pointed",
+      "description": "normal upright ear; never the floppy ear"
     },
     "left": {
-      "state": "floppy",
-      "direction": "down"
+      "state": "half-floppy",
+      "direction": "partly down / halfway folded",
+      "description": "left ear hangs halfway; not fully upright and not fully flat downward"
     }
   },
   "laterality": {
@@ -155,7 +157,8 @@
     "use_approved_fur_and_colors": true,
     "use_approved_tail": true,
     "laterality_from_yupi_not_viewer": true,
-    "no_automatic_mirroring": true
+    "no_automatic_mirroring": true,
+    "left_ear_half_floppy": true
   },
   "post_generation_validation": [
     "exactly 3 legs",
@@ -164,7 +167,7 @@
     "no stump or partial left foreleg",
     "both hindlegs present",
     "right ear upright",
-    "left ear floppy",
+    "left ear half-floppy / hanging halfway",
     "exactly 2 ears",
     "approved Yupi design preserved",
     "requested emotion correct",
