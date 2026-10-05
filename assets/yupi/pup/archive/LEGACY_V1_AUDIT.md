@@ -61,3 +61,9 @@ Belangrijk: deze beelden blijven bewaard. Waar houding, expressie of beweging go
 | `experiments/walk8/frame-004.png` | partial_reference | Zelfde fout: oren staan verkeerd om ten opzichte van de canon. Bewaren als bewegingsreferentie; niet als canonieke Yupi-bron gebruiken totdat de oor-laterality is gecorrigeerd. |
 | `experiments/walk8/frame-005.png` | partial_reference | Zelfde fout: oren staan verkeerd om ten opzichte van de canon. Bewaren als bewegingsreferentie; niet als canonieke Yupi-bron gebruiken totdat de oor-laterality is gecorrigeerd. |
 | `experiments/walk8/frame-006.png` | partial_reference | Zelfde fout: oren staan verkeerd om ten opzichte van de canon. Bewaren als bewegingsreferentie; niet als canonieke Yupi-bron gebruiken totdat de oor-laterality is gecorrigeerd. |
+| `experiments/walk8/frame-007.png` | partial_reference | Zelfde fout: oren staan verkeerd om ten opzichte van de canon. Bewaren als bewegingsreferentie; niet als canonieke Yupi-bron gebruiken totdat de oor-laterality is gecorrigeerd. |
+
+
+### Samenvatting walk8
+
+Alle 8 frames van `experiments/walk8/` zijn door Johan visueel gecontroleerd. De loopbeweging blijft bruikbaar, maar in alle 8 frames staat de oor-laterality verkeerd om ten opzichte van de huidige Pup-canon. De reeks blijft volledig bewaard als bewegingsreferentie.
