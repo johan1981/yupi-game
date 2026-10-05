@@ -86,3 +86,10 @@ Alle 8 frames van `experiments/walk8/` zijn door Johan visueel gecontroleerd. De
 ### Samenvatting walk8-v2
 
 Alle 8 frames van `experiments/walk8-v2/` zijn door Johan visueel gecontroleerd. De loopbeweging is bruikbaar, maar in alle 8 frames staat de oor-laterality verkeerd om ten opzichte van de huidige Pup-canon. De reeks blijft volledig bewaard als bewegingsreferentie.
+
+
+## Walk8-headbob experiment
+
+| Bestand | Status | Beoordeling |
+|---|---|---|
+| `experiments/walk8-headbob/frame-000.png` | partial_reference | Animatie-experiment met head-bob; oor-laterality staat verkeerd om ten opzichte van de canon. Bewaren als bewegings-/animatiereferentie, niet als canonieke Yupi-bron. |
