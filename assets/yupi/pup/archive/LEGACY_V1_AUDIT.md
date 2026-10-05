@@ -17,6 +17,7 @@ Niets in deze map wordt door deze audit verwijderd of overschreven.
 | `legacy-v1/idle.png` | historical_reference | Oren omgewisseld. Bewaren, maar niet gebruiken als canonieke Yupi-bron. |
 | `legacy-v1/jump.png` | historical_reference | Oren omgewisseld. Bewaren, maar niet gebruiken als canonieke Yupi-bron. |
 | `legacy-v1/run-01.png` | historical_reference | Oren omgewisseld. Bewaren, maar niet gebruiken als canonieke Yupi-bron. |
+| `legacy-v1/run-02.png` | historical_reference | Oren omgewisseld. Rechtervoorpoot is wel aanwezig, maar rechteroor/linkeroor staan verkeerd. Bewaren als historie/bewegingsreferentie, niet als canonieke Yupi-bron. |
 
 ## Harde Pup-regels tijdens audit
 
