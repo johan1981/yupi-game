@@ -20,6 +20,7 @@ Niets in deze map wordt door deze audit verwijderd of overschreven.
 | `legacy-v1/run-02.png` | historical_reference | Oren omgewisseld. Rechtervoorpoot is wel aanwezig, maar rechteroor/linkeroor staan verkeerd. Bewaren als historie/bewegingsreferentie, niet als canonieke Yupi-bron. |
 | `legacy-v1/sad-searching.png` | partial_reference | Visueel mooi en bruikbaar voor houding/expressie, maar oren zijn omgewisseld. Bewaren als pose-/expressiereferentie; niet als canonieke Yupi-bron gebruiken. |
 | `legacy-v1/sniff.png` | historical_reference | Anatomiefout: Yupi heeft drie oren in plaats van exact twee. Bewaren als historische pose-referentie, maar nooit gebruiken als canonieke visuele bron of generatie-referentie. |
+| `legacy-v1/startled.png` | partial_reference | Verder bruikbaar/mooi als houding en expressie, maar de oren staan verkeerd ten opzichte van de canon. Bewaren als pose-/expressiereferentie; niet als canonieke Yupi-bron gebruiken. |
 
 ## Harde Pup-regels tijdens audit
 
