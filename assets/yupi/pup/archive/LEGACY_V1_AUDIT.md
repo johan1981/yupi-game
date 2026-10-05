@@ -67,3 +67,10 @@ Belangrijk: deze beelden blijven bewaard. Waar houding, expressie of beweging go
 ### Samenvatting walk8
 
 Alle 8 frames van `experiments/walk8/` zijn door Johan visueel gecontroleerd. De loopbeweging blijft bruikbaar, maar in alle 8 frames staat de oor-laterality verkeerd om ten opzichte van de huidige Pup-canon. De reeks blijft volledig bewaard als bewegingsreferentie.
+
+
+## Walk8-v2 experiment
+
+| Bestand | Status | Beoordeling |
+|---|---|---|
+| `experiments/walk8-v2/frame-000.png` | partial_reference | Loopframe bruikbaar, maar de oor-laterality staat verkeerd om ten opzichte van de canon. Bewaren als bewegingsreferentie; niet als canonieke Yupi-bron gebruiken totdat uitsluitend de oorstand is gecorrigeerd. |
