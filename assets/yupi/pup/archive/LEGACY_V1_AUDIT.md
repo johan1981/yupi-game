@@ -98,6 +98,8 @@ Alle 8 frames van `experiments/walk8-v2/` zijn door Johan visueel gecontroleerd.
 | `experiments/walk8-headbob/frame-003.png` | partial_reference | Visueel mooi en bruikbaar als animatie-/bewegingsreferentie, maar de oor-laterality staat verkeerd om ten opzichte van de Pup-canon. Bewaren; niet als canonieke Yupi-bron gebruiken totdat de oorstand is gecorrigeerd. |
 | `experiments/walk8-headbob/frame-004.png` | historical_reference | Oor-laterality staat verkeerd om. Daarnaast is het frame visueel defect: de onderkant van de poten verschijnt bovenin het beeld. Alleen bewaren als historische ontwikkelreferentie; niet gebruiken als canonieke of serieuze spritebron. |
 | `experiments/walk8-headbob/frame-005.png` | historical_reference | Zelfde defect als frame-004: oor-laterality staat verkeerd om en de onderkant van de poten verschijnt bovenin het beeld. Alleen bewaren als historische ontwikkelreferentie; niet gebruiken als canonieke of serieuze spritebron. |
+| `experiments/walk8-headbob/frame-006.png` | partial_reference | Visueel mooi en bruikbaar als animatie-/bewegingsreferentie, maar de oor-laterality staat verkeerd om ten opzichte van de Pup-canon. Bewaren; niet als canonieke Yupi-bron gebruiken totdat de oorstand is gecorrigeerd. |
+| `experiments/walk8-headbob/frame-007.png` | historical_reference | Oor-laterality staat verkeerd om. Daarnaast zijn bovenin het beeld losse stukjes van poten zichtbaar, wat wijst op een compositie/renderfout. Alleen bewaren als historische ontwikkelreferentie; niet gebruiken als canonieke of serieuze spritebron. |
 
 
 ## Walk8-final experiment
@@ -143,3 +145,8 @@ Alle 8 frames van `sprites/_prototype/walk-right/` zijn door Johan visueel gecon
 ### Samenvatting prototypes
 
 De volledige huidige map `sprites/_prototype/` is nu visueel doorgelopen: idle, alle 8 walk-right-frames en de walk16-right source strip. In alle gecontroleerde prototypebeelden staat de oor-laterality verkeerd om ten opzichte van de huidige Pup-canon. De bestanden blijven behouden als pose-/bewegings-/animatiereferentie.
+
+
+### Samenvatting walk8-headbob
+
+Alle 8 frames van `experiments/walk8-headbob/` zijn nu door Johan visueel gecontroleerd. De reeks bevat bruikbare beweging en enkele mooie frames, maar de oor-laterality staat structureel verkeerd om. Daarnaast vertonen meerdere frames beelddefecten/cropping, waaronder ontbrekende onderkant en losse pootfragmenten bovenin het beeld. De reeks blijft volledig bewaard als historische animatie-/bewegingsreferentie, maar is niet canoniek.
