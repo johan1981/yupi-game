@@ -74,3 +74,4 @@ Alle 8 frames van `experiments/walk8/` zijn door Johan visueel gecontroleerd. De
 | Bestand | Status | Beoordeling |
 |---|---|---|
 | `experiments/walk8-v2/frame-000.png` | partial_reference | Loopframe bruikbaar, maar de oor-laterality staat verkeerd om ten opzichte van de canon. Bewaren als bewegingsreferentie; niet als canonieke Yupi-bron gebruiken totdat uitsluitend de oorstand is gecorrigeerd. |
+| `experiments/walk8-v2/frame-001.png` | partial_reference | Zelfde fout: oor-laterality staat verkeerd om ten opzichte van de canon. Bewaren als bewegingsreferentie; niet als canonieke Yupi-bron gebruiken totdat uitsluitend de oorstand is gecorrigeerd. |
