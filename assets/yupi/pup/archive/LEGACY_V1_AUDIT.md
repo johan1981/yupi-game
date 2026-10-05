@@ -127,8 +127,14 @@ Alle 8 frames van `experiments/walk8-final/` zijn door Johan visueel gecontrolee
 | `sprites/_prototype/walk-right/frame-005.png` | partial_reference | Zelfde fout: oor-laterality staat verkeerd om ten opzichte van de Pup-canon. Bewaren als prototype-/bewegingsreferentie; niet als canonieke Yupi-bron gebruiken totdat de oorstand is gecorrigeerd. |
 | `sprites/_prototype/walk-right/frame-006.png` | partial_reference | Zelfde fout: oor-laterality staat verkeerd om ten opzichte van de Pup-canon. Bewaren als prototype-/bewegingsreferentie; niet als canonieke Yupi-bron gebruiken totdat de oorstand is gecorrigeerd. |
 | `sprites/_prototype/walk-right/frame-007.png` | partial_reference | Zelfde fout: oor-laterality staat verkeerd om ten opzichte van de Pup-canon. Bewaren als prototype-/bewegingsreferentie; niet als canonieke Yupi-bron gebruiken totdat de oorstand is gecorrigeerd. |
+| `sprites/_prototype/walk16-right/source-strip.jpg` | partial_reference | Bronstrip is bruikbaar als animatie-/bewegingsreferentie, maar de oor-laterality staat verkeerd om ten opzichte van de Pup-canon. Bewaren; niet als canonieke Yupi-bron gebruiken totdat de oorstand is gecorrigeerd. |
 
 
 ### Samenvatting prototype walk-right
 
 Alle 8 frames van `sprites/_prototype/walk-right/` zijn door Johan visueel gecontroleerd. De loopbeweging blijft bruikbaar, maar in alle 8 frames staat de oor-laterality verkeerd om ten opzichte van de huidige Pup-canon. De volledige reeks blijft bewaard als prototype-/bewegingsreferentie.
+
+
+### Samenvatting prototypes
+
+De volledige huidige map `sprites/_prototype/` is nu visueel doorgelopen: idle, alle 8 walk-right-frames en de walk16-right source strip. In alle gecontroleerde prototypebeelden staat de oor-laterality verkeerd om ten opzichte van de huidige Pup-canon. De bestanden blijven behouden als pose-/bewegings-/animatiereferentie.
