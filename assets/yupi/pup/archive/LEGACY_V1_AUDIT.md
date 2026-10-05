@@ -93,6 +93,7 @@ Alle 8 frames van `experiments/walk8-v2/` zijn door Johan visueel gecontroleerd.
 | Bestand | Status | Beoordeling |
 |---|---|---|
 | `experiments/walk8-headbob/frame-000.png` | partial_reference | Animatie-experiment met head-bob; oor-laterality staat verkeerd om ten opzichte van de canon. Bewaren als bewegings-/animatiereferentie, niet als canonieke Yupi-bron. |
+| `experiments/walk8-headbob/frame-001.png` | partial_reference | Oor-laterality staat verkeerd om. Daarnaast ontbreekt/cropt een deel aan de onderkant van het beeld, waardoor het frame niet volledig is. Bewaren als historische animatiereferentie; niet gebruiken als canonieke Yupi-bron. |
 
 
 ## Walk8-final experiment
