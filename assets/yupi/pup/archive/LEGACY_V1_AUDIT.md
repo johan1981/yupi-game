@@ -24,6 +24,7 @@ Niets in deze map wordt door deze audit verwijderd of overschreven.
 | `legacy-v1/walk-01.png` | partial_reference | Verder goed en bruikbaar voor loop-/houdingsreferentie, maar de oren zijn omgewisseld. Bewaren als bewegingsreferentie; niet als canonieke Yupi-bron gebruiken totdat alleen de oorstand is gecorrigeerd. |
 | `legacy-v1/walk-02.png` | partial_reference | Zelfde als walk-01: verder goed en bruikbaar voor loop-/houdingsreferentie, maar de oren zijn omgewisseld. Bewaren als bewegingsreferentie; niet als canonieke Yupi-bron gebruiken totdat alleen de oorstand is gecorrigeerd. |
 | `legacy-v1/character-sheet.png` | partial_reference | Visueel verder heel mooi en bruikbaar, maar de oren staan verkeerd ten opzichte van de canon. Bewaren als karakter-/pose-referentie; niet als canonieke Yupi-bron gebruiken totdat de oorstand is gecorrigeerd. |
+| `legacy-v1/sprite-sheet.png` | partial_reference | De oor-laterality is consequent omgekeerd ten opzichte van de canon. Bewaren als sprite-/bewegingsreferentie; niet als canonieke Yupi-bron gebruiken totdat de oorstand is gecorrigeerd. |
 
 ## Harde Pup-regels tijdens audit
 
@@ -33,3 +34,10 @@ Niets in deze map wordt door deze audit verwijderd of overschreven.
 - linkervoorpoot ontbreekt volledig tot aan de schouder;
 - beide achterpoten zijn aanwezig;
 - geen automatische spiegeling.
+
+
+## Samenvatting legacy-v1
+
+De volledige `legacy-v1`-set is nu visueel doorgelopen. Het dominante patroon is dat de oren consequent links/rechts omgewisseld zijn ten opzichte van de huidige canon. Dat wijst op een oude, verkeerd vastgelegde laterality in deze generatie-reeks, niet op losse incidentele fouten.
+
+Belangrijk: deze beelden blijven bewaard. Waar houding, expressie of beweging goed is, kunnen ze later gericht worden gecorrigeerd met behoud van de rest van het beeld. `sniff.png` heeft daarnaast een harde extra anatomiefout: drie oren.
