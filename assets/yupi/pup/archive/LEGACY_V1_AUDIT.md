@@ -48,3 +48,10 @@ Belangrijk: deze beelden blijven bewaard. Waar houding, expressie of beweging go
 | Bestand | Status | Beoordeling |
 |---|---|---|
 | `legacy-v2/base-sheet.png` | partial_reference | Poses zijn door Johan als perfect beoordeeld. Oren staan consequent verkeerd om ten opzichte van de canon. Zeer waardevol als pose-/compositiereferentie; niet als canonieke Yupi-bron gebruiken totdat uitsluitend de oor-laterality is gecorrigeerd. |
+
+
+## Walk8 experiment
+
+| Bestand | Status | Beoordeling |
+|---|---|---|
+| `experiments/walk8/frame-000.png` | partial_reference | Loopframe bruikbaar, maar de oren staan verkeerd om ten opzichte van de canon. Bewaren als bewegingsreferentie; niet als canonieke Yupi-bron gebruiken totdat de oor-laterality is gecorrigeerd. |
