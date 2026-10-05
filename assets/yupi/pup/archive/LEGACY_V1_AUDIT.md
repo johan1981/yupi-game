@@ -55,3 +55,4 @@ Belangrijk: deze beelden blijven bewaard. Waar houding, expressie of beweging go
 | Bestand | Status | Beoordeling |
 |---|---|---|
 | `experiments/walk8/frame-000.png` | partial_reference | Loopframe bruikbaar, maar de oren staan verkeerd om ten opzichte van de canon. Bewaren als bewegingsreferentie; niet als canonieke Yupi-bron gebruiken totdat de oor-laterality is gecorrigeerd. |
+| `experiments/walk8/frame-001.png` | partial_reference | Zelfde fout: oren staan verkeerd om ten opzichte van de canon. Bewaren als bewegingsreferentie; niet als canonieke Yupi-bron gebruiken totdat de oor-laterality is gecorrigeerd. |
