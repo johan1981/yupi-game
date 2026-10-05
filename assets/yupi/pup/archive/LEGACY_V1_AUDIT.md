@@ -119,3 +119,4 @@ Alle 8 frames van `experiments/walk8-final/` zijn door Johan visueel gecontrolee
 | Bestand | Status | Beoordeling |
 |---|---|---|
 | `sprites/_prototype/idle/idle.png` | partial_reference | Oor-laterality staat verkeerd om ten opzichte van de Pup-canon. Bewaren als prototype-/pose-referentie; niet als canonieke Yupi-bron gebruiken totdat de oorstand is gecorrigeerd. |
+| `sprites/_prototype/walk-right/frame-000.png` | partial_reference | Oor-laterality staat verkeerd om ten opzichte van de Pup-canon. Bewaren als prototype-/bewegingsreferentie; niet als canonieke Yupi-bron gebruiken totdat de oorstand is gecorrigeerd. |
