@@ -80,3 +80,9 @@ Alle 8 frames van `experiments/walk8/` zijn door Johan visueel gecontroleerd. De
 | `experiments/walk8-v2/frame-004.png` | partial_reference | Zelfde fout: oor-laterality staat verkeerd om ten opzichte van de canon. Bewaren als bewegingsreferentie; niet als canonieke Yupi-bron gebruiken totdat uitsluitend de oorstand is gecorrigeerd. |
 | `experiments/walk8-v2/frame-005.png` | partial_reference | Zelfde fout: oor-laterality staat verkeerd om ten opzichte van de canon. Bewaren als bewegingsreferentie; niet als canonieke Yupi-bron gebruiken totdat uitsluitend de oorstand is gecorrigeerd. |
 | `experiments/walk8-v2/frame-006.png` | partial_reference | Zelfde fout: oor-laterality staat verkeerd om ten opzichte van de canon. Bewaren als bewegingsreferentie; niet als canonieke Yupi-bron gebruiken totdat uitsluitend de oorstand is gecorrigeerd. |
+| `experiments/walk8-v2/frame-007.png` | partial_reference | Zelfde fout: oor-laterality staat verkeerd om ten opzichte van de canon. Bewaren als bewegingsreferentie; niet als canonieke Yupi-bron gebruiken totdat uitsluitend de oorstand is gecorrigeerd. |
+
+
+### Samenvatting walk8-v2
+
+Alle 8 frames van `experiments/walk8-v2/` zijn door Johan visueel gecontroleerd. De loopbeweging is bruikbaar, maar in alle 8 frames staat de oor-laterality verkeerd om ten opzichte van de huidige Pup-canon. De reeks blijft volledig bewaard als bewegingsreferentie.
