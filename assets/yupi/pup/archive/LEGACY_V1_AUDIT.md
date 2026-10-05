@@ -106,3 +106,9 @@ Alle 8 frames van `experiments/walk8-v2/` zijn door Johan visueel gecontroleerd.
 | `experiments/walk8-final/frame-004.png` | partial_reference | Zelfde fout: oor-laterality staat verkeerd om ten opzichte van de Pup-canon. Bewaren als bewegings-/animatiereferentie; niet als canonieke Yupi-bron gebruiken totdat de oorstand is gecorrigeerd. |
 | `experiments/walk8-final/frame-005.png` | partial_reference | Zelfde fout: oor-laterality staat verkeerd om ten opzichte van de Pup-canon. Bewaren als bewegings-/animatiereferentie; niet als canonieke Yupi-bron gebruiken totdat de oorstand is gecorrigeerd. |
 | `experiments/walk8-final/frame-006.png` | partial_reference | Zelfde fout: oor-laterality staat verkeerd om ten opzichte van de Pup-canon. Bewaren als bewegings-/animatiereferentie; niet als canonieke Yupi-bron gebruiken totdat de oorstand is gecorrigeerd. |
+| `experiments/walk8-final/frame-007.png` | partial_reference | Zelfde fout: oor-laterality staat verkeerd om ten opzichte van de Pup-canon. Bewaren als bewegings-/animatiereferentie; niet als canonieke Yupi-bron gebruiken totdat de oorstand is gecorrigeerd. |
+
+
+### Samenvatting walk8-final
+
+Alle 8 frames van `experiments/walk8-final/` zijn door Johan visueel gecontroleerd. De beweging blijft bruikbaar, maar in alle 8 frames staat de oor-laterality verkeerd om ten opzichte van de huidige Pup-canon. De volledige reeks blijft bewaard als bewegings-/animatiereferentie.
