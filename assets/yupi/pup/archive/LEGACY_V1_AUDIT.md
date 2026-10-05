@@ -41,3 +41,10 @@ Niets in deze map wordt door deze audit verwijderd of overschreven.
 De volledige `legacy-v1`-set is nu visueel doorgelopen. Het dominante patroon is dat de oren consequent links/rechts omgewisseld zijn ten opzichte van de huidige canon. Dat wijst op een oude, verkeerd vastgelegde laterality in deze generatie-reeks, niet op losse incidentele fouten.
 
 Belangrijk: deze beelden blijven bewaard. Waar houding, expressie of beweging goed is, kunnen ze later gericht worden gecorrigeerd met behoud van de rest van het beeld. `sniff.png` heeft daarnaast een harde extra anatomiefout: drie oren.
+
+
+## Legacy-v2
+
+| Bestand | Status | Beoordeling |
+|---|---|---|
+| `legacy-v2/base-sheet.png` | partial_reference | Poses zijn door Johan als perfect beoordeeld. Oren staan consequent verkeerd om ten opzichte van de canon. Zeer waardevol als pose-/compositiereferentie; niet als canonieke Yupi-bron gebruiken totdat uitsluitend de oor-laterality is gecorrigeerd. |
