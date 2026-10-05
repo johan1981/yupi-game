@@ -10,6 +10,11 @@ De afbeeldingen hieronder worden rechtstreeks uit `assets/yupi/` gerenderd; dit 
 
 ![Pup canonical base](../assets/yupi/pup/design/approved/base-reference.jpeg)
 
+### Standing turnaround — approved
+[Open bestand](../assets/yupi/pup/sheets/standing-turnaround.jpeg)
+
+![Pup approved standing turnaround](../assets/yupi/pup/sheets/standing-turnaround.jpeg)
+
 ### Afgewezen / verkeerd geclassificeerd
 
 `assets/yupi/pup/poses/sitting/front.png` is door Johan op 2026-10-05 visueel beoordeeld als **geen Pup Yupi** en hoort niet bij de Pup-canon.

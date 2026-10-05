@@ -144,6 +144,39 @@
         "low playful movement"
       ],
       "notes": "Real-Yupi biomechanics reference. Right foreleg is the only front support; front body compresses and rebounds; hindlegs provide propulsion; head/neck follow vertical cadence; tail aids balance. Another dog appears in parts of the source and must not be used as Yupi gait reference."
+    },
+    {
+      "id": "yupi-pup-standing-turnaround",
+      "type": "sheet",
+      "subtype": "turnaround",
+      "action": "standing",
+      "views": [
+        "front",
+        "right",
+        "left",
+        "back"
+      ],
+      "status": "approved",
+      "path": "assets/yupi/pup/sheets/standing-turnaround.jpeg",
+      "anatomy_spec": "docs/characters/YUPI_SPEC.json",
+      "approval_date": "2026-10-05",
+      "approval_basis": "Johan explicitly approved this exact four-view Pup Yupi turnaround in chat ('Dit ziet er heel goed uit!!! opslaan' and later 'Ja vastleggen').",
+      "source_reference": "055F782F-8F04-4086-9ABE-C530FB519F5D.jpeg",
+      "format": "jpeg",
+      "notes": "Approved Route B standing turnaround. Four aligned views of the same Pup Yupi: front, right, left and back. Canonical asymmetry is preserved: right foreleg present, left foreleg absent to the shoulder, both hindlegs present, right ear upright and left ear half-floppy. Preserve this exact approved image; do not regenerate the whole sheet when only one view later needs correction.",
+      "sha256": "c0891c1b2a118b910dcbfdf78f0609be10e8037701745b199529d5fca2b91ff1",
+      "mime_type": "image/jpeg",
+      "dimensions": "1448x1086",
+      "persistent_source": {
+        "provider": "ChatGPT conversation upload",
+        "file_id": "file_0000000091ac81f4815dce20d82d595e",
+        "library_file_id": "libfile_7697701843ec8191a7d84d6846701c32"
+      },
+      "source_generation": {
+        "provider": "ChatGPT image generation",
+        "gen_id": "01935fa5-517b-480c-acf8-6c7a42d20393",
+        "workflow": "Route B"
+      }
     }
   ],
   "prototypes": [
