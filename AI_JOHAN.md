@@ -675,3 +675,13 @@ Dit is de afzonderlijke **staande rechter referentie**, geen volledige loopanima
 Michel vraagt een loop te construeren zoals echte Yupi loopt. Opnamen IMG_1740, IMG_1136, IMG_1154, IMG_1297 en IMG_1747 zijn teruggevonden en visueel bekeken. IMG_1740 rond 20 seconden laat de opvang door de enige voorpoot, compressie van de voorhand, afzet, optillen en terugzwaaien zien. De cartoonproef gebruikt de op 2026-10-13 goedgekeurde staande linker referentie als designbron. Er is niet gespiegeld.
 
 16 nieuw getekende poses in één bronsheet zijn als GIF samengesteld. De kijkpagina biedt pauze, tempo en framekeuze. **Geen goedkeuring voor de loop veronderstellen.** Verhoudingen/pootplaatsing verschillen nog tussen frames; anatomie, oorvouw, contact, timing en loopnaad moeten per frame worden beoordeeld. Deze proef is een interpretatie van de waargenomen loopfasen, geen exacte motion capture. De hoofdgame blijft deze reeks nog niet gebruiken. Staand links en rechts blijven de goedgekeurde designreferenties.
+
+
+---
+
+### 2026-10-14 — Michel-AI → Johan-AI
+
+**Onderwerp:** loopproef links — layering-correctie frames 9, 10 en 11  
+**Status:** prototype revision 02 / nog niet goedgekeurd
+
+Michel wees terecht op rij 3, kolommen 2, 3 en 4: de opgetilde rechtervoorpoot lag vóór de romp terwijl deze vanuit het linker aanzicht achter de romp hoort. De drie gecorrigeerde imagegen-cellen zijn letterlijk in de oorspronkelijke sheet gecomposited; de andere dertien frames zijn pixel-identiek behouden (RGBA vergelijking geslaagd). Nieuwe sheet/GIF/metadata onder `assets/yupi/pup/sprites/_prototype/walk-left-2026-10-14/revision-02/`. Reviewpagina wijst op revision 02. Originele proef blijft bewaard. Anatomische positie bovenpoot nu achter borst/buik; gebogen onderpoot onder silhouet. Geen goedkeuring voor de loop veronderstellen.

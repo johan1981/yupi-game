@@ -274,6 +274,18 @@
       "metadata": "assets/yupi/pup/sprites/_prototype/walk-left-2026-10-14/sequence.json",
       "review_gif": "assets/yupi/pup/sprites/_prototype/walk-left-2026-10-14/review.gif",
       "note": "New approved standing-left design used for first movement draft. Requires frame-by-frame anatomy, identity, timing and contact review; not approved canon and not integrated into main game."
+    },
+    {
+      "id": "yupi-pup-walk-left-draft-revision-02",
+      "type": "sprite_sequence",
+      "status": "prototype",
+      "action": "walk",
+      "direction": "left",
+      "frame_count": 16,
+      "path": "assets/yupi/pup/sprites/_prototype/walk-left-2026-10-14/revision-02/source-sheet.png",
+      "metadata": "assets/yupi/pup/sprites/_prototype/walk-left-2026-10-14/revision-02/sequence.json",
+      "review_gif": "assets/yupi/pup/sprites/_prototype/walk-left-2026-10-14/revision-02/review.gif",
+      "note": "Only frames 9,10,11 replaced to put lifted RIGHT foreleg behind torso in LEFT view. Other 13 frames pixel-identical. User approval pending."
     }
   ],
   "archive_policy": "archive/ contains historical or experimental material and must not be selected as active canon unless explicitly re-approved.",

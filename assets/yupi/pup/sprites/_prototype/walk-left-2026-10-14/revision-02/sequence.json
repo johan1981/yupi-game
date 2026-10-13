@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "id": "yupi-pup-walk-left-draft-revision-02",
+  "status": "prototype",
+  "approved": false,
+  "direction": "left",
+  "frame_count": 16,
+  "source_sheet": {
+    "path": "assets/yupi/pup/sprites/_prototype/walk-left-2026-10-14/revision-02/source-sheet.png",
+    "sha256": "98fbe05f2e9dccc16ec6dba9c16cb26ad497f3a0a96974fdcef734e0fd2b1d40",
+    "width": 1448,
+    "height": 1086,
+    "columns": 4,
+    "rows": 4,
+    "cell_width": 362,
+    "cell_height": 271,
+    "crop": "x=(frame%4)*362; y=floor(frame/4)*271; 362x271; row-major. Bottom 2 source pixels outside grid."
+  },
+  "review_gif": {
+    "path": "assets/yupi/pup/sprites/_prototype/walk-left-2026-10-14/revision-02/review.gif",
+    "sha256": "0a41831841d2d9193ca369f9a61ade5c1aedbbb3c3c57ff80d23d59f9960d719",
+    "fps": 20,
+    "cycle_seconds": 0.8
+  },
+  "design_reference": "assets/yupi/pup/poses/standing/left.png",
+  "opposite_reference": "assets/yupi/pup/poses/standing/right.png",
+  "motion_references": [
+    {
+      "source": "IMG_1740.mp4",
+      "library_file_id": "libfile_c238142e81288191ae446fc8eafd9453",
+      "segment_seconds": [
+        20,
+        20.64
+      ],
+      "role": "observed walk biomechanics; timing interpreted for draft, not frame-exact motion capture"
+    },
+    {
+      "source": "IMG_1747.mp4",
+      "library_file_id": "libfile_6c9a6ceaa1108191a009409c568fea2b",
+      "role": "existing documented motion reference; play/start/landing support"
+    }
+  ],
+  "construction": "Imagegen generated 16 articulated poses; FFmpeg cropped fixed cells and assembled GIF. No horizontal mirroring. Not mesh-warped standing image.",
+  "review_required": [
+    "identity/proportions consistency across frames",
+    "right foreleg laterality in every frame",
+    "left foreleg absent to shoulder; no stump",
+    "both hindlegs visible; no extra fragments",
+    "ear shape and forward one-third fold preserved",
+    "ground contact and foot slide",
+    "chest/head compression and rebound",
+    "seam from frame15 to frame0",
+    "cycle timing against real walk"
+  ],
+  "known_limitations": [
+    "Scale/proportion and paw-placement variation between generated frames",
+    "First loop is an interpretation of observed phases, not a validated exact gait reconstruction"
+  ],
+  "preview_page": "tests/yupi-walk-review.html",
+  "created_at": "2026-10-14",
+  "main_game_uses_prototype": false,
+  "revision": 2,
+  "changed_frames_zero_based": [
+    9,
+    10,
+    11
+  ],
+  "changed_cells_one_based": [
+    "row3 col2",
+    "row3 col3",
+    "row3 col4"
+  ],
+  "correction": "far-side right foreleg upper arm occluded by near torso; lower flexed paw visible underneath",
+  "other_13_frames_pixel_identical": true
+}
