@@ -86,6 +86,9 @@ Nooit 4.
 - Mag nooit het hangende oor worden
 
 ## LINKER OOR
+
+**Goedgekeurde Pup-verfijning (2026-10-13):** bij de afzonderlijke staande linker referentie `assets/yupi/pup/poses/standing/left.png` klapt alleen het bovenste **derde** van het linkeroor om; de onderste twee derde staan op. Michel en Johan hebben dit exacte beeld goedgekeurd. Deze concrete Pup-referentie verfijnt de eerdere algemene omschrijving “halverwege”. Rechteroor blijft rechtop. Bestaande goedgekeurde beelden van andere levensfasen worden hiermee niet vervangen.
+
 - HANGT HALVERWEGE
 - Is half omgeklapt / half hangend, niet volledig plat omlaag
 - Heeft duidelijk een andere stand dan het rechteroor

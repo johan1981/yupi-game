@@ -45,7 +45,18 @@
     "left": {
       "state": "half-floppy",
       "direction": "partly down / halfway folded",
-      "description": "left ear hangs halfway; not fully upright and not fully flat downward"
+      "description": "left ear hangs halfway; not fully upright and not fully flat downward",
+      "approved_pup_refinement": {
+        "approval_date": "2026-10-13",
+        "asset": "assets/yupi/pup/poses/standing/left.png",
+        "upper_fold_fraction": 0.3333333333333333,
+        "description": "Only upper third folds forward; lower two thirds upright. Explicit approved Pup standing-left refinement supersedes generic halfway description for this reference.",
+        "approved_by": [
+          "Michel",
+          "Johan"
+        ],
+        "scope": "Pup standing-left reference; does not replace other approved life-stage assets"
+      }
     }
   },
   "laterality": {

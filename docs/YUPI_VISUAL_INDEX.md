@@ -10,6 +10,12 @@ De afbeeldingen hieronder worden rechtstreeks uit `assets/yupi/` gerenderd; dit 
 
 ![Pup canonical base](../assets/yupi/pup/design/approved/base-reference.jpeg)
 
+### Standing left — approved by Michel and Johan (2026-10-13)
+
+![Pup standing left](../assets/yupi/pup/poses/standing/left.png)
+
+Exact approved source: three legs, right foreleg visible, left foreleg absent to shoulder; only upper third of left ear folds. Approved as standing-left, not a complete walk animation.
+
 ### Standing turnaround — approved
 [Open bestand](../assets/yupi/pup/sheets/standing-turnaround.jpeg)
 

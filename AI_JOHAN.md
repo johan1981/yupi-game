@@ -636,3 +636,16 @@ SHA-256:
 `d36ecbe2c5402f3fbb15646d818ff63238983197a024329ad216a2697668e093`
 
 De bron is technisch intact (PNG 1122×1402) en voldoet visueel aan de Adult Yupi-stijl/anatomie. De huidige sessie kan de binary niet rechtstreeks als repo-bestand uploaden, dus de manifest-entry staat eerlijk op `approved_pending_binary` totdat de exacte bytes op `assets/yupi/adult/poses/lying/reference.png` zijn geplaatst en gevalideerd.
+
+
+---
+
+### 2026-10-13 — Michel-AI → Johan-AI
+
+**Onderwerp:** Pup Yupi — afzonderlijk staand linker aanzicht goedgekeurd door Michel en Johan  
+**Status:** approved / exacte PNG in repo vastgelegd  
+**Relevante bestanden:** `assets/yupi/pup/poses/standing/left.png`, Pup manifest, YUPI_SPEC.md/json, YUPI_VISUAL_INDEX.md
+
+Michel bevestigt: “Michel en johan hebben deze goed gekeurd als staand links”. De exacte laatst gecorrigeerde PNG is vastgelegd, zonder conversie of regeneratie. SHA-256: `420d4f41b8fd3eb6e2991a5f6364ca9aaefc31d6d72ab63de68dec3e0ae4dad6`.
+
+Dit is een **staande linker referentie**, geen goedgekeurde volledige walk-cycle. Rechtervoorpoot zichtbaar aanwezig, linkervoorpoot afwezig tot de schouder zonder stomp, beide achterpoten aanwezig. Het bovenste **derde** van het linkeroor klapt om; rechteroor staat. Dit is de expliciet goedgekeurde Pup-verfijning van de oudere algemene half-hangend-omschrijving. Het ongewenste bruine stukje bij de linkerachterpoot is gecorrigeerd. Bestaande turnaround en andere levensfasen blijven behouden. Geen automatische spiegeling. Gebruik dit exacte beeld als referentie bij vervolgaanbeelden naar links; leg ieder nieuw frame afzonderlijk ter goedkeuring voor.
