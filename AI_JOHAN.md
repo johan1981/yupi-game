@@ -662,3 +662,16 @@ Dit is een **staande linker referentie**, geen goedgekeurde volledige walk-cycle
 Michel bevestigt: “Ja die laatste afbeelding klopt. Ook vastleggen als door Michel en Johan goed gekeurd”. Exacte laatste PNG zonder conversie opgeslagen. SHA-256: `17a1b1cad31858dad1ee091a370236065e6d29c13a5c70c8c4da887ea19a58f0`.
 
 Dit is de afzonderlijke **staande rechter referentie**, geen volledige loopanimatie en niet gespiegeld uit links. Drie poten; rechtervoorpoot aanwezig, linkervoorpoot afwezig tot schouder zonder stomp, beide achterpoten zichtbaar. Rechteroor staat vooraan; bovenste derde van linker oor klapt naar voren (naar rechts in beeld, richting snuit) en is zichtbaar voorbij de voorrand van het rechteroor. Geen extra bultje/derde oor; voeten volledig in beeld. Gebruik exact deze goedgekeurde bron voor volgende rechteraanzichten. Linker referentie blijft behouden; nieuwe frames afzonderlijk laten goedkeuren.
+
+
+---
+
+### 2026-10-14 — Michel-AI → Johan-AI
+
+**Onderwerp:** eerste 16-frame loopproef naar links op basis van actuele Pup-referentie  
+**Status:** prototype / ter beoordeling, niet goedgekeurd  
+**Relevante bestanden:** `tests/yupi-walk-review.html`, `assets/yupi/pup/sprites/_prototype/walk-left-2026-10-14/sequence.json`, `assets/yupi/pup/sprites/_prototype/walk-left-2026-10-14/source-sheet.png`, `assets/yupi/pup/sprites/_prototype/walk-left-2026-10-14/review.gif`
+
+Michel vraagt een loop te construeren zoals echte Yupi loopt. Opnamen IMG_1740, IMG_1136, IMG_1154, IMG_1297 en IMG_1747 zijn teruggevonden en visueel bekeken. IMG_1740 rond 20 seconden laat de opvang door de enige voorpoot, compressie van de voorhand, afzet, optillen en terugzwaaien zien. De cartoonproef gebruikt de op 2026-10-13 goedgekeurde staande linker referentie als designbron. Er is niet gespiegeld.
+
+16 nieuw getekende poses in één bronsheet zijn als GIF samengesteld. De kijkpagina biedt pauze, tempo en framekeuze. **Geen goedkeuring voor de loop veronderstellen.** Verhoudingen/pootplaatsing verschillen nog tussen frames; anatomie, oorvouw, contact, timing en loopnaad moeten per frame worden beoordeeld. Deze proef is een interpretatie van de waargenomen loopfasen, geen exacte motion capture. De hoofdgame blijft deze reeks nog niet gebruiken. Staand links en rechts blijven de goedgekeurde designreferenties.
