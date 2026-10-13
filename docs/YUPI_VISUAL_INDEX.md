@@ -16,6 +16,12 @@ De afbeeldingen hieronder worden rechtstreeks uit `assets/yupi/` gerenderd; dit 
 
 Exact approved source: three legs, right foreleg visible, left foreleg absent to shoulder; only upper third of left ear folds. Approved as standing-left, not a complete walk animation.
 
+### Standing right — approved by Michel and Johan (2026-10-14)
+
+![Pup standing right](../assets/yupi/pup/poses/standing/right.png)
+
+Exact approved source, independently rendered: right ear upright, upper third of left ear folds forward toward the nose and is visible beyond the upright ear. Three legs, all paws uncropped.
+
 ### Standing turnaround — approved
 [Open bestand](../assets/yupi/pup/sheets/standing-turnaround.jpeg)
 

@@ -207,6 +207,36 @@
         "git_blob_sha": "e841db221a1813f1842b9c5b59b553a39d3079ca",
         "visual_anatomy": "checked against repo specification with explicitly approved Pup ear refinement"
       }
+    },
+    {
+      "id": "yupi-pup-standing-right",
+      "type": "pose",
+      "action": "standing",
+      "view": "right",
+      "status": "approved",
+      "path": "assets/yupi/pup/poses/standing/right.png",
+      "anatomy_spec": "docs/characters/YUPI_SPEC.json",
+      "approval_date": "2026-10-14",
+      "approved_by": [
+        "Michel",
+        "Johan"
+      ],
+      "approval_basis": "Michel: 'Ja die laatste afbeelding klopt. Ook vastleggen als door Michel en Johan goed gekeurd'.",
+      "sha256": "17a1b1cad31858dad1ee091a370236065e6d29c13a5c70c8c4da887ea19a58f0",
+      "mime_type": "image/png",
+      "dimensions": "1448x1086",
+      "notes": "Exact approved standing RIGHT reference, independently rendered, not mirrored. Right foreleg present; left foreleg absent completely to shoulder without stump; both hindlegs visible. Right ear upright nearer camera; upper third of far left ear folds FORWARD toward nose/screen right and visibly projects beyond front edge of upright ear. No extra ear bump; all paws uncropped. Standing reference, not full walk-cycle.",
+      "provenance": {
+        "provider": "ChatGPT image generation",
+        "source_filename": "exec-92f5b92a-7666-44bc-8fb7-0a51e3fdcaf9.png",
+        "approval_context": "2026-10-14 Europe/Amsterdam, approval by Michel and Johan reported by Michel"
+      },
+      "validation": {
+        "technical_decode": "passed",
+        "mode": "RGBA",
+        "git_blob_sha": "ff13687945a8de7f12c28a3ff8f0787561db8900",
+        "visual_anatomy": "checked with explicit approved Pup ear refinement"
+      }
     }
   ],
   "prototypes": [

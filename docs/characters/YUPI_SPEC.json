@@ -56,6 +56,18 @@
           "Johan"
         ],
         "scope": "Pup standing-left reference; does not replace other approved life-stage assets"
+      },
+      "approved_pup_right_refinement": {
+        "approval_date": "2026-10-14",
+        "asset": "assets/yupi/pup/poses/standing/right.png",
+        "approved_by": [
+          "Michel",
+          "Johan"
+        ],
+        "upper_fold_fraction": 0.3333333333333333,
+        "fold_direction": "forward toward muzzle; screen right in right-facing view",
+        "visibility": "folded tip visibly extends beyond front edge of upright right ear; no extra rear bump",
+        "scope": "approved Pup standing-right reference"
       }
     }
   },

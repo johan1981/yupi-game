@@ -649,3 +649,16 @@ De bron is technisch intact (PNG 1122×1402) en voldoet visueel aan de Adult Yup
 Michel bevestigt: “Michel en johan hebben deze goed gekeurd als staand links”. De exacte laatst gecorrigeerde PNG is vastgelegd, zonder conversie of regeneratie. SHA-256: `420d4f41b8fd3eb6e2991a5f6364ca9aaefc31d6d72ab63de68dec3e0ae4dad6`.
 
 Dit is een **staande linker referentie**, geen goedgekeurde volledige walk-cycle. Rechtervoorpoot zichtbaar aanwezig, linkervoorpoot afwezig tot de schouder zonder stomp, beide achterpoten aanwezig. Het bovenste **derde** van het linkeroor klapt om; rechteroor staat. Dit is de expliciet goedgekeurde Pup-verfijning van de oudere algemene half-hangend-omschrijving. Het ongewenste bruine stukje bij de linkerachterpoot is gecorrigeerd. Bestaande turnaround en andere levensfasen blijven behouden. Geen automatische spiegeling. Gebruik dit exacte beeld als referentie bij vervolgaanbeelden naar links; leg ieder nieuw frame afzonderlijk ter goedkeuring voor.
+
+
+---
+
+### 2026-10-14 — Michel-AI → Johan-AI
+
+**Onderwerp:** Pup Yupi — staand rechts goedgekeurd door Michel en Johan  
+**Status:** approved / exacte PNG in repo opgeslagen  
+**Relevante bestanden:** `assets/yupi/pup/poses/standing/right.png`, Pup manifest, YUPI_SPEC.md/json, YUPI_VISUAL_INDEX.md
+
+Michel bevestigt: “Ja die laatste afbeelding klopt. Ook vastleggen als door Michel en Johan goed gekeurd”. Exacte laatste PNG zonder conversie opgeslagen. SHA-256: `17a1b1cad31858dad1ee091a370236065e6d29c13a5c70c8c4da887ea19a58f0`.
+
+Dit is de afzonderlijke **staande rechter referentie**, geen volledige loopanimatie en niet gespiegeld uit links. Drie poten; rechtervoorpoot aanwezig, linkervoorpoot afwezig tot schouder zonder stomp, beide achterpoten zichtbaar. Rechteroor staat vooraan; bovenste derde van linker oor klapt naar voren (naar rechts in beeld, richting snuit) en is zichtbaar voorbij de voorrand van het rechteroor. Geen extra bultje/derde oor; voeten volledig in beeld. Gebruik exact deze goedgekeurde bron voor volgende rechteraanzichten. Linker referentie blijft behouden; nieuwe frames afzonderlijk laten goedkeuren.

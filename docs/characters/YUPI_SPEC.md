@@ -87,6 +87,9 @@ Nooit 4.
 
 ## LINKER OOR
 
+**Rechter Pup-referentie goedgekeurd op 2026-10-14:** `assets/yupi/pup/poses/standing/right.png`. Ook hier klapt alleen het bovenste derde van het linkeroor naar voren, richting snuit — dus **naar rechts in beeld**. De oorpunt is zichtbaar voorbij de voorrand van het rechtopstaande rechteroor; een los bultje achter het rechteroor is geen correcte vervanging. Exact twee oren. Deze expliciet goedgekeurde Pup-verfijning sluit aan op de linker referentie van 2026-10-13.
+
+
 **Goedgekeurde Pup-verfijning (2026-10-13):** bij de afzonderlijke staande linker referentie `assets/yupi/pup/poses/standing/left.png` klapt alleen het bovenste **derde** van het linkeroor om; de onderste twee derde staan op. Michel en Johan hebben dit exacte beeld goedgekeurd. Deze concrete Pup-referentie verfijnt de eerdere algemene omschrijving “halverwege”. Rechteroor blijft rechtop. Bestaande goedgekeurde beelden van andere levensfasen worden hiermee niet vervangen.
 
 - HANGT HALVERWEGE
