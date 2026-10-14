@@ -1,0 +1,106 @@
+<!doctype html><html lang="nl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Yupi — looptest 16 frames</title><meta name="theme-color" content="#f7f3eb"><link rel="manifest" href="../manifest.webmanifest"><style>*{box-sizing:border-box}body{margin:0;background:#f7f3eb;color:#42372d;font:16px system-ui,sans-serif}main{max-width:980px;margin:auto;padding:24px}h1{font-size:28px;margin-bottom:8px}p{line-height:1.5}.status{background:#eadfcf;padding:8px 12px;border-radius:20px;display:inline-block;font-size:13px}canvas{display:block;width:auto;height:50vh;max-width:100%;max-height:500px;margin:20px auto;background:#fffaf3;border:1px solid #ded3c3;border-radius:18px}button,select,input{font:inherit}button,select{padding:10px 16px;border:1px solid #cdbcaa;border-radius:12px;background:white;color:#42372d}button{cursor:pointer}.controls{display:flex;flex-wrap:wrap;align-items:center;gap:12px}.frame{width:100%;accent-color:#a75529}.refs{display:flex;gap:16px;margin-top:25px}.refs figure{margin:0;width:50%;background:white;border-radius:12px;padding:12px}.refs img{width:100%;height:200px;object-fit:contain}small{display:block;line-height:1.5;color:#716254}a{color:#88441f}@media(max-width:600px){main{padding:16px}.refs img{height:140px}h1{font-size:24px}}</style><main><span class="status">Looptest · 16 frames · nog te beoordelen</span><h1>Yupi loopt naar links</h1><label>Versie <select id="version"><option value="first">Eerste loopproef</option><option value="corrected">Gecorrigeerde loopproef</option><option value="hop" selected>Uitgelijnd + hup</option></select></label><p>Eén loopritme voor drie poten: de achterpoten zijn afgestemd op de landing en afzet van de rechtervoorpoot. De voorhand is behouden.</p><canvas id="c" width="800" height="500" aria-label="Loopanimatie van Pup Yupi naar links"></canvas><div class="controls"><button id="play">Pauzeren</button><button id="prev">Vorige</button><button id="next">Volgende</button><label>Tempo <select id="fps"><option value="10">Langzaam</option><option value="20" selected>Normaal</option><option value="25">Sneller</option></select></label><strong id="counter"></strong></div><div class="controls" style="margin-top:12px"><label><input id="align" type="checkbox" checked> Uitlijnen</label><label>Hup <input id="hop" aria-label="Sterkte van de hup" type="range" min="0" max="150" value="100"><output id="hopValue">100%</output></label></div><div class="controls" style="margin-top:12px"><label>Achterpoten <select id="rearTiming"><option value="synced" selected>Afgestemd op voorpoot</option><option value="previous">Vorige timing</option></select></label></div><input class="frame" id="scrub" aria-label="Frame kiezen" type="range" min="0" max="15" value="0"><small>Dit is een eerste proef. Frame-overgangen, schaal, grondcontact en aansluiting van het laatste op het eerste frame zijn nog niet definitief goedgekeurd. Deze test gebruikt de proef om hem te beoordelen.</small><details><summary>Goedgekeurde staande referenties</summary><div class="refs"><figure><img src="../assets/yupi/pup/poses/standing/left.png" alt="Goedgekeurde linker referentie"><figcaption>Staand links — goedgekeurd</figcaption></figure><figure><img src="./assets/yupi/pup/poses/standing/right.png" alt="Goedgekeurde rechter referentie"><figcaption>Staand rechts — goedgekeurd</figcaption></figure></div></details><p><a href="../assets/yupi/pup/sprites/_prototype/walk-left-2026-10-14/revision-02/review.gif">Open de GIF</a></p></main><script>
+const root="../assets/yupi/pup/sprites/_prototype/walk-left-2026-10-14/";
+const sources={first:root+"source-sheet.png",corrected:root+"revision-02/source-sheet.png",hop:root+"revision-02/source-sheet.png"};
+const boxes=[[36,7,347,271],[25,6,336,271],[14,11,331,271],[6,11,325,271],[25,8,348,267],[23,17,340,269],[15,19,338,268],[8,15,328,271],[29,3,350,264],[43,0,360,265],[35,1,362,267],[40,4,355,268],[26,0,346,257],[24,0,344,257],[25,0,354,257],[16,1,337,256]];
+const singleContactOrder=[2,12,15,3,4,5,6,7,8,9,10,11,13,14,0,1];
+const rearContactOrder=[11,12,13,14,15,0,1,2,3,4,5,6,7,8,9,10];
+const angles=[0,0,0,0,0,0,0,0,1,5,8,9,8,6,4,2];
+const canvas=document.getElementById("c"),ctx=canvas.getContext("2d"),play=document.getElementById("play"),scrub=document.getElementById("scrub"),fps=document.getElementById("fps"),counter=document.getElementById("counter"),version=document.getElementById("version"),align=document.getElementById("align"),hop=document.getElementById("hop"),hopValue=document.getElementById("hopValue");
+const rearTiming=document.getElementById("rearTiming");
+const image=new Image();
+let frame=0,playing=true,last=0,elapsed=0,loaded=false,failed=false;
+
+const frameTextures=[],framePixels=[];
+let lastRearKey="",lastRearOrigin=[0,0];
+const rearRaster=document.createElement("canvas"),rearRasterContext=rearRaster.getContext("2d");
+const rearFootAnchors=[[[224.5,271],[316.6,271]],[[211.3,267],[301.9,271]],[[204.7,271],[309.3,271]],[[201.5,271],[300.1,271]],[[224,267],[324.8,264]],[[247.3,269],[305.5,266]],[[210.6,268],[320.6,267]],[[205.6,263],[295.8,271]],[[223.9,250],[313.8,264]],[[232.6,265],[328,262]],[[234.7,260],[333.2,267]],[[225.1,267],[322,263]],[[219,248],[309.3,257]],[[209.3,251],[316.1,257]],[[227.2,253],[327.2,257]],[[214.4,252],[303,256]]];
+function prepareFrameTextures(){
+frameTextures.length=0;framePixels.length=0;lastRearKey="";
+for(let i=0;i<16;i++){const c=document.createElement("canvas");c.width=362;c.height=271;c.getContext("2d").drawImage(image,(i%4)*362,Math.floor(i/4)*271,362,271,0,0,362,271);frameTextures.push(c);framePixels.push(c.getContext("2d").getImageData(0,0,362,271).data);}
+}
+function drawRearRaster(triangles,pixels){
+const points=triangles.flatMap(t=>t.destination),left=Math.floor(Math.min(...points.map(p=>p[0]))),top=Math.floor(Math.min(...points.map(p=>p[1]))),width=Math.ceil(Math.max(...points.map(p=>p[0])))-left,height=Math.ceil(Math.max(...points.map(p=>p[1])))-top;
+if(width<=0||height<=0)return;
+rearRaster.width=width;rearRaster.height=height;
+const output=rearRasterContext.createImageData(width,height),data=output.data;
+for(const triangle of triangles){const [a,b,c]=triangle.source,[u,v,w]=triangle.destination;
+const det=(v[0]-u[0])*(w[1]-u[1])-(w[0]-u[0])*(v[1]-u[1]);if(det<=0)continue;
+const x0=Math.max(left,Math.floor(Math.min(u[0],v[0],w[0]))),x1=Math.min(left+width,Math.ceil(Math.max(u[0],v[0],w[0]))),y0=Math.max(top,Math.floor(Math.min(u[1],v[1],w[1]))),y1=Math.min(top+height,Math.ceil(Math.max(u[1],v[1],w[1])));
+for(let y=y0;y<y1;y++)for(let x=x0;x<x1;x++){
+const dx=x+.5-u[0],dy=y+.5-u[1],q=(dx*(w[1]-u[1])-dy*(w[0]-u[0]))/det,r=((v[0]-u[0])*dy-(v[1]-u[1])*dx)/det;if(q<-.000001||r<-.000001||q+r>1.000001)continue;
+const sx=Math.max(0,Math.min(361,a[0]+q*(b[0]-a[0])+r*(c[0]-a[0])-.5)),sy=Math.max(0,Math.min(270,a[1]+q*(b[1]-a[1])+r*(c[1]-a[1])-.5)),ix=Math.floor(sx),iy=Math.floor(sy),fx=sx-ix,fy=sy-iy;
+const samples=[(iy*362+ix)*4,(iy*362+Math.min(361,ix+1))*4,(Math.min(270,iy+1)*362+ix)*4,(Math.min(270,iy+1)*362+Math.min(361,ix+1))*4],weights=[(1-fx)*(1-fy),fx*(1-fy),(1-fx)*fy,fx*fy];
+let alpha=0,red=0,green=0,blue=0;for(let k=0;k<4;k++){const index=samples[k],weight=weights[k]*pixels[index+3];alpha+=weight;red+=weight*pixels[index];green+=weight*pixels[index+1];blue+=weight*pixels[index+2];}
+const index=((y-top)*width+x-left)*4;if(alpha>0){data[index]=red/alpha;data[index+1]=green/alpha;data[index+2]=blue/alpha;data[index+3]=alpha;}
+}
+}
+rearRasterContext.putImageData(output,0,0);lastRearOrigin=[left,top];ctx.drawImage(rearRaster,left,top);
+}
+function drawConnectedRear(bodyFrame,angle,scale,pivotX,pivotY,supportLift){
+const rearFrame=rearTiming.value==="previous"?frame:rearContactOrder[frame];
+const cacheKey=[bodyFrame,rearFrame,angle,scale,pivotX,pivotY,supportLift].join("|");if(cacheKey===lastRearKey){ctx.drawImage(rearRaster,...lastRearOrigin);return;}lastRearKey=cacheKey;
+const [rl,rt,rr,rb]=boxes[rearFrame],rearScale=410/(rr-rl),rearPivot=rl+(rr-rl)*.70;
+const [bl,bt,br,bb]=boxes[bodyFrame],cutX=185,cutY=170;
+const smooth=t=>{t=Math.max(0,Math.min(1,t));return t*t*(3-2*t);};
+const bodyPoint=(x,y)=>{const dx=(x-pivotX)*scale,dy=(y-pivotY)*scale;return [500+dx*Math.cos(angle)-dy*Math.sin(angle),450-supportLift+dx*Math.sin(angle)+dy*Math.cos(angle)];};
+const sourceFeet=rearFootAnchors[bodyFrame],targetFeet=rearFootAnchors[rearFrame];
+const shifts=sourceFeet.map((p,i)=>{const from=bodyPoint(...p),to=[500+(targetFeet[i][0]-rearPivot)*rearScale,450+(targetFeet[i][1]-rb)*rearScale];return [to[0]-from[0],to[1]-from[1]];});
+const point=(x,y,amount=1)=>{const p=bodyPoint(x,y),blend=smooth((x-sourceFeet[0][0])/(sourceFeet[1][0]-sourceFeet[0][0]));const anchorY=sourceFeet[0][1]*(1-blend)+sourceFeet[1][1]*blend;const weight=amount*smooth((y-cutY)/(anchorY-cutY))*smooth((x-cutX)/40);return [p[0]+weight*(shifts[0][0]*(1-blend)+shifts[1][0]*blend),p[1]+weight*(shifts[0][1]*(1-blend)+shifts[1][1]*blend)];};
+const xs=[],ys=[];for(let x=cutX;x<br;x+=12)xs.push(x);xs.push(br);for(let y=cutY;y<bb;y+=12)ys.push(y);ys.push(bb);
+let amount=1,vertices;
+const area=(a,b,c)=>(b[0]-a[0])*(c[1]-a[1])-(c[0]-a[0])*(b[1]-a[1]);
+for(let attempt=0;attempt<18;attempt++){
+vertices=ys.map(y=>xs.map(x=>point(x,y,amount)));let valid=true;
+for(let j=0;j<ys.length-1;j++)for(let i=0;i<xs.length-1;i++){const u=vertices[j][i],v=vertices[j][i+1],w=vertices[j+1][i+1],z=vertices[j+1][i],minimum=(xs[i+1]-xs[i])*(ys[j+1]-ys[j])*scale*scale*.1;if(area(u,v,w)<minimum||area(u,w,z)<minimum)valid=false;}
+if(valid)break;amount=attempt===16?0:amount*.75;
+}
+const triangles=[];for(let j=0;j<ys.length-1;j++)for(let i=0;i<xs.length-1;i++){const a=[xs[i],ys[j]],b=[xs[i+1],ys[j]],c=[xs[i+1],ys[j+1]],d=[xs[i],ys[j+1]],u=vertices[j][i],v=vertices[j][i+1],w=vertices[j+1][i+1],z=vertices[j+1][i];triangles.push({source:[a,b,c],destination:[u,v,w]},{source:[a,c,d],destination:[u,w,z]});}drawRearRaster(triangles,framePixels[bodyFrame]);
+}
+function draw(){
+ctx.fillStyle="#fffaf3";ctx.fillRect(0,0,800,500);
+ctx.strokeStyle="#decfbd";ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(45,450);ctx.lineTo(755,450);ctx.stroke();
+if(loaded){
+const sourceFrame=version.value==="hop"?singleContactOrder[frame]:frame;
+const sx=(sourceFrame%4)*362,sy=Math.floor(sourceFrame/4)*271;
+if(align.checked){
+const [left,top,right,bottom]=boxes[sourceFrame],width=right-left,scale=410/width;
+const pivotX=left+width*.70,pivotY=bottom;
+let angle=0;
+if(version.value==="hop"){
+const fraction=playing?Math.min(1,elapsed/(1000/Number(fps.value))):0;
+angle=(angles[frame]+(angles[(frame+1)%16]-angles[frame])*fraction)*Number(hop.value)/100*Math.PI/180;
+}
+const supportLift=Math.max(0,Math.sin(angle)*width*scale*.30);
+if(version.value==="hop"){
+drawConnectedRear(sourceFrame,angle,scale,pivotX,pivotY,supportLift);
+ctx.save();ctx.translate(500,450-supportLift);ctx.rotate(angle);ctx.scale(scale,scale);ctx.translate(-pivotX,-pivotY);
+ctx.beginPath();ctx.rect(left,top,width,bottom-top);ctx.rect(186,171,right-186,bottom-171);ctx.clip("evenodd");ctx.drawImage(frameTextures[sourceFrame],left,top,width,bottom-top,left,top,width,bottom-top);ctx.restore();
+}else{
+ctx.save();ctx.translate(500,450-supportLift);ctx.rotate(angle);
+ctx.drawImage(image,sx+left,sy+top,width,bottom-top,(left-pivotX)*scale,(top-pivotY)*scale,width*scale,(bottom-top)*scale);ctx.restore();
+}
+}else{
+ctx.drawImage(image,sx,sy,362,271,98,20,604,452);
+}
+}
+counter.textContent=failed?"Beeld kon niet geladen worden":loaded?"Frame "+(frame+1)+" / 16":"Beeld laden…";
+scrub.value=frame;
+}
+function pause(){playing=false;play.textContent="Afspelen";elapsed=0;}
+function loadVersion(){loaded=false;failed=false;frame=0;elapsed=0;image.src=sources[version.value]+"?v=20261014-connected";document.querySelector('a[href$="review.gif"]').href=root+(version.value==="first"?"":"revision-02/")+"review.gif";hop.disabled=version.value!=="hop";rearTiming.disabled=version.value!=="hop";draw();}
+image.onload=()=>{prepareFrameTextures();loaded=true;failed=false;last=0;draw();};
+image.onerror=()=>{loaded=false;failed=true;pause();draw();};
+play.onclick=()=>{playing=!playing;play.textContent=playing?"Pauzeren":"Afspelen";elapsed=0;};
+document.getElementById("prev").onclick=()=>{pause();frame=(frame+15)%16;draw();};
+document.getElementById("next").onclick=()=>{pause();frame=(frame+1)%16;draw();};
+scrub.oninput=()=>{pause();frame=Number(scrub.value);draw();};
+fps.onchange=()=>{elapsed=0;};
+version.onchange=()=>{pause();loadVersion();};
+align.onchange=draw;
+rearTiming.onchange=draw;
+hop.oninput=()=>{hopValue.textContent=hop.value+"%";draw();};
+function tick(t){const dt=Math.min(100,t-last||0);last=t;if(playing&&loaded){elapsed+=dt;const step=1000/Number(fps.value);while(elapsed>=step){frame=(frame+1)%16;elapsed-=step;}}draw();requestAnimationFrame(tick);}
+loadVersion();requestAnimationFrame(tick);
+if('serviceWorker' in navigator){navigator.serviceWorker.register('../sw.js').catch(()=>{});}
+</script></html>
+

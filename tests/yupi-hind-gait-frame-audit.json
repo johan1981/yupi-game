@@ -1,0 +1,242 @@
+[
+  {
+    "frame": 1,
+    "legs": [
+      {
+        "name": "right",
+        "stance": true,
+        "lift": 0
+      },
+      {
+        "name": "left",
+        "stance": true,
+        "lift": 0
+      }
+    ]
+  },
+  {
+    "frame": 2,
+    "legs": [
+      {
+        "name": "right",
+        "stance": true,
+        "lift": 0
+      },
+      {
+        "name": "left",
+        "stance": true,
+        "lift": 0
+      }
+    ]
+  },
+  {
+    "frame": 3,
+    "legs": [
+      {
+        "name": "right",
+        "stance": false,
+        "lift": 11.379566196872812
+      },
+      {
+        "name": "left",
+        "stance": true,
+        "lift": 0
+      }
+    ]
+  },
+  {
+    "frame": 4,
+    "legs": [
+      {
+        "name": "right",
+        "stance": false,
+        "lift": 29.001201615331166
+      },
+      {
+        "name": "left",
+        "stance": true,
+        "lift": 0
+      }
+    ]
+  },
+  {
+    "frame": 5,
+    "legs": [
+      {
+        "name": "right",
+        "stance": false,
+        "lift": 40.717864595110015
+      },
+      {
+        "name": "left",
+        "stance": true,
+        "lift": 0
+      }
+    ]
+  },
+  {
+    "frame": 6,
+    "legs": [
+      {
+        "name": "right",
+        "stance": false,
+        "lift": 42.27197854256711
+      },
+      {
+        "name": "left",
+        "stance": true,
+        "lift": 0
+      }
+    ]
+  },
+  {
+    "frame": 7,
+    "legs": [
+      {
+        "name": "right",
+        "stance": false,
+        "lift": 33.12554645812228
+      },
+      {
+        "name": "left",
+        "stance": true,
+        "lift": 0
+      }
+    ]
+  },
+  {
+    "frame": 8,
+    "legs": [
+      {
+        "name": "right",
+        "stance": false,
+        "lift": 16.52271684508786
+      },
+      {
+        "name": "left",
+        "stance": true,
+        "lift": 0
+      }
+    ]
+  },
+  {
+    "frame": 9,
+    "legs": [
+      {
+        "name": "right",
+        "stance": true,
+        "lift": 0
+      },
+      {
+        "name": "left",
+        "stance": true,
+        "lift": 0
+      }
+    ]
+  },
+  {
+    "frame": 10,
+    "legs": [
+      {
+        "name": "right",
+        "stance": true,
+        "lift": 0
+      },
+      {
+        "name": "left",
+        "stance": true,
+        "lift": 0
+      }
+    ]
+  },
+  {
+    "frame": 11,
+    "legs": [
+      {
+        "name": "right",
+        "stance": true,
+        "lift": 0
+      },
+      {
+        "name": "left",
+        "stance": false,
+        "lift": 12.70277156860221
+      }
+    ]
+  },
+  {
+    "frame": 12,
+    "legs": [
+      {
+        "name": "right",
+        "stance": true,
+        "lift": 0
+      },
+      {
+        "name": "left",
+        "stance": false,
+        "lift": 32.37343436129991
+      }
+    ]
+  },
+  {
+    "frame": 13,
+    "legs": [
+      {
+        "name": "right",
+        "stance": true,
+        "lift": 0
+      },
+      {
+        "name": "left",
+        "stance": false,
+        "lift": 45.452500013146064
+      }
+    ]
+  },
+  {
+    "frame": 14,
+    "legs": [
+      {
+        "name": "right",
+        "stance": true,
+        "lift": 0
+      },
+      {
+        "name": "left",
+        "stance": false,
+        "lift": 47.18732488472608
+      }
+    ]
+  },
+  {
+    "frame": 15,
+    "legs": [
+      {
+        "name": "right",
+        "stance": true,
+        "lift": 0
+      },
+      {
+        "name": "left",
+        "stance": false,
+        "lift": 36.97735418581092
+      }
+    ]
+  },
+  {
+    "frame": 16,
+    "legs": [
+      {
+        "name": "right",
+        "stance": true,
+        "lift": 0
+      },
+      {
+        "name": "left",
+        "stance": false,
+        "lift": 18.44396298986552
+      }
+    ]
+  }
+]

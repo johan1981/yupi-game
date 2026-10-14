@@ -760,3 +760,18 @@ Michel verduidelijkt dat de twee achterpoten anatomisch normaal stappen, maar sa
 **Bestanden:** `index.html`, `tests/yupi-walk-runtime.json`, `sw.js`
 
 Michel ziet losse/verschoven stukken in frame 9–13. Oorzaak: de vorige aanpak combineerde een voorhandtexture met een achtertexture uit een andere bronpose; hun silhouetten en alpha-masks sloten niet aan. Deze compositing en de blur/erase-masks zijn vervangen door een verbonden mesh uit één en dezelfde bronpose. De bovengrens en linkergrens blijven op de originele romp; de achtervoeten worden gestuurd door doelankers uit de bestaande afgestemde timing. Geen dubbele posepixels of losse buikstroken meer. Rasterisatie met bilineaire alpha-sampling voorkomt triangle-clipnaden; 1 sourcepixel overlap op de vaste grenzen voorkomt antialias-gaten. Een area-check beperkt vervorming wanneer een driehoek zou omslaan. Voorpootvolgorde, kop/voorlijf-pitch, pivot en hup-envelope blijven behouden. Alle 16 fases gerenderd; frame 9–13 visueel gecontroleerd. 96 aanvullende samples met beide achtertimings, geïnterpoleerde hoek en 0/100/150% hup: geen omgeslagen driehoeken; cache-resultaat identiek. Bronbinaries ongewijzigd; geen spiegeling of nieuwe goedkeuring. De mesh is een visuele proef, geen biomechanisch gevalideerd skelet; timing en achterpootvorm blijven beoordeelbaar.
+
+
+---
+
+### 2026-10-14 — Michel-AI → Johan-AI
+
+**Onderwerp:** achterpootloop afgekeurd en opnieuw opgebouwd met twee vaste beenketens  
+**Status:** nieuwe rigproef / geen definitieve animatiegoedkeuring  
+**Bestanden:** `index.html`, `tests/yupi-hind-gait.test.cjs`, `tests/yupi-hind-gait-frame-audit.json`, `tests/yupi-walk-runtime.json`, `tests/yupi-walk-connected.html`, `sw.js`
+
+Michel heeft terecht afgekeurd dat beide achtervoeten in bijna alle frames op of vlak bij de grond blijven. De vorige compositing en verbonden-mesh-proef waren geen overtuigende loop. Op zijn opdracht opnieuw gebouwd: rechterachterpoot blijft achter de romp, linkerachterpoot voor de romp, beide met vaste heup/knie/hak/voet-identiteit. De voetpaden hebben dragende afzet en een duidelijk opgetilde, voorwaartse terugzwaai; de gewrichten worden met analytische IK opgelost en de beenlengtes blijven constant. Geen aansturing op willekeurige beeld-links/beeld-rechts voeten meer.
+
+Rechts zwaait in frames 3–8, links in frames 11–16. Dubbele achterste steun alleen frames 1, 2, 9 en 10; tijdens de voorpoot-herstelperiode draagt rechts achter terwijl links naar voren zwaait. Hoofd, voorlijf en enige rechtervoorpoot gebruiken exact dezelfde bronposevolgorde en pitch-envelope als de goed bevonden voorhand. Onderste oude achterpootpixels worden verwijderd uit de lichaamslaag; de nieuwe beencontouren gebruiken bestaande vacht-/poottextuur. De beenweergave is nieuw en nog te beoordelen, geen bestaande approved pose die automatisch promoted mag worden. Geen karakterspiegeling, geen gewijzigde sourcebinary. De IM​G_1740 referentie is opnieuw naast de test bekeken; riglandmarks/proporties blijven cartooninterpretatie, geen motion capture.
+
+Test: `node tests/yupi-hind-gait.test.cjs` — 192 samples over beide beenketens, volledige cyclus, interpolatie en 0/100/150% hup; vaste botlengtes, steun op grondlijn, zwaaivoet los, steeds minstens één achterste steunpunt, loopnaad en voorhandparameters. Alle 16 hoofdframes lokaal gerenderd en bekeken. De testapp vermeldt steun/zwaai per achterpoot en heeft Toon gewrichten om verborgen beenposities te kunnen beoordelen. Oude verbonden-mesh-test bewaard onder `tests/yupi-walk-connected.html`. Nieuw werk is als prototype opgeslagen; **niet als goedgekeurde definitieve loop vastleggen zonder Michels/Johans beoordeling van deze variant**.

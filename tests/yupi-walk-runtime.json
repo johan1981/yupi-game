@@ -144,7 +144,7 @@
       0,
       150
     ],
-    "method": "Original forehand pose order, pitch, pivot and rebound retained; same-source continuous mesh only in rear lower region.",
+    "method": "Original source pose order, scale/pivot and angle envelope retained for forehand; rear legs use separate joint chains.",
     "forehand_preserved": true
   },
   "source_pixels_modified": false,
@@ -188,16 +188,122 @@
   "expected_foreleg_landings_per_cycle": 1,
   "notes": "Runtime playback order corrected after Michel observed a double forepaw tap. Original source pixels and old comparison modes unchanged. Contact annotation is pose review, not physical collision simulation.",
   "rear_gait": {
-    "independent_from_forepaw_order": false,
-    "draw_method": "continuous rear mesh from the same source pose as the forehand; pinned upper and left boundaries; foot-anchor targets use selected rear timing",
-    "source_cut_region": [
+    "status": "rig_motion_review",
+    "approved": false,
+    "method": "two anatomical hind-leg chains with fixed hip/knee/hock/paw identity and lengths; analytical IK; separate ground stance and lifted forward swing",
+    "motion_reference": "IMG_1740 walk cycle, interpreted for cartoon proportions; authoring calibration, not motion capture",
+    "ground_y": 450,
+    "stride_pixels": 60,
+    "stance_fraction": 0.58,
+    "legs": [
+      {
+        "name": "right",
+        "depth": "behind torso",
+        "source_joints": [
+          [
+            250,
+            178
+          ],
+          [
+            240,
+            216
+          ],
+          [
+            209,
+            240
+          ],
+          [
+            223,
+            263
+          ]
+        ],
+        "body_attachment": [
+          255,
+          195
+        ],
+        "ground_center_x": 490,
+        "phase_offset": 0.5,
+        "swing_lift_pixels": 43
+      },
+      {
+        "name": "left",
+        "depth": "in front of torso",
+        "source_joints": [
+          [
+            258,
+            180
+          ],
+          [
+            268,
+            218
+          ],
+          [
+            301,
+            240
+          ],
+          [
+            315,
+            263
+          ]
+        ],
+        "body_attachment": [
+          270,
+          180
+        ],
+        "ground_center_x": 550,
+        "phase_offset": 0,
+        "swing_lift_pixels": 48
+      }
+    ],
+    "fixed_scale": 1.3183279742765273,
+    "double_support_frames_one_based": [
+      1,
+      2,
+      9,
+      10
+    ],
+    "right_swing_frames_one_based": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "left_swing_frames_one_based": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "skin": "continuous joint contour, raster fur sampled from existing sheet cell 0 and existing paw texture; no mixed-pose torso meshes",
+    "source_sheet_pixels_modified": false,
+    "body_erase_mask": [
       [
         185,
+        220
+      ],
+      [
+        215,
+        220
+      ],
+      [
+        235,
+        180
+      ],
+      [
+        275,
         170
       ],
       [
+        300,
+        185
+      ],
+      [
         362,
-        170
+        185
       ],
       [
         362,
@@ -208,72 +314,21 @@
         271
       ]
     ],
-    "ground_y": 450,
-    "notes": "Mixed-pose textures removed after Michel reported displaced pieces in frames 9–13. One source pose remains connected; mesh deformation is reduced if any triangle would fold. Rear timing and anatomical movement remain a prototype; not motion capture or a validated skeletal gait.",
-    "previous_source_frame_order_zero_based": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12,
-      13,
-      14,
-      15
+    "lower_old_leg_erase_rect": [
+      165,
+      225,
+      197,
+      46
     ],
-    "separate_render_layer": false,
-    "synchronization": "One shared 16-phase cycle. Rear pose sequence rephased relative to unchanged sole-forepaw landing/rebound. Cyclic order retained; no independent clock.",
-    "comparison_control": {
-      "default": "synced",
-      "alternative": "previous"
-    },
-    "target_pose_order_zero_based": [
-      11,
-      12,
-      13,
-      14,
-      15,
-      0,
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10
+    "body_boundary_feather_pixels": 3,
+    "draw_order": [
+      "right hind leg",
+      "original forehand and torso",
+      "left hind leg",
+      "optional joint overlay"
     ],
-    "render_source_order_zero_based": [
-      2,
-      12,
-      15,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      13,
-      14,
-      0,
-      1
-    ],
-    "mesh_cell_size": 12,
-    "mesh_minimum_relative_triangle_area": 0.1,
-    "border_overlap_source_pixels": 1,
-    "rasterization": "inverse triangle mapping with bilinear premultiplied-alpha sampling; shared output raster, no antialiased clip seams",
-    "foot_anchor_region_description": "screen-left and screen-right hind paw endpoints measured from alpha > 200 in source rows 230..270; visual targets, not anatomical skeleton coordinates"
+    "debug": "Toon gewrichten; per-leg stance/swing labels",
+    "validation": "node tests/yupi-hind-gait.test.cjs: 192 poses over the full cycle and 0/100/150% rebound, fixed bone lengths, planted stance soles, lifted swing soles, no zero-support phase, cycle wrap and forehand parameters",
+    "notes": "The preceding rear gait was rejected by Michel. This is a rebuilt rig and a new rendered rear-leg interpretation, not a final approved image asset or exact anatomical reconstruction. Review motion and hip/skin appearance before promotion."
   }
 }
