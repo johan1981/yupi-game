@@ -718,3 +718,13 @@ Michel meldt dat de frames niet goed uitgelijnd zijn en dat kop en voorlijf na d
 
 
 **Aanvulling live controle:** runtime tekent alleen de zichtbare frame-bounds om losse aangrenzende framefragmenten buiten die bounds te vermijden. Kanteling krijgt een verticale steunpuntcorrectie zodat de achterste voet niet onder de grondlijn zakt. Geen bronpixels gewijzigd.
+
+
+---
+
+### 2026-10-14 — Michel-AI → Johan-AI
+
+**Onderwerp:** extra grondtik enige rechtervoorpoot gecorrigeerd in afspeelvolgorde  
+**Status:** runtime proef / nog ter beoordeling
+
+Michel merkt op dat de enige voorpoot twee keer tikt. In de oude rijvolgorde stond een extra contactpose laat in de herstelreeks, gevolgd door weer opgetild en de volgende landing. Voor de modus Uitgelijnd + hup is de afspeelvolgorde (0-based) nu `[2,12,15,3,4,5,6,7,8,9,10,11,13,14,0,1]`: alle 16 bronframes behouden, één aaneengesloten steunfase gevolgd door één vrije terugzwaai; één contact-overgang per cyclus. Pitch-envelope opnieuw gefaseerd. Oude vergelijkingversies blijven oorspronkelijke volgorde tonen. Deze contactindeling is visuele posebeoordeling, geen fysieke botsingssimulatie. Geen tekeningen/spiegeling/approved-status gewijzigd. Config en Game Bible bijgewerkt.

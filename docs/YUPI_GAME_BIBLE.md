@@ -135,6 +135,7 @@ Hij beweegt niet alsof hij "kapot" is. Zijn manier van lopen is gewoon zijn norm
 De aangeleverde video's van Yupi zijn de vaste referentie voor zijn gamebeweging.
 
 - De enige rechter voorpoot draagt het voorlichaam centraal.
+- **Michel, 2026-10-14:** één landing/steunfase van de enige voorpoot per volledige stapcyclus; daarna afzet en een vrije terugzwaai. Geen tweede korte grondtik vóór de volgende cyclus.
 - Bij de opvang zakt de schouder/voorhand zichtbaar en veert daarna weer omhoog.
 - De achterpoten leveren relatief veel afzet en voortstuwing.
 - Hoofd en nek bewegen mee met het pasritme.

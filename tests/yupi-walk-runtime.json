@@ -133,10 +133,10 @@
       5,
       8,
       9,
+      8,
       6,
-      3,
-      1,
-      0
+      4,
+      2
     ],
     "interpolation": "linear between frame angles during playback",
     "strength_default": 100,
@@ -147,5 +147,43 @@
     "method": "whole sprite pitches about rear support; provisional visual approximation, not independent forebody skeletal articulation"
   },
   "source_pixels_modified": false,
-  "no_mirroring": true
+  "no_mirroring": true,
+  "playback_order_zero_based": [
+    2,
+    12,
+    15,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    13,
+    14,
+    0,
+    1
+  ],
+  "foreleg_contact_phase_by_output_frame": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "expected_foreleg_landings_per_cycle": 1,
+  "notes": "Runtime playback order corrected after Michel observed a double forepaw tap. Original source pixels and old comparison modes unchanged. Contact annotation is pose review, not physical collision simulation."
 }
