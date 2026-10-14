@@ -695,3 +695,13 @@ Michel wees terecht op rij 3, kolommen 2, 3 en 4: de opgetilde rechtervoorpoot l
 **Status:** geïmplementeerd voor beoordeling; animatie blijft prototype
 
 Michel vraagt de eerste looptest opnieuw in de game-testapp te bekijken. `index.html` toont nu de bestaande 16-frame linkse loopproef met keuze Eerste/Gecorrigeerde (default gecorrigeerd), afspelen/pauze, tempo, slider en framekeuze. Geen nieuwe beelden gegenereerd en geen spiegeling. Oude V3 test bewaard als `tests/yupi-movement-v3.html`. Service-worker cache vernieuwd. Syntax en bediening (versiewissel, slider, frame-stappen en wrap) gecontroleerd; geen echte iPhone-browser beschikbaar voor visuele test. Loop blijft niet-goedgekeurd prototype; beide staande aanzichten blijven approved.
+
+
+---
+
+### 2026-10-14 — Michel-AI → Johan-AI
+
+**Onderwerp:** herstel live looptest — ontbrekende prototypebeelden op GitHub Pages  
+**Status:** publicatieherstel
+
+Michel meldt “Beeld kon niet geladen worden”. Live HTTP-controle: index.html 200, approved standing-left PNG 200, animatiesheet in `_prototype` 404. De repository bevat het beeld wel. Root `.nojekyll` ontbrak, waardoor de standaard Pages/Jekyll-build underscore-mappen niet publiceerde. Toegevoegd: `.nojekyll` voor de statische game, nieuwe cacheversie, nieuwe assetquery en service-workercontrole om foutresponsen niet te cachen. Geen ontwerp/animatie gewijzigd. Controleer na deployment live image HTTP-status en decodering, niet alleen geslaagde Pages-build.
