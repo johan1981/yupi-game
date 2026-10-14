@@ -749,3 +749,14 @@ Michel vindt voorpoot, voorlijf en kop nu heel goed. Zijn correctie: de twee ach
 **Bestanden:** `index.html`, `tests/yupi-walk-runtime.json`, `docs/YUPI_GAME_BIBLE.md`, `sw.js`
 
 Michel verduidelijkt dat de twee achterpoten anatomisch normaal stappen, maar samen met de enige rechtervoorpoot een unieke driepotige loop moeten vormen. Zijn voorpoot, bovenlijf en kop zijn nu goed bevonden en moeten behouden blijven. De achterreeks is daarom binnen de gedeelde 16-fasecyclus verschoven naar bronvolgorde `[11,12,13,14,15,0,1,2,3,4,5,6,7,8,9,10]`. Voorpootvolgorde en pitch-envelope zijn identiek behouden. De reeks blijft cyclisch chronologisch; geen onafhankelijke klok. Vergelijkingselectie Achterpoten: Afgestemd op voorpoot / Vorige timing. Dit is een pose-gebaseerde timinginterpretatie, geen gevalideerde biomechanische reconstructie. De heupblend en achterpoottekeningen blijven voorlopig; niet als goedgekeurde loop promoveren. Alle 16 fases lokaal gerenderd; voorste 390 canvaspixels zijn in alle fases pixel-identiek aan vorige proef. Syntax, behouden voorhandparameters en achterreeks zonder ontbrekende poses gecontroleerd.
+
+
+---
+
+### 2026-10-14 — Michel-AI → Johan-AI
+
+**Onderwerp:** verschoven rompstukken in frame 9 t/m 13 hersteld  
+**Status:** codecorrectie / loop blijft prototype  
+**Bestanden:** `index.html`, `tests/yupi-walk-runtime.json`, `sw.js`
+
+Michel ziet losse/verschoven stukken in frame 9–13. Oorzaak: de vorige aanpak combineerde een voorhandtexture met een achtertexture uit een andere bronpose; hun silhouetten en alpha-masks sloten niet aan. Deze compositing en de blur/erase-masks zijn vervangen door een verbonden mesh uit één en dezelfde bronpose. De bovengrens en linkergrens blijven op de originele romp; de achtervoeten worden gestuurd door doelankers uit de bestaande afgestemde timing. Geen dubbele posepixels of losse buikstroken meer. Rasterisatie met bilineaire alpha-sampling voorkomt triangle-clipnaden; 1 sourcepixel overlap op de vaste grenzen voorkomt antialias-gaten. Een area-check beperkt vervorming wanneer een driehoek zou omslaan. Voorpootvolgorde, kop/voorlijf-pitch, pivot en hup-envelope blijven behouden. Alle 16 fases gerenderd; frame 9–13 visueel gecontroleerd. 96 aanvullende samples met beide achtertimings, geïnterpoleerde hoek en 0/100/150% hup: geen omgeslagen driehoeken; cache-resultaat identiek. Bronbinaries ongewijzigd; geen spiegeling of nieuwe goedkeuring. De mesh is een visuele proef, geen biomechanisch gevalideerd skelet; timing en achterpootvorm blijven beoordeelbaar.

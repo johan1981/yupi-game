@@ -144,7 +144,7 @@
       0,
       150
     ],
-    "method": "forehand texture retains prior pitch and playback order; rear limbs follow an independent mapped layer",
+    "method": "Original forehand pose order, pitch, pivot and rebound retained; same-source continuous mesh only in rear lower region.",
     "forehand_preserved": true
   },
   "source_pixels_modified": false,
@@ -188,34 +188,16 @@
   "expected_foreleg_landings_per_cycle": 1,
   "notes": "Runtime playback order corrected after Michel observed a double forepaw tap. Original source pixels and old comparison modes unchanged. Contact annotation is pose review, not physical collision simulation.",
   "rear_gait": {
-    "source_frame_order_zero_based": [
-      11,
-      12,
-      13,
-      14,
-      15,
-      0,
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
     "independent_from_forepaw_order": false,
-    "draw_method": "separate rear-limb layer, two-triangle mapping from moving hip root to stable ground baseline",
+    "draw_method": "continuous rear mesh from the same source pose as the forehand; pinned upper and left boundaries; foot-anchor targets use selected rear timing",
     "source_cut_region": [
       [
         185,
-        140
+        170
       ],
       [
         362,
-        140
+        170
       ],
       [
         362,
@@ -227,40 +209,7 @@
       ]
     ],
     "ground_y": 450,
-    "body_seam_feather_pixels": 12,
-    "notes": "Timing experiment for Yupi's three-leg gait, not a generic quadruped cycle. Source pose interpretation; not measured motion capture or validated foot collisions. Hip blend and generated rear poses remain provisional.",
-    "rear_texture_alpha_ramp_y": [
-      140,
-      195
-    ],
-    "fore_texture_erase_region": [
-      [
-        230,
-        195
-      ],
-      [
-        362,
-        195
-      ],
-      [
-        362,
-        271
-      ],
-      [
-        185,
-        271
-      ],
-      [
-        185,
-        225
-      ]
-    ],
-    "fore_texture_solid_erase_rect": [
-      185,
-      225,
-      177,
-      46
-    ],
+    "notes": "Mixed-pose textures removed after Michel reported displaced pieces in frames 9–13. One source pose remains connected; mesh deformation is reduced if any triangle would fold. Rear timing and anatomical movement remain a prototype; not motion capture or a validated skeletal gait.",
     "previous_source_frame_order_zero_based": [
       0,
       1,
@@ -279,11 +228,52 @@
       14,
       15
     ],
-    "separate_render_layer": true,
+    "separate_render_layer": false,
     "synchronization": "One shared 16-phase cycle. Rear pose sequence rephased relative to unchanged sole-forepaw landing/rebound. Cyclic order retained; no independent clock.",
     "comparison_control": {
       "default": "synced",
       "alternative": "previous"
-    }
+    },
+    "target_pose_order_zero_based": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "render_source_order_zero_based": [
+      2,
+      12,
+      15,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14,
+      0,
+      1
+    ],
+    "mesh_cell_size": 12,
+    "mesh_minimum_relative_triangle_area": 0.1,
+    "border_overlap_source_pixels": 1,
+    "rasterization": "inverse triangle mapping with bilinear premultiplied-alpha sampling; shared output raster, no antialiased clip seams",
+    "foot_anchor_region_description": "screen-left and screen-right hind paw endpoints measured from alpha > 200 in source rows 230..270; visual targets, not anatomical skeleton coordinates"
   }
 }
