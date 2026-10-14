@@ -144,7 +144,7 @@
       0,
       150
     ],
-    "method": "whole sprite pitches about rear support; provisional visual approximation, not independent forebody skeletal articulation",
+    "method": "forehand texture retains prior pitch and playback order; rear limbs follow an independent mapped layer",
     "forehand_preserved": true
   },
   "source_pixels_modified": false,
@@ -210,12 +210,12 @@
     "draw_method": "separate rear-limb layer, two-triangle mapping from moving hip root to stable ground baseline",
     "source_cut_region": [
       [
-        220,
-        165
+        185,
+        140
       ],
       [
         362,
-        165
+        140
       ],
       [
         362,
@@ -224,14 +224,42 @@
       [
         185,
         271
-      ],
-      [
-        185,
-        210
       ]
     ],
     "ground_y": 450,
-    "body_seam_feather_pixels": 4,
-    "notes": "Existing chronological rear poses are restored independently of regrouped forepaw poses. No whole-sprite rebound applied directly to the rear feet. This remains a visual prototype, not a final skeleton gait."
+    "body_seam_feather_pixels": 12,
+    "notes": "Existing chronological rear poses are restored independently of regrouped forepaw poses. No whole-sprite rebound applied directly to the rear feet. This remains a visual prototype, not a final skeleton gait.",
+    "rear_texture_alpha_ramp_y": [
+      140,
+      195
+    ],
+    "fore_texture_erase_region": [
+      [
+        230,
+        195
+      ],
+      [
+        362,
+        195
+      ],
+      [
+        362,
+        271
+      ],
+      [
+        185,
+        271
+      ],
+      [
+        185,
+        225
+      ]
+    ],
+    "fore_texture_solid_erase_rect": [
+      185,
+      225,
+      177,
+      46
+    ]
   }
 }
