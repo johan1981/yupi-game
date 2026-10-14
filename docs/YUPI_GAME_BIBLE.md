@@ -138,6 +138,7 @@ De aangeleverde video's van Yupi zijn de vaste referentie voor zijn gamebeweging
 - Bij de opvang zakt de schouder/voorhand zichtbaar en veert daarna weer omhoog.
 - De achterpoten leveren relatief veel afzet en voortstuwing.
 - Hoofd en nek bewegen mee met het pasritme.
+- **Michel, 2026-10-14:** na de afzet met de enige rechtervoorpoot gaan kop en voorlijf samen mee omhoog; de cadans voelt als een soort hinkelen. Dit is meer dan alleen de voorpoot optillen; de hele voorhand veert mee.
 - De staart ondersteunt balans bij draaien en snelle richtingswisselingen.
 - Versnellen, stoppen en omkeren hebben een korte gewichtsverplaatsing; Yupi mag niet als een stijve sprite schuiven.
 - De animatieset omvat minimaal idle, snuffelen, wandelen, draven, sprinten, stoppen, draaien, speels bewegen, Nexus-puls, geraakt en herstellen.

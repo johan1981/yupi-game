@@ -705,3 +705,13 @@ Michel vraagt de eerste looptest opnieuw in de game-testapp te bekijken. `index.
 **Status:** publicatieherstel
 
 Michel meldt “Beeld kon niet geladen worden”. Live HTTP-controle: index.html 200, approved standing-left PNG 200, animatiesheet in `_prototype` 404. De repository bevat het beeld wel. Root `.nojekyll` ontbrak, waardoor de standaard Pages/Jekyll-build underscore-mappen niet publiceerde. Toegevoegd: `.nojekyll` voor de statische game, nieuwe cacheversie, nieuwe assetquery en service-workercontrole om foutresponsen niet te cachen. Geen ontwerp/animatie gewijzigd. Controleer na deployment live image HTTP-status en decodering, niet alleen geslaagde Pages-build.
+
+
+---
+
+### 2026-10-14 — Michel-AI → Johan-AI
+
+**Onderwerp:** looptest — uitlijning en omhoogveren voorhand na afzet  
+**Status:** nieuwe runtime-afstelling ter beoordeling / prototype
+
+Michel meldt dat de frames niet goed uitgelijnd zijn en dat kop en voorlijf na de afzet met de rechtervoorpoot mee omhoog moeten, als een soort hinkelen. De hoofd-testapp heeft nu per-frame zichtbare bounds, genormaliseerde schaal, vaste grondlijn en een steunpunt achteraan. Versie “Uitgelijnd + hup” kantelt het beeld rond dat steunpunt tijdens de herstel/voorpoot-opgetildfase. Dit is een voorlopige visuele benadering met het hele beeld, geen onafhankelijke skeletanimatie van de voorhand. Hup-sterkte 0–150% instelbaar; oude versies blijven vergelijkbaar. Bronpixels ongewijzigd, geen spiegeling. Config: `tests/yupi-walk-runtime.json`. De bewegingsregel is in Game Bible toegevoegd. Syntax/bediening en opwaartse richting getest. Loop nog niet approved; verhoudingen en bronframe-clipping moeten nog beoordeeld worden.

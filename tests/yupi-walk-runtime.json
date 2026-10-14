@@ -1,0 +1,151 @@
+{
+  "status": "prototype",
+  "approved": false,
+  "source_sheet": "revision-02/source-sheet.png",
+  "frame_count": 16,
+  "cell_size": [
+    362,
+    271
+  ],
+  "alignment": {
+    "method": "per-frame visible bounds, uniform visible-width normalization and rear-support pivot",
+    "foreground_bounds": [
+      [
+        36,
+        7,
+        347,
+        271
+      ],
+      [
+        25,
+        6,
+        336,
+        271
+      ],
+      [
+        14,
+        11,
+        331,
+        271
+      ],
+      [
+        6,
+        11,
+        325,
+        271
+      ],
+      [
+        25,
+        8,
+        348,
+        267
+      ],
+      [
+        23,
+        17,
+        340,
+        269
+      ],
+      [
+        15,
+        19,
+        338,
+        268
+      ],
+      [
+        8,
+        15,
+        328,
+        271
+      ],
+      [
+        29,
+        3,
+        350,
+        264
+      ],
+      [
+        43,
+        0,
+        360,
+        265
+      ],
+      [
+        35,
+        1,
+        362,
+        267
+      ],
+      [
+        40,
+        4,
+        355,
+        268
+      ],
+      [
+        26,
+        0,
+        346,
+        257
+      ],
+      [
+        24,
+        0,
+        344,
+        257
+      ],
+      [
+        25,
+        0,
+        354,
+        257
+      ],
+      [
+        16,
+        1,
+        337,
+        256
+      ]
+    ],
+    "target_visible_width": 410,
+    "canvas_pivot": [
+      500,
+      450
+    ],
+    "pivot_relative_to_bounds": [
+      0.7,
+      1
+    ],
+    "notes": "Alignment of generated frames; not a validated skeleton rig. Drawn body proportions and cropped source details still require review."
+  },
+  "front_rebound": {
+    "description": "Michel: after push-off with sole right foreleg, head and forebody rise together like hopping/hinkelen.",
+    "pitch_degrees": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      5,
+      8,
+      9,
+      6,
+      3,
+      1,
+      0
+    ],
+    "interpolation": "linear between frame angles during playback",
+    "strength_default": 100,
+    "strength_range": [
+      0,
+      150
+    ],
+    "method": "whole sprite pitches about rear support; provisional visual approximation, not independent forebody skeletal articulation"
+  },
+  "source_pixels_modified": false,
+  "no_mirroring": true
+}

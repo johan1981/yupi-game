@@ -1,4 +1,4 @@
-const CACHE="yupi-looptest-v3-20261014-publishfix";
+const CACHE="yupi-looptest-v4-20261014-hop";
 const ASSETS=["./","./index.html","./manifest.webmanifest","./assets/yupi/pup/sprites/_prototype/walk-left-2026-10-14/source-sheet.png","./assets/yupi/pup/sprites/_prototype/walk-left-2026-10-14/revision-02/source-sheet.png"];
 self.addEventListener("install",e=>{self.skipWaiting();e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)))});
 self.addEventListener("activate",e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
