@@ -329,7 +329,7 @@
     ],
     "debug": "Toon gewrichten; per-leg stance/swing labels",
     "validation": "node tests/yupi-hind-gait.test.cjs: 192 poses over the full cycle and 0/100/150% rebound, fixed bone lengths, planted stance soles, lifted swing soles, no zero-support phase, cycle wrap and forehand parameters",
-    "notes": "Michel approves the rig gait motion but finds the rear legs too thin. Skin radii enlarged around knee, shank and hock; gait function, joint locations, bone lengths, forehand, paw sole height and timing unchanged. Revised appearance remains under review.",
+    "notes": "Motion remains approved by Michel. Right hind-leg skin enlarged further after feedback that it still looks like a thin stick; left hind-leg appearance, all bone positions, lengths, paw paths and timing unchanged. Right lower leg now has a fuller knee, calf and hock with the same tapered paw junction.",
     "motion_approval": {
       "approved": true,
       "approved_by": [
@@ -356,15 +356,15 @@
       ],
       "right": [
         [
+          20,
+          16
+        ],
+        [
+          16,
+          14
+        ],
+        [
           14,
-          12
-        ],
-        [
-          12,
-          10
-        ],
-        [
-          10,
           9
         ]
       ]

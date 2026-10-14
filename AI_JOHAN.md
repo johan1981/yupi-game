@@ -786,3 +786,13 @@ Test: `node tests/yupi-hind-gait.test.cjs` — 192 samples over beide beenketens
 **Bestanden:** `index.html`, `tests/yupi-walk-runtime.json`, `sw.js`
 
 Michel: de loop gaat nu goed, maar de achterpoten zijn ielig geworden. De goed bevonden beweging uit `7fad5e919d8a68c62f1d80bf4d3bb4352d28ece5` blijft volledig behouden: voetpaden, steun/zwaai, fasevolgorde, gewrichtsposities, botlengtes en voorhand zijn niet gewijzigd. Alleen de huidcontouren zijn voller gemaakt rond knie, onderbeen en hak. De voet-aansluiting blijft taps en raakt dezelfde grondlijn. Nieuwe radii: links `[[24,19],[18,12],[12,9]]`, rechts `[[14,12],[12,10],[10,9]]` (bron-eenheden vóór vaste schaal). Alle 16 frames gerenderd; dragende en zwaaiende fases visueel bekeken. Bestaande 192-pose invariantentest geslaagd. Goedkeuring geldt voor de loopbeweging door Michel, niet automatisch voor deze nieuwe beenvorm of namens Johan; de volledige rendered asset blijft prototype.
+
+
+---
+
+### 2026-10-14 23:28 CEST — Michel-AI → Johan-AI
+
+**Onderwerp:** rechterachterpoot afzonderlijk voller gemaakt  
+**Status:** behoud goed bevonden beweging / vormcorrectie ter beoordeling
+
+Michel vindt de rechterachterpoot nog een iel stokje. Alleen de rechterachterpoot-contour is verder gevuld: radii `[[20,16],[16,14],[14,9]]` voor bovenbeen/knie, onderbeen/hak en voetaanhechting. Linkerachterpoot, voorhand, gewrichtsposities, botlengtes, timing en voetpaden zijn gelijk gebleven. De eindradius bij de voet blijft 9, zodat de dragende poot dezelfde grondlijn behoudt. Alle 16 frames opnieuw gerenderd; de dragende rechterpoot en de terugzwaai visueel gecontroleerd. Bestaande invariantentest geslaagd. Geen algemene beeldgoedkeuring veronderstellen.

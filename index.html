@@ -43,7 +43,7 @@ function drawRigLeg(index,phase,bodyFrame,angle,scale,pivotX,pivotY,supportLift)
 
 const rig=rigs[index],src=rig.source,bodyPoint=(x,y)=>{const dx=(x-pivotX)*scale,dy=(y-pivotY)*scale;return [500+dx*Math.cos(angle)-dy*Math.sin(angle),450-supportLift+dx*Math.sin(angle)+dy*Math.cos(angle)];},hip=bodyPoint(...rig.hip),state=gait(phase,rig,hip),dst=solveLeg(rig,hip,state),baseScale=410/311;
 rigStates.push({name:rig.name,state,joints:dst});
-const widths=index===1?[[24,19],[18,12],[12,9]]:[[14,12],[12,10],[10,9]];
+const widths=index===1?[[24,19],[18,12],[12,9]]:[[20,16],[16,14],[14,9]];
 ctx.save();ctx.beginPath();
 for(let i=0;i<3;i++){const a=dst[i],b=dst[i+1],vx=b[0]-a[0],vy=b[1]-a[1],length=Math.hypot(vx,vy),nx=-vy/length,ny=vx/length,heading=Math.atan2(vy,vx),r0=widths[i][0]*baseScale,r1=widths[i][1]*baseScale;ctx.moveTo(a[0]+nx*r0,a[1]+ny*r0);ctx.lineTo(b[0]+nx*r1,b[1]+ny*r1);ctx.arc(b[0],b[1],r1,heading+Math.PI/2,heading-Math.PI/2,true);ctx.lineTo(a[0]-nx*r0,a[1]-ny*r0);ctx.arc(a[0],a[1],r0,heading-Math.PI/2,heading+Math.PI/2,true);ctx.closePath();}
 ctx.clip();ctx.fillStyle=ctx.createPattern(furTexture,"repeat");ctx.fillRect(hip[0]-100,hip[1]-80,220,240);const shade=ctx.createLinearGradient(hip[0]-30,0,hip[0]+45,0);shade.addColorStop(0,index===0?"rgba(70,25,10,.25)":"rgba(255,194,112,.12)");shade.addColorStop(.5,"rgba(125,42,17,0)");shade.addColorStop(1,"rgba(95,31,12,.28)");ctx.fillStyle=shade;ctx.fillRect(hip[0]-100,hip[1]-80,220,240);ctx.restore();
@@ -85,7 +85,7 @@ counter.textContent=failed?"Beeld kon niet geladen worden":loaded?"Frame "+(fram
 scrub.value=frame;
 }
 function pause(){playing=false;play.textContent="Afspelen";elapsed=0;}
-function loadVersion(){loaded=false;failed=false;frame=0;elapsed=0;image.src=sources[version.value]+"?v=20261014-sturdier";document.querySelector('a[href$="review.gif"]').href=root+(version.value==="first"?"":"revision-02/")+"review.gif";hop.disabled=version.value!=="hop";draw();}
+function loadVersion(){loaded=false;failed=false;frame=0;elapsed=0;image.src=sources[version.value]+"?v=20261014-rightfuller";document.querySelector('a[href$="review.gif"]').href=root+(version.value==="first"?"":"revision-02/")+"review.gif";hop.disabled=version.value!=="hop";draw();}
 image.onload=()=>{prepareFrameTextures();loaded=true;failed=false;last=0;draw();};
 image.onerror=()=>{loaded=false;failed=true;pause();draw();};
 play.onclick=()=>{playing=!playing;play.textContent=playing?"Pauzeren":"Afspelen";elapsed=0;};
