@@ -278,7 +278,7 @@
       15,
       16
     ],
-    "skin": "continuous joint contour, raster fur sampled from existing sheet cell 0 and existing paw texture; no mixed-pose torso meshes",
+    "skin": "Right: smoothly sampled joint contour, rounded per-bone shading, calf fur and naturally outlined paw sampled from approved standing-left PNG. Left skin unchanged.",
     "source_sheet_pixels_modified": false,
     "body_erase_mask": [
       [
@@ -329,7 +329,7 @@
     ],
     "debug": "Toon gewrichten; per-leg stance/swing labels",
     "validation": "node tests/yupi-hind-gait.test.cjs: 192 poses over the full cycle and 0/100/150% rebound, fixed bone lengths, planted stance soles, lifted swing soles, no zero-support phase, cycle wrap and forehand parameters",
-    "notes": "Motion remains approved by Michel. Right hind-leg skin enlarged further after feedback that it still looks like a thin stick; left hind-leg appearance, all bone positions, lengths, paw paths and timing unchanged. Right lower leg now has a fuller knee, calf and hock with the same tapered paw junction.",
+    "notes": "Art revision after Michel requested comparison to approved standing side view. All gait/IK functions, joints, support phases, motion approval and forehand transforms preserved. Right artwork remains under review.",
     "motion_approval": {
       "approved": true,
       "approved_by": [
@@ -368,6 +368,28 @@
           9
         ]
       ]
+    },
+    "art_reference": {
+      "asset": "assets/yupi/pup/poses/standing/left.png",
+      "fur_crop": [
+        1137,
+        856,
+        32,
+        32
+      ],
+      "paw_crop": [
+        1100,
+        900,
+        145,
+        102
+      ],
+      "paw_rect_relative_to_joint": [
+        -22,
+        -16,
+        36,
+        25
+      ],
+      "paw_upper_edge_feather_source_pixels": 22
     }
   }
 }

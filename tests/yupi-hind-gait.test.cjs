@@ -38,7 +38,7 @@ for (const strength of [0, 100, 150]) for (let frame = 0; frame < 16; frame++) f
       const lengths=joints.slice(0,3).map((p,i)=>Math.hypot(joints[i+1][0]-p[0],joints[i+1][1]-p[1]));
       const expected=r.source.slice(0,3).map((p,i)=>Math.hypot(r.source[i+1][0]-p[0],r.source[i+1][1]-p[1])*410/311);
       const rx=r.name==="left"?20:18,theta=state.toeAngle;
-      const sole=state.foot[1]+(410/311)*(-4*Math.sin(theta)+Math.cos(theta)+Math.hypot(rx*Math.sin(theta),8*Math.cos(theta)));
+      const sole=state.foot[1]+(410/311)*(r.name==="right" ? Math.max(-22*Math.sin(theta),14*Math.sin(theta))+9*Math.cos(theta) : -4*Math.sin(theta)+Math.cos(theta)+Math.hypot(rx*Math.sin(theta),8*Math.cos(theta)));
       return {state,joints,lengths,expected,sole};
     });
   })()`);
@@ -61,3 +61,4 @@ for (const name of ["left", "right"]) {
   assert.equal(result[2], result[3]);
 }
 console.log("PASS: " + samples + " poses; fixed limb identity and bone lengths; grounded stance; airborne swing; four double-support frames; cycle wrap; unchanged forehand parameters.");
+

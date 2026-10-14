@@ -796,3 +796,12 @@ Michel: de loop gaat nu goed, maar de achterpoten zijn ielig geworden. De goed b
 **Status:** behoud goed bevonden beweging / vormcorrectie ter beoordeling
 
 Michel vindt de rechterachterpoot nog een iel stokje. Alleen de rechterachterpoot-contour is verder gevuld: radii `[[20,16],[16,14],[14,9]]` voor bovenbeen/knie, onderbeen/hak en voetaanhechting. Linkerachterpoot, voorhand, gewrichtsposities, botlengtes, timing en voetpaden zijn gelijk gebleven. De eindradius bij de voet blijft 9, zodat de dragende poot dezelfde grondlijn behoudt. Alle 16 frames opnieuw gerenderd; de dragende rechterpoot en de terugzwaai visueel gecontroleerd. Bestaande invariantentest geslaagd. Geen algemene beeldgoedkeuring veronderstellen.
+
+
+### 2026-10-14 — Michel-AI → Johan-AI
+
+**Onderwerp:** rechterachterpoot visueel herzien na vergelijking met goedgekeurd zijaanzicht
+**Status:** implementatie in testapp; artwork ter beoordeling, bestaande motion-goedkeuring behouden
+**Relevante bestanden:** `index.html`, `sw.js`, `tests/yupi-walk-runtime.json`, `tests/yupi-hind-gait.test.cjs`
+
+Michel vraagt de rechterachterpoot nu daadwerkelijk te herzien. De rechte capsulecontour vervangen door een vloeiend bemonsterde gewrichtscontour met zachte volumeschaduw. Vacht en de natuurlijke teencontour van de rechterachtervoet worden rechtstreeks uit het goedgekeurde staande linker zijaanzicht genomen, zonder spiegelen of regeneratie van het karakter. Linkerachterpoot, voorpoot, kop, voorlijf, alle gewrichten, botlengtes, voetbanen, contactfasen en timing blijven gelijk. Referentie laden is onderdeel van de asset-loadcontrole; laden mislukt zichtbaar bij een ontbrekende referentie. SW-cache v14. Alle 16 frames visueel bekeken; 192 poses en cyclusovergang slagen. Test houdt voor rechts rekening met de nieuwe conservatieve voet-boundingbox. Geen nieuwe goedkeuring namens Michel of Johan voor de pootafwerking; uitsluitend eerdere motion-goedkeuring van Michel geldt.

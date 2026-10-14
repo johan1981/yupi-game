@@ -1,5 +1,5 @@
-const CACHE="yupi-looptest-v13-20261014-rightfuller";
-const ASSETS=["./","./index.html","./manifest.webmanifest","./assets/yupi/pup/sprites/_prototype/walk-left-2026-10-14/source-sheet.png","./assets/yupi/pup/sprites/_prototype/walk-left-2026-10-14/revision-02/source-sheet.png"];
+const CACHE="yupi-looptest-v14-20261014-rightart";
+const ASSETS=["./","./index.html","./manifest.webmanifest","./assets/yupi/pup/poses/standing/left.png","./assets/yupi/pup/sprites/_prototype/walk-left-2026-10-14/source-sheet.png","./assets/yupi/pup/sprites/_prototype/walk-left-2026-10-14/revision-02/source-sheet.png"];
 self.addEventListener("install",e=>{self.skipWaiting();e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)))});
 self.addEventListener("activate",e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener("fetch",e=>e.respondWith(fetch(e.request).then(r=>{if(r.ok && e.request.method==='GET'){const clone=r.clone();caches.open(CACHE).then(c=>c.put(e.request,clone)).catch(()=>{});}return r}).catch(()=>caches.match(e.request))));
