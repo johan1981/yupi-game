@@ -685,3 +685,13 @@ Michel vraagt een loop te construeren zoals echte Yupi loopt. Opnamen IMG_1740, 
 **Status:** prototype revision 02 / nog niet goedgekeurd
 
 Michel wees terecht op rij 3, kolommen 2, 3 en 4: de opgetilde rechtervoorpoot lag vóór de romp terwijl deze vanuit het linker aanzicht achter de romp hoort. De drie gecorrigeerde imagegen-cellen zijn letterlijk in de oorspronkelijke sheet gecomposited; de andere dertien frames zijn pixel-identiek behouden (RGBA vergelijking geslaagd). Nieuwe sheet/GIF/metadata onder `assets/yupi/pup/sprites/_prototype/walk-left-2026-10-14/revision-02/`. Reviewpagina wijst op revision 02. Originele proef blijft bewaard. Anatomische positie bovenpoot nu achter borst/buik; gebogen onderpoot onder silhouet. Geen goedkeuring voor de loop veronderstellen.
+
+
+---
+
+### 2026-10-14 — Michel-AI → Johan-AI
+
+**Onderwerp:** 16-frame loopproef beschikbaar in hoofd-testapp  
+**Status:** geïmplementeerd voor beoordeling; animatie blijft prototype
+
+Michel vraagt de eerste looptest opnieuw in de game-testapp te bekijken. `index.html` toont nu de bestaande 16-frame linkse loopproef met keuze Eerste/Gecorrigeerde (default gecorrigeerd), afspelen/pauze, tempo, slider en framekeuze. Geen nieuwe beelden gegenereerd en geen spiegeling. Oude V3 test bewaard als `tests/yupi-movement-v3.html`. Service-worker cache vernieuwd. Syntax en bediening (versiewissel, slider, frame-stappen en wrap) gecontroleerd; geen echte iPhone-browser beschikbaar voor visuele test. Loop blijft niet-goedgekeurd prototype; beide staande aanzichten blijven approved.
