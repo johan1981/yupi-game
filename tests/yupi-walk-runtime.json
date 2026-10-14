@@ -329,6 +329,45 @@
     ],
     "debug": "Toon gewrichten; per-leg stance/swing labels",
     "validation": "node tests/yupi-hind-gait.test.cjs: 192 poses over the full cycle and 0/100/150% rebound, fixed bone lengths, planted stance soles, lifted swing soles, no zero-support phase, cycle wrap and forehand parameters",
-    "notes": "The preceding rear gait was rejected by Michel. This is a rebuilt rig and a new rendered rear-leg interpretation, not a final approved image asset or exact anatomical reconstruction. Review motion and hip/skin appearance before promotion."
+    "notes": "Michel approves the rig gait motion but finds the rear legs too thin. Skin radii enlarged around knee, shank and hock; gait function, joint locations, bone lengths, forehand, paw sole height and timing unchanged. Revised appearance remains under review.",
+    "motion_approval": {
+      "approved": true,
+      "approved_by": [
+        "Michel"
+      ],
+      "date": "2026-10-14",
+      "source_commit": "7fad5e919d8a68c62f1d80bf4d3bb4352d28ece5",
+      "scope": "Loopbeweging goed bevonden; beenvorm niet definitief goedgekeurd."
+    },
+    "skin_radii_source_units": {
+      "left": [
+        [
+          24,
+          19
+        ],
+        [
+          18,
+          12
+        ],
+        [
+          12,
+          9
+        ]
+      ],
+      "right": [
+        [
+          14,
+          12
+        ],
+        [
+          12,
+          10
+        ],
+        [
+          10,
+          9
+        ]
+      ]
+    }
   }
 }

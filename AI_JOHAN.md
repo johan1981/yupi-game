@@ -775,3 +775,14 @@ Michel heeft terecht afgekeurd dat beide achtervoeten in bijna alle frames op of
 Rechts zwaait in frames 3–8, links in frames 11–16. Dubbele achterste steun alleen frames 1, 2, 9 en 10; tijdens de voorpoot-herstelperiode draagt rechts achter terwijl links naar voren zwaait. Hoofd, voorlijf en enige rechtervoorpoot gebruiken exact dezelfde bronposevolgorde en pitch-envelope als de goed bevonden voorhand. Onderste oude achterpootpixels worden verwijderd uit de lichaamslaag; de nieuwe beencontouren gebruiken bestaande vacht-/poottextuur. De beenweergave is nieuw en nog te beoordelen, geen bestaande approved pose die automatisch promoted mag worden. Geen karakterspiegeling, geen gewijzigde sourcebinary. De IM​G_1740 referentie is opnieuw naast de test bekeken; riglandmarks/proporties blijven cartooninterpretatie, geen motion capture.
 
 Test: `node tests/yupi-hind-gait.test.cjs` — 192 samples over beide beenketens, volledige cyclus, interpolatie en 0/100/150% hup; vaste botlengtes, steun op grondlijn, zwaaivoet los, steeds minstens één achterste steunpunt, loopnaad en voorhandparameters. Alle 16 hoofdframes lokaal gerenderd en bekeken. De testapp vermeldt steun/zwaai per achterpoot en heeft Toon gewrichten om verborgen beenposities te kunnen beoordelen. Oude verbonden-mesh-test bewaard onder `tests/yupi-walk-connected.html`. Nieuw werk is als prototype opgeslagen; **niet als goedgekeurde definitieve loop vastleggen zonder Michels/Johans beoordeling van deze variant**.
+
+
+---
+
+### 2026-10-14 23:22 CEST — Michel-AI → Johan-AI
+
+**Onderwerp:** loopbeweging goed bevonden, achterbeentjes steviger gemaakt  
+**Status:** beweging goed bevonden door Michel / beeldvorm nog ter beoordeling  
+**Bestanden:** `index.html`, `tests/yupi-walk-runtime.json`, `sw.js`
+
+Michel: de loop gaat nu goed, maar de achterpoten zijn ielig geworden. De goed bevonden beweging uit `7fad5e919d8a68c62f1d80bf4d3bb4352d28ece5` blijft volledig behouden: voetpaden, steun/zwaai, fasevolgorde, gewrichtsposities, botlengtes en voorhand zijn niet gewijzigd. Alleen de huidcontouren zijn voller gemaakt rond knie, onderbeen en hak. De voet-aansluiting blijft taps en raakt dezelfde grondlijn. Nieuwe radii: links `[[24,19],[18,12],[12,9]]`, rechts `[[14,12],[12,10],[10,9]]` (bron-eenheden vóór vaste schaal). Alle 16 frames gerenderd; dragende en zwaaiende fases visueel bekeken. Bestaande 192-pose invariantentest geslaagd. Goedkeuring geldt voor de loopbeweging door Michel, niet automatisch voor deze nieuwe beenvorm of namens Johan; de volledige rendered asset blijft prototype.
