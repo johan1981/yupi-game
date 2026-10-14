@@ -715,3 +715,6 @@ Michel meldt “Beeld kon niet geladen worden”. Live HTTP-controle: index.html
 **Status:** nieuwe runtime-afstelling ter beoordeling / prototype
 
 Michel meldt dat de frames niet goed uitgelijnd zijn en dat kop en voorlijf na de afzet met de rechtervoorpoot mee omhoog moeten, als een soort hinkelen. De hoofd-testapp heeft nu per-frame zichtbare bounds, genormaliseerde schaal, vaste grondlijn en een steunpunt achteraan. Versie “Uitgelijnd + hup” kantelt het beeld rond dat steunpunt tijdens de herstel/voorpoot-opgetildfase. Dit is een voorlopige visuele benadering met het hele beeld, geen onafhankelijke skeletanimatie van de voorhand. Hup-sterkte 0–150% instelbaar; oude versies blijven vergelijkbaar. Bronpixels ongewijzigd, geen spiegeling. Config: `tests/yupi-walk-runtime.json`. De bewegingsregel is in Game Bible toegevoegd. Syntax/bediening en opwaartse richting getest. Loop nog niet approved; verhoudingen en bronframe-clipping moeten nog beoordeeld worden.
+
+
+**Aanvulling live controle:** runtime tekent alleen de zichtbare frame-bounds om losse aangrenzende framefragmenten buiten die bounds te vermijden. Kanteling krijgt een verticale steunpuntcorrectie zodat de achterste voet niet onder de grondlijn zakt. Geen bronpixels gewijzigd.

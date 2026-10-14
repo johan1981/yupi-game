@@ -19,8 +19,9 @@ if(version.value==="hop"){
 const fraction=playing?Math.min(1,elapsed/(1000/Number(fps.value))):0;
 angle=(angles[frame]+(angles[(frame+1)%16]-angles[frame])*fraction)*Number(hop.value)/100*Math.PI/180;
 }
-ctx.save();ctx.translate(500,450);ctx.rotate(angle);
-ctx.drawImage(image,sx,sy,362,271,-pivotX*scale,-pivotY*scale,362*scale,271*scale);ctx.restore();
+const supportLift=Math.max(0,Math.sin(angle)*width*scale*.30);
+ctx.save();ctx.translate(500,450-supportLift);ctx.rotate(angle);
+ctx.drawImage(image,sx+left,sy+top,width,bottom-top,(left-pivotX)*scale,(top-pivotY)*scale,width*scale,(bottom-top)*scale);ctx.restore();
 }else{
 ctx.drawImage(image,sx,sy,362,271,98,20,604,452);
 }
@@ -29,7 +30,7 @@ counter.textContent=failed?"Beeld kon niet geladen worden":loaded?"Frame "+(fram
 scrub.value=frame;
 }
 function pause(){playing=false;play.textContent="Afspelen";elapsed=0;}
-function loadVersion(){loaded=false;failed=false;frame=0;elapsed=0;image.src=sources[version.value]+"?v=20261014-hop1";document.querySelector('a[href$="review.gif"]').href=root+(version.value==="first"?"":"revision-02/")+"review.gif";hop.disabled=version.value!=="hop";draw();}
+function loadVersion(){loaded=false;failed=false;frame=0;elapsed=0;image.src=sources[version.value]+"?v=20261014-hop2";document.querySelector('a[href$="review.gif"]').href=root+(version.value==="first"?"":"revision-02/")+"review.gif";hop.disabled=version.value!=="hop";draw();}
 image.onload=()=>{loaded=true;failed=false;last=0;draw();};
 image.onerror=()=>{loaded=false;failed=true;pause();draw();};
 play.onclick=()=>{playing=!playing;play.textContent=playing?"Pauzeren":"Afspelen";elapsed=0;};
