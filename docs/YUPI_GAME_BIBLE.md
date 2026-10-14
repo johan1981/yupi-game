@@ -138,6 +138,7 @@ De aangeleverde video's van Yupi zijn de vaste referentie voor zijn gamebeweging
 - **Michel, 2026-10-14:** één landing/steunfase van de enige voorpoot per volledige stapcyclus; daarna afzet en een vrije terugzwaai. Geen tweede korte grondtik vóór de volgende cyclus.
 - Bij de opvang zakt de schouder/voorhand zichtbaar en veert daarna weer omhoog.
 - De achterpoten leveren relatief veel afzet en voortstuwing.
+- **Michel, 2026-10-14:** beide achterpoten stappen beurtelings zoals bij een normale hond met vier poten; zij mogen niet samen stuiteren als gevolg van de hup van de voorhand.
 - Hoofd en nek bewegen mee met het pasritme.
 - **Michel, 2026-10-14:** na de afzet met de enige rechtervoorpoot gaan kop en voorlijf samen mee omhoog; de cadans voelt als een soort hinkelen. Dit is meer dan alleen de voorpoot optillen; de hele voorhand veert mee.
 - De staart ondersteunt balans bij draaien en snelle richtingswisselingen.

@@ -144,7 +144,8 @@
       0,
       150
     ],
-    "method": "whole sprite pitches about rear support; provisional visual approximation, not independent forebody skeletal articulation"
+    "method": "whole sprite pitches about rear support; provisional visual approximation, not independent forebody skeletal articulation",
+    "forehand_preserved": true
   },
   "source_pixels_modified": false,
   "no_mirroring": true,
@@ -185,5 +186,52 @@
     false
   ],
   "expected_foreleg_landings_per_cycle": 1,
-  "notes": "Runtime playback order corrected after Michel observed a double forepaw tap. Original source pixels and old comparison modes unchanged. Contact annotation is pose review, not physical collision simulation."
+  "notes": "Runtime playback order corrected after Michel observed a double forepaw tap. Original source pixels and old comparison modes unchanged. Contact annotation is pose review, not physical collision simulation.",
+  "rear_gait": {
+    "source_frame_order_zero_based": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "independent_from_forepaw_order": true,
+    "draw_method": "separate rear-limb layer, two-triangle mapping from moving hip root to stable ground baseline",
+    "source_cut_region": [
+      [
+        220,
+        165
+      ],
+      [
+        362,
+        165
+      ],
+      [
+        362,
+        271
+      ],
+      [
+        185,
+        271
+      ],
+      [
+        185,
+        210
+      ]
+    ],
+    "ground_y": 450,
+    "body_seam_feather_pixels": 4,
+    "notes": "Existing chronological rear poses are restored independently of regrouped forepaw poses. No whole-sprite rebound applied directly to the rear feet. This remains a visual prototype, not a final skeleton gait."
+  }
 }

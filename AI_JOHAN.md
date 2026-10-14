@@ -728,3 +728,13 @@ Michel meldt dat de frames niet goed uitgelijnd zijn en dat kop en voorlijf na d
 **Status:** runtime proef / nog ter beoordeling
 
 Michel merkt op dat de enige voorpoot twee keer tikt. In de oude rijvolgorde stond een extra contactpose laat in de herstelreeks, gevolgd door weer opgetild en de volgende landing. Voor de modus Uitgelijnd + hup is de afspeelvolgorde (0-based) nu `[2,12,15,3,4,5,6,7,8,9,10,11,13,14,0,1]`: alle 16 bronframes behouden, één aaneengesloten steunfase gevolgd door één vrije terugzwaai; één contact-overgang per cyclus. Pitch-envelope opnieuw gefaseerd. Oude vergelijkingversies blijven oorspronkelijke volgorde tonen. Deze contactindeling is visuele posebeoordeling, geen fysieke botsingssimulatie. Geen tekeningen/spiegeling/approved-status gewijzigd. Config en Game Bible bijgewerkt.
+
+
+---
+
+### 2026-10-14 — Michel-AI → Johan-AI
+
+**Onderwerp:** achterpoten lopen los van de goed bevonden voorhand  
+**Status:** prototype — achterpootbeweging ter beoordeling
+
+Michel vindt voorpoot, voorlijf en kop nu heel goed. Zijn correctie: de twee achterpoten lijken te stuiteren, terwijl hun stapbeweging bij Yupi normaal is zoals bij een hond met vier poten. De runtime houdt daarom voorpootvolgorde en hup-envelope exact aan, maar tekent achterpoten als aparte laag in oorspronkelijke chronologische bronvolgorde 0–15. De heupwortel sluit aan op het voorlijf, onderste steunlijn blijft op y=450; achterste voetbeelden kantelen niet rechtstreeks met het hele lichaam mee. Twee-triangle mapping, soft 4px seam. Geen nieuwe afbeeldingen, geen spiegeling en geen sourcebinary gewijzigd. Alle 16 frames lokaal gerenderd en meerdere fases visueel gecontroleerd. De nieuwe achterpootbeweging is nog een proef; alleen de voorhand is door Michel inhoudelijk goed bevonden.

@@ -1,4 +1,4 @@
-<!doctype html><html lang="nl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Yupi — looptest 16 frames</title><meta name="theme-color" content="#f7f3eb"><link rel="manifest" href="./manifest.webmanifest"><style>*{box-sizing:border-box}body{margin:0;background:#f7f3eb;color:#42372d;font:16px system-ui,sans-serif}main{max-width:980px;margin:auto;padding:24px}h1{font-size:28px;margin-bottom:8px}p{line-height:1.5}.status{background:#eadfcf;padding:8px 12px;border-radius:20px;display:inline-block;font-size:13px}canvas{display:block;width:auto;height:50vh;max-width:100%;max-height:500px;margin:20px auto;background:#fffaf3;border:1px solid #ded3c3;border-radius:18px}button,select,input{font:inherit}button,select{padding:10px 16px;border:1px solid #cdbcaa;border-radius:12px;background:white;color:#42372d}button{cursor:pointer}.controls{display:flex;flex-wrap:wrap;align-items:center;gap:12px}.frame{width:100%;accent-color:#a75529}.refs{display:flex;gap:16px;margin-top:25px}.refs figure{margin:0;width:50%;background:white;border-radius:12px;padding:12px}.refs img{width:100%;height:200px;object-fit:contain}small{display:block;line-height:1.5;color:#716254}a{color:#88441f}@media(max-width:600px){main{padding:16px}.refs img{height:140px}h1{font-size:24px}}</style><main><span class="status">Looptest · 16 frames · nog te beoordelen</span><h1>Yupi loopt naar links</h1><label>Versie <select id="version"><option value="first">Eerste loopproef</option><option value="corrected">Gecorrigeerde loopproef</option><option value="hop" selected>Uitgelijnd + hup</option></select></label><p>Eén landing met de rechtervoorpoot, afzetten en omhoogveren, daarna vrij naar voren zwaaien. Vergelijk de versies en stel de sterkte van de hup af.</p><canvas id="c" width="800" height="500" aria-label="Loopanimatie van Pup Yupi naar links"></canvas><div class="controls"><button id="play">Pauzeren</button><button id="prev">Vorige</button><button id="next">Volgende</button><label>Tempo <select id="fps"><option value="10">Langzaam</option><option value="20" selected>Normaal</option><option value="25">Sneller</option></select></label><strong id="counter"></strong></div><div class="controls" style="margin-top:12px"><label><input id="align" type="checkbox" checked> Uitlijnen</label><label>Hup <input id="hop" aria-label="Sterkte van de hup" type="range" min="0" max="150" value="100"><output id="hopValue">100%</output></label></div><input class="frame" id="scrub" aria-label="Frame kiezen" type="range" min="0" max="15" value="0"><small>Dit is een eerste proef. Frame-overgangen, schaal, grondcontact en aansluiting van het laatste op het eerste frame zijn nog niet definitief goedgekeurd. Deze test gebruikt de proef om hem te beoordelen.</small><details><summary>Goedgekeurde staande referenties</summary><div class="refs"><figure><img src="./assets/yupi/pup/poses/standing/left.png" alt="Goedgekeurde linker referentie"><figcaption>Staand links — goedgekeurd</figcaption></figure><figure><img src="./assets/yupi/pup/poses/standing/right.png" alt="Goedgekeurde rechter referentie"><figcaption>Staand rechts — goedgekeurd</figcaption></figure></div></details><p><a href="./assets/yupi/pup/sprites/_prototype/walk-left-2026-10-14/revision-02/review.gif">Open de GIF</a></p></main><script>
+<!doctype html><html lang="nl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Yupi — looptest 16 frames</title><meta name="theme-color" content="#f7f3eb"><link rel="manifest" href="./manifest.webmanifest"><style>*{box-sizing:border-box}body{margin:0;background:#f7f3eb;color:#42372d;font:16px system-ui,sans-serif}main{max-width:980px;margin:auto;padding:24px}h1{font-size:28px;margin-bottom:8px}p{line-height:1.5}.status{background:#eadfcf;padding:8px 12px;border-radius:20px;display:inline-block;font-size:13px}canvas{display:block;width:auto;height:50vh;max-width:100%;max-height:500px;margin:20px auto;background:#fffaf3;border:1px solid #ded3c3;border-radius:18px}button,select,input{font:inherit}button,select{padding:10px 16px;border:1px solid #cdbcaa;border-radius:12px;background:white;color:#42372d}button{cursor:pointer}.controls{display:flex;flex-wrap:wrap;align-items:center;gap:12px}.frame{width:100%;accent-color:#a75529}.refs{display:flex;gap:16px;margin-top:25px}.refs figure{margin:0;width:50%;background:white;border-radius:12px;padding:12px}.refs img{width:100%;height:200px;object-fit:contain}small{display:block;line-height:1.5;color:#716254}a{color:#88441f}@media(max-width:600px){main{padding:16px}.refs img{height:140px}h1{font-size:24px}}</style><main><span class="status">Looptest · 16 frames · nog te beoordelen</span><h1>Yupi loopt naar links</h1><label>Versie <select id="version"><option value="first">Eerste loopproef</option><option value="corrected">Gecorrigeerde loopproef</option><option value="hop" selected>Uitgelijnd + hup</option></select></label><p>De voorhand houdt één landing en de hup. De twee achterpoten stappen in een eigen doorlopende reeks.</p><canvas id="c" width="800" height="500" aria-label="Loopanimatie van Pup Yupi naar links"></canvas><div class="controls"><button id="play">Pauzeren</button><button id="prev">Vorige</button><button id="next">Volgende</button><label>Tempo <select id="fps"><option value="10">Langzaam</option><option value="20" selected>Normaal</option><option value="25">Sneller</option></select></label><strong id="counter"></strong></div><div class="controls" style="margin-top:12px"><label><input id="align" type="checkbox" checked> Uitlijnen</label><label>Hup <input id="hop" aria-label="Sterkte van de hup" type="range" min="0" max="150" value="100"><output id="hopValue">100%</output></label></div><input class="frame" id="scrub" aria-label="Frame kiezen" type="range" min="0" max="15" value="0"><small>Dit is een eerste proef. Frame-overgangen, schaal, grondcontact en aansluiting van het laatste op het eerste frame zijn nog niet definitief goedgekeurd. Deze test gebruikt de proef om hem te beoordelen.</small><details><summary>Goedgekeurde staande referenties</summary><div class="refs"><figure><img src="./assets/yupi/pup/poses/standing/left.png" alt="Goedgekeurde linker referentie"><figcaption>Staand links — goedgekeurd</figcaption></figure><figure><img src="./assets/yupi/pup/poses/standing/right.png" alt="Goedgekeurde rechter referentie"><figcaption>Staand rechts — goedgekeurd</figcaption></figure></div></details><p><a href="./assets/yupi/pup/sprites/_prototype/walk-left-2026-10-14/revision-02/review.gif">Open de GIF</a></p></main><script>
 const root="./assets/yupi/pup/sprites/_prototype/walk-left-2026-10-14/";
 const sources={first:root+"source-sheet.png",corrected:root+"revision-02/source-sheet.png",hop:root+"revision-02/source-sheet.png"};
 const boxes=[[36,7,347,271],[25,6,336,271],[14,11,331,271],[6,11,325,271],[25,8,348,267],[23,17,340,269],[15,19,338,268],[8,15,328,271],[29,3,350,264],[43,0,360,265],[35,1,362,267],[40,4,355,268],[26,0,346,257],[24,0,344,257],[25,0,354,257],[16,1,337,256]];
@@ -7,6 +7,41 @@ const angles=[0,0,0,0,0,0,0,0,1,5,8,9,8,6,4,2];
 const canvas=document.getElementById("c"),ctx=canvas.getContext("2d"),play=document.getElementById("play"),scrub=document.getElementById("scrub"),fps=document.getElementById("fps"),counter=document.getElementById("counter"),version=document.getElementById("version"),align=document.getElementById("align"),hop=document.getElementById("hop"),hopValue=document.getElementById("hopValue");
 const image=new Image();
 let frame=0,playing=true,last=0,elapsed=0,loaded=false,failed=false;
+
+const rearTextures=[],foreTextures=[];
+function prepareRearTextures(){
+rearTextures.length=0;foreTextures.length=0;
+for(let i=0;i<16;i++){const c=document.createElement("canvas");c.width=362;c.height=271;const g=c.getContext("2d");const [, ,right,bottom]=boxes[i];g.beginPath();g.moveTo(220,165);g.lineTo(right,165);g.lineTo(right,bottom);g.lineTo(185,bottom);g.lineTo(185,210);g.closePath();g.clip();g.drawImage(image,(i%4)*362,Math.floor(i/4)*271,362,271,0,0,362,271);rearTextures.push(c);
+const f=document.createElement("canvas");f.width=362;f.height=271;const fg=f.getContext("2d");fg.drawImage(image,(i%4)*362,Math.floor(i/4)*271,362,271,0,0,362,271);fg.globalCompositeOperation="destination-out";fg.filter="blur(4px)";fg.beginPath();fg.moveTo(220,165);fg.lineTo(362,165);fg.lineTo(362,271);fg.lineTo(185,271);fg.lineTo(185,210);fg.closePath();fg.fill();foreTextures.push(f);
+}
+}
+function drawTriangle(source,destination,texture){
+const [a,b,c]=source,[u,v,w]=destination;
+const dx1=b[0]-a[0],dy1=b[1]-a[1],dx2=c[0]-a[0],dy2=c[1]-a[1],det=dx1*dy2-dx2*dy1;
+if(Math.abs(det)<.0001)return;
+const ex1=v[0]-u[0],ey1=v[1]-u[1],ex2=w[0]-u[0],ey2=w[1]-u[1];
+const A=(ex1*dy2-ex2*dy1)/det,B=(ey1*dy2-ey2*dy1)/det,C=(ex2*dx1-ex1*dx2)/det,D=(ey2*dx1-ey1*dx2)/det;
+const centroid=[(u[0]+v[0]+w[0])/3,(u[1]+v[1]+w[1])/3];
+const expanded=[u,v,w].map(p=>{const dx=p[0]-centroid[0],dy=p[1]-centroid[1],length=Math.hypot(dx,dy)||1;return [p[0]+dx/length*1.5,p[1]+dy/length*1.5];});
+ctx.save();ctx.beginPath();ctx.moveTo(...expanded[0]);ctx.lineTo(...expanded[1]);ctx.lineTo(...expanded[2]);ctx.closePath();ctx.clip();ctx.setTransform(A,B,C,D,u[0]-A*a[0]-C*a[1],u[1]-B*a[0]-D*a[1]);ctx.drawImage(texture,0,0);ctx.restore();
+}
+function drawRearLayer(bodyFrame,angle,scale,pivotX,pivotY,supportLift){
+const rearFrame=frame; // Rear gait stays chronological, independently of forepaw contact ordering.
+const [rl,rt,rr,rb]=boxes[rearFrame],rearScale=410/(rr-rl),rearPivot=rl+(rr-rl)*.70;
+const [bl,bt,br,bb]=boxes[bodyFrame],cutX=185,cutY=165;
+const bodyPoint=(x,y)=>{const dx=(x-pivotX)*scale,dy=(y-pivotY)*scale;return [500+dx*Math.cos(angle)-dy*Math.sin(angle),450-supportLift+dx*Math.sin(angle)+dy*Math.cos(angle)];};
+const topLeft=bodyPoint(cutX,cutY),topRight=bodyPoint(br,cutY);
+const bottomLeft=[500+(cutX-rearPivot)*rearScale,450],bottomRight=[500+(rr-rearPivot)*rearScale,450];
+const rx=(rearFrame%4)*362,ry=Math.floor(rearFrame/4)*271;
+const point=(side,t)=>[(side?topRight[0]:topLeft[0])*(1-t)+(side?bottomRight[0]:bottomLeft[0])*t,(side?topRight[1]:topLeft[1])*(1-t)+450*t];
+for(let k=0;k<1;k++){
+const t0=k,t1=k+1,y0=cutY+(rb-cutY)*t0,y1=cutY+(rb-cutY)*t1;
+const s0=[cutX,y0],s1=[rr,y0],s2=[rr,y1],s3=[cutX,y1];
+const d0=point(0,t0),d1=point(1,t0),d2=point(1,t1),d3=point(0,t1);
+drawTriangle([s0,s1,s2],[d0,d1,d2],rearTextures[rearFrame]);drawTriangle([s0,s2,s3],[d0,d2,d3],rearTextures[rearFrame]);
+}
+}
+
 function draw(){
 ctx.fillStyle="#fffaf3";ctx.fillRect(0,0,800,500);
 ctx.strokeStyle="#decfbd";ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(45,450);ctx.lineTo(755,450);ctx.stroke();
@@ -22,8 +57,14 @@ const fraction=playing?Math.min(1,elapsed/(1000/Number(fps.value))):0;
 angle=(angles[frame]+(angles[(frame+1)%16]-angles[frame])*fraction)*Number(hop.value)/100*Math.PI/180;
 }
 const supportLift=Math.max(0,Math.sin(angle)*width*scale*.30);
+if(version.value==="hop"){
+drawRearLayer(sourceFrame,angle,scale,pivotX,pivotY,supportLift);
+ctx.save();ctx.translate(500,450-supportLift);ctx.rotate(angle);ctx.scale(scale,scale);ctx.translate(-pivotX,-pivotY);
+ctx.drawImage(foreTextures[sourceFrame],left,top,width,bottom-top,left,top,width,bottom-top);ctx.restore();
+}else{
 ctx.save();ctx.translate(500,450-supportLift);ctx.rotate(angle);
 ctx.drawImage(image,sx+left,sy+top,width,bottom-top,(left-pivotX)*scale,(top-pivotY)*scale,width*scale,(bottom-top)*scale);ctx.restore();
+}
 }else{
 ctx.drawImage(image,sx,sy,362,271,98,20,604,452);
 }
@@ -32,8 +73,8 @@ counter.textContent=failed?"Beeld kon niet geladen worden":loaded?"Frame "+(fram
 scrub.value=frame;
 }
 function pause(){playing=false;play.textContent="Afspelen";elapsed=0;}
-function loadVersion(){loaded=false;failed=false;frame=0;elapsed=0;image.src=sources[version.value]+"?v=20261014-onetouch";document.querySelector('a[href$="review.gif"]').href=root+(version.value==="first"?"":"revision-02/")+"review.gif";hop.disabled=version.value!=="hop";draw();}
-image.onload=()=>{loaded=true;failed=false;last=0;draw();};
+function loadVersion(){loaded=false;failed=false;frame=0;elapsed=0;image.src=sources[version.value]+"?v=20261014-rearwalk";document.querySelector('a[href$="review.gif"]').href=root+(version.value==="first"?"":"revision-02/")+"review.gif";hop.disabled=version.value!=="hop";draw();}
+image.onload=()=>{prepareRearTextures();loaded=true;failed=false;last=0;draw();};
 image.onerror=()=>{loaded=false;failed=true;pause();draw();};
 play.onclick=()=>{playing=!playing;play.textContent=playing?"Pauzeren":"Afspelen";elapsed=0;};
 document.getElementById("prev").onclick=()=>{pause();frame=(frame+15)%16;draw();};
