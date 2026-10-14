@@ -189,6 +189,11 @@
   "notes": "Runtime playback order corrected after Michel observed a double forepaw tap. Original source pixels and old comparison modes unchanged. Contact annotation is pose review, not physical collision simulation.",
   "rear_gait": {
     "source_frame_order_zero_based": [
+      11,
+      12,
+      13,
+      14,
+      15,
       0,
       1,
       2,
@@ -199,14 +204,9 @@
       7,
       8,
       9,
-      10,
-      11,
-      12,
-      13,
-      14,
-      15
+      10
     ],
-    "independent_from_forepaw_order": true,
+    "independent_from_forepaw_order": false,
     "draw_method": "separate rear-limb layer, two-triangle mapping from moving hip root to stable ground baseline",
     "source_cut_region": [
       [
@@ -228,7 +228,7 @@
     ],
     "ground_y": 450,
     "body_seam_feather_pixels": 12,
-    "notes": "Existing chronological rear poses are restored independently of regrouped forepaw poses. No whole-sprite rebound applied directly to the rear feet. This remains a visual prototype, not a final skeleton gait.",
+    "notes": "Timing experiment for Yupi's three-leg gait, not a generic quadruped cycle. Source pose interpretation; not measured motion capture or validated foot collisions. Hip blend and generated rear poses remain provisional.",
     "rear_texture_alpha_ramp_y": [
       140,
       195
@@ -260,6 +260,30 @@
       225,
       177,
       46
-    ]
+    ],
+    "previous_source_frame_order_zero_based": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "separate_render_layer": true,
+    "synchronization": "One shared 16-phase cycle. Rear pose sequence rephased relative to unchanged sole-forepaw landing/rebound. Cyclic order retained; no independent clock.",
+    "comparison_control": {
+      "default": "synced",
+      "alternative": "previous"
+    }
   }
 }

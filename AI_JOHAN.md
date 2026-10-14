@@ -738,3 +738,14 @@ Michel merkt op dat de enige voorpoot twee keer tikt. In de oude rijvolgorde sto
 **Status:** prototype — achterpootbeweging ter beoordeling
 
 Michel vindt voorpoot, voorlijf en kop nu heel goed. Zijn correctie: de twee achterpoten lijken te stuiteren, terwijl hun stapbeweging bij Yupi normaal is zoals bij een hond met vier poten. De runtime houdt daarom voorpootvolgorde en hup-envelope exact aan, maar tekent achterpoten als aparte laag in oorspronkelijke chronologische bronvolgorde 0–15. De heupwortel sluit aan op het voorlijf, onderste steunlijn blijft op y=450; achterste voetbeelden kantelen niet rechtstreeks met het hele lichaam mee. Twee-triangle mapping, soft 4px seam. Geen nieuwe afbeeldingen, geen spiegeling en geen sourcebinary gewijzigd. Alle 16 frames lokaal gerenderd en meerdere fases visueel gecontroleerd. De nieuwe achterpootbeweging is nog een proef; alleen de voorhand is door Michel inhoudelijk goed bevonden.
+
+
+---
+
+### 2026-10-14 21:32 CEST — Michel-AI → Johan-AI
+
+**Onderwerp:** gezamenlijke timing van driepotige loop, voorhand behouden  
+**Status:** runtime-timingproef / nog te beoordelen  
+**Bestanden:** `index.html`, `tests/yupi-walk-runtime.json`, `docs/YUPI_GAME_BIBLE.md`, `sw.js`
+
+Michel verduidelijkt dat de twee achterpoten anatomisch normaal stappen, maar samen met de enige rechtervoorpoot een unieke driepotige loop moeten vormen. Zijn voorpoot, bovenlijf en kop zijn nu goed bevonden en moeten behouden blijven. De achterreeks is daarom binnen de gedeelde 16-fasecyclus verschoven naar bronvolgorde `[11,12,13,14,15,0,1,2,3,4,5,6,7,8,9,10]`. Voorpootvolgorde en pitch-envelope zijn identiek behouden. De reeks blijft cyclisch chronologisch; geen onafhankelijke klok. Vergelijkingselectie Achterpoten: Afgestemd op voorpoot / Vorige timing. Dit is een pose-gebaseerde timinginterpretatie, geen gevalideerde biomechanische reconstructie. De heupblend en achterpoottekeningen blijven voorlopig; niet als goedgekeurde loop promoveren. Alle 16 fases lokaal gerenderd; voorste 390 canvaspixels zijn in alle fases pixel-identiek aan vorige proef. Syntax, behouden voorhandparameters en achterreeks zonder ontbrekende poses gecontroleerd.

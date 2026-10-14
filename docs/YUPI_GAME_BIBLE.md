@@ -139,6 +139,7 @@ De aangeleverde video's van Yupi zijn de vaste referentie voor zijn gamebeweging
 - Bij de opvang zakt de schouder/voorhand zichtbaar en veert daarna weer omhoog.
 - De achterpoten leveren relatief veel afzet en voortstuwing.
 - **Michel, 2026-10-14:** beide achterpoten stappen beurtelings zoals bij een normale hond met vier poten; zij mogen niet samen stuiteren als gevolg van de hup van de voorhand.
+- **Verduidelijking Michel, 2026-10-14:** de volledige loop is specifiek driepotig. De stapbewegingen van de achterpoten moeten in één samenhangend ritme met steun, afzet en landing van de enige rechtervoorpoot passen. Normale achterpoten betekenen geen onafhankelijk vierpotig loopritme. De nu goed bevonden voorpoot-, kop- en voorlijfbeweging behouden tijdens het afstellen van de achterpoten.
 - Hoofd en nek bewegen mee met het pasritme.
 - **Michel, 2026-10-14:** na de afzet met de enige rechtervoorpoot gaan kop en voorlijf samen mee omhoog; de cadans voelt als een soort hinkelen. Dit is meer dan alleen de voorpoot optillen; de hele voorhand veert mee.
 - De staart ondersteunt balans bij draaien en snelle richtingswisselingen.
